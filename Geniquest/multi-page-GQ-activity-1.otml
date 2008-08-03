@@ -41,121 +41,37 @@
     <import class="org.concord.biologica.state.OTStaticOrganism" />
     <import class="org.concord.biologica.state.OTSex" />
     <import class="org.concord.otrunk.ui.OTChoiceWithFeedback" />
+	<import class="org.concord.graph.util.state.OTDrawingTool" />
+	<import class="org.concord.otrunk.OTSystem" />
+	<import class="org.concord.otrunk.OTInclude" />
+	<import class="org.concord.otrunk.OTIncludeRootObject" />
+	<import class="org.concord.otrunk.view.OTViewBundle" />
+	<import class="org.concord.otrunk.view.OTViewMode" />
+	<import class="org.concord.otrunk.view.OTViewEntry" />
+	<import class="org.concord.otrunk.script.ui.OTXHTMLScriptViewEntry" />
+	<import class="org.concord.otrunk.view.OTMultiUserRoot" />
+	<import class="org.concord.otrunk.view.document.OTCompoundDoc"/>
+	<import class="org.concord.otrunk.view.document.OTDocumentViewConfig"/>
+	<import class="org.concord.otrunk.script.ui.OTXHTMLScript" />
+	<import class="org.concord.otrunk.script.jruby.OTJRuby" />
+	<import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+	<import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+	<import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+	<import class="org.concord.framework.otrunk.wrapper.OTBlob" />
+	<import class="org.concord.otrunk.view.OTViewChild"/>
   </imports>
   <objects>
     <OTSystem local_id="system">
       <bundles>
-        <OTViewBundle id="8d880970-c22a-11dc-95ff-0800200c9a66" showLeftPanel="false" currentMode="student">
-          <modes>
-            <OTViewMode name="authoring">
-              <map>
-                <entry key="${moz-swing-view}">
-                  <OTViewEntry objectClass="org.concord.otrunk.browser.mozswing.OTMozSwing" viewClass="org.concord.otrunk.browser.mozswing.OTMozSwingEditView" />
-                </entry>
-                <entry key="${snapshot_button_view}">
-                  <OTViewEntry objectClass="org.concord.otrunk.ui.snapshot.OTSnapshotButton" viewClass="org.concord.otrunk.ui.snapshot.OTSnapshotButtonEditView" />
-                </entry>
-                <entry key="${choice-radio-view}">
-                  <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceComboBoxEditView" useViewsAsChoices="true" />
-                </entry>
-                <entry key="${choice-checkbox-view}">
-                  <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoiceMultiple" viewClass="org.concord.otrunk.ui.swing.OTChoiceComboBoxEditView" useViewsAsChoices="true" />
-                </entry>
-                <entry key="${data-table-view}">
-                  <OTViewEntry objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.otrunk.ui.swing.OTDataTableEditView" />
-                </entry>
-                <entry key="${netlogo-view}">
-                  <OTViewEntry viewClass="org.concord.otrunknl4.OTNLogoModelEditView" objectClass="org.concord.otrunknl4.OTNLogoModel" />
-                </entry>
-                <entry key="${compound-doc-view}">
-                  <OTDocumentEditViewConfig objectClass="org.concord.otrunk.view.document.OTCompoundDoc" viewClass="org.concord.otrunk.view.document.edit.OTDocumentEditView">
-                    <documentViewConfig>
-                      <object refid="${compound-doc-view}" />
-                    </documentViewConfig>
-                    <objectsToInsert>
-                      <OTText name="Text field" />
-                      <OTDrawingTool2 name="Draw tool" />
-                      <OTChoice name="Multiple-choice (single answer)" alignContent="0">
-                        <choices>
-                          <OTCompoundDoc name="Dominant">
-                            <bodyText>Dominant</bodyText>
-                          </OTCompoundDoc>
-                          <OTCompoundDoc name="Recessive">
-                            <bodyText>Recessive</bodyText>
-                          </OTCompoundDoc>
-                          <OTCompoundDoc name="Neither">
-                            <bodyText>Neither</bodyText>
-                          </OTCompoundDoc>
-                        </choices>
-                      </OTChoice>
-                      <OTChoiceMultiple name="Multiple-choice (check boxes)" />
-                      <OTDataTable name="Data table" showLastRowForAddingNew="true">
-                        <dataStore>
-                          <OTDataStore numberChannels="2" />
-                        </dataStore>
-                      </OTDataTable>
-                      <OTDataCollector name="Data graph" title="Data graph">
-                        <source>
-                          <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
-                            <dataStore>
-                              <OTDataStore />
-                            </dataStore>
-                          </OTDataGraphable>
-                        </source>
-                        <xDataAxis>
-                          <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
-                        </xDataAxis>
-                        <yDataAxis>
-                          <OTDataAxis max="40.0" units="" min="-0.0" label="" />
-                        </yDataAxis>
-                      </OTDataCollector>
-                      <OTSnapshotButton name="Snapshot button" />
-                      <OTSnapshotChooser name="Snapshot chooser" />
-                      <OTMozSwing name="Web browser" />
-                      <OTSoundPlayer name="Sound player" />
-                      <OTModelerPage name="Molecular workbench" authoredDataURL="http://mw2.concord.org/public/student/classic/motion/undershotwaterwheel.cml" />
-                      <OTNLogoModel name="NetLogo model" />
-                    </objectsToInsert>
-                  </OTDocumentEditViewConfig>
-                </entry>
-                <entry key="${data-collector-view}">
-                  <OTDataCollectorViewConfig viewClass="org.concord.otrunk.graph.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector">
-                    <predefinedGraphs>
-                      <object refid="088786c2-8719-11dc-8314-0800200c9a66" />
-                    </predefinedGraphs>
-                  </OTDataCollectorViewConfig>
-                </entry>
-                <entry key="${drawing-view}">
-                  <OTViewEntry viewClass="org.concord.datagraph.state.OTDataDrawingToolEditView" objectClass="org.concord.graph.util.state.OTDrawingTool" />
-                </entry>
-                <entry key="${text-edit}">
-                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextEditEditView" />
-                </entry>
-                <entry key="${sound-player-view}">
-                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTSoundPlayer" viewClass="org.concord.otrunk.ui.swing.OTSoundPlayerEditView" />
-                </entry>
-                <entry key="${mw-view}">
-                  <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageEditView" />
-                </entry>
-                <entry key="${menu-horizontal-circle}">
-                  <OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageEditView" />
-                </entry>
-                <entry key="${mode-switcher}">
-                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTModeSwitcher" viewClass="org.concord.otrunk.ui.swing.OTModeSwitcherView" />
-                </entry>
-              </map>
-            </OTViewMode>
-            <OTViewMode name="student">
-              <map />
-            </OTViewMode>
-          </modes>
-		  <viewEntries>
-				<OTViewEntry objectClass="org.concord.otrunk.script.ui.OTHTMLScript" viewClass="org.concord.trunk.view.OTXHTMLScriptView" />
+        <OTViewBundle id="8d880970-c22a-11dc-95ff-0800200c9a66" showLeftPanel="false">
+		  <views>
+				<OTViewEntry objectClass="org.concord.otrunk.script.ui.OTXHTMLScript" viewClass="org.concord.trunk.view.OTXHTMLScriptView" />
+				<OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />
 				<OTDocumentViewConfig
 					objectClass="org.concord.otrunk.view.document.OTDocument"
 					viewClass="org.concord.otrunk.view.document.OTDocumentView"
-					css="body { background-color: #FFFFBB}"/>
-			</viewEntries>
+					css="body { background-color: #FFFFBB;}"/>
+			</views>
 		</OTViewBundle>
 		<OTScriptEngineBundle>
 			<engines>
@@ -167,7 +83,7 @@
 	<root>
 		<OTXHTMLScript local_id="test-view-1">
 			<script>
-				<OTJRuby name="ruby-script" local-id="ruby-script" src="scripts/multi-page-ruby-script-1.rb" />
+				<OTJRuby name="ruby-script" local_id="ruby-script" src="scripts/multi-page-ruby-script-1.rb" />
 			</script>
 			<variables>
 				<OTScriptVariable name="template-1">
@@ -177,7 +93,6 @@
 				</OTScriptVariable>
 				<OTScriptVariable name="test-view-1" reference="${test-view-1}" />
 				<OTScriptVariable name="test-view-2" reference="${test-view-2}" />
-				<OTScriptVariable name="section-1-card-container" reference="${section-1-card-container}"/>
 				<OTScriptVariable name="staticFatherView" reference="${staticFatherView}" />
 				<OTScriptVariable name="staticMotherView" reference="${staticMotherView}" />
 				<OTScriptVariable name="page-1" reference="${page-1}"/>
@@ -197,10 +112,9 @@
 				</OTScriptVariable>
 				<OTScriptVariable name="test-view-1" reference="${test-view-1}"/>
 				<OTScriptVariable name="test-view-2" reference="${test-view-2}"/>
-				<OTScriptVariable name="breedOffspringView1" reference="${breedOffspringView1}" />
+				<OTScriptVariable name="breedOffspringView" reference="${breedOffspringView}" />
 				<OTScriptVariable name="breedOffspringView2" reference="${breedOffspringView2}" />
 				<OTScriptVariable name="wingsHeredityChoice" reference="${wings_heredity_choice}" />
-				<OTScriptVariable name="tailsHeredityChoice" reference="${tails_heredity_choice}" />
 			</variables>
 		</OTXHTMLScriptViewEntry>
         <OTBreedOffspring local_id="breedOffspringView">
@@ -288,16 +202,12 @@
 		  </alleles>
         </OTOrganism>
         <OTUDLMenu local_id="section-1-menu">
-          <cardContainer>
-            <object refid="${section-1-card-container}" />
-          </cardContainer>
           <menuRule>
             <object refid="${page-rule}" />
           </menuRule>
         </OTUDLMenu>
         <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
       </library>
-      </root>
 	</OTSystem>
   </objects>
 </otrunk>
