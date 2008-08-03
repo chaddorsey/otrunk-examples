@@ -199,7 +199,7 @@
 				<OTScriptVariable name="test-view-2" reference="${test-view-2}"/>
 				<OTScriptVariable name="breedOffspringView1" reference="${breedOffspringView1}" />
 				<OTScriptVariable name="breedOffspringView2" reference="${breedOffspringView2}" />
-				<OTScriptVariable name-"wingsHeredityChoice" reference="${wings_heredity_choice}" />
+				<OTScriptVariable name="wingsHeredityChoice" reference="${wings_heredity_choice}" />
 				<OTScriptVariable name="tailsHeredityChoice" reference="${tails_heredity_choice}" />
 			</variables>
 		</OTXHTMLScriptViewEntry>
