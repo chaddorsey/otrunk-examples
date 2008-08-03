@@ -220,7 +220,7 @@
 	<root>
 		<OTXHTMLScript local_id="test-view-1">
 			<script>
-				<OTJRuby name="ruby-script-1" local-id="ruby-script-1" src="scripts/multi-page-ruby-script-1.rb" />
+				<OTJRuby name="ruby-script" local-id="ruby-script" src="scripts/multi-page-ruby-script-1.rb" />
 			</script>
 			<variables>
 				<OTScriptVariable name="template-1">
@@ -228,6 +228,8 @@
 						<OTBlob src="scripts/erb-layout-1.html.erb" />
 					</reference>
 				</OTScriptVariable>
+				<OTScriptVariable name="test-view-1" reference="${test-view-1}" />
+				<OTScriptVariable name="test-view-2" reference="${test-view-2}" />
 				<OTScriptVariable name="section-1-card-container" reference="${section-1-card-container}"/>
 				<OTScriptVariable name="staticFatherView" reference="${staticFatherView}" />
 				<OTScriptVariable name="staticMotherView" reference="${staticMotherView}" />
@@ -235,6 +237,119 @@
 				<OTScriptVariable name="page-2" reference="${page-2}"/>
 				<OTScriptVariable name="breedOffspringView1" reference="${breedOffspringView1}" />
 				<OTScriptVariable name="breedOffspringView2" reference="${breedOffspringView2}" />
+			</variables>
+		</OTXHTMLScript>
+	</root>
+	<library>
+		<OTXHTMLScriptViewEntry local_id="test-view-2" 			objectClass="org.concord.framework.otrunk.OTObject" viewClass="org.concord.otrunk.script.ui.OTXHTMLScriptView" script="${ruby-script}">
+			<variables>
+				<OTScriptVariable name="template-2">
+					<reference>
+						<OTBlob src="scripts/erb-layout-2.html.erb" />
+					</reference>
+				</OTScriptVariable>
+				<OTScriptVariable name="test-view-1" reference="${test-view-1}"/>
+				<OTScriptVariable name="test-view-2" reference="${test-view-2}"/>
+				<OTScriptVariable name="breedOffspringView1" reference="${breedOffspringView1}" />
+				<OTScriptVariable name="breedOffspringView2" reference="${breedOffspringView2}" />
+				<OTScriptVariable name-"wingsHeredityChoice" reference="${wings_heredity_choice}" />
+				<OTScriptVariable name="tailsHeredityChoice" reference="${tails_heredity_choice}" />
+			</variables>
+		</OTXHTMLScriptViewEntry>
+        <OTBreedOffspring local_id="breedOffspringView">
+          <fatherOrganism>
+            <OTOrganism local_id="maleOrganism">
+              <name>male</name>
+              <sex>0</sex>
+              <world>
+                <OTWorld local_id="dragon_world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+              </world>
+              <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+            </OTOrganism>
+          </fatherOrganism>
+          <motherOrganism>
+            <OTOrganism local_id="femaleOrganism">
+              <name>female</name>
+              <sex>1</sex>
+              <world>
+                <object refid="${dragon_world}" />
+              </world>
+			<alleles> b:h,a:h,b:S,a:S,b:W,a:W,b:l,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B
+			</alleles>
+            </OTOrganism>
+          </motherOrganism>
+        </OTBreedOffspring>
+        <OTBreedOffspring local_id="breedOffspringView2">
+          <fatherOrganism>
+            <OTOrganism local_id="maleOrganism2">
+              <name>male</name>
+              <sex>0</sex>
+              <world>
+                <object refid="${dragon_world}" />
+              </world>
+              <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+            </OTOrganism>
+          </fatherOrganism>
+          <motherOrganism>
+            <OTOrganism local_id="femaleOrganism2">
+              <name>female</name>
+              <sex>1</sex>
+              <world>
+                <object refid="${dragon_world}" />
+              </world>
+			<alleles> b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:b
+			</alleles>
+            </OTOrganism>
+          </motherOrganism>
+        </OTBreedOffspring>
+        <OTChoiceWithFeedback local_id="wings_heredity_choice">
+          <choices>
+            <OTText name="Dominant" />
+            <OTText local_id="correct_choice_1" name="Recessive" />
+            <OTText name="Neither" />
+          </choices>
+          <correctChoice>
+            <object refid="${correct_choice_1}" />
+          </correctChoice>
+          <immediateFeedback>false</immediateFeedback>
+        </OTChoiceWithFeedback>
+        <OTStaticOrganism local_id="staticFatherView" name="staticFatherView">
+          <organism>
+            <object refid="${staticFather}" />
+          </organism>
+        </OTStaticOrganism>
+        <OTStaticOrganism local_id="staticMotherView" name="staticMotherView">
+          <organism>
+            <object refid="${staticMother}" />
+          </organism>
+        </OTStaticOrganism>
+        <OTOrganism local_id="staticFather">
+          <name>Molthwan</name>
+          <sex>0</sex>
+          <world>
+            <object refid="${dragon_world}" />
+          </world>
+          <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:T,a:t,a:p,a:f,a:a,a:B</alleles>
+        </OTOrganism>
+        <OTOrganism local_id="staticMother">
+          <name>Lucenne</name>
+          <sex>1</sex>
+          <world>
+            <object refid="${dragon_world}" />
+          </world>
+		  <alleles> b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:a,a:a,b:B,a:B
+		  </alleles>
+        </OTOrganism>
+        <OTUDLMenu local_id="section-1-menu">
+          <cardContainer>
+            <object refid="${section-1-card-container}" />
+          </cardContainer>
+          <menuRule>
+            <object refid="${page-rule}" />
+          </menuRule>
+        </OTUDLMenu>
+        <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
+      </library>
 				
         <OTModeSwitcher>
           <otObject>
@@ -291,64 +406,7 @@ Lucenne, two of the island’s most admired inhabitants.
                           </tr>
                         </table>
                       </bodyText>
-                      <documentRefs>
-                        <OTBreedOffspring local_id="breedOffspringView">
-                          <fatherOrganism>
-                            <OTOrganism local_id="maleOrganism">
-                              <name>male</name>
-                              <sex>0</sex>
-                              <world>
-                                <OTWorld local_id="dragon_world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-                              </world>
-                              <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
-                            </OTOrganism>
-                          </fatherOrganism>
-                          <motherOrganism>
-                            <OTOrganism local_id="femaleOrganism">
-                              <name>female</name>
-                              <sex>1</sex>
-                              <world>
-                                <object refid="${dragon_world}" />
-                              </world>
-                              <alleles>b:h,a:h,b:S,a:S,b:W,a:W,b:l,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
-                            </OTOrganism>
-                          </motherOrganism>
-                        </OTBreedOffspring>
-                        <OTBreedOffspring local_id="breedOffspringView2">
-                          <fatherOrganism>
-                            <OTOrganism local_id="maleOrganism2">
-                              <name>male</name>
-                              <sex>0</sex>
-                              <world>
-                                <object refid="${dragon_world}" />
-                              </world>
-                              <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
-                            </OTOrganism>
-                          </fatherOrganism>
-                          <motherOrganism>
-                            <OTOrganism local_id="femaleOrganism2">
-                              <name>female</name>
-                              <sex>1</sex>
-                              <world>
-                                <object refid="${dragon_world}" />
-                              </world>
-                              <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:b</alleles>
-                            </OTOrganism>
-                          </motherOrganism>
-                        </OTBreedOffspring>
-                        <OTChoiceWithFeedback local_id="wings_heredity_choice">
-                          <choices>
-                            <OTText name="Dominant" />
-                            <OTText local_id="correct_choice_1" name="Recessive" />
-                            <OTText name="Neither" />
-                          </choices>
-                          <correctChoice>
-                            <object refid="${correct_choice_1}" />
-                          </correctChoice>
-                          <immediateFeedback>false</immediateFeedback>
-                        </OTChoiceWithFeedback>
-                      </documentRefs>
-                    </OTCompoundDoc>
+</OTCompoundDoc>
                     <OTCompoundDoc local_id="page-3" name="3">
                       <bodyText>
                         <table>
@@ -441,151 +499,7 @@ Lucenne, two of the island’s most admired inhabitants.
           </otObject>
         </OTModeSwitcher>
       </root>
-      <library>
-        <!-- Organism definitions -->
-        <OTStaticOrganism local_id="staticFatherView" name="staticFatherView">
-          <organism>
-            <object refid="${staticFather}" />
-          </organism>
-        </OTStaticOrganism>
-        <OTStaticOrganism local_id="staticMotherView" name="staticMotherView">
-          <organism>
-            <object refid="${staticMother}" />
-          </organism>
-        </OTStaticOrganism>
-        <OTOrganism local_id="staticFather">
-          <name>Molthwan</name>
-          <sex>0</sex>
-          <world>
-            <object refid="${dragon_world}" />
-          </world>
-          <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:T,a:t,a:p,a:f,a:a,a:B</alleles>
-        </OTOrganism>
-        <OTOrganism local_id="staticMother">
-          <name>Lucenne</name>
-          <sex>1</sex>
-          <world>
-            <object refid="${dragon_world}" />
-          </world>
-          <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:a,a:a,b:B,a:B</alleles>
-        </OTOrganism>
-        <OTUDLMenu local_id="section-1-menu">
-          <cardContainer>
-            <object refid="${section-1-card-container}" />
-          </cardContainer>
-          <menuRule>
-            <object refid="${page-rule}" />
-          </menuRule>
-        </OTUDLMenu>
-        <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
-        <OTDataCollector id="b9f16067-204c-11dd-b9fc-a3ab42a2d8df" name="ObjectMotion1">
-          <source>
-            <OTDataGraphable name="Object Graph" connectPoints="true" controllable="false" yColumn="1" drawMarks="true" color="16711680" xColumn="0" lineWidth="2.0">
-              <dataStore>
-                <OTDataStore local_id="datastore_01" numberChannels="2">
-                  <values>
-                    <float>0.0</float>
-                    <float>0.5</float>
-                    <float>1.0</float>
-                    <float>0.7</float>
-                    <float>2.0</float>
-                    <float>0.9</float>
-                    <float>3.0</float>
-                    <float>1.1</float>
-                    <float>4.0</float>
-                    <float>1.3</float>
-                    <float>5.0</float>
-                    <float>1.5</float>
-                    <float>6.0</float>
-                    <float>1.7</float>
-                    <float>7.0</float>
-                    <float>1.9</float>
-                    <float>8.0</float>
-                    <float>2.1</float>
-                    <float>9.0</float>
-                    <float>2.3</float>
-                  </values>
-                </OTDataStore>
-              </dataStore>
-            </OTDataGraphable>
-          </source>
-          <xDataAxis>
-            <OTDataAxis local_id="standard_x_axis" max="20.0" units="s" min="0.0" label="Time" />
-          </xDataAxis>
-          <yDataAxis>
-            <OTDataAxis local_id="standard_y_axis" max="3.25" units="m" min="-0.0" label="Distance" />
-          </yDataAxis>
-        </OTDataCollector>
-        <OTDataFilterScript local_id="datafilter_01">
-          <description>
-            <OTDataStoreFilterDescription operation="custom script" />
-          </description>
-          <filterScript>
-            <object refid="${script_02}" />
-          </filterScript>
-          <inputDataStore>
-            <object refid="${datastore_01}" />
-          </inputDataStore>
-        </OTDataFilterScript>
-        <OTJavascript local_id="script_01">
-          <script>importClass(Packages.java.lang.System);
-              importClass(Packages.java.lang.Float);
-              /** 
-              * This function returns the y value of the filter 
-              */ 
-              function filterYValue(x, y) { 
-                return y + 1;
-                //return y + 10; 
-                // original y value + 10 
-                //return y - y/2; 
-              }</script>
-        </OTJavascript>
-        <OTJRuby local_id="script_02">
-          <script># 
-              # This function returns the y value of the filter 
-              # 
-              require 'java' 
-              def self.filterYValue(x, y) 
-              y + 1 
-              end</script>
-        </OTJRuby>
-        <OTScriptObject local_id="script_03">
-          <variables>
-            <OTScriptVariable name="datastore_02" />
-            <OTScriptVariable name="displayText">
-              <reference>
-                <object refid="${script_03_text_object}" />
-              </reference>
-            </OTScriptVariable>
-          </variables>
-          <script>
-            <OTJRuby>
-              <script># 
-                  # This is intended to subtract 0.25 from the Y values of datastore_02 ... someday 
-                  # The variables passed in are referenced in JRuby as global variables. 
-                  # That's why they are prefixed with the '$' character below.
-                  #
-                  require 'java' 
-                  def self.init 
-                    require 'rbconfig'
-                    display = "" 
-                    display += "Ruby version: JRuby #{RUBY_VERSION} (#{RUBY_RELEASE_DATE} [i386-jruby#{JRUBY_VERSION}]" 
-                    display += ",platform: Java, version #{java.lang.System.getProperty('java.version')}" + "\n\n" 
-                    display += "self.methods: " + self.methods.join(', ') + "\n\n" 
-                    display += "$datastore_02.inspect: " + $datastore_02.inspect + "\n\n" 
-                    display += "getNumberChannels: " + $datastore_02.getNumberChannels.to_s + "\n\n" 
-                    display += "getValues.get(0): " + $datastore_02.getValues.get(0).to_s + "\n\n" 
-                    display += "getValues.get(1): " + $datastore_02.getValues.get(1).to_s + "\n\n"
-                    display += "getValues.set(1, java.lang.Float.new(0.75)) \n"
-                    $datastore_02.getValues.set(1, java.lang.Float.new(0.75))
-                    $displayText.setText(display) # puts self.methods.join(', ') 
-                  end</script>
-            </OTJRuby>
-          </script>
-        </OTScriptObject>
-        <OTText local_id="script_03_text_object" />
-      </library>
-    </OTSystem>
+</OTSystem>
   </objects>
 </otrunk>
 
