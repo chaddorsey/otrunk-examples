@@ -63,7 +63,7 @@
 					<variables>
 						<OTScriptVariable name="template">
 							<reference>
-								<OTBlob src="scripts/˝ruby_erb_dragon_test.html.erb" />
+								<OTBlob src="scripts/ruby_erb_dragon_test.html.erb" />
 							</reference>
 						</OTScriptVariable>
 						<OTScriptVariable name="test-view-1" reference="${test-view-1}" />
