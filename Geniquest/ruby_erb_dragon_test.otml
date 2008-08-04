@@ -80,6 +80,21 @@
 						</OTScriptVariable>
 						<OTScriptVariable name="test-view-1" reference="${test-view-1}" />
 						<OTScriptVariable name="staticFatherView" reference="${staticFatherView}" />
+						<OTScriptVariable name="staticFather" reference="${staticFather}" />
+						<OTScriptVariable name="dragon_world" reference="${dragon_world}" />
+						<OTScriptVariable name="breedOffspringView" reference="${breedOffspringView}" />
+						<OTScriptVariable name="maleOrganism" reference="${maleOrganism}" />
+						<OTScriptVariable name="femaleOrganism" reference="${femaleOrganism}" />
+						<OTScriptVariable name="breedOffspring2" reference="${breedOffspring2}" />
+						<OTScriptVariable name="maleOrganism2" reference="${maleOrganism2}" />
+						<OTScriptVariable name="femaleOrganism2" reference="${femaleOrganism2}" />
+						<OTScriptVariable name="breedOffspring3" reference="${breedOffspring3}" />
+						<OTScriptVariable name="maleOrganism3" reference="${maleOrganism3}" />
+						<OTScriptVariable name="femaleOrganism3" reference="${femaleOrganism3}" />
+						<OTScriptVariable name="wings_heredity_choice" reference="${wings_heredity_choice}" />
+						<OTScriptVariable name="tails_heredity_choice" reference="${tails_heredity_choice}" />
+						<OTScriptVariable name="correct_choice_1" reference="${correct_choice_1}" />
+						<OTScriptVariable name="correct_choice_2" reference="${correct_choice_2}" />
 					</variables>
 		        </OTXHTMLScript>
 			</root>
