@@ -107,7 +107,7 @@
 				</OTViewChild>
 			</root>
 			<library>
-				<OTXHTMLScriptViewEntry local_id="```_view_entry2" 
+				<OTXHTMLScriptViewEntry local_id="report_view_entry2" 
 					objectClass="org.concord.framework.otrunk.OTObject"
 					viewClass="org.concord.otrunk.script.ui.OTXHTMLScriptView"
 					script="${report_script}">
