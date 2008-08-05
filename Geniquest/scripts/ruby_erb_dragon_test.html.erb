@@ -1,13 +1,42 @@
 <div id="content">
 Hello, World!
 </div>
-<table border="0" width="300" cellspacing="20">
-  <tr>
-    <td width="200">
+<div id="links">
+	<%# linkToObject, "Page 1", $template1 %>
+	<%# linkToObject, "Page 2", $template2 %>
+	<%# linkToObject, "Page 3", $template3 %>
+</div>
+	
+<table>
+	<tr>
+		<td>
+<div id="introOrganisms" style="width: 400px;">
+	<div class="staticOrganism" id="staticFather" style="width: 150px; float: left;">
       <%= embedObject $staticFatherView %>
-    </td>
-    <td>
-      This is a dragon.
-    </td>
-  </tr>
+			<div class="caption" id="staticFatherCaption">
+				This is a father dragon.
+			</div>
+		</div>
+		</td>
+		<td>
+	<div class="staticOrganism" id="staticMother" style="width: 100px; float: left;">
+    <%= embedObject $staticMotherView %>
+		<div class="caption" id="staticMotherCaption">
+			This is a mother dragon.
+		</div>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= embedObject $breedOffspringView %>
+			<div class="caption" id="breedOffspringCaption">
+				Try breeding some offspring.
+			</div>
+		</td>
+		<td>
+			<div class="object" id="whings_choice">
+				<%= embedObject $wings_heredity_choice %>
+	</tr>
 </table>
+</div>
