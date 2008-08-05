@@ -16,10 +16,9 @@ import org.concord.biologica.ui
 import org.concord.biologica.engine
 import java.lang
 import java.beans
-include_class org.concord.otrunk.view.OTFolderObject
-include_class org.concord.otrunk.ui.OTText
-include_class org.concord.biologica.ui.UIProp
-include_class org.concord.biologica.engine.EngineProp
+include_class 'org.concord.otrunk.view.OTFolderObject'
+include_class 'org.concord.biologica.ui.UIProp'
+include_class 'org.concord.biologica.engine.EngineProp'
 
 def getText
   if $model
