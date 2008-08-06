@@ -72,8 +72,10 @@ def gmt_time_from_svn_time(svn_time)
 end
 
 otrunk_example_dirs.each do |path|  
-  svn_props = YAML::load(`svn info #{path}`)
-  gmt_time = gmt_time_from_svn_time(svn_props["Last Changed Date"])
+#  svn_props = YAML::load(`svn info #{path}`)
+  git_time = YAML::load(`git log --name-status #{path} | sed -n '3p' | awk 'BEGIN{FS=":   "}; {print $2}'`)
+#  gmt_time = gmt_time_from_svn_time(svn_props["Last Changed Date"])
+  gmt_time = git_time
   examples = Dir.glob("#{path}/*.otml").length
   index_page_body += "<tr><td><a href=""#{path}/ot-index.html"">#{File.basename(path)}</a></td>"
   index_page_body += "<td class='timestyle'>#{gmt_time}</td>"
@@ -125,18 +127,20 @@ HERE
     filename = File.basename(subpath)
     if subpath =~ /.*otml$/
       # look up the file in the .svn/entries file to gets its svn commit number 
-      svn_status = `svn status -v #{subpath}`
-      re = / *(\d*) *(\d*)/
-      match = re.match(svn_status)
-      svn_rev1 = match[1]
-      svn_rev2 = match[2]
+      ##svn_status = `svn status -v #{subpath}`
+      ##re = / *(\d*) *(\d*)/
+      ##match = re.match(svn_status)
+      ##svn_rev1 = match[1]
+      ##svn_rev2 = match[2]
       local_http_path = subpath[/.*otrunk-examples(.*)/, 1]
       example_name = filename[/(.*)\.otml/, 1]
       otml_url = "http://otrunk-examples#{local_http_path}"
       trac_otml_url = "http://trac.cosmos.concord.org/projects/browser/trunk/common/java/otrunk/otrunk-examples/#{subpath}"
       jnlp_url = jnlp_url_tmpl.sub(/%otml_url%/, otml_url)
       jnlp_author_url = jnlp_url_tmpl_author.sub(/%otml_url%/, otml_url)
-      otml_launchers += "<tr><td width=280>#{example_name}</td><td width=100><a href=""#{jnlp_url}"">learner</a></td><td width=120><a href=#{jnlp_author_url}>author</a></td><td width=280><a href=#{filename}>#{filename}</a></td><td width=180><a href=#{trac_otml_url}>#{svn_rev2}</a></td></tr>\n"
+#      otml_launchers += "<tr><td width=280>#{example_name}</td><td width=100><a href=""#{jnlp_url}"">learner</a></td><td width=120><a href=#{jnlp_author_url}>author</a></td><td width=280><a href=#{filename}>#{filename}</a></td><td width=180><a href=#{trac_otml_url}>#{svn_rev2}</a></td></tr>\n"
+      otml_launchers += "<tr><td width=280>#{example_name}</td><td width=100><a href=""#{jnlp_url}"">learner</a></td><td width=120><a href=#{jnlp_author_url}>author</a></td><td width=280><a href=#{filename}>#{filename}</a></td><td width=180><a href=#{trac_otml_url}>Latest Commit</a></td></tr>\n"
+
     end
     
     all_files += "<tr><td><a href=""#{filename}"">#{filename}</a></td></tr>\n"
