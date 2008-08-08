@@ -591,7 +591,7 @@
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="39819641-6517-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="${page-1}" />
                       </currentCard>
                       <viewedCards>
                         <object refid="${page-1}" />
@@ -755,8 +755,22 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="7407ca81-651c-11dd-bd45-d9d11cbf97e7" name="%7407ca81-651c-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
                           <bodyText>
+                            Below you can see Molthwan and Lucenne's germ cells. By pressing the 
+    triangular play button, you can cause the cells to undergo meiosis. Click 
+    on the maginfying glass to zoom the view in for a closer look.
+                            <br />
                             <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
                             <br />
+                            <p>
+                              When both dragons have undergone meiosis, you can combine two gametes 
+      and fertilize them to create a child. Click one of the four gametes 
+      under each dragon and use the arrow buttons to move them into the 
+      middle. Before you click play to run fertilization, zoom in with the 
+      magnifying glass. Can you predict how the child will look just by 
+      examining the genes?
+                              <em>(Note: You can click and drag the chromosomes to 
+      separate them for a better look.)</em>
+                            </p>
                           </bodyText>
                           <documentRefs>
                             <OTSex id="f87576ab-651c-11dd-bd45-d9d11cbf97e7" name="Meiosis" replayButtonEnabled="false">
