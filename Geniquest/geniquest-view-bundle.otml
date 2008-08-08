@@ -97,6 +97,7 @@
 	  <import class="org.concord.smartgraph.OTSmartGraphQuestion" />
 
 <!-- GENIQUEST IMPORTS -->
+		<import class="org.concord.biologica.state.OTChromosomeZoom" />
 		<import class="org.concord.biologica.state.OTTerrainEng" />
 		<import class="org.concord.biologica.state.OTMultipleOrganism" />
 		<import class="org.concord.biologica.state.OTFamilyController" />
@@ -170,6 +171,41 @@
             </OTViewMode>
             <OTViewMode name="authoring">
               <map>
+                <entry key="${dna-view}">
+									<OTViewEntry objectClass="org.concord.biologica.state.OTDna" viewClass="org.concord.biologica.state.ui.OTDnaEditView" />
+								</entry>
+                <entry key="${pedigree-view}">
+									<OTViewEntry objectClass="org.concord.biologica.state.OTPedigree"
+			viewClass="org.concord.biologica.state.ui.OTPedigreeEditView" />
+								</entry>
+      					<entry key="${chromosome-zoom-view}">
+			          	<OTViewEntry objectClass="org.concord.biologica.state.OTChromosomeZoom"
+				viewClass="org.concord.biologica.state.ui.OTChromosomeZoomEditView" />
+								</entry>
+								<entry key="${breed-offspring-view}">
+			            <OTViewEntry objectClass="org.concord.biologica.state.OTBreedOffspring" viewClass="org.concord.biologica.state.ui.OTBreedOffspringEditView" />
+								</entry>
+								<entry key="${sex-view}">
+			            <OTViewEntry objectClass="org.concord.biologica.state.OTSex" viewClass="org.concord.biologica.state.ui.OTSexEditView" />
+								</entry>
+								<entry key="${chromosome-view}">
+			            <OTViewEntry objectClass="org.concord.biologica.state.OTChromosome" viewClass="org.concord.biologica.state.ui.OTChromosomeEditView" />
+								</entry>
+								<entry key="${static-organism-view}">
+			            <OTViewEntry objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismEditView" />
+								</entry>
+								<entry key="${characteristic-view}">
+									<OTViewEntry objectClass="org.concord.biologica.state.OTCharacteristic" viewClass="org.concord.biologica.state.ui.OTCharacteristicEditView" />
+								</entry>
+								<entry key="${multiple-organism-view}">
+									<OTViewEntry objectClass="org.concord.biologica.state.OTMultipleOrganism" viewClass="org.concord.biologica.state.ui.OTMultipleOrganismEditView" />
+								</entry>
+								<entry key="${world-view}">
+									<OTViewEntry objectClass="org.concord.biologica.state.OTWorld" viewClass="org.concord.biologica.state.ui.OTWorldView" />
+								</entry>
+								<entry key="${terrain-eng-view}">
+									<OTViewEntry local_id="terrain-eng-view" objectClass="org.concord.biologica.state.OTTerrainEng" viewClass="org.concord.biologica.state.ui.OTTerrainEngView" />
+								</entry>
               	<entry key="${lab-page-view}">
               		<OTViewEntry objectClass="org.concord.otrunk.udl.OTUDLLabPage" viewClass="org.concord.otrunk.udl.ui.OTUDLLabPageEditView"/>
               	</entry>
@@ -224,7 +260,18 @@
                       <object refid="${compound_doc_view}" />
                     </documentViewConfig>
                     <objectsToInsert>
-                      <OTText name="Text field" />
+											<OTDna name="DNA" />	
+											<OTPedigree name="Pedigree" />
+											<OTChromosomeZoom name="Chromosome Zoom" />
+											<OTBreedOffspring name="Breed Offspring" />
+											<OTSex name="Meiosis" />
+											<OTChromosome name="Chromosome"/>
+											<OTStaticOrganism name="Static Organism" />
+											<OTCharacteristic name="Characteristic" />
+											<OTMultipleOrganism name="Multiple Organism" />
+											<OTWorld name="World" />
+											<OTTerrainEng name="Terrain Eng" />
+											<OTText name="Text field!" />
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Multiple-choice (single answer)" />
                       <OTChoiceMultiple name="Multiple-choice (check boxes)" />
@@ -365,42 +412,6 @@
                 <entry key="${script-button-view}">
                 	<OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptButton" viewClass="org.concord.otrunk.script.ui.OTScriptButtonEditView"/>
                 </entry>
-                <entry key="${dna-view}">
-									<OTViewEntry local_id="dna-view" objectClass="org.concord.biologica.state.OTDna" viewClass="org.concord.biologica.state.ui.OTDnaEditView" />
-								</entry>
-                <entry key="${pedigree-view}">
-									<OTViewEntry local_id="pedigree-view" objectClass="org.concord.biologica.state.OTPedigree"
-			viewClass="org.concord.biologica.state.ui.OTPedigreeEditView" />
-								</entry>
-      					<entry key="${chromosome-zoom-view}">
-			          	<OTViewEntry local_id="chromosome-zoom-view"
-				objectClass="org.concord.biologica.state.OTChromosomeZoom"
-				viewClass="org.concord.biologica.state.ui.OTChromosomeZoomEditView" />
-								</entry>
-								<entry key="${breed-offspring-view}">
-			            <OTViewEntry local_id="breed-offspring-view" objectClass="org.concord.biologica.state.OTBreedOffspring" viewClass="org.concord.biologica.state.ui.OTBreedOffspringEditView" />
-								</entry>
-								<entry key="${sex-view}">
-			            <OTViewEntry local_id="sex-view" objectClass="org.concord.biologica.state.OTSex" viewClass="org.concord.biologica.state.ui.OTSexEditView" />
-								</entry>
-								<entry key="${chromosome-view}">
-			            <OTViewEntry local_id="chromosome-view" objectClass="org.concord.biologica.state.OTChromosome" viewClass="org.concord.biologica.state.ui.OTChromosomeEditView" />
-								</entry>
-								<entry key="${static-organism-view}">
-			            <OTViewEntry local_id="static-organism-view" objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismEditView" />
-								</entry>
-								<entry>
-									<OTViewEntry local_id="characteristic-view" objectClass="org.concord.biologica.state.OTCharacteristic" viewClass="org.concord.biologica.state.ui.OTCharacteristicEditView" />
-								</entry>
-								<entry>
-									<OTViewEntry local_id="multiple-organism-view" objectClass="org.concord.biologica.state.OTMultipleOrganism" viewClass="org.concord.biologica.state.ui.OTMultipleOrganismEditView" />
-								</entry>
-								<entry>
-									<OTViewEntry local_id="world-view" objectClass="org.concord.biologica.state.OTWorld" viewClass="org.concord.biologica.state.ui.OTWorldView" />
-								</entry>
-								<entry>
-									<OTViewEntry local_id="terrain-eng-view" objectClass="org.concord.biologica.state.OTTerrainEng" viewClass="org.concord.biologica.state.ui.OTTerrainEngView" />
-								<entry>
               </map>
             </OTViewMode>
           </modes>
