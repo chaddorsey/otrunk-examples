@@ -154,7 +154,7 @@
                 <OTWorld id="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism name="male" sex="0" alleles="b:H,a:H,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B">
+            <OTOrganism name="male" sex="0" alleles="b:HU1,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:ta1,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <object refid="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" />
               </world>
@@ -783,14 +783,114 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </OTSex>
                           </documentRefs>
                         </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" name="%1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                          <bodyText>
+                            <p>
+                              Now zoom in on Molthwan, our Daddy dragon. Your goal will be to create a 
+      child dragon with wings, but no legs. To inherit these traits, the child 
+      will need to have the gene combinations
+                              <em>ww</em>
+                              and
+                              <em>ll</em>
+                              .
+                            </p>
+                            <p>
+                              Can Molthwan provide his half of these combinations?
+                              <br />
+                              <br />
+                              <object refid="edd7e556-6524-11dd-bd45-d9d11cbf97e7" />
+                            </p>
+                            <p />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
+                            <br />
+                          </bodyText>
+                          <documentRefs>
+                            <OTChoice id="edd7e556-6524-11dd-bd45-d9d11cbf97e7" name="Multiple-choice (single answer)" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc name="Yes">
+                                  <bodyText>Yes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="No">
+                                  <bodyText>No</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="14a64879-6525-11dd-bd45-d9d11cbf97e7" name="%14a64879-6525-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                          <bodyText>
+                            <p>Now reset the meiosis and zoom in on Lucenne, our expectant mother 
+      dragon. Run meiosis a few times. (Note that you will have to return to 
+      the un-zoomed view and hit "reset" to get a fresh run).</p>
+                            <p>
+                              If we want to "design" a child dragon with the gene combinations
+                              <em>ww</em>
+                              and
+                              <em>ll</em>
+                              , can Lucenne carry through on her part of the bargain?
+                              <br />
+                              <br />
+                              <object refid="8e4450fa-6525-11dd-bd45-d9d11cbf97e7" />
+                            </p>
+                            <p />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
+                            <br />
+                          </bodyText>
+                          <documentRefs>
+                            <OTChoice id="8e4450fa-6525-11dd-bd45-d9d11cbf97e7" name="Multiple-choice (single answer)" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc name="Yes">
+                                  <bodyText>Yes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="No">
+                                  <bodyText>No</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="b98c073d-6525-11dd-bd45-d9d11cbf97e7" name="%b98c073d-6525-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                          <bodyText>
+                            <p>
+                              You're right: we have a problem. Lucenne can only give chromosomes with 
+      the genes
+                              <em>Wl</em>
+                              or wL. And neither of these will help us in our 
+      quest. Fortunately, there's a catch… Zoom in on Lucenne and press 
+      the triangular "play" button again. The process will stop halfway 
+      through and wait for you. When it does, click on one chromosome with the 
+      tip of your mouse. See the flashing arrows? The arrows show places on 
+      other organisms you can click. Try it.
+                            </p>
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
+                            <br />
+                            <p>
+                              Congratulations, you just created a child by crossing genes over! (This 
+      is also called genetic recombination, by the way.) Zoom out to reset 
+      things, and try a few more times. Can you create our designer
+                              <em>ww</em>
+                              and
+                              <em>ll</em>
+                              dragon now? Give it a shot.
+                            </p>
+                          </bodyText>
+                          <documentRefs>
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="7407ca81-651c-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="b98c073d-6525-11dd-bd45-d9d11cbf97e7" />
                       </currentCard>
                       <viewedCards>
                         <object refid="3bac2caf-64f4-11dd-88f8-3390a456ed3b" />
                         <object refid="24c8fed6-651a-11dd-bd45-d9d11cbf97e7" />
                         <object refid="7407ca81-651c-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="14a64879-6525-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="b98c073d-6525-11dd-bd45-d9d11cbf97e7" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
@@ -841,30 +941,84 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                       <cards>
                         <OTUDLCompoundDoc id="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" showDefinitions="false">
                           <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
-                                </div>
-                              </div>
-                            </div>
+                            Now that you know how to breed dragons, let's try some selective breeding. 
+    This is the pedigree view. Click on the cross button and drag your pointer 
+    from one organism (square or circle) to another. Notice what happens. (You 
+    will have to scroll to see this in the
+                            <i>very tiny box…</i>
+                            )
+                            <br />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[2]" />
+                            <br />
+                            <p>You have just created a new generation of dragons. Now breed two of the 
+      dragons (one circle and one square) from this generation together. 
+      Repeat this five more times, until you get to generation F8. Using the 
+      pulldown menu at the upper left, change the menu until it reads "Legs." 
+      What do you notice as you scroll through the generations? At which 
+      generation do all the dragons all begin having the same traits?</p>
+                            <p>Using the pulldown menu to select different traits, scroll through the 
+      dragons you have bred. Can you find any traits that are different among 
+      the members of your F8 generation?</p>
+                            <p>
+                              You have just created a
+                              <em>strain</em>
+                              of dragons. If you take any 
+      dragon from the pool, you can be guaranteed that it will have the same 
+      traits as any other dragon.
+                              <br />
+                              <br />
+                              <object refid="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" />
+                            </p>
                           </bodyText>
+                          <documentRefs>
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[2]" />
+                            <OTUDLQuestion id="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Describe what a dragon from your F8 generation would look like.</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText name="Open response" rows="3" />
+                              </input>
+                            </OTUDLQuestion>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="7466671d-652b-11dd-bd45-d9d11cbf97e7" name="%7466671d-652b-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            Here is a dragon and his chromosomes. Try clicking on one of the red genes 
+    and watch what appears below.
+                            <br />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[7]" />
+                            <br />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[6]" />
+                            <br />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[1]" />
+                            <br />
+                            What 
+    happens if you click on on the DNA itself and use your keyboard to insert, 
+    delete or change letters? Can you find the gene that controls horns and 
+    change it? What happens?
+                          </bodyText>
+                          <documentRefs>
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[7]" />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[6]" />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[1]" />
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="7466671d-652b-11dd-bd45-d9d11cbf97e7" />
                       </currentCard>
                       <viewedCards>
                         <object refid="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="7466671d-652b-11dd-bd45-d9d11cbf97e7" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="5fdbdad5-6517-11dd-bd45-d9d11cbf97e7" name="%5fdbdad5-6517-11dd-bd45-d9d11cbf97e7" showEditBar="false">
-                      <bodyText>
-                        <div class="title">Section 3</div>
-                      </bodyText>
+                      <bodyText />
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -905,7 +1059,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="3bac2cae-64f4-11dd-88f8-3390a456ed3b" />
+                <object refid="5fdbdad2-6517-11dd-bd45-d9d11cbf97e7" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
