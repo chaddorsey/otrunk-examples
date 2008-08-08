@@ -139,12 +139,12 @@
               </world>
             </OTOrganism>
             <object refid="ec63a7dd-6517-11dd-bd45-d9d11cbf97e7" />
-            <OTOrganism name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
+            <OTOrganism name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
               <world>
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+            <OTOrganism name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
@@ -169,12 +169,12 @@
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism id="f87576ad-651c-11dd-bd45-d9d11cbf97e7" name="Lucenne" sex="1" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+            <OTOrganism id="f87576ad-651c-11dd-bd45-d9d11cbf97e7" name="Lucenne" sex="1" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
               <world>
                 <OTWorld id="f87576ae-651c-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism id="f87576ac-651c-11dd-bd45-d9d11cbf97e7" name="Molthwan" sex="0" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+            <OTOrganism id="f87576ac-651c-11dd-bd45-d9d11cbf97e7" name="Molthwan" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <object refid="f87576ae-651c-11dd-bd45-d9d11cbf97e7" />
               </world>
@@ -757,7 +757,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                           <bodyText>
                             Below you can see Molthwan and Lucenne's germ cells. By pressing the 
     triangular play button, you can cause the cells to undergo meiosis. Click 
-    on the maginfying glass to zoom the view in for a closer look.
+    on the magnifying glass to zoom the views in for a closer look.
                             <br />
                             <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
                             <br />
@@ -768,8 +768,8 @@ Try changing some of the genes and see what happens. Experiment with the genes f
       middle. Before you click play to run fertilization, zoom in with the 
       magnifying glass. Can you predict how the child will look just by 
       examining the genes?
-                              <em>(Note: You can click and drag the chromosomes to 
-      separate them for a better look.)</em>
+                              <em>(Note: You can click and drag the chromosomes 
+      to separate them for a better look.)</em>
                             </p>
                           </bodyText>
                           <documentRefs>
