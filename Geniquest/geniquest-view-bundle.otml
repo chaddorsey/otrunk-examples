@@ -197,7 +197,7 @@
 									<OTViewEntry objectClass="org.concord.biologica.state.OTMultipleOrganism" viewClass="org.concord.biologica.state.ui.OTMultipleOrganismEditView" />
 								</entry>
 								<entry key="${world-view}">
-									<OTViewEntry objectClass="org.concord.biologica.state.OTWorld" viewClass="org.concord.biologica.state.ui.OTWorldView" />
+									<OTViewEntry objectClass="org.concord.biologica.state.OTWorld" viewClass="org.concord.biologica.state.ui.OTWorldEditView" />
 								</entry>
               	<entry key="${lab-page-view}">
               		<OTViewEntry objectClass="org.concord.otrunk.udl.OTUDLLabPage" viewClass="org.concord.otrunk.udl.ui.OTUDLLabPageEditView"/>
@@ -253,6 +253,7 @@
                       <object refid="${compound_doc_view}" />
                     </documentViewConfig>
                     <objectsToInsert>
+											<OTOrganism name="Organism" />
 											<OTDna name="DNA" />	
 											<OTPedigree name="Pedigree" />
 											<OTChromosomeZoom name="Chromosome Zoom" />
