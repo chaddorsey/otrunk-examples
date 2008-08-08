@@ -482,9 +482,9 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
                 <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
               </definitionManager>
               <cssBlocks>
-                <OTCssText id="23cc14f0-c44f-11dc-95ff-0800200c9a66" src="../css/otrunk-normal-font.css" />
-                <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="../css/otrunk-56-color.css" />
-                <OTCssText id="3cefc800-c44f-11dc-95ff-0800200c9a66" src="../css/otrunk-normal-layout.css" />
+                <OTCssText id="23cc14f0-c44f-11dc-95ff-0800200c9a66" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-font.css" />
+                <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-56-color.css" />
+                <OTCssText id="3cefc800-c44f-11dc-95ff-0800200c9a66" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-layout.css" />
               </cssBlocks>
             </OTUDLDocumentViewConfig>
             <OTPrototypeViewEntry id="textsize-choice-view" objectClass="org.concord.otrunk.OTSystem" viewClass="org.concord.otrunk.view.prototype.OTPrototypeView" copyPrototype="false">
