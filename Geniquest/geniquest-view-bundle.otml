@@ -98,7 +98,6 @@
 
 <!-- GENIQUEST IMPORTS -->
 		<import class="org.concord.biologica.state.OTChromosomeZoom" />
-		<import class="org.concord.biologica.state.OTTerrainEng" />
 		<import class="org.concord.biologica.state.OTMultipleOrganism" />
 		<import class="org.concord.biologica.state.OTFamily" />
 		<import class="org.concord.biologica.state.OTDna" />
@@ -197,9 +196,6 @@
 								<entry key="${world-view}">
 									<OTViewEntry objectClass="org.concord.biologica.state.OTWorld" viewClass="org.concord.biologica.state.ui.OTWorldView" />
 								</entry>
-								<entry key="${terrain-eng-view}">
-									<OTViewEntry local_id="terrain-eng-view" objectClass="org.concord.biologica.state.OTTerrainEng" viewClass="org.concord.biologica.state.ui.OTTerrainEngView" />
-								</entry>
               	<entry key="${lab-page-view}">
               		<OTViewEntry objectClass="org.concord.otrunk.udl.OTUDLLabPage" viewClass="org.concord.otrunk.udl.ui.OTUDLLabPageEditView"/>
               	</entry>
@@ -264,7 +260,6 @@
 											<OTCharacteristic name="Characteristic" />
 											<OTMultipleOrganism name="Multiple Organism" />
 											<OTWorld name="World" />
-											<OTTerrainEng name="Terrain Eng" />
 											<OTText name="Text field!" />
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Multiple-choice (single answer)" />
@@ -380,9 +375,6 @@
                 </entry>
                 <entry key="${data-collector-view}">
                   <OTDataCollectorViewConfig viewClass="org.concord.otrunk.graph.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector">
-                    <predefinedGraphs>
-                      <object refid="088786c2-8719-11dc-8314-0800200c9a66" />
-                    </predefinedGraphs>
                   </OTDataCollectorViewConfig>
                 </entry>
                 <entry key="${drawing-view}">
@@ -414,7 +406,6 @@
           </frame>
           <views>
 <!--GENIQUEST VIEWS -->
-						<OTViewEntry local_id="terrain-eng-view" objectClass="org.concord.biologica.state.OTTerrainEng" viewClass="org.concord.biologica.state.ui.OTTerrainEngView" />
 						<OTViewEntry local_id="world-view" objectClass="org.concord.biologica.state.OTWorld" viewClass="org.concord.biologica.state.ui.OTWorldView" />
 						<OTViewEntry local_id="multiple-organism-view" objectClass="org.concord.biologica.state.OTMultipleOrganism" viewClass="org.concord.biologica.state.ui.OTMultipleOrganismView" />
 						<OTViewEntry local_id="characteristic-view" objectClass="org.concord.biologica.state.OTCharacteristic" viewClass="org.concord.biologica.state.ui.OTCharacteristicView" />
