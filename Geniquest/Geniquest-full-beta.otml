@@ -78,7 +78,8 @@
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="http://continuum.concord.org/otrunk/examples/UDL/global-imports/udl-view-bundle.otml" />
+        
+				<OTInclude href="geniquest-view-bundle.otml" />
       </includes>
       <bundles>
         <OTSharingBundle />
