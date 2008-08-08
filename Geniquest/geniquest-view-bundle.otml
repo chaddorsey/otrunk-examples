@@ -164,6 +164,9 @@
             </OTViewMode>
             <OTViewMode name="authoring">
               <map>
+                <entry key="${organism-view}">
+									<OTViewEntry objectClass="org.concord.biologica.state.OTOrganism" viewClass="org.concord.biologica.state.ui.OTOrganism" />
+								</entry>
                 <entry key="${dna-view}">
 									<OTViewEntry objectClass="org.concord.biologica.state.OTDna" viewClass="org.concord.biologica.state.ui.OTDnaEditView" />
 								</entry>
