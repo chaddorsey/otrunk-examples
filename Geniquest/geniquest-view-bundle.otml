@@ -134,9 +134,6 @@
   </idMap>
   <objects>
     <OTSystem id="be0c1cc0-c37f-11dc-95ff-0800200c9a66">
-      <includes>
-        <OTInclude href="predefined-sensor-graphs.otml" />
-      </includes>
       <bundles>
         <OTViewBundle showLeftPanel="false" currentMode="student" id="8d880970-c22a-11dc-95ff-0800200c9a66">
           <modes>
