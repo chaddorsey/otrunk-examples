@@ -165,7 +165,7 @@
             <OTViewMode name="authoring">
               <map>
                 <entry key="${organism-view}">
-									<OTViewEntry objectClass="org.concord.biologica.state.OTOrganism" viewClass="org.concord.biologica.state.ui.OTOrganism" />
+									<OTViewEntry objectClass="org.concord.biologica.state.OTOrganism" viewClass="org.concord.biologica.state.ui.OTOrganismEditView" />
 								</entry>
                 <entry key="${dna-view}">
 									<OTViewEntry objectClass="org.concord.biologica.state.OTDna" viewClass="org.concord.biologica.state.ui.OTDnaEditView" />
@@ -421,6 +421,8 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
             <OTViewEntry local_id="sex-view" objectClass="org.concord.biologica.state.OTSex" viewClass="org.concord.biologica.state.ui.OTSexView" />
             <OTViewEntry local_id="chromosome-view" objectClass="org.concord.biologica.state.OTChromosome" viewClass="org.concord.biologica.state.ui.OTChromosomeView" />
             <OTViewEntry local_id="static-organism-view" objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismView" />
+            <OTViewEntry local_id="organism-view" objectClass="org.concord.biologica.state.OTOrganism" viewClass="org.concord.biologica.state.ui.OTOrganismView" />
+
 <!-- GENIQUEST VIEWS -->  
             <!-- The OTUDLQuestionViewConfig can be used to set the default scaffolding level, and whether the student can navigate through the levels.
 						  The default scaffolding level just uses the order of the items inside OTUDLLeveledQuestions/questions. It is not aware of the names
@@ -500,7 +502,7 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
                     <OTOverlay id="da41a2a0-c44e-11dc-95ff-0800200c9a66" name="Small text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText src="../css/otrunk-small-font.css" />
+                          <OTCssText src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-small-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -508,7 +510,7 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
                     <OTOverlay id="7ba31210-c44e-11dc-95ff-0800200c9a66" name="Large text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText src="../css/otrunk-large-font.css" />
+                          <OTCssText src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-large-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -550,7 +552,7 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
       <library>
       	<OTDefinitionManager id="b6350a20-e3b4-11dc-95ff-0800200c9a66">
           <definitions>
-          	<OTDefinitionList src="../glossary/common-glossary.txt"/>
+          	<OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/common-glossary.txt"/>
           </definitions>
           <frame>
             <OTFrame local_id="definition_frame" width="300" height="190" borderlessPopup="true" />
@@ -562,14 +564,14 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
         <OTOverlay id="bfc60e90-db35-11dc-95ff-0800200c9a66">
           <deltaObjectMap>
             <entry key="${css-color}">
-              <OTCssText src="../css/otrunk-34-color.css" />
+              <OTCssText src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-34-color.css" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>
         <OTOverlay id="b5d8b4a0-db35-11dc-95ff-0800200c9a66">
           <deltaObjectMap>
             <entry key="${css-color}">
-              <OTCssText src="../css/otrunk-56-color.css" />
+              <OTCssText src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-56-color.css" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>
@@ -586,6 +588,7 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
              </div>
            </bodyText>
          </OTCompoundDoc>
+         <OTWorld local_id="dragon_world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
       </library>
     </OTSystem>
   </objects>
