@@ -94,7 +94,21 @@
     <import class="org.concord.sensor.state.OTSensorRequest" />
     <import class="org.concord.sensor.state.OTZeroSensor" />
     <import class="org.concord.smartgraph.OTSmartGraph" />
-	<import class="org.concord.smartgraph.OTSmartGraphQuestion" />
+	  <import class="org.concord.smartgraph.OTSmartGraphQuestion" />
+
+<!-- GENIQUEST IMPORTS -->
+
+		<import class="org.concord.biologica.state.OTDna" />
+		<import class="org.concord.biologica.state.OTPedigree" />
+	  <import class="org.concord.biologica.state.OTBreedOffspring" />
+    <import class="org.concord.biologica.state.OTOrganism" />
+    <import class="org.concord.biologica.state.OTWorld" />
+    <import class="org.concord.biologica.state.OTChromosome" />
+    <import class="org.concord.biologica.state.OTStaticOrganism" />
+    <import class="org.concord.biologica.state.OTSex" />
+    <import class="org.concord.otrunk.ui.OTChoiceWithFeedback" />
+<!-- GENIQUEST IMPORTS -->
+  
   </imports>
   <idMap>
   	<idMapping local_id="css-font" id="23cc14f0-c44f-11dc-95ff-0800200c9a66"/>
@@ -344,6 +358,30 @@
                 <entry key="${script-button-view}">
                 	<OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptButton" viewClass="org.concord.otrunk.script.ui.OTScriptButtonEditView"/>
                 </entry>
+                <entry key="${dna-view}">
+									<OTViewEntry local_id="dna-view" objectClass="org.concord.biologica.state.OTDna" viewClass="org.concord.biologica.state.ui.OTDnaEditView" />
+								</entry>
+                <entry key="${pedigree-view}">
+									<OTViewEntry local_id="pedigree-view" objectClass="org.concord.biologica.state.OTPedigree"
+			viewClass="org.concord.biologica.state.ui.OTPedigreeEditView" />
+								</entry>
+      					<entry key="${chromosome-zoom-view}">
+			          	<OTViewEntry local_id="chromosome-zoom-view"
+				objectClass="org.concord.biologica.state.OTChromosomeZoom"
+				viewClass="org.concord.biologica.state.ui.OTChromosomeZoomEditView" />
+								</entry>
+								<entry key="${breed-offspring-view}">
+			            <OTViewEntry local_id="breed-offspring-view" objectClass="org.concord.biologica.state.OTBreedOffspring" viewClass="org.concord.biologica.state.ui.OTBreedOffspringEditView" />
+								</entry>
+								<entry key="${sex-view}">
+			            <OTViewEntry local_id="sex-view" objectClass="org.concord.biologica.state.OTSex" viewClass="org.concord.biologica.state.ui.OTSexEditView" />
+								</entry>
+								<entry key="${chromosome-view}">
+			            <OTViewEntry local_id="chromosome-view" objectClass="org.concord.biologica.state.OTChromosome" viewClass="org.concord.biologica.state.ui.OTChromosomeEditView" />
+								</entry>
+								<entry key="${static-organism-view}">
+			            <OTViewEntry local_id="static-organism-view" objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismEditView" />
+								</entry>
               </map>
             </OTViewMode>
           </modes>
@@ -351,6 +389,17 @@
             <OTFrame useScrollPane="false" width="850" height="600" />
           </frame>
           <views>
+<!--GENIQUEST VIEWS -->
+						<OTViewEntry local_id="dna-view" objectClass="org.concord.biologica.state.OTDna" viewClass="org.concord.biologica.state.ui.OTDnaView" />
+						<OTViewEntry local_id="pedigree-view" objectClass="org.concord.biologica.state.OTPedigree"
+viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
+          	<OTViewEntry local_id="chromosome-zoom-view" objectClass="org.concord.biologica.state.OTChromosomeZoom"
+                viewClass="org.concord.biologica.state.ui.OTChromosomeZoomView" />
+            <OTViewEntry local_id="breed-offspring-view" objectClass="org.concord.biologica.state.OTBreedOffspring" viewClass="org.concord.biologica.state.ui.OTBreedOffspringView" />
+            <OTViewEntry local_id="sex-view" objectClass="org.concord.biologica.state.OTSex" viewClass="org.concord.biologica.state.ui.OTSexView" />
+            <OTViewEntry local_id="chromosome-view" objectClass="org.concord.biologica.state.OTChromosome" viewClass="org.concord.biologica.state.ui.OTChromosomeView" />
+            <OTViewEntry local_id="static-organism-view" objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismView" />
+<!-- GENIQUEST VIEWS -->  
             <!-- The OTUDLQuestionViewConfig can be used to set the default scaffolding level, and whether the student can navigate through the levels.
 						  The default scaffolding level just uses the order of the items inside OTUDLLeveledQuestions/questions. It is not aware of the names
 						  such as "L1", "L2", etc. -->
