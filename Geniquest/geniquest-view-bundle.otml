@@ -423,6 +423,8 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
             <OTViewEntry local_id="chromosome-view" objectClass="org.concord.biologica.state.OTChromosome" viewClass="org.concord.biologica.state.ui.OTChromosomeView" />
             <OTViewEntry local_id="static-organism-view" objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismView" />
             <OTViewEntry local_id="organism-view" objectClass="org.concord.biologica.state.OTOrganism" viewClass="org.concord.biologica.state.ui.OTOrganismView" />
+            <OTViewEntry local_id="choice_feedback_radio_view" objectClass="org.concord.otrunk.ui.OTChoiceWithFeedback" viewClass="org.concord.otrunk.ui.swing.OTChoiceRadioButtonWithFeedbackView" />
+
 
 <!-- GENIQUEST VIEWS -->  
             <!-- The OTUDLQuestionViewConfig can be used to set the default scaffolding level, and whether the student can navigate through the levels.
