@@ -240,46 +240,134 @@
                               </div>
                             </div>
                           </bodyText>
-                          <documentRefs>
-                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="9c422e44-64f9-11dd-88f8-3390a456ed3b" name="%9c422e44-64f9-11dd-88f8-3390a456ed3b" showEditBar="true" showDefinitions="false">
                           <bodyText>
-                            <object refid="65d7e7a0-64fb-11dd-88f8-3390a456ed3b" />
-                            <br />
-                            <object refid="5d23a9ec-64fb-11dd-88f8-3390a456ed3b" />
-                            <br />
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                          <documentRefs>
-                            <OTBreedOffspring id="65d7e7a0-64fb-11dd-88f8-3390a456ed3b" name="Breed Offspring">
-                              <motherOrganism>
-                                <object refid="433cea57-64fa-11dd-88f8-3390a456ed3b" />
-                              </motherOrganism>
-                              <fatherOrganism>
-                                <object refid="7850b6e9-64fa-11dd-88f8-3390a456ed3b" />
-                              </fatherOrganism>
-                            </OTBreedOffspring>
-                            <OTBreedOffspring id="5d23a9ec-64fb-11dd-88f8-3390a456ed3b" name="Breed Offspring">
-                              <motherOrganism>
-                                <object refid="9039c71b-64fa-11dd-88f8-3390a456ed3b" />
-                              </motherOrganism>
-                              <fatherOrganism>
-                                <object refid="f9868606-64f9-11dd-88f8-3390a456ed3b" />
-                              </fatherOrganism>
-                            </OTBreedOffspring>
-                          </documentRefs>
+									                        <table width="100%">
+									                          <tr>
+									                            <td>Try breeding some dragons to see if you can figure out any rules 
+									          that govern which dragons have wings. Click the button to breed possible children from these pairs.</td>
+									                          </tr>
+									                          <tr>
+									                            <object refid="${breedOffspringView}" editable="false" />
+																							</tr>
+									                            <tr>
+									                              <object refid="${breedOffspringView2}" editable="false" />
+									                            </tr>
+									                          <tr>
+									                            <td>
+Do you have an idea about how wings are inherited? Try the two scenarios below to see if they confirm your suspicions.
+									                            </td>
+									                          </tr>
+																						<tr>
+								                            <object refid="${breedOffspringView3}" editable="false" />
+																						</tr>
+								                            <tr>
+								                              <object refid="${breedOffspringView4}" editable="false" />
+								                              <object refid="${wings_heredity_choice}" viewid="${choice_feedback_radio_view}" />
+
+								                            </tr>
+									                        </table>
+									                      </bodyText>
+									                      <documentRefs>
+
+									                        <OTBreedOffspring local_id="breedOffspringView">
+									                          <fatherOrganism>
+									                            <OTOrganism local_id="maleOrganism">
+									                              <name>male</name>
+									                              <sex>0</sex>
+									                              <world>
+									                                <OTWorld local_id="dragon_world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+									                              </world>
+<alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+									                            </OTOrganism>
+									                          </fatherOrganism>
+									                          <motherOrganism>
+									                            <OTOrganism local_id="femaleOrganism">
+									                              <name>female</name>
+									                              <sex>1</sex>
+									                              <world>
+									                                <object refid="${dragon_world}" />
+									                              </world>
+<alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+									                            </OTOrganism>
+									                          </motherOrganism>
+									                        </OTBreedOffspring>
+
+									                        <OTBreedOffspring local_id="breedOffspringView2">
+									                          <fatherOrganism>
+									                            <OTOrganism local_id="maleOrganism2">
+									                              <name>male</name>
+									                              <sex>0</sex>
+									                              <world>
+									                                <object refid="${dragon_world}" />
+									                              </world>
+ <alleles>b:h,a:h,b:S,a:S,b:w,a:W,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+									                            </OTOrganism>
+									                          </fatherOrganism>
+									                          <motherOrganism>
+									                            <OTOrganism local_id="femaleOrganism2">
+									                              <name>female</name>
+									                              <sex>1</sex>
+									                              <world>
+									                                <object refid="${dragon_world}" />
+									                              </world>
+<alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+									                            </OTOrganism>
+									                          </motherOrganism>
+									                        </OTBreedOffspring>
+
+									                        <OTBreedOffspring local_id="breedOffspringView3">
+									                          <fatherOrganism>
+									                            <OTOrganism local_id="maleOrganism3">
+									                              <name>male</name>
+									                              <sex>0</sex>
+									                              <world>
+									                                <object refid="${dragon_world}" />
+									                              </world>
+ <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+									                            </OTOrganism>
+									                          </fatherOrganism>
+									                          <motherOrganism>
+									                            <OTOrganism local_id="femaleOrganism3">
+									                              <name>female</name>
+									                              <sex>1</sex>
+									                              <world>
+									                                <object refid="${dragon_world}" />
+									                              </world>
+<alleles>b:h,a:h,b:S,a:S,b:W,a:W,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+									                            </OTOrganism>
+									                          </motherOrganism>
+									                        </OTBreedOffspring>
+
+									                        <OTBreedOffspring local_id="breedOffspringView4">
+									                          <fatherOrganism>
+									                            <OTOrganism local_id="maleOrganism4">
+									                              <name>male</name>
+									                              <sex>0</sex>
+									                              <world>
+									                                <object refid="${dragon_world}" />
+									                              </world>
+	<alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+									                            </OTOrganism>
+									                          </fatherOrganism>
+									                          <motherOrganism>
+									                            <OTOrganism local_id="femaleOrganism4">
+									                              <name>female</name>
+									                              <sex>1</sex>
+									                              <world>
+									                                <object refid="${dragon_world}" />
+									                              </world>
+<alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+									                            </OTOrganism>
+									                          </motherOrganism>
+									                        </OTBreedOffspring>
+									
+									                      </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="9c422e44-64f9-11dd-88f8-3390a456ed3b" />
+                        <object refid="${page-1}" />
                       </currentCard>
                       <viewedCards>
                         <object refid="${page-1}" />
