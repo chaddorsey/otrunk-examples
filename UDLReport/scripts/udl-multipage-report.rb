@@ -134,17 +134,37 @@ def linkToUnitPage(link_text)
   linkToObject link_text, firstObject, firstView
 end
 
+def activityRoot
+  rootObject.reportTemplate.reference
+end
+
+def udlFormatVersion
+  return :version_2 if activityRoot.is_a? org.concord.otrunk.ui.OTModeSwitcher
+  return :version_1 if activityRoot.is_a? org.concord.otrunk.udl3.OTUDLContainer
+end
+
 def layeredContainer
-  modeSwitcher = rootObject.reportTemplate.reference
-  modeSwitcher.otObject
+  activityRoot.otObject
 end
 
 def activityTitle
-  return layeredContainer.name
+  case udlFormatVersion
+  when :version_2
+    layeredContainer.name
+  when :version_1
+    toPlainText( activityRoot.title )
+  end
+  
+  nil
 end
 
 def activitySectionContainer
-  layeredContainer.layers.get(0)
+  case udlFormatVersion
+  when :version_2
+	layeredContainer.layers.get(0)
+  when :version_1
+    activityRoot.content
+  end 
 end
 
 def activitySections
@@ -198,22 +218,34 @@ def toPlainText(obj)
     test = text.gsub(/\s+/, " ").strip
   end
   text
+  test
 end
 
-def choiceLabel( chooser) 
+def choiceLabel(chooser, answer) 
   labels = ( 'a'..'f').to_a
 
-  answer = chooser.currentChoice
   return nil if answer == nil
   
-  i = 0
-  chooser.choices.vector.each do |choice|    
-    return labels[i] if answer == choice 
-    i += 1
+  chooser.choices.vector.size.times do |i|    
+    return labels[i] if answer == chooser.choices.vector[i] 
   end
 end
 
-def currentChoiceText( chooser)
+# Return user answer for a multi-choice question as a label (a, b, c, etc.)
+def answerLabel(chooser) 
+  return choiceLabel(chooser, chooser.currentChoice)
+end
+
+# Return correct answer for a multi-choice question as a label (a, b, c, etc.)
+def correctAnswerLabel(question)
+	label = nil
+	if question.input.is_a? org.concord.otrunk.ui.OTChoice
+		label = choiceLabel(question.input, question.correctAnswer)
+	end
+	return label ? label : 'Not Available'	
+end
+
+def currentChoiceText(chooser)
   answer = chooser.currentChoice
   return nil if answer == nil
   
@@ -242,10 +274,12 @@ def questionCorrect (question)
   return nil if question.input.is_a? org.concord.otrunk.ui.OTText
 
   if question.input.is_a? org.concord.otrunk.ui.OTChoice
-	return question.correctAnswer == question.input.currentChoice
-
+    if question.input.currentChoice == nil
+      return nil
+    else
+	    return question.correctAnswer == question.input.currentChoice
+    end
   end
-  
 end
 
 # this takes a userQuestion
@@ -257,3 +291,4 @@ def questionAnswerHtml(question)
   return "<font color=\"ff0000\">#{text}</font>" unless correct
   return "<font color=\"00ff00\">#{text}</font>"    
 end
+

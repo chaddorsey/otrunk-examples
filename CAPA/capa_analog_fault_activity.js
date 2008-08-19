@@ -8,22 +8,17 @@ importClass(Packages.java.awt.event.ActionListener)
 importClass(Packages.javax.swing.JOptionPane)
 importClass(Packages.java.math.RoundingMode)
 
-importClass(Packages.org.concord.framework.otrunk.view.OTUserListService)
 importClass(Packages.org.concord.otrunk.ui.OTText)
 importClass(Packages.org.concord.otrunk.ui.swing.OTCardContainerView)
 importClass(Packages.org.concord.otrunkcapa.rubric.OTAssessment)
-importClass(Packages.org.concord.otrunkcapa.rubric.OTAssessmentView)
-importClass(Packages.org.concord.otrunkcapa.rubric.RubricGradeUtil)
 importClass(Packages.org.concord.otrunk.labview.LabviewMonitor)
 importClass(Packages.org.concord.otrunk.labview.LabviewReportConverter)
-importClass(Packages.org.concord.otrunk.labview.MADWrapper)
-
+importClass(Packages.org.concord.otrunk.labview.AnalogDCUtil)
 
 /*
- * Variables from OTScriptContextHelper
- * ====================================
+ * Variables from OTScriptObject
+ * 
  * otContents
- * viewContext
  * controllerService
  */
  
@@ -33,15 +28,15 @@ importClass(Packages.org.concord.otrunk.labview.MADWrapper)
  */
  
 var ot_monitor
+var ot_assessment
 var ot_cards
+var otc_reportButton
  	
 var glob = {
 	dateFormat : SimpleDateFormat.getInstance(),
 	currentStep : 1,
 	lastStep : 1,
 	monitor : null, // "real object" for ot_monitor
-	otAssessment : null,
-	madWrapper : null,
 	activityLog : ""
 }
 
@@ -52,7 +47,8 @@ var glob = {
  */
 function init() {
 	System.out.println("Entered: init()")
-	glob.dateFormat.applyPattern("MM/dd/yyyy HH:mm:ss zzz");
+	glob.dateFormat.applyPattern("MM/dd/yyyy HH:mm:ss zzz")	
+	setupGUI();
     glob.monitor = controllerService.getRealObject(ot_monitor)
     glob.monitor.setExitListener(listeners.labviewExitListener)
     setupAssessmentLogging()
@@ -66,41 +62,35 @@ function save() {
 }
 
 function setupAssessmentLogging() {
-	var userName = getUserName()
-	var ms = new Date().getTime()
-	var assessment = ot_assessment
-	assessment.setActivityName("Digital Troubleshooting")
-	assessment.setUserName(userName)
-	assessment.setTime(ms)	
-	otContents.add(assessment)
-	glob.otAssessment = assessment
+	// Create assessment object
+	otContents.add(ot_assessment)
 }
 
-function getUserName() {
-	var userListService = viewContext.getViewService(OTUserListService)
-	var users = userListService.getUserList()
-	if (users.size() < 1) {
-		return "A student"
-	}
-	else {
-		return users.get(0).getName()
-	}
+function setupGUI() {
+	otc_reportButton.setVisible(false)	
+}
+
+function endActivity() {
+	otc_reportButton.setVisible(true)
+	OTCardContainerView.setCurrentCard(ot_cards, "main_card_2")
 }
 
 function wrap_assess() {
+	var ms = new Date().getTime()
+	ot_assessment.setTime(ms)	
 	var converter = new LabviewReportConverter(glob.monitor)
 	converter.markEndTime()
-	glob.madWrapper = converter.getMADWrapper()
-	var inventory = glob.otAssessment.getInventory()
+	var madWrapper = converter.getMADWrapper()
+	var inventory = ot_assessment.getInventory()
 	var madID = converter.getOTModelActivityData().getGlobalId()
 	inventory.put("modelActivityData", madID)
-	assess(glob.otAssessment, glob.madWrapper)
+	assess(ot_assessment, madWrapper)
 }
 
 var listeners = {
 	labviewExitListener : new LabviewMonitor.ExitListener({
 		exited: function() {
-	    	wrap_assess() // must close labVIEW before assess()			
+    		wrap_assess() // must close labVIEW before assess()			
 			OTCardContainerView.setCurrentCard(ot_cards, "main_card_2")				
 		}	
 	})
