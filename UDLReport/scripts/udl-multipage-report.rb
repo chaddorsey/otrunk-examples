@@ -64,7 +64,27 @@ end
 
 def users
   userListService = $viewContext.getViewService(OTUserListService.java_class)
-  userListService.getUserList()
+  userListService.getUserList().sort do |u1, u2| 
+    sep = /[\s,]+/
+ 	n1 = u1.name.split(sep)
+	n2 = u2.name.split(sep)
+	last1 = n1[n1.length-1]
+	last2 = n2[n2.length-1]
+	first1 = n1.length > 1 ? n1[0] : ''
+	first2 = n2.length > 1 ? n2[0] : ''
+	
+	if last1 < last2 
+		-1
+	elsif last1 > last2
+		1
+	elsif first1 < first2
+		-1
+	elsif first1 > first2
+		1
+	else
+		0
+	end
+  end
 end
 
 def embedUserObject(obj, user)
@@ -224,7 +244,7 @@ end
 def choiceLabel(chooser, answer) 
   labels = ( 'a'..'f').to_a
 
-  return nil if answer == nil
+  return '-' if answer == nil
   
   chooser.choices.vector.size.times do |i|    
     return labels[i] if answer == chooser.choices.vector[i] 
@@ -232,17 +252,21 @@ def choiceLabel(chooser, answer)
 end
 
 # Return user answer for a multi-choice question as a label (a, b, c, etc.)
-def answerLabel(chooser) 
-  return choiceLabel(chooser, chooser.currentChoice)
+def answerLabel(question) 
+  if question.input.is_a? org.concord.otrunk.ui.OTChoice
+  	return choiceLabel(question.input, question.input.currentChoice)
+  else
+  	return questionAnswer(question)
+  end
 end
 
 # Return correct answer for a multi-choice question as a label (a, b, c, etc.)
 def correctAnswerLabel(question)
-	label = nil
 	if question.input.is_a? org.concord.otrunk.ui.OTChoice
-		label = choiceLabel(question.input, question.correctAnswer)
+		return choiceLabel(question.input, question.correctAnswer)
+	else
+		return 'Not Available'
 	end
-	return label ? label : 'Not Available'	
 end
 
 def currentChoiceText(chooser)
@@ -290,5 +314,9 @@ def questionAnswerHtml(question)
   return text if correct == nil
   return "<font color=\"ff0000\">#{text}</font>" unless correct
   return "<font color=\"00ff00\">#{text}</font>"    
+end
+
+def isChoiceQuestion(question)
+  return question.input.is_a? org.concord.otrunk.ui.OTChoice
 end
 
