@@ -23,37 +23,28 @@ include_class 'org.concord.otrunk.view.OTFolderObject'
 include_class 'org.concord.biologica.ui.UIProp'
 include_class 'org.concord.biologica.engine.EngineProp'
 
-def self.init
-  puts "self.init called"
-end
+class MeiosisAction
+ include java.beans.PropertyChangeListener
 
-def self.clicked
- response_key = {
-   :width_retrieved => { :text => "The width was retrieved." },
-   :variable_not_set => { :text => "This variable isn't set. Odd, that."},
-   :text_visible => { :text => "The text was visible. I'll make it go away." },
-   :text_invisible => { :text => "The text was invisible. I'll make it appear."}
- }
- @label_range_response = LabelRangeResponse.new(response_key)
- @label_range_response.clicked
-end
-
-class LabelRangeResponse
-  
-  attr_reader :response_key
-  
-  def initialize(response_key)
-    @response_key = response_key
-  end
-  
-  def clicked
-    $motherOrganism.name = "NewName"
-    $motherView.setNameTextVisible = false
-  end
-
+ def propertyChange(evt)
+   if (evt.getPropertyName == UIProp::SEX_VIEW_MODE)
+     case $meiosisViewInternal.getSexViewMode
+     when 1 : $meiosisViewInternal.setSexTextVisible(false) # Normal view
+     when 2 : $meiosisViewInternal.setSexTextVisible(false) # Viewing mother chromosomes
+     when 3 : $meiosisViewInternal.setSexTextVisible(false) # Viewing father chromosomes
+     end
+   end
+ end
 end
 
 # displays message in dialog
 def showMessage(message)
   JOptionPane.showMessageDialog(nil, message)
+end
+
+def self.init
+  puts "self.init called"
+  $meiosisViewInternal = $meiosisView.getComponent(0)
+  $meiosisViewInternal.addPropertyChangeListener MeiosisAction.new
+  true
 end
