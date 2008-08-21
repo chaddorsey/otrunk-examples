@@ -33,6 +33,8 @@
 		<import class="org.concord.otrunk.ui.OTButton" />
 		<import class="org.concord.otrunk.script.ui.OTScriptVariableRealObject" />
 		<import class="org.concord.otrunk.script.ui.OTScriptVariableView" />
+		<import class="org.concord.otrunk.script.ui.OTScriptObject" />
+		<import class="org.concord.otrunk.script.ui.OTScriptVariableComponent" />
 	</imports>
 	<objects>
 		<OTSystem local_id="system">
@@ -86,6 +88,8 @@
 						 <OTViewEntry local_id="script-button-view"
 							objectClass="org.concord.otrunk.script.ui.OTScriptButton"
 							viewClass="org.concord.otrunk.script.ui.OTScriptButtonView"/>
+							<OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject"
+								viewClass="org.concord.otrunk.script.ui.OTScriptObjectView" />
 					</viewEntries>
 				</OTViewBundle>
 
@@ -110,24 +114,34 @@
 								Title Goes Here
 							</tr>
 							<tr>
-								<object refid="${staticMotherView}" editable="true" />
+								<object refid="${meiosisView}" editable="true" />
 							</tr>
 							<tr>
-								<object refid="${test_button_script}" />
+								<object refid="${test_script_object}" />
 							</tr>
 						</table>
 				</bodyText>
 				</OTCompoundDoc>
 			</root>
 			<library>
-			<OTScriptButton local_id="test_button_script" name="Script button" text="Report status">
+			<OTScriptObject local_id="test_script_object" name="Script object">
          <script>
            <OTJRuby src="scripts/ruby_meiosis_script.rb" />
          </script>
-				<scriptVariables>
+				<variables>
+					<OTScriptVariableComponent name="meiosisView">
+						<reference>
+							<object refid="${meiosisView}" />
+						</reference>
+					</OTScriptVariableComponent>
+					<OTScriptVariable name="motherStatic">
+            <reference>
+              <object refid="${staticMother}" />
+            </reference>
+          </OTScriptVariable>
 					<OTScriptVariableView name="motherView">
             <reference>
-              <object refid="${staticMotherView}" />
+              <object refid="${staticMother}" />
             </reference>
           </OTScriptVariableView>
 					<OTScriptVariable name="textVisible">
@@ -140,8 +154,13 @@
 							<object refid="${femaleOrganism}" />
 						</reference>
 					</OTScriptVariable>
-			  </scriptVariables>
-        </OTScriptButton>
+<!--					<OTScriptVariableView name="motherOrganismView">
+						<reference>
+							<object refid="${femaleOrganism}" />
+						</reference>
+					</OTScriptVariableView>
+-->			  </variables>
+        </OTScriptObject>
 
 				<OTWorld local_id="dragon_world"
 					speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
@@ -150,7 +169,7 @@
 					<object refid="${maleOrganism}" />
 					</organism>
 				</OTStaticOrganism>
-				<OTStaticOrganism local_id="staticMotherView" name="staticMotherView">
+				<OTStaticOrganism local_id="staticMother" name="staticMother">
 					<organism>
 					<object refid="${femaleOrganism}" />
 					</organism>
