@@ -117,14 +117,14 @@
 								<object refid="${meiosisView}" editable="true" />
 							</tr>
 							<tr>
-								<object refid="${test_script_object}" />
+								<object refid="${test_script_button}" />
 							</tr>
 						</table>
 				</bodyText>
 				</OTCompoundDoc>
 			</root>
 			<library>
-			<OTScriptObject local_id="test_script_object" name="Script object">
+			<OTScriptButton local_id="test_script_button" name="Script object">
          <script>
            <OTJRuby src="scripts/ruby_meiosis_script.rb" />
          </script>
