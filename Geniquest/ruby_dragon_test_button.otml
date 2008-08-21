@@ -32,7 +32,9 @@
 		<import class="org.concord.framework.otrunk.wrapper.OTBoolean" />
 		<import class="org.concord.otrunk.ui.OTButton" />
 		<import class="org.concord.otrunk.script.ui.OTScriptVariableRealObject" />
+		<import class="org.concord.otrunk.script.ui.OTScriptVariableComponent" />
 		<import class="org.concord.otrunk.script.ui.OTScriptVariableView" />
+		<import class="org.concord.otrunk.script.ui.OTScriptObject" />
 	</imports>
 	<objects>
 		<OTSystem local_id="system">
@@ -86,6 +88,9 @@
 						 <OTViewEntry local_id="script-button-view"
 							objectClass="org.concord.otrunk.script.ui.OTScriptButton"
 							viewClass="org.concord.otrunk.script.ui.OTScriptButtonView"/>
+						 <OTViewEntry local_id="script-object-view"
+							objectClass="org.concord.otrunk.script.ui.OTScriptObject"
+							viewClass="org.concord.otrunk.script.ui.OTScriptObjectView"/>
 					</viewEntries>
 				</OTViewBundle>
 
@@ -110,10 +115,9 @@
 								Title Goes Here
 							</tr>
 							<tr>
-								<object refid="${staticMotherView}" editable="true" />
+								<object refid="${meiosisView}" editable="true" />
 							</tr>
 							<tr>
-
 								<object refid="${test_button_script}" />
 							</tr>
 						</table>
@@ -121,7 +125,7 @@
 				</OTCompoundDoc>
 			</root>
 			<library>
-			<OTScriptButton local_id="test_button_script" name="Script button" text="Report status">
+			<OTScriptObject local_id="test_button_script" name="Script button">
          <script>
            <OTJRuby src="scripts/ruby_meiosis_script.rb" />
          </script>
