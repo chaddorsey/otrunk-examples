@@ -125,145 +125,14 @@
          <script>
            <OTJRuby src="scripts/ruby_meiosis_script.rb" />
          </script>
-				<scriptVariables>
-					<OTScriptVariableView name="motherView">
-            <reference>
-              <object refid="${staticMotherView}" />
-            </reference>
-          </OTScriptVariableView>
-					<OTScriptVariable name="textVisible">
-            <reference>
-              <OTBoolean />
-            </reference>
-					</OTScriptVariable>
-					<OTScriptVariable name="motherOrganism">
+				<variables>
+					<OTScriptVariableComponent name="meiosisView">
 						<reference>
-							<object refid="${femaleOrganism}" />
+							<object refid="${meiosisView}" />
 						</reference>
-					</OTScriptVariable>
-			  </scriptVariables>
-        </OTScriptButton>
-
-				<OTWorld local_id="dragon_world"
-					speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-				<OTStaticOrganism local_id="staticFatherView" name="staticFatherView">
-					<organism>
-					<object refid="${maleOrganism}" />
-					</organism>
-				</OTStaticOrganism>
-				<OTStaticOrganism local_id="staticMotherView" name="staticMotherView">
-					<organism>
-					<object refid="${femaleOrganism}" />
-					</organism>
-				</OTStaticOrganism>
-				<OTOrganism local_id="staticFather">
-					<name>Molthwan</name>
-					<sex>0</sex>
-					<world>
-						<object refid="${dragon_world}"/>
-					</world>
-					<alleles> b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:T,a:t,a:p,a:f,a:a,a:B
-					</alleles>
-				</OTOrganism>
-				<OTBreedOffspring local_id="breedOffspringView">
-					<fatherOrganism>
-						<OTOrganism local_id="maleOrganism">
-							<name>male</name>
-							<sex>0</sex>
-							<world>
-								<object refid="${dragon_world}" />
-							</world>
-							<alleles>
-								b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B
-							</alleles>
-						</OTOrganism>
-					</fatherOrganism>
-					<motherOrganism>
-						<OTOrganism local_id="femaleOrganism">
-							<name>Mom</name>
-							<sex>1</sex>
-							<world>
-								<object refid="${dragon_world}" />
-							</world>
-							<alleles>
-								b:h,a:h,b:S,a:S,b:W,a:W,b:l,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B
-							</alleles>
-						</OTOrganism>
-					</motherOrganism>
-				</OTBreedOffspring>
-				<OTBreedOffspring local_id="breedOffspringView2">
-					<fatherOrganism>
-						<OTOrganism local_id="maleOrganism2">
-							<name>male</name>
-							<sex>0</sex>
-							<world>
-								<object refid="${dragon_world}" />
-							</world>
-							<alleles>
-								b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B
-							</alleles>
-						</OTOrganism>
-					</fatherOrganism>
-					<motherOrganism>
-						<OTOrganism local_id="femaleOrganism2">
-							<name>female</name>
-							<sex>1</sex>
-							<world>
-								<object refid="${dragon_world}" />
-							</world>
-							<alleles> b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:b
-							</alleles>
-						</OTOrganism>
-					</motherOrganism>
-				</OTBreedOffspring>
-				<OTChoiceWithFeedback local_id="wings_heredity_choice">
-					<choices>
-						<OTText name="Dominant" />
-						<OTText local_id="correct_choice_1" name="Recessive" />
-						<OTText name="Neither" />
-					</choices>
-					<correctChoice>
-						<object refid="${correct_choice_1}" />
-					</correctChoice>
-					<immediateFeedback>false</immediateFeedback>
-				</OTChoiceWithFeedback>
-				<OTBreedOffspring local_id="breedOffspringView3">
-					<fatherOrganism>
-						<OTOrganism local_id="maleOrganism3">
-							<name>male</name>
-							<sex>0</sex>
-							<world>
-								<object refid="${dragon_world}" />
-							</world>
-							<alleles>
-								b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B
-							</alleles>
-						</OTOrganism>
-					</fatherOrganism>
-					<motherOrganism>
-						<OTOrganism local_id="femaleOrganism3">
-							<name>female</name>
-							<sex>1</sex>
-							<world>
-								<object refid="${dragon_world}" />
-							</world>
-							<alleles>
-								b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:b
-							</alleles>
-						</OTOrganism>
-					</motherOrganism>
-				</OTBreedOffspring>
-				<OTChoiceWithFeedback local_id="tails_heredity_choice">
-					<choices>
-						<OTText local_id="correct_choice_2" name="Dominant" />
-						<OTText name="Recessive" />
-						<OTText name="Neither" />
-					</choices>
-					<correctChoice>
-						<object refid="${correct_choice_2}" />
-					</correctChoice>
-					<immediateFeedback>false</immediateFeedback>
-				</OTChoiceWithFeedback>
+					</OTScriptVariableComponent>
+		  	</variables>
+        </OTScriptObject>
 				<OTSex local_id="meiosisView" width="880" height="620" replayButtonEnabled="false">
           <motherOrganism>
             <object refid="${femaleOrganism}" />
@@ -271,7 +140,29 @@
           <fatherOrganism>
             <object refid="${maleOrganism}" />
           </fatherOrganism>
-        </OTSex>		  
+        </OTSex>
+				<OTOrganism local_id="femaleOrganism">
+					<name>Mom</name>
+					<sex>1</sex>
+					<world>
+						<object refid="${dragon_world}" />
+					</world>
+					<alleles>
+						b:h,a:h,b:S,a:S,b:W,a:W,b:l,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B
+					</alleles>
+				</OTOrganism>
+				<OTOrganism local_id="maleOrganism">
+					<name>male</name>
+					<sex>0</sex>
+					<world>
+						<object refid="${dragon_world}" />
+					</world>
+					<alleles>
+						b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B
+					</alleles>
+				</OTOrganism>
+				<OTWorld local_id="dragon_world"
+					speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
 			</library>
 		</OTSystem>
 	</objects>

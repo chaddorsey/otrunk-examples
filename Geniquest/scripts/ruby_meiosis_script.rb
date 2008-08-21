@@ -37,34 +37,6 @@ class MeiosisAction
  end
 end
 
-def self.clicked
- response_key = {
-   :width_retrieved => { :text => "The width was retrieved." },
-   :variable_not_set => { :text => "This variable isn't set. Odd, that."},
-   :text_visible => { :text => "The text was visible. I'll make it go away." },
-   :text_invisible => { :text => "The text was invisible. I'll make it appear."}
- }
- @label_range_response = LabelRangeResponse.new(response_key)
- @label_range_response.clicked
-end
-
-class LabelRangeResponse
-  
-  attr_reader :response_key
-  
-  def initialize(response_key)
-    @response_key = response_key
-
-  end
-  
-  def clicked
-    #$motherOrganism.name = "NewName"
-    #$motherView.setSexTextVisible(false)
-    $meiosisViewInternal.setSexTextVisible(false)
-  end
-
-end
-
 # displays message in dialog
 def showMessage(message)
   JOptionPane.showMessageDialog(nil, message)
@@ -72,7 +44,6 @@ end
 
 def self.init
   puts "self.init called"
-  puts "Doing the initialization."
   $meiosisViewInternal = $meiosisView.getComponent(0)
   $meiosisViewInternal.addPropertyChangeListener MeiosisAction.new
   true
