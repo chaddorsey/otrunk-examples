@@ -118,26 +118,39 @@
 								<object refid="${meiosisView}" editable="true" />
 							</tr>
 							<tr>
-								<object refid="${test_button_script}" />
+								<object refid="${test_sex_view_script}" />
+							</tr>
+							<tr>
+								<object refid="${button_width_script}" />
 							</tr>
 						</table>
 				</bodyText>
 				</OTCompoundDoc>
 			</root>
 			<library>
-			<OTScriptObject local_id="test_button_script" name="Script button">
-         <script>
-           <OTJRuby src="scripts/ruby_meiosis_script.rb" />
-         </script>
-				<variables>
-					<OTScriptVariableComponent name="meiosisView">
-						<reference>
+				<OTScriptObject local_id="test_sex_view_script" name="Sex view script">
+	         <script>
+	           <OTJRuby src="scripts/ruby_meiosis_script.rb" />
+	         </script>
+					<variables>
+						<OTScriptVariableComponent name="meiosisView">
+							<reference>
+								<object refid="${meiosisView}" />
+							</reference>
+						</OTScriptVariableComponent>
+			  	</variables>
+	      </OTScriptObject>
+				<OTButtonScript>
+					<script>
+						<OTJRuby src="scripts/button_width_script.rb"/>
+					</script>
+					<scriptVariables>
+						<OTScriptVariable>
 							<object refid="${meiosisView}" />
-						</reference>
-					</OTScriptVariableComponent>
-		  	</variables>
-        </OTScriptObject>
-				<OTSex local_id="meiosisView" width="880" height="620" replayButtonEnabled="false">
+						</OTScriptVariable>
+					</scriptVariables>
+				</OTButtonScript>
+				<OTSex local_id="meiosisView" replayButtonEnabled="false">
           <motherOrganism>
             <object refid="${femaleOrganism}" />
           </motherOrganism>
