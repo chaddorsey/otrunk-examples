@@ -48,3 +48,7 @@ def self.init
   $meiosisViewInternal.addPropertyChangeListener MeiosisAction.new
   true
 end
+
+def self.save
+  true
+end
