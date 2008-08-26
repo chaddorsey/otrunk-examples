@@ -28,6 +28,7 @@
     <import class="org.concord.otrunk.script.ui.OTScriptVariableComponent" />
     <import class="org.concord.otrunk.script.ui.OTScriptVariableView" />
     <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunk.script.jruby.OTJRuby" />
     <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
     <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
     <import class="org.concord.otrunk.udl.OTAuthorNote" />
@@ -179,12 +180,23 @@
                 <object refid="f87576ae-651c-11dd-bd45-d9d11cbf97e7" />
               </world>
             </OTOrganism>
+            <OTOrganism id="a8e20bf5-73a4-11dd-a769-cbc7ca7b3ef4" name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+              <world>
+                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+              </world>
+            </OTOrganism>
+            <OTOrganism id="a8e20bf4-73a4-11dd-a769-cbc7ca7b3ef4" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+              <world>
+                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+              </world>
+            </OTOrganism>
           </sharedObjects>
         </OTSharingBundle>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
         <OTScriptEngineBundle>
           <engines>
             <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.jruby.OTJRuby" engineClass="org.concord.otrunk.script.jruby.OTJRubyEngine" />
           </engines>
         </OTScriptEngineBundle>
         <OTInterfaceManager>
@@ -728,24 +740,40 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  This is a view of Molthwan and Gandwar's cells undergoing the process of 
-          meiosis. Click on the triangular play button to start the process in 
-          each, and click on the magnifying glass to zoom in for a closer look.
+                                  This is a view of Molthwan and Gandwar's cells undergoing the 
+          process of meiosis. Click on the triangular play button to start the 
+          process in each, and click on the magnifying glass to zoom in for a 
+          closer look.
                                   <br />
-                                  <object refid="54a72d27-651a-11dd-bd45-d9d11cbf97e7" />
+                                  <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
+																	<object refid="${initial_meiosis_script}" />
+                                  <br />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTSex id="54a72d27-651a-11dd-bd45-d9d11cbf97e7" name="Meiosis" replayButtonEnabled="false">
-                              <motherOrganism>
-                                <object refid="c1e77779-64f5-11dd-88f8-3390a456ed3b" />
-                              </motherOrganism>
+	                          <OTSex id="f87576ab-651c-11dd-bd45-d9d11cbf97e7" name="Meiosis" replayButtonEnabled="false">
                               <fatherOrganism>
-                                <object refid="6b4c4b25-64f5-11dd-88f8-3390a456ed3b" />
+                                <object refid="f87576ac-651c-11dd-bd45-d9d11cbf97e7" />
                               </fatherOrganism>
+                              <motherOrganism>
+                                <object refid="f87576ad-651c-11dd-bd45-d9d11cbf97e7" />
+                              </motherOrganism>
                             </OTSex>
+										        <OTScriptObject local_id="initial_meiosis_script" name="Sex view script">
+										          <script>
+										            <OTJRuby src="scripts/meiosis_initial_investigation.rb" />
+										          </script>
+										          <variables>
+										            <OTScriptVariableComponent name="meiosisView">
+										              <reference>
+										                <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
+										              </reference>
+										            </OTScriptVariableComponent>
+										          </variables>
+										          <scriptState />
+										        </OTScriptObject>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="7407ca81-651c-11dd-bd45-d9d11cbf97e7" name="%7407ca81-651c-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
@@ -768,14 +796,6 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </p>
                           </bodyText>
                           <documentRefs>
-                            <OTSex id="f87576ab-651c-11dd-bd45-d9d11cbf97e7" name="Meiosis" replayButtonEnabled="false">
-                              <fatherOrganism>
-                                <object refid="f87576ac-651c-11dd-bd45-d9d11cbf97e7" />
-                              </fatherOrganism>
-                              <motherOrganism>
-                                <object refid="f87576ad-651c-11dd-bd45-d9d11cbf97e7" />
-                              </motherOrganism>
-                            </OTSex>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" name="%1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
@@ -877,8 +897,12 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="3bac2caf-64f4-11dd-88f8-3390a456ed3b" />
+                        <object refid="24c8fed6-651a-11dd-bd45-d9d11cbf97e7" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="3bac2caf-64f4-11dd-88f8-3390a456ed3b" />
+                        <object refid="24c8fed6-651a-11dd-bd45-d9d11cbf97e7" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -1045,10 +1069,11 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_1}" />
+                <object refid="3bac2cae-64f4-11dd-88f8-3390a456ed3b" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
+                <object refid="3bac2cae-64f4-11dd-88f8-3390a456ed3b" />
               </viewedCards>
             </OTCardContainer>
           </content>
