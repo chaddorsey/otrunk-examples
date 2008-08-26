@@ -159,7 +159,7 @@
 						</OTScriptVariable>
           </scriptVariables>
         </OTScriptButton>
-        <OTSex local_id="meiosisView" replayButtonEnabled="false">
+        <OTSex local_id="meiosisView" replayButtonEnabled="false" width="800" height="600">
           <motherOrganism>
             <object refid="${femaleOrganism}" />
           </motherOrganism>
