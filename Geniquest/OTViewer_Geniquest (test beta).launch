@@ -47,7 +47,7 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.concord.otrunk.view.OTViewer"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-f Geniquest/test-beta-authoring.otml -Dotrunk.view.author=true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-f /Users/chaddorsey/dev/otrunk-examples/Geniquest/test-beta-authoring.otml -Dotrunk.view.author=true"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="otrunk-examples"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dotrunk.view.single_user=false -Dotrunk.view.author=true -D_otrunk.view.debug=true"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dotrunk.view.single_user=false -Dotrunk.view.author=true -D_otrunk.view.debug=true -Dotrunk.view.mode.authoring=true"/>
 </launchConfiguration>

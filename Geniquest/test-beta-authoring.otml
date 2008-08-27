@@ -80,9 +80,11 @@
     <import class="org.concord.biologica.state.OTStaticOrganism" />
     <import class="org.concord.biologica.state.OTChromosome" />
     <import class="org.concord.biologica.state.OTBreedOffspring" />
+		<import class="org.concord.biologica.state.OTPedigree" />
     <import class="org.concord.otrunk.udl.question.OTUDLQuestion" />
     <import class="org.concord.otrunk.ui.OTObjectSet" />
     <import class="org.concord.biologica.state.OTSex" />
+    <import class="org.concord.otrunk.view.OTFrameDisplayAction"/>
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -150,12 +152,12 @@
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism name="female" sex="1" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B">
+            <OTOrganism local_id="samplefemale" name="female" sex="1" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
               <world>
                 <OTWorld id="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism name="male" sex="0" alleles="b:HU1,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:ta1,a:t,a:p,a:f,a:a,a:B">
+            <OTOrganism local_id="samplemale" name="male" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <object refid="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" />
               </world>
@@ -737,23 +739,23 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="24c8fed6-651a-11dd-bd45-d9d11cbf97e7" name="%24c8fed6-651a-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
                           <bodyText>
+                            <br />
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  This is a view of Molthwan and Gandwar's cells undergoing the 
-          process of meiosis. Click on the triangular play button to start the 
-          process in each, and click on the magnifying glass to zoom in for a 
-          closer look.
+                                  <br />
+                                  <object refid="fa8552fb-73b1-11dd-a769-cbc7ca7b3ef4" />
                                   <br />
                                   <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
-																	<object refid="${initial_meiosis_script}" />
+                                  <object refid="${initial_meiosis_script}" />
                                   <br />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-	                          <OTSex id="f87576ab-651c-11dd-bd45-d9d11cbf97e7" name="Meiosis" replayButtonEnabled="false">
+                            <OTText id="fa8552fb-73b1-11dd-a769-cbc7ca7b3ef4" name="Text field!" text="This is a view of Molthwan and Gandwar's cells undergoing the process of meiosis. Click on the play button to start the process in the mother." />
+                            <OTSex id="f87576ab-651c-11dd-bd45-d9d11cbf97e7" name="Meiosis" replayButtonEnabled="false">
                               <fatherOrganism>
                                 <object refid="f87576ac-651c-11dd-bd45-d9d11cbf97e7" />
                               </fatherOrganism>
@@ -761,19 +763,24 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 <object refid="f87576ad-651c-11dd-bd45-d9d11cbf97e7" />
                               </motherOrganism>
                             </OTSex>
-										        <OTScriptObject local_id="initial_meiosis_script" name="Sex view script">
-										          <script>
-										            <OTJRuby src="scripts/meiosis_initial_investigation.rb" />
-										          </script>
-										          <variables>
-										            <OTScriptVariableComponent name="meiosisView">
-										              <reference>
-										                <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
-										              </reference>
-										            </OTScriptVariableComponent>
-										          </variables>
-										          <scriptState />
-										        </OTScriptObject>
+                            <OTScriptObject local_id="initial_meiosis_script" name="Sex view script">
+                              <script>
+                                <OTJRuby src="scripts/meiosis_initial_investigation.rb" />
+                              </script>
+                              <variables>
+                                <OTScriptVariableComponent name="meiosisView">
+                                  <reference>
+                                    <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+																<OTScriptVariable name="textObject">
+																	<reference>
+																		<object refid="fa8552fb-73b1-11dd-a769-cbc7ca7b3ef4" />
+																	</reference>
+																</OTScriptVariable>
+                              </variables>
+                              <scriptState />
+                            </OTScriptObject>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="7407ca81-651c-11dd-bd45-d9d11cbf97e7" name="%7407ca81-651c-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
@@ -795,8 +802,6 @@ Try changing some of the genes and see what happens. Experiment with the genes f
       to separate them for a better look.)</em>
                             </p>
                           </bodyText>
-                          <documentRefs>
-                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" name="%1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -953,13 +958,8 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         <OTUDLCompoundDoc id="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" showDefinitions="false">
                           <bodyText>
                             Now that you know how to breed dragons, let's try some selective breeding. 
-    This is the pedigree view. Click on the cross button and drag your pointer 
-    from one organism (square or circle) to another. Notice what happens. (You 
-    will have to scroll to see this in the
-                            <i>very tiny box…</i>
-                            )
-                            <br />
-                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[2]" />
+    This is the pedigree view. <br/>
+<object refid="${pedigreeButton}"/>
                             <br />
                             <p>You have just created a new generation of dragons. Now breed two of the 
       dragons (one circle and one square) from this generation together. 
@@ -977,12 +977,52 @@ Try changing some of the genes and see what happens. Experiment with the genes f
       dragon from the pool, you can be guaranteed that it will have the same 
       traits as any other dragon.
                               <br />
+															<object refid="${pedigreeTextObject}" />
                               <br />
                               <object refid="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" />
+															<object refid="${initial_pedigree_script}" />
                             </p>
                           </bodyText>
                           <documentRefs>
-                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[2]" />
+														<OTText local_id="pedigreeTextObject" text="This is a text placeholder."/>
+		                            <OTPedigree local_id="firstPedigreeView">
+								                    <organisms>
+								                        <object refid="${samplemale}" />
+								                        <object refid="${samplefemale}" />
+								                    </organisms>
+								                </OTPedigree>
+														<OTButton local_id="pedigreeButton" text="Show Pedigree View">
+															<action>
+																<object refid="${show_pedigree_frame}"/>
+															</action>
+														</OTButton>
+														<OTFrameDisplayAction local_id="show_pedigree_frame">
+															 <frame>
+																<OTFrame local_id="popup_frame" width="500" height="500" />
+															</frame>
+															<objectToDisplay>
+																<object refid="${firstPedigreeView}"/>
+															</objectToDisplay>
+														</OTFrameDisplayAction>
+                            <OTScriptObject local_id="initial_pedigree_script" name="Pedigree view script">
+                              <script>
+                                <OTJRuby src="scripts/pedigree_initial_investigation.rb" />
+                              </script>
+                              <variables>
+                                <OTScriptVariableView name="pedigreeView">
+                                  <reference>
+                                    <object refid="${firstPedigreeView}" />
+                                  </reference>
+                                </OTScriptVariableView>
+																<OTScriptVariable name="textObject">
+																	<reference>
+																		<object refid="${pedigreeTextObject}" />
+																	</reference>
+																</OTScriptVariable>
+                              </variables>
+                              <scriptState />
+                            </OTScriptObject>
+                           
                             <OTUDLQuestion id="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
