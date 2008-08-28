@@ -168,7 +168,7 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
           </scriptVariables>
         </OTScriptButton>
 <!-- Separate copy of button for pedigree view -->
-        <OTScriptButton local_id="button_width_script_pedigree" name="Button Width script" text="Change width">
+        <OTScriptButton local_id="button_width_script_pedigree" name="Display selected organisms" text="Change width">
           <script>
             <OTJRuby src="scripts/button_width_script_pedigree.rb" />
           </script>
