@@ -42,7 +42,7 @@ def self.clicked
 end
 
 class LabelRangeResponse
-  $pedigreeViewInternal=$pedigreeViewComp
+  $pedigreeViewInternal=$pedigreeViewComp.getComponent(0)
   attr_reader :response_key
   
   def initialize(response_key)

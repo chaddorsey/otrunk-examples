@@ -983,42 +983,38 @@ Try changing some of the genes and see what happens. Experiment with the genes f
 															<a href="${pedigreeErbScript}" target="${popup_frame}">Click Me.</a>
 															<object refid="${pedigreeTextObject}" />
                               <br />
+															<object refid="${firstPedigreeView}" />
                               <object refid="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" />
-															<object refid="${initial_pedigree_script}" />
+															<object refid="${pedigreeInitialInvestigation}" />
                             </p>
                           </bodyText>
                           <documentRefs>
 
-														<OTText local_id="pedigreeTextObject" text="This is a text placeholder."/>
-                            <OTPedigree local_id="firstPedigreeView">
+														<OTText local_id="pedigreeTextObject" text="This is a text placeholder!"/>
+                            <OTPedigree local_id="firstPedigreeView" height="400" width="400">
 						                    <organisms>
 						                        <object refid="${samplemale}" />
 						                        <object refid="${samplefemale}" />
 						                    </organisms>
 						                </OTPedigree>
-														<OTXHTMLScript local_id="pedigreeErbScript" objectClass="org.concord.framework.otrunk.OTObject" viewClass="org.concord.otrunk.script.ui.OTXHTMLScriptView">
-                              <script>
-                                <OTJRuby src="scripts/pedigree_erb_script.rb" />
-                              </script>
-                              <variables>
-																<OTScriptVariable name="template">
-																	<reference>
-																		<OTBlob src="scripts/pedigree_erb_template.html.erb"/>
-																	</reference>
-																</OTScriptVariable>
-                                <OTScriptVariable name="pedigreeView">
-                                  <reference>
-                                    <object refid="${firstPedigreeView}" />
-                                  </reference>
-                                </OTScriptVariable>
-																<OTScriptVariable name="textObject">
+														<OTScriptObject local_id="pedigreeInitialInvestigation">
+							                <script>
+							                  <OTJRuby src="scripts/pedigree_initial_investigation.rb" />
+							                </script>
+							                <variables>
+							                  <OTScriptVariableComponent name="pedigreeView">
+							                    <reference>
+							                      <object refid="${firstPedigreeView}" />
+							                    </reference>
+							                  </OTScriptVariableComponent>
+																<OTScriptVariable name="textField">
 																	<reference>
 																		<object refid="${pedigreeTextObject}" />
 																	</reference>
 																</OTScriptVariable>
-                              </variables>
-                              <scriptState />
-                            </OTXHTMLScript>								
+							                </variables>
+							                <scriptState />
+							              </OTScriptObject>														
 														<OTButton local_id="pedigreeButton" text="Show Pedigree View">
 															<action>
 																<object refid="${show_pedigree_frame}"/>

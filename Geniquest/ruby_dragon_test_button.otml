@@ -226,7 +226,7 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
           </scriptVariables>
         </OTScriptButton>
 
-        <OTPedigree local_id="pedigreeView">
+        <OTPedigree local_id="pedigreeView" height="500" width="400">
             <organisms>
                 <object refid="${maleOrganism}" />
                 <object refid="${femaleOrganism}" />

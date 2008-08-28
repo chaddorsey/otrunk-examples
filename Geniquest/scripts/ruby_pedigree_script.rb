@@ -45,7 +45,7 @@ end
 
 def self.init
   puts "self.init called"
-  $pedigreeViewInternal = $pedigreeView
+  $pedigreeViewInternal = $pedigreeView.getComponent(0)
   $pedigreeViewInternal.addPropertyChangeListener PedigreeAction.new
   true
 end
