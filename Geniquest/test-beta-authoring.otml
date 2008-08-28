@@ -27,6 +27,9 @@
     <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
     <import class="org.concord.otrunk.script.ui.OTScriptVariableComponent" />
     <import class="org.concord.otrunk.script.ui.OTScriptVariableView" />
+		<import class="org.concord.otrunk.script.ui.OTXHTMLScript" />
+		<import class="org.concord.otrunk.script.ui.OTXHTMLScriptViewEntry" />
+		<import class="org.concord.framework.otrunk.wrapper.OTBlob" />
     <import class="org.concord.otrunk.script.js.OTJavascript" />
     <import class="org.concord.otrunk.script.jruby.OTJRuby" />
     <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
@@ -977,6 +980,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
       dragon from the pool, you can be guaranteed that it will have the same 
       traits as any other dragon.
                               <br />
+															<a href="${pedigreeErbScript}" target="${popup_frame}">Click Me.</a>
 															<object refid="${pedigreeTextObject}" />
                               <br />
                               <object refid="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" />
@@ -984,13 +988,37 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </p>
                           </bodyText>
                           <documentRefs>
+
 														<OTText local_id="pedigreeTextObject" text="This is a text placeholder."/>
-		                            <OTPedigree local_id="firstPedigreeView">
-								                    <organisms>
-								                        <object refid="${samplemale}" />
-								                        <object refid="${samplefemale}" />
-								                    </organisms>
-								                </OTPedigree>
+                            <OTPedigree local_id="firstPedigreeView">
+						                    <organisms>
+						                        <object refid="${samplemale}" />
+						                        <object refid="${samplefemale}" />
+						                    </organisms>
+						                </OTPedigree>
+														<OTXHTMLScript local_id="pedigreeErbScript" objectClass="org.concord.framework.otrunk.OTObject" viewClass="org.concord.otrunk.script.ui.OTXHTMLScriptView">
+                              <script>
+                                <OTJRuby src="scripts/pedigree_erb_script.rb" />
+                              </script>
+                              <variables>
+																<OTScriptVariable name="template">
+																	<reference>
+																		<OTBlob src="scripts/pedigree_erb_template.html.erb"/>
+																	</reference>
+																</OTScriptVariable>
+                                <OTScriptVariable name="pedigreeView">
+                                  <reference>
+                                    <object refid="${firstPedigreeView}" />
+                                  </reference>
+                                </OTScriptVariable>
+																<OTScriptVariable name="textObject">
+																	<reference>
+																		<object refid="${pedigreeTextObject}" />
+																	</reference>
+																</OTScriptVariable>
+                              </variables>
+                              <scriptState />
+                            </OTXHTMLScript>								
 														<OTButton local_id="pedigreeButton" text="Show Pedigree View">
 															<action>
 																<object refid="${show_pedigree_frame}"/>
@@ -1001,27 +1029,10 @@ Try changing some of the genes and see what happens. Experiment with the genes f
 																<OTFrame local_id="popup_frame" width="500" height="500" />
 															</frame>
 															<objectToDisplay>
-																<object refid="${firstPedigreeView}"/>
+																<object refid="${pedigreeErbScript}"/>
 															</objectToDisplay>
 														</OTFrameDisplayAction>
-                            <OTScriptObject local_id="initial_pedigree_script" name="Pedigree view script">
-                              <script>
-                                <OTJRuby src="scripts/pedigree_initial_investigation.rb" />
-                              </script>
-                              <variables>
-                                <OTScriptVariableView name="pedigreeView">
-                                  <reference>
-                                    <object refid="${firstPedigreeView}" />
-                                  </reference>
-                                </OTScriptVariableView>
-																<OTScriptVariable name="textObject">
-																	<reference>
-																		<object refid="${pedigreeTextObject}" />
-																	</reference>
-																</OTScriptVariable>
-                              </variables>
-                              <scriptState />
-                            </OTScriptObject>
+
                            
                             <OTUDLQuestion id="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" name="Question" showConvertButton="true">
                               <prompt>
