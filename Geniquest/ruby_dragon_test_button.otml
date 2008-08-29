@@ -27,6 +27,7 @@
     <import class="org.concord.biologica.state.OTChromosome" />
     <import class="org.concord.biologica.state.OTSex" />
 		<import class="org.concord.biologica.state.OTPedigree" />
+		<import class="org.concord.biologica.state.OTMultipleOrganism" />
     <import class="org.concord.otrunk.ui.OTChoiceWithFeedback" />
     <import class="org.concord.otrunk.ui.OTText" />
     <import class="org.concord.otrunk.script.ui.OTScriptButton" />
@@ -51,7 +52,7 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
             <OTViewEntry objectClass="org.concord.biologica.state.OTChromosome" viewClass="org.concord.biologica.state.ui.OTChromosomeView" />
             <OTViewEntry objectClass="org.concord.biologica.state.OTOrganism" viewClass="org.concord.biologica.state.ui.OTOrganismView" />
             <OTViewEntry objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismView" />
-            <OTViewEntry objectClass="org.concord.biologica.state.OTStaticOrganism" viewClass="org.concord.biologica.state.ui.OTStaticOrganismView" />
+            <OTViewEntry objectClass="org.concord.biologica.state.OTMultipleOrganism" viewClass="org.concord.biologica.state.ui.OTMultipleOrganismView" />
             <OTViewEntry local_id="choice_feedback_radio_view" objectClass="org.concord.otrunk.ui.OTChoiceWithFeedback" viewClass="org.concord.otrunk.ui.swing.OTChoiceRadioButtonWithFeedbackView" />
             <OTViewEntry local_id="menu-horizontal-circle" objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageView" />
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTCardContainer" viewClass="org.concord.otrunk.ui.swing.OTCardContainerView" />
@@ -76,14 +77,64 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
       <root>
         <OTCompoundDoc local_id="page-1" name="1">
           <bodyText>
-                <object refid="${pedigreeView}" editable="true" /><br/>
+<!--                <object refid="${pedigreeView}" editable="true" /><br/>
                 <object refid="${test_pedigree_view_script}" />
-
-                <object refid="${button_width_script_pedigree}" />
+                <object refid="${button_width_script_pedigree}" /><br/>
+-->								<object refid="${test_xhtml_script}" />
           </bodyText>
         </OTCompoundDoc>
       </root>
       <library>
+	
+				<OTXHTMLScript local_id="test_xhtml_script" name="Test XHTML Script">
+					<script>
+						<OTJRuby src="scripts/ruby_erb_dragon_test.rb" />
+					</script>
+					<variables>
+						<OTScriptVariable name="template">
+							<reference>
+								<OTBlob src="scripts/ruby_erb_dragon_test.html.erb" />
+							</reference>
+						</OTScriptVariable>
+            <OTScriptVariableComponent name="pedigreeView">
+              <reference>
+                <object refid="${pedigreeView}" />
+              </reference>
+            </OTScriptVariableComponent>
+						<OTScriptVariableComponent name="newMotherComp">
+							<reference>
+								<object refid="${newMother}" />
+							</reference>
+						</OTScriptVariableComponent>
+						<OTScriptVariableRealObject name="newMotherObj">
+							<reference>
+								<object refid="${newMother}" />
+							</reference>
+						</OTScriptVariableRealObject>
+						<OTScriptVariable name="newMother">
+							<reference>
+								<object refid="${newMother}" />
+							</reference>
+						</OTScriptVariable>
+						<OTScriptVariable name="staticOrganism1">
+							<reference>
+								<object refid="${staticOrganismContainer}"/>
+							</reference>
+						</OTScriptVariable>
+						<OTScriptVariable name="staticOrganism1b">
+							<reference>
+								<object refid="${staticOrganismContainer}"/>
+							</reference>
+						</OTScriptVariable>
+						<OTScriptVariable name="staticOrganism2">
+							<reference>
+								<object refid="${staticOrganismContainer2}"/>
+							</reference>
+						</OTScriptVariable>
+          </variables>
+				</OTXHTMLScript>
+				
+				
         <OTScriptObject local_id="test_sex_view_script" name="Sex view script">
           <script>
             <OTJRuby src="scripts/ruby_meiosis_script.rb" />
@@ -188,7 +239,12 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
                 <object refid="${pedigreeView}" />
               </reference>
             </OTScriptVariableComponent>
-						<OTScriptVariable name="oldMotherVar">
+<!--						<OTScriptVariableComponent name="multipleOrganismComp">
+							<reference>
+								<object refid="${multipleOrganism}"/>
+							</reference>
+						</OTScriptVariableComponent>
+-->						<OTScriptVariable name="oldMotherVar">
 							<reference>
 								<object refid="${femaleOrganism}" />
 							</reference>
@@ -225,13 +281,19 @@ viewClass="org.concord.biologica.state.ui.OTPedigreeView" />
 						</OTScriptVariable>
           </scriptVariables>
         </OTScriptButton>
-
+				
+				<OTStaticOrganism local_id="staticOrganismContainer">
+				</OTStaticOrganism>
+				<OTStaticOrganism local_id="staticOrganismContainer2">
+				</OTStaticOrganism>				
         <OTPedigree local_id="pedigreeView" height="500" width="400">
             <organisms>
                 <object refid="${maleOrganism}" />
                 <object refid="${femaleOrganism}" />
             </organisms>
         </OTPedigree>
+				<OTMultipleOrganism local_id="multipleOrganism">
+				</OTMultipleOrganism>
         <OTSex local_id="meiosisView" replayButtonEnabled="false" width="800" height="600">
           <motherOrganism>
             <object refid="${femaleOrganism}" />

@@ -43,6 +43,7 @@ end
 
 class LabelRangeResponse
   $pedigreeViewInternal=$pedigreeViewComp.getComponent(0)
+  #$multipleOrganismInternal=$multipleOrganismComp.getComponent(0)
   attr_reader :response_key
   
   def initialize(response_key)
@@ -63,6 +64,8 @@ class LabelRangeResponse
     $pedigreeViewInternal.setOffspringModePulldownVisible(false)
     $pedigreeViewInternal.setBounds(0,0,500,500)
     $pedigreeViewInternal.updateSize
+    #numberInView = $multipleOrganismInternal.getNumberOfOrganisms
+    #puts numberInView
     #newnum=sexViewMode.to_i
     #newnum == 5? newnum = 1 : newnum = newnum + 1
     #$pedigreeViewInternal.setSexViewMode(newnum)

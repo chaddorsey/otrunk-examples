@@ -3,58 +3,84 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>ruby_dragon_test_button.otml</string>
+	<string>test-beta-authoring.otml</string>
 	<key>documents</key>
 	<array>
 		<dict>
-			<key>filename</key>
-			<string>scripts/ruby_erb_dragon_test.html.erb</string>
-			<key>lastUsed</key>
-			<date>2008-08-21T13:56:05Z</date>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>filename</key>
+					<string>../LOOPS/scripts/loops-one-dimension-report.rb</string>
+					<key>lastUsed</key>
+					<date>2008-08-07T04:10:51Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>../LOOPS/scripts/loops-one-dimension-report.html.erb</string>
+					<key>lastUsed</key>
+					<date>2008-08-20T13:38:43Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>../LOOPS/loops-one-dimension-report.otml</string>
+					<key>lastUsed</key>
+					<date>2008-08-06T03:19:55Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>multi-page-GQ-activity-1.otml</string>
+					<key>lastUsed</key>
+					<date>2008-08-20T20:39:44Z</date>
+				</dict>
+			</array>
+			<key>name</key>
+			<string>Other Stuff</string>
 		</dict>
 		<dict>
-			<key>filename</key>
-			<string>scripts/ruby_meiosis_script.rb</string>
-			<key>lastUsed</key>
-			<date>2008-08-22T12:18:13Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>multi-page-GQ-activity-1.otml</string>
-			<key>lastUsed</key>
-			<date>2008-08-20T20:39:44Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>scripts/ruby_erb_dragon_test.rb</string>
-			<key>lastUsed</key>
-			<date>2008-08-21T13:56:04Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>ruby_dragon_test_button.otml</string>
-			<key>lastUsed</key>
-			<date>2008-08-22T12:18:13Z</date>
-			<key>selected</key>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>filename</key>
+					<string>ruby_dragon_test_button.otml</string>
+					<key>lastUsed</key>
+					<date>2008-08-29T13:53:26Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>scripts/ruby_meiosis_script.rb</string>
+					<key>lastUsed</key>
+					<date>2008-08-29T13:49:27Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>scripts/button_width_script.rb</string>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>scripts/button_width_script_pedigree.rb</string>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>scripts/ruby_pedigree_script.rb</string>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>scripts/ruby_erb_dragon_test.rb</string>
+					<key>lastUsed</key>
+					<date>2008-08-21T13:56:04Z</date>
+				</dict>
+				<dict>
+					<key>filename</key>
+					<string>scripts/ruby_erb_dragon_test.html.erb</string>
+					<key>lastUsed</key>
+					<date>2008-08-29T13:53:24Z</date>
+				</dict>
+			</array>
+			<key>expanded</key>
 			<true/>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../LOOPS/loops-one-dimension-report.otml</string>
-			<key>lastUsed</key>
-			<date>2008-08-06T03:19:55Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../LOOPS/scripts/loops-one-dimension-report.html.erb</string>
-			<key>lastUsed</key>
-			<date>2008-08-20T13:38:43Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../LOOPS/scripts/loops-one-dimension-report.rb</string>
-			<key>lastUsed</key>
-			<date>2008-08-07T04:10:51Z</date>
+			<key>name</key>
+			<string>Testing Ground</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -84,11 +110,27 @@
 			<key>filename</key>
 			<string>test-beta-authoring.otml</string>
 			<key>lastUsed</key>
-			<date>2008-08-20T20:00:11Z</date>
+			<date>2008-08-29T13:53:28Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/multi_org_button.rb</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/pedigree_initial_investigation.rb</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/meiosis_initial_investigation.rb</string>
+			<key>lastUsed</key>
+			<date>2008-08-29T13:53:28Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>147</integer>
+	<integer>239</integer>
 	<key>metaData</key>
 	<dict>
 		<key>../LOOPS/scripts/loops-one-dimension-report.rb</key>
@@ -149,59 +191,59 @@
 				<integer>275</integer>
 			</dict>
 		</dict>
-		<key>ruby_dragon_test_button.otml</key>
+		<key>scripts/meiosis_initial_investigation.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>11</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>135</integer>
+				<integer>30</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>137</integer>
+			<integer>11</integer>
 		</dict>
-		<key>scripts/ruby_erb_dragon_test.html.erb</key>
+		<key>test-beta-authoring.otml</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>86</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>772</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>scripts/ruby_meiosis_script.rb</key>
-		<dict>
-			<key>caret</key>
+			<integer>756</integer>
+			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>3</integer>
+				<integer>83</integer>
 				<key>line</key>
-				<integer>53</integer>
+				<integer>772</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>15</integer>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>86</integer>
+				<key>line</key>
+				<integer>772</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>scripts/ruby_erb_dragon_test.html.erb</string>
-		<string>ruby_dragon_test_button.otml</string>
-		<string>scripts/ruby_meiosis_script.rb</string>
-		<string>multi-page-GQ-activity-1.otml</string>
+		<string>scripts/meiosis_initial_investigation.rb</string>
+		<string>test-beta-authoring.otml</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{227, 95}, {823, 722}}</string>
+	<string>{{271, 103}, {823, 722}}</string>
 </dict>
 </plist>

@@ -27,9 +27,10 @@
     <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
     <import class="org.concord.otrunk.script.ui.OTScriptVariableComponent" />
     <import class="org.concord.otrunk.script.ui.OTScriptVariableView" />
-		<import class="org.concord.otrunk.script.ui.OTXHTMLScript" />
-		<import class="org.concord.otrunk.script.ui.OTXHTMLScriptViewEntry" />
-		<import class="org.concord.framework.otrunk.wrapper.OTBlob" />
+    <import class="org.concord.otrunk.script.ui.OTScriptButton" />
+    <import class="org.concord.otrunk.script.ui.OTXHTMLScript" />
+    <import class="org.concord.otrunk.script.ui.OTXHTMLScriptViewEntry" />
+    <import class="org.concord.framework.otrunk.wrapper.OTBlob" />
     <import class="org.concord.otrunk.script.js.OTJavascript" />
     <import class="org.concord.otrunk.script.jruby.OTJRuby" />
     <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
@@ -83,11 +84,12 @@
     <import class="org.concord.biologica.state.OTStaticOrganism" />
     <import class="org.concord.biologica.state.OTChromosome" />
     <import class="org.concord.biologica.state.OTBreedOffspring" />
-		<import class="org.concord.biologica.state.OTPedigree" />
+    <import class="org.concord.biologica.state.OTPedigree" />
+    <import class="org.concord.biologica.state.OTMultipleOrganism" />
     <import class="org.concord.otrunk.udl.question.OTUDLQuestion" />
     <import class="org.concord.otrunk.ui.OTObjectSet" />
     <import class="org.concord.biologica.state.OTSex" />
-    <import class="org.concord.otrunk.view.OTFrameDisplayAction"/>
+    <import class="org.concord.otrunk.view.OTFrameDisplayAction" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -776,11 +778,11 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                     <object refid="f87576ab-651c-11dd-bd45-d9d11cbf97e7" />
                                   </reference>
                                 </OTScriptVariableComponent>
-																<OTScriptVariable name="textObject">
-																	<reference>
-																		<object refid="fa8552fb-73b1-11dd-a769-cbc7ca7b3ef4" />
-																	</reference>
-																</OTScriptVariable>
+                                <OTScriptVariable name="textObject">
+                                  <reference>
+                                    <object refid="fa8552fb-73b1-11dd-a769-cbc7ca7b3ef4" />
+                                  </reference>
+                                </OTScriptVariable>
                               </variables>
                               <scriptState />
                             </OTScriptObject>
@@ -961,10 +963,11 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         <OTUDLCompoundDoc id="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" showDefinitions="false">
                           <bodyText>
                             Now that you know how to breed dragons, let's try some selective breeding. 
-    This is the pedigree view. <br/>
-<object refid="${pedigreeButton}"/>
+    This is the pedigree view.
                             <br />
-                            <p>You have just created a new generation of dragons. Now breed two of the 
+                            <object refid="${pedigreeButton}" />
+                            <br />
+                            <!--You have just created a new generation of dragons. Now breed two of the 
       dragons (one circle and one square) from this generation together. 
       Repeat this five more times, until you get to generation F8. Using the 
       pulldown menu at the upper left, change the menu until it reads "Legs." 
@@ -980,56 +983,79 @@ Try changing some of the genes and see what happens. Experiment with the genes f
       dragon from the pool, you can be guaranteed that it will have the same 
       traits as any other dragon.
                               <br />
-															<a href="${pedigreeErbScript}" target="${popup_frame}">Click Me.</a>
+															<a href="${pedigreeErbScript}" target="2767fe20-6c7d-11dc-8314-0800200c9a66!/popup_frame">Click Me.</a>
 															<object refid="${pedigreeTextObject}" />
                               <br />
-															<object refid="${firstPedigreeView}" />
-                              <object refid="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" />
-															<object refid="${pedigreeInitialInvestigation}" />
-                            </p>
+-->
+                            <object refid="${firstPedigreeView}" />
+
+<!--                              <object refid="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" /> -->
+                            <object refid="${pedigreeInitialInvestigation}" /><br/>
+                            <object refid="${multipleOrganismView}" />
+                            <br />
+                            <object refid="${multipleOrganismViewButton}" />
                           </bodyText>
                           <documentRefs>
-
-														<OTText local_id="pedigreeTextObject" text="This is a text placeholder!"/>
+                            <OTText local_id="pedigreeTextObject" text="This is a text placeholder!" />
                             <OTPedigree local_id="firstPedigreeView" height="400" width="400">
-						                    <organisms>
-						                        <object refid="${samplemale}" />
-						                        <object refid="${samplefemale}" />
-						                    </organisms>
-						                </OTPedigree>
-														<OTScriptObject local_id="pedigreeInitialInvestigation">
-							                <script>
-							                  <OTJRuby src="scripts/pedigree_initial_investigation.rb" />
-							                </script>
-							                <variables>
-							                  <OTScriptVariableComponent name="pedigreeView">
-							                    <reference>
-							                      <object refid="${firstPedigreeView}" />
-							                    </reference>
-							                  </OTScriptVariableComponent>
-																<OTScriptVariable name="textField">
-																	<reference>
-																		<object refid="${pedigreeTextObject}" />
-																	</reference>
-																</OTScriptVariable>
-							                </variables>
-							                <scriptState />
-							              </OTScriptObject>														
-														<OTButton local_id="pedigreeButton" text="Show Pedigree View">
-															<action>
-																<object refid="${show_pedigree_frame}"/>
-															</action>
-														</OTButton>
-														<OTFrameDisplayAction local_id="show_pedigree_frame">
-															 <frame>
-																<OTFrame local_id="popup_frame" width="500" height="500" />
-															</frame>
-															<objectToDisplay>
-																<object refid="${pedigreeErbScript}"/>
-															</objectToDisplay>
-														</OTFrameDisplayAction>
+                              <organisms>
+                                <object refid="${samplemale}" />
+                                <object refid="${samplefemale}" />
+                              </organisms>
+                            </OTPedigree>
+                            <OTMultipleOrganism local_id="multipleOrganismView">
+                              <organisms>
+                                <object refid="${samplemale}" />
+                                <object refid="${samplefemale}" />
+                              </organisms>
+                            </OTMultipleOrganism>
+                            <OTScriptObject local_id="pedigreeInitialInvestigation">
+                              <script>
+                                <OTJRuby src="scripts/pedigree_initial_investigation.rb" />
+                              </script>
+                              <variables>
+                                <OTScriptVariableComponent name="pedigreeView">
+                                  <reference>
+                                    <object refid="${firstPedigreeView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="textField">
+                                  <reference>
+                                    <object refid="${pedigreeTextObject}" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </variables>
+                              <scriptState />
+                            </OTScriptObject>
 
-                           
+                            <OTScriptButton local_id="multipleOrganismViewButton" text="Update Multi-org view">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_button.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="pedigreeView">
+                                  <reference>
+                                    <object refid="${firstPedigreeView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariableComponent name="multiOrganismView">
+                                  <reference>
+                                    <object refid="${multipleOrganismView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+
+                            <OTButton local_id="pedigreeButton" text="Show Pedigree View">
+                              <action>
+                                <object refid="${show_pedigree_frame}" />
+                              </action>
+                            </OTButton>
+                            <OTFrameDisplayAction local_id="show_pedigree_frame">
+                              <frame>
+                                <OTFrame local_id="popup_frame" width="500" height="500" />
+                              </frame>
+                            </OTFrameDisplayAction>
                             <OTUDLQuestion id="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
@@ -1116,11 +1142,12 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="3bac2cae-64f4-11dd-88f8-3390a456ed3b" />
+                <object refid="5fdbdad2-6517-11dd-bd45-d9d11cbf97e7" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
                 <object refid="3bac2cae-64f4-11dd-88f8-3390a456ed3b" />
+                <object refid="5fdbdad2-6517-11dd-bd45-d9d11cbf97e7" />
               </viewedCards>
             </OTCardContainer>
           </content>
