@@ -983,10 +983,10 @@ Try changing some of the genes and see what happens. Experiment with the genes f
       dragon from the pool, you can be guaranteed that it will have the same 
       traits as any other dragon.
                               <br />
-															<a href="${pedigreeErbScript}" target="2767fe20-6c7d-11dc-8314-0800200c9a66!/popup_frame">Click Me.</a>
+-->															<a href="${pedigreeErbScript}" target="2767fe20-6c7d-11dc-8314-0800200c9a66!/popup_frame">Click Me.</a>
 															<object refid="${pedigreeTextObject}" />
                               <br />
--->
+
                             <object refid="${firstPedigreeView}" />
 
 <!--                              <object refid="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" /> -->
@@ -1055,6 +1055,9 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               <frame>
                                 <OTFrame local_id="popup_frame" width="500" height="500" />
                               </frame>
+															<objectToDisplay>
+																<object refid="${multipleOrganismView}" />
+															</objectToDisplay>
                             </OTFrameDisplayAction>
                             <OTUDLQuestion id="3ff1c0b5-652b-11dd-bd45-d9d11cbf97e7" name="Question" showConvertButton="true">
                               <prompt>
