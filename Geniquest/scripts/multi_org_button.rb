@@ -58,6 +58,14 @@ class LabelRangeResponse
     pedOrgs=$pedigreeViewInternal.getOrganisms
     selectedOrgs = $pedigreeViewInternal.getSelectionSet
     $multiOrgViewInternal.removeAllOrganisms
+    #puts "Organism images visible: " + $multiOrgViewInternal.isOrganismImagesVisible
+    puts "Organism size: " + $multiOrgViewInternal.getOrganismImageSize.to_s
+    $multiOrgViewInternal.setOrganismImageSize(2)
+    $multiOrgViewInternal.setSpeciesTextVisible(false)
+    $multiOrgViewInternal.setSexTextVisible(false)
+    $multiOrgViewInternal.setCharacteristicsTextVisible(false)
+    $multiOrgViewInternal.setNameTextVisible(false)
+    $multiOrgViewInternal.setLockSymbolVisible(false)
     pedOrgs.each {|p| $multiOrgViewInternal.addOrganism(p.getOrganism)}
     $multiOrgViewInternal.updateScrollBars
     $multiOrgViewInternal.setSelectionSet(selectedOrgs)
