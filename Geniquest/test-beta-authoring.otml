@@ -997,13 +997,13 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                           </bodyText>
                           <documentRefs>
                             <OTText local_id="pedigreeTextObject" text="This is a text placeholder!" />
-                            <OTPedigree local_id="firstPedigreeView" height="400" width="400">
+                            <OTPedigree local_id="firstPedigreeView" height="400" width="400" organismImagesVisible="true" organismImageSize="2">
                               <organisms>
                                 <object refid="${samplemale}" />
                                 <object refid="${samplefemale}" />
                               </organisms>
                             </OTPedigree>
-                            <OTMultipleOrganism local_id="multipleOrganismView">
+                            <OTMultipleOrganism local_id="multipleOrganismView" width="300" height="100">
                               <organisms>
                                 <object refid="${samplemale}" />
                                 <object refid="${samplefemale}" />

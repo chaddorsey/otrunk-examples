@@ -43,7 +43,7 @@ end
 
 class LabelRangeResponse
   $pedigreeViewInternal=$pedigreeView.getComponent(0)
-  $multiOrgViewInternal=$multiOrganismView
+  $multiOrgViewInternal=$multiOrganismView.getComponent(0).getComponent(0)
   attr_reader :response_key
   
   def initialize(response_key)
@@ -53,6 +53,7 @@ class LabelRangeResponse
   def clicked
     puts $pedigreeViewInternal.isOrganismImagesVisible
     $pedigreeViewInternal.setOrganismImagesVisible(true)
+    $pedigreeViewInternal.setOrganismImageSize(2)
     $pedigreeViewInternal.repaint
     puts $pedigreeViewInternal.getNumberOfOrganisms
     pedOrgs=$pedigreeViewInternal.getOrganisms
