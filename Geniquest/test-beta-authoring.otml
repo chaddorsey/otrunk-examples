@@ -197,12 +197,24 @@
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism id="619fc538-79cd-11dd-acfb-c58c080ea6e2" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:a,a:B">
+            <OTOrganism id="619fc538-79cd-11dd-acfb-c58c080ea6e2" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+              <world>
+                <OTWorld id="619fc538-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+              </world>
+            </OTOrganism>
+            <OTOrganism id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+              <world>
+                <OTWorld id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+              </world>
+            </OTOrganism>
+            <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2/world" />
+            <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2/world" />
+            <OTOrganism id="3b6fe9db-7b46-11dd-8304-0bc503599a8b" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
               <world>
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
-            <OTOrganism id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+            <OTOrganism id="4c5615de-7b46-11dd-8304-0bc503599a8b" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
@@ -1166,11 +1178,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                         <object refid="680d6e4a-79cd-11dd-acfb-c58c080ea6e2" />
                                       </td>
                                       <td>
-						                            <OTChromosome id="strain2malechromosome" local_id="strain_2_male" name="Chromosome">
-						                              <organism>
-						                                <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" />
-						                              </organism>
-						                            </OTChromosome>
+                                          <object refid="3b6f74aa-7b46-11dd-8304-0bc503599a8b" />
                                       </td>
                                     </tr>
                                     <tr>
@@ -1178,11 +1186,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                         <object refid="619fc537-79cd-11dd-acfb-c58c080ea6e2" />
                                       </td>
                                       <td>
-						                            <OTChromosome id="strain1femalechromosome" local_id="strain_1_female" name="Chromosome">
-						                              <organism>
-						                                <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2" />
-						                              </organism>
-						                            </OTChromosome>
+                                            <object refid="4c5615dd-7b46-11dd-8304-0bc503599a8b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -1196,12 +1200,23 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" />
                               </organism>
                             </OTStaticOrganism>
-                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[6]" />
+                            <OTChromosome id="3b6f74aa-7b46-11dd-8304-0bc503599a8b" name="Chromosome">
+                              <organism>
+                                <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" />
+                              </organism>
+                            </OTChromosome>
+                            <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" />
                             <OTStaticOrganism id="619fc537-79cd-11dd-acfb-c58c080ea6e2" name="Static Organism">
                               <organism>
                                 <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2" />
                               </organism>
                             </OTStaticOrganism>
+                            <OTChromosome id="4c5615dd-7b46-11dd-8304-0bc503599a8b" name="Chromosome">
+                              <organism>
+                                <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2" />
+                              </organism>
+                            </OTChromosome>
+                            <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
