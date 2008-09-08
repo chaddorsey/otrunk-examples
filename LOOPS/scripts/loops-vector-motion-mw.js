@@ -12,6 +12,7 @@ var showTimer = true;
 var blnDoStop = false;
 var integerTimeToStop = -1;
 var playButtonEnabled = true
+var maxTime = scriptState.get("maxTime")
 
 var pageListener = new PageListener() {
 	pageUpdate: function(event) {
@@ -45,18 +46,18 @@ var actionHandler =
 	{
 		if (evt.getSource().equals( runpause_button ))
 		{
-			blnDoStop = false
-
 			if(model.isRunning())
 			{
-					blnDoStop = true
+				blnDoStop = true
 			}
 			else
 			{
-				System.err.println("starting model")
+				integerTimeToStop = -1
+				// System.err.println("starting model")
+				blnDoStop = false
 				model.runScript("run")
 
-				setupPlayButton("pause", playButtonEnabled)			 
+				setupPlayButton("stop", playButtonEnabled)			 
 			}
 				
 		}
@@ -65,7 +66,7 @@ var actionHandler =
 			blnDoStop = false
 			
 			playButtonEnabled = true
-			setupPlayButton("play", playButtonEnabled)
+			setupPlayButton("start", playButtonEnabled)
 			model.runScript("stop; reset")
 
 			lblTimer.setText("0")
@@ -82,17 +83,17 @@ var actionListener = new ActionListener(actionHandler);
 
 function setupPlayButton(strL, enabled)
 {
-	if (strL.equals("play"))
+	if (strL.equals("start"))
 	{
 //Get rid of icon
 //		startButton.setIcon(playIcon);
-		runpause_button.setText("Play")
+		runpause_button.setText("Start")
 	}
-	else if (strL.equals("pause"))
+	else if (strL.equals("stop"))
 	{
 //Get rid of icon
 //		startButton.setIcon(pauseIcon);
-		runpause_button.setText("Pause")
+		runpause_button.setText("Stop")
 	}
 	runpause_button.setEnabled(enabled)
 }
@@ -106,6 +107,10 @@ var updateHandler =
 		if (showTimer)
 		{
 			lblTimer.setText(java.lang.Integer.toString(seconds));
+			if ((seconds + 1) > maxTime) {
+				blnDoStop = true;
+				playButtonEnabled = false
+			}
 		}
 		if (blnDoStop){
 			if (integerTimeToStop == -1){
@@ -118,7 +123,7 @@ var updateHandler =
 				lblTimer.setText(integerTimeToStop);		
 
 				model.runScript("stop")
-				setupPlayButton("play", playButtonEnabled)
+				setupPlayButton("start", playButtonEnabled)
 
 				integerTimeToStop = -1
 
@@ -130,11 +135,11 @@ var updateHandler =
 var updateListener = new UpdateListener(updateHandler);
 
 function postMWInit() {
-	System.err.println("MW initialized")
+	// System.err.println("MW initialized")
 	var models = page.getEmbeddedComponent(Class.forName("org.concord.modeler.ModelCanvas")).values().toArray();
 	if (models != null) {
 		for (var i = 0; i < models.length; i++) {
-			System.err.println("Model initialized")
+			// System.err.println("Model initialized")
 			model = models[i].getContainer().getModel();
 			model.addUpdateListener(updateListener);
 		}
