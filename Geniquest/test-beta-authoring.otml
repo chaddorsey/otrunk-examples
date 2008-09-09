@@ -102,7 +102,7 @@
             <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[6]" />
             <OTOrganism id="6b4c4b25-64f5-11dd-88f8-3390a456ed3b" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
-                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+                <OTWorld local_id="dragonmarkers" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
             <OTOrganism id="c1e77779-64f5-11dd-88f8-3390a456ed3b" name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
@@ -215,6 +215,16 @@
               </world>
             </OTOrganism>
             <OTOrganism id="4c5615de-7b46-11dd-8304-0bc503599a8b" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+              <world>
+                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+              </world>
+            </OTOrganism>
+            <OTOrganism id="3f49957e-7b50-11dd-8304-0bc503599a8b" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+              <world>
+                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+              </world>
+            </OTOrganism>
+            <OTOrganism id="3f49957f-7b50-11dd-8304-0bc503599a8b" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
@@ -1178,7 +1188,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                         <object refid="680d6e4a-79cd-11dd-acfb-c58c080ea6e2" />
                                       </td>
                                       <td>
-                                          <object refid="3b6f74aa-7b46-11dd-8304-0bc503599a8b" />
+                                        <object refid="3b6f74aa-7b46-11dd-8304-0bc503599a8b" />
                                       </td>
                                     </tr>
                                     <tr>
@@ -1186,7 +1196,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                         <object refid="619fc537-79cd-11dd-acfb-c58c080ea6e2" />
                                       </td>
                                       <td>
-                                            <object refid="4c5615dd-7b46-11dd-8304-0bc503599a8b" />
+                                        <object refid="4c5615dd-7b46-11dd-8304-0bc503599a8b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -1219,12 +1229,107 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="170b4e9a-7b50-11dd-8304-0bc503599a8b" name="%170b4e9a-7b50-11dd-8304-0bc503599a8b" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">Breeding Test Area</div>
+                                  Try breeding some offspring to see what crosses between these strains produce.
+                                  <br />
+                                  <object refid="${breedOffspringViewForStrains}" editable="true" />
+                                  <br />
+																	<object refid="${multipleOrganismViewForStrains}" />
+																	<object refid="${strainMultipleOrganismScript}" />
+																	<object refid="${multiOrgClearButton}" />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTScriptObject local_id="strainMultipleOrganismScript">
+                              <script>
+                                <OTJRuby src="scripts/strain_multiple_organism.rb" />
+                              </script>
+                              <variables>
+                                <OTScriptVariableComponent name="breedOffspringView">
+                                  <reference>
+                                    <object refid="${breedOffspringViewForStrains}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismViewForStrains}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </variables>
+                              <scriptState />
+                            </OTScriptObject>
+														<OTScriptButton local_id="multiOrgClearButton" text="Clear All Organisms">
+															<script>
+																<OTJRuby src="scripts/multi_org_clear_button.rb" />
+															</script>
+															<scriptVariables>
+																<OTScriptVariableComponent name="multiOrgView">
+																	<reference>
+																		<object refid="${multipleOrganismViewForStrains}" />
+																	</reference>
+																</OTScriptVariableComponent>
+															</scriptVariables>
+														</OTScriptButton>
+														<OTMultipleOrganism local_id="multipleOrganismViewForStrains" width="300" height="150" organismImageSize="2">
+                              <organisms>
+                                <object refid="${samplemale}" />
+                                <object refid="${samplefemale}" />
+                              </organisms>
+                            </OTMultipleOrganism>                          
+                            <OTBreedOffspring local_id="breedOffspringViewForStrains">
+                              <fatherOrganism>
+                                <OTOrganism local_id="maleStrainOrganism">
+                                  <name>male</name>
+                                  <sex>0</sex>
+                                  <world>
+                                    <OTWorld local_id="dragon_world_strains" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+                                </OTOrganism>
+                              </fatherOrganism>
+                              <motherOrganism>
+                                <OTOrganism local_id="femaleStrainOrganism">
+                                  <name>female</name>
+                                  <sex>1</sex>
+                                  <world>
+                                    <object refid="${dragon_world_strains}" />
+                                  </world>
+                                  <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:p,a:P,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
+                                </OTOrganism>
+                              </motherOrganism>
+                            </OTBreedOffspring>
+
+
+														<OTBreedOffspring local_id="strain_breedoffspring">
+                              <motherOrganism>
+										            <OTOrganism local_id="strain_1_female_breedoffspring" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+										              <world>
+																		<OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />										              </world>
+										            </OTOrganism>
+                              </motherOrganism>
+                              <fatherOrganism>
+										            <OTOrganism local_id="strain_2_male_breedoffspring" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+										              <world>
+																		<OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />										             										              </world>
+										            </OTOrganism>                              
+															</fatherOrganism>
+														</OTBreedOffspring>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="f69b9731-79bb-11dd-b6e3-bdb383ed1215" />
+                        <object refid="170b4e9a-7b50-11dd-8304-0bc503599a8b" />
                       </currentCard>
                       <viewedCards>
                         <object refid="f69b9731-79bb-11dd-b6e3-bdb383ed1215" />
+                        <object refid="170b4e9a-7b50-11dd-8304-0bc503599a8b" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>

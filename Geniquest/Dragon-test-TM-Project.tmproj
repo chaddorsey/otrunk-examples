@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>test-beta-authoring.otml</string>
+	<string>scripts/strain_multiple_organism.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 					<key>filename</key>
 					<string>ruby_dragon_test_button.otml</string>
 					<key>lastUsed</key>
-					<date>2008-08-29T13:53:26Z</date>
+					<date>2008-09-05T14:41:05Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
@@ -108,19 +108,29 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>test-beta-authoring.otml</string>
+			<string>scripts/strain_multiple_organism.rb</string>
 			<key>lastUsed</key>
-			<date>2008-08-29T13:53:28Z</date>
+			<date>2008-09-08T13:39:07Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
+			<string>test-beta-authoring.otml</string>
+			<key>lastUsed</key>
+			<date>2008-09-08T13:39:07Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>scripts/multi_org_button.rb</string>
+			<key>lastUsed</key>
+			<date>2008-09-08T13:22:57Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>scripts/pedigree_initial_investigation.rb</string>
+			<key>lastUsed</key>
+			<date>2008-09-08T13:14:20Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -191,6 +201,20 @@
 				<integer>275</integer>
 			</dict>
 		</dict>
+		<key>ruby_dragon_test_button.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>84</integer>
+			<key>firstVisibleLine</key>
+			<integer>53</integer>
+		</dict>
 		<key>scripts/meiosis_initial_investigation.rb</key>
 		<dict>
 			<key>caret</key>
@@ -205,45 +229,75 @@
 			<key>firstVisibleLine</key>
 			<integer>11</integer>
 		</dict>
+		<key>scripts/multi_org_button.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>46</integer>
+				<key>line</key>
+				<integer>53</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>37</integer>
+		</dict>
+		<key>scripts/pedigree_initial_investigation.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>scripts/strain_multiple_organism.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>46</integer>
+				<key>line</key>
+				<integer>51</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>23</integer>
+		</dict>
 		<key>test-beta-authoring.otml</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>86</integer>
+				<integer>59</integer>
 				<key>line</key>
-				<integer>772</integer>
+				<integer>1262</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>756</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>83</integer>
-				<key>line</key>
-				<integer>772</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>86</integer>
-				<key>line</key>
-				<integer>772</integer>
-			</dict>
+			<integer>1234</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>scripts/meiosis_initial_investigation.rb</string>
 		<string>test-beta-authoring.otml</string>
+		<string>scripts/strain_multiple_organism.rb</string>
+		<string>scripts/pedigree_initial_investigation.rb</string>
+		<string>scripts/multi_org_button.rb</string>
+		<string>ruby_dragon_test_button.otml</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{271, 103}, {823, 722}}</string>
+	<string>{{491, 61}, {823, 722}}</string>
 </dict>
 </plist>
