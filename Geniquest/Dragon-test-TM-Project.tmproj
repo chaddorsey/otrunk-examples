@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>scripts/strain_multiple_organism.rb</string>
+	<string>test-beta-authoring.otml</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -110,21 +110,25 @@
 			<key>filename</key>
 			<string>scripts/strain_multiple_organism.rb</string>
 			<key>lastUsed</key>
-			<date>2008-09-08T13:39:07Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2008-09-15T13:18:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>test-beta-authoring.otml</string>
 			<key>lastUsed</key>
-			<date>2008-09-08T13:39:07Z</date>
+			<date>2008-09-15T13:18:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>scripts/multi_org_button.rb</string>
 			<key>lastUsed</key>
 			<date>2008-09-08T13:22:57Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/multi_org_save_family_button.rb</string>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -137,6 +141,14 @@
 			<string>scripts/meiosis_initial_investigation.rb</string>
 			<key>lastUsed</key>
 			<date>2008-08-29T13:53:28Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/multi_org_clear_button.rb</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/multi_org_move_up_button.rb</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -276,7 +288,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>59</integer>
+				<integer>27</integer>
 				<key>line</key>
 				<integer>1262</integer>
 			</dict>
@@ -298,6 +310,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{491, 61}, {823, 722}}</string>
+	<string>{{512, 87}, {823, 722}}</string>
 </dict>
 </plist>
