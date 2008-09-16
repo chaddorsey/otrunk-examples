@@ -232,6 +232,8 @@
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
+            <object refid="${femaleStrainOrganism}" />
+            <object refid="${maleStrainOrganism}" />
           </sharedObjects>
         </OTSharingBundle>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
@@ -1240,37 +1242,39 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                   <div class="subtitle">Breeding Test Area</div>
                                   Try breeding some offspring to see what crosses between these strains produce.
                                   <br />
-																	<table>
-																		<tr>
-																			<td>																			
-																				<table>
-																					<tr>
-																						<td align="left">
-			                                  			<object refid="${breedOffspringViewForStrains}" editable="true" />
-																						</td>
-																					</tr>
-																					<tr>
-																						<td>
-																							<object refid="${multipleOrganismViewForStrains}" /><br/>
-																							<object refid="${strainMultipleOrganismScript}" />
-																							<object refid="${multiOrgClearButton}" /><br/>
-
-																						</td>
-																					</tr>
-																				</table>
-																			</td>
-																			<td>
-																				<table>
-																				<tr>
-																					<td>
-																						<object refid="${multipleOrganismViewTransfer}" /><br/>
-																																													<object refid="${multiOrgSaveFamilyButton}" />
-																					</td>
-																				</tr>
-																			</table>
-																		</td>
-																	</tr>
-																</table>
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td align="left">
+                                              <object refid="${breedOffspringViewForStrains}" editable="true" />
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <object refid="${multipleOrganismViewForStrains}" />
+                                              <br />
+                                              <object refid="${strainMultipleOrganismScript}" />
+                                              <object refid="${multiOrgClearButton}" />
+                                              <br />
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td>
+                                              <object refid="${multipleOrganismViewTransfer}" />
+                                              <br />
+                                              <object refid="${multiOrgSaveFamilyButton}" />
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
                                 </div>
                               </div>
                             </div>
@@ -1294,30 +1298,30 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               </variables>
                               <scriptState />
                             </OTScriptObject>
-														<OTScriptButton local_id="multiOrgClearButton" text="Clear all organisms">
-															<script>
-																<OTJRuby src="scripts/multi_org_clear_button.rb" />
-															</script>
-															<scriptVariables>
-																<OTScriptVariableComponent name="multiOrgView">
-																	<reference>
-																		<object refid="${multipleOrganismViewForStrains}" />
-																	</reference>
-																</OTScriptVariableComponent>
-															</scriptVariables>
-														</OTScriptButton>
-														<OTMultipleOrganism local_id="multipleOrganismViewForStrains" width="300" height="150" organismImageSize="2">
+                            <OTScriptButton local_id="multiOrgClearButton" text="Clear all organisms">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_clear_button.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismViewForStrains}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+                            <OTMultipleOrganism local_id="multipleOrganismViewForStrains" width="300" height="150" organismImageSize="2">
                               <organisms>
                                 <object refid="${samplemale}" />
                                 <object refid="${samplefemale}" />
                               </organisms>
                             </OTMultipleOrganism>
-														<OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2">
+                            <OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2">
                               <organisms>
                                 <object refid="${samplemale}" />
                                 <object refid="${samplefemale}" />
                               </organisms>
-                            </OTMultipleOrganism>                                                                                  
+                            </OTMultipleOrganism>
                             <OTBreedOffspring local_id="breedOffspringViewForStrains">
                               <fatherOrganism>
                                 <OTOrganism local_id="maleStrainOrganism">
@@ -1340,87 +1344,135 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 </OTOrganism>
                               </motherOrganism>
                             </OTBreedOffspring>
-														<OTBreedOffspring local_id="strain_breedoffspring">
+                            <OTBreedOffspring local_id="strain_breedoffspring">
                               <motherOrganism>
-										            <OTOrganism local_id="strain_1_female_breedoffspring" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
-										              <world>
-																		<OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />										              </world>
-										            </OTOrganism>
+                                <OTOrganism local_id="strain_1_female_breedoffspring" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+                                  <world>
+                                    <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+                                  </world>
+                                </OTOrganism>
                               </motherOrganism>
                               <fatherOrganism>
-										            <OTOrganism local_id="strain_2_male_breedoffspring" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
-										              <world>
-																		<OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />										             										              </world>
-										            </OTOrganism>                              
-															</fatherOrganism>
-														</OTBreedOffspring>
-														<OTScriptButton local_id="multiOrgSaveFamilyButton" text="Save">
-															<script>
-																<OTJRuby src="scripts/multi_org_save_family_button.rb" />
-															</script>
-															<scriptVariables>
-																<OTScriptVariableComponent name="strainFamily">
-																	<reference>
-																		<OTFamily local_id="strainFamily">
-																			<father>
-																				<object refid="${maleStrainOrganism}" />
-																			</father>
-																			<mother>
-																				<object refid="${femaleStrainOrganism}" />
-																			</mother>
-																		</OTFamily>
-																	</reference>
-																</OTScriptVariableComponent>
+                                <OTOrganism local_id="strain_2_male_breedoffspring" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+                                  <world>
+                                    <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+                                  </world>
+                                </OTOrganism>
+                              </fatherOrganism>
+                            </OTBreedOffspring>
+                            <OTScriptButton local_id="multiOrgSaveFamilyButton" text="Save">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_save_family_button.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="strainFamily">
+                                  <reference>
+                                    <OTFamily local_id="strainFamily">
+                                      <father>
+                                        <object refid="${maleStrainOrganism}" />
+                                      </father>
+                                      <mother>
+                                        <object refid="${femaleStrainOrganism}" />
+                                      </mother>
+                                    </OTFamily>
+                                  </reference>
+                                </OTScriptVariableComponent>
                                 <OTScriptVariableComponent name="breedOffspringView">
                                   <reference>
                                     <object refid="${breedOffspringViewForStrains}" />
                                   </reference>
                                 </OTScriptVariableComponent>
-																<OTScriptVariableComponent name="multiOrgView">
-																	<reference>
-																		<object refid="${multipleOrganismViewForStrains}" />
-																	</reference>
-																</OTScriptVariableComponent>
-																<OTScriptVariableComponent name="multiOrgView2">
-																	<reference>
-																		<object refid="${multipleOrganismViewTransfer}" />
-																	</reference>
-																</OTScriptVariableComponent>
-															</scriptVariables>
-														</OTScriptButton>
-														<OTScriptButton local_id="moveUp" text="/\">
-															<script>
-																<OTJRuby src="scripts/multi_org_move_up_button.rb" />
-															</script>
-															<scriptVariables>
-																<OTScriptVariableComponent name="multiOrgView">
-																	<reference>
-																		<object refid="${multipleOrganismViewTransfer}" />
-																	</reference>
-																</OTScriptVariableComponent>
-															</scriptVariables>
-														</OTScriptButton>
-														<OTScriptButton local_id="moveDown" text="\/">
-															<script>
-																<OTJRuby src="scripts/multi_org_move_down_button.rb" />
-															</script>
-															<scriptVariables>
-																<OTScriptVariableComponent name="multiOrgView">
-																	<reference>
-																		<object refid="${multipleOrganismViewTransfer}" />
-																	</reference>
-																</OTScriptVariableComponent>
-															</scriptVariables>
-														</OTScriptButton>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismViewForStrains}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariableComponent name="multiOrgView2">
+                                  <reference>
+                                    <object refid="${multipleOrganismViewTransfer}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+                            <OTScriptButton local_id="moveUp" text="/\">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_move_up_button.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismViewTransfer}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+                            <OTScriptButton local_id="moveDown" text="\/">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_move_down_button.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismViewTransfer}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
                           </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="b6e29e26-83ef-11dd-9e23-eb01b8e568e2" name="%b6e29e26-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                 <table>
+																	<tr>
+																		<td>
+																			<object refid="${multipleOrganismViewTransfer}" />
+																			<object refid="${repaintButton}"/>
+																		</td>
+																	</tr>
+																 </table>		
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+													<documentRefs>
+														<OTScriptButton local_id="repaintButton" text="Repaint">
+															<script>
+																<OTJRuby src="scripts/repaint_button.rb"/>
+															</script>
+															<scriptVariables>
+																<OTScriptVariableComponent name="component">
+                                  <reference>
+                                    <object refid="${multipleOrganismViewTransfer}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+														</OTScriptButton>
+													</documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="b9f387a7-83ef-11dd-9e23-eb01b8e568e2" name="%b9f387a7-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">New page</div>
+                                  New page content
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="170b4e9a-7b50-11dd-8304-0bc503599a8b" />
+                        <object refid="b6e29e26-83ef-11dd-9e23-eb01b8e568e2" />
                       </currentCard>
                       <viewedCards>
                         <object refid="f69b9731-79bb-11dd-b6e3-bdb383ed1215" />
                         <object refid="170b4e9a-7b50-11dd-8304-0bc503599a8b" />
+                        <object refid="b6e29e26-83ef-11dd-9e23-eb01b8e568e2" />
+                        <object refid="b9f387a7-83ef-11dd-9e23-eb01b8e568e2" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
@@ -1467,6 +1519,87 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                     <object refid="f69b9734-79bb-11dd-b6e3-bdb383ed1215" />
                   </south>
                 </OTUDLSection>
+                <OTUDLSection id="bcc4f728-83ef-11dd-9e23-eb01b8e568e2" name="Section 5">
+                  <content>
+                    <OTCardContainer id="bcc4f72a-83ef-11dd-9e23-eb01b8e568e2" contentsMayScroll="true" loadViewOnlyOnDemand="true">
+                      <cards>
+                        <OTUDLCompoundDoc id="bcc4f729-83ef-11dd-9e23-eb01b8e568e2">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">New page</div>
+                                  New page content
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" name="%be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">New page</div>
+                                  New page content
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+                      </cards>
+                      <currentCard>
+                        <object refid="be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" />
+                      </currentCard>
+                      <viewedCards>
+                        <object refid="bcc4f729-83ef-11dd-9e23-eb01b8e568e2" />
+                        <object refid="be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" />
+                      </viewedCards>
+                    </OTCardContainer>
+                  </content>
+                  <header>
+                    <OTUDLCompoundDoc id="bcc4f72b-83ef-11dd-9e23-eb01b8e568e2" name="%bcc4f72b-83ef-11dd-9e23-eb01b8e568e2" showEditBar="false">
+                      <bodyText>
+                        <div class="title">Section 5</div>
+                      </bodyText>
+                    </OTUDLCompoundDoc>
+                  </header>
+                  <footer>
+                    <OTUDLCompoundDoc id="bcc4f72c-83ef-11dd-9e23-eb01b8e568e2" name="%bcc4f72c-83ef-11dd-9e23-eb01b8e568e2" showEditBar="false">
+                      <bodyText>
+                        <div align="center">
+                          <table>
+                            <tr>
+                              <td>
+                                <object refid="bcc6089d-83ef-11dd-9e23-eb01b8e568e2" viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTUDLMenu id="bcc6089d-83ef-11dd-9e23-eb01b8e568e2">
+                          <cardContainer>
+                            <object refid="bcc4f72a-83ef-11dd-9e23-eb01b8e568e2" />
+                          </cardContainer>
+                          <menuRule>
+                            <object refid="${page-rule}" />
+                          </menuRule>
+                        </OTUDLMenu>
+                        <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                      </documentRefs>
+                    </OTUDLCompoundDoc>
+                  </footer>
+                  <north>
+                    <object refid="bcc4f72b-83ef-11dd-9e23-eb01b8e568e2" />
+                  </north>
+                  <center>
+                    <object refid="bcc4f72a-83ef-11dd-9e23-eb01b8e568e2" />
+                  </center>
+                  <south>
+                    <object refid="bcc4f72c-83ef-11dd-9e23-eb01b8e568e2" />
+                  </south>
+                </OTUDLSection>
               </cards>
               <currentCard>
                 <object refid="f69b7020-79bb-11dd-b6e3-bdb383ed1215" />
@@ -1476,6 +1609,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                 <object refid="3bac2cae-64f4-11dd-88f8-3390a456ed3b" />
                 <object refid="5fdbdad2-6517-11dd-bd45-d9d11cbf97e7" />
                 <object refid="f69b7020-79bb-11dd-b6e3-bdb383ed1215" />
+                <object refid="bcc4f728-83ef-11dd-9e23-eb01b8e568e2" />
               </viewedCards>
             </OTCardContainer>
           </content>
