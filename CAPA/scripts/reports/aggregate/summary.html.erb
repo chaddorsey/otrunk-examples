@@ -1,0 +1,54 @@
+<h3><%= $title.getText %></h3>
+
+<p>
+Class: <font color="#3030f0"> <%= className %> </font><br/>
+Teacher: <font color="#3030f0"> <%= teacherName %> </font>
+</p> 
+
+<% indicators = $rubric.getIndicators %>
+<% sums = [0] * (indicators.size + 1) %>
+<% numRows = 0 %>
+
+<table border="1">
+  <tr>
+    <td></td>
+    <% indicators.size.times do |i| %>
+      <%= '<td>' + indicators.get(i).getLabel + '</td>' %>
+    <% end %>
+    <td>Final Grade</td>
+  </tr>
+  <% users.size.times do |i| %>
+    <% user = users.get(i) %>
+    <% name = user.getName %>
+    <% assessment = getLastAssessment(user) %>
+    <% if assessment %>
+      <% numRows += 1 %>
+      <tr>
+        <% indicatorValues = assessment.getIndicatorValues %>
+        <td><%= name %></td>
+        <% indicators.size.times do |j| %>
+          <% indicator = indicators.get(j) %>
+          <% indicatorGrade = RubricGradeUtil.getIndicatorGrade(assessment, indicator, $rubric) %>
+	      <% if indicatorGrade == nil %>
+	        <td><font title="hoho">N/A</font></td>
+          <% else %>
+            <% points = indicatorGrade.getPoints() %> 					
+			<td><%= points %></td>
+			<% sums[j] += points %>
+	      <% end %>
+        <% end %>
+        <% points = RubricGradeUtil.getTotalGrade(assessment, $rubric).getPoints() %> 
+        <td><font color="3030f0"><%= points %></font></td>
+        <% sums[sums.length-1] += points %>
+      </tr>
+    <% else %>
+      <% info("No assessment data for student [#{name}]") %>
+    <% end %>
+  <% end %>
+  
+  <td><font color="#a030a0">Average</font></td>
+  <% (indicators.size + 1).times do |i| %>
+    <td><font color="#a030a0"><%= '%.2f' % (sums[i].to_f / numRows) %></font></td>
+  <% end %>
+</table>
+

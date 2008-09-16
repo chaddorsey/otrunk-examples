@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<otrunk id="78a74dbd-e565-11dc-93d4-fd07c3ecd46a">
+<otrunk id="16d5465d-0a2d-481f-890d-d021def59f12">
 	<imports>
 		<import class="org.concord.otrunk.OTSystem" />
 		<import class="org.concord.otrunk.OTInclude" />
@@ -7,6 +7,7 @@
 		<import class="org.concord.otrunk.view.OTViewBundle" />
 		<import class="org.concord.otrunk.view.OTViewMode" />
 		<import class="org.concord.otrunk.view.OTViewEntry" />
+		<import class="org.concord.otrunk.script.ui.OTXHTMLScriptViewEntry" />
 		<import class="org.concord.otrunk.view.OTMultiUserRoot" />
 		<import class="org.concord.otrunk.view.document.OTDocumentViewConfig" />
 		<import class="org.concord.otrunk.ui.OTText"/>
@@ -14,19 +15,18 @@
 		<import class="org.concord.otrunk.script.OTScriptEngineBundle" />
 		<import class="org.concord.otrunk.script.OTScriptEngineEntry" />
 		<import class="org.concord.otrunk.script.ui.OTScriptVariable" />
-		<import class="org.concord.otrunk.script.ui.OTXHTMLScriptViewEntry" />
 		<import class="org.concord.framework.otrunk.wrapper.OTBlob" />
 		<import class="org.concord.framework.otrunk.view.OTFrame" />
 	</imports>
     <idMap>
-  	  <idMapping local_id="rubric_xx" id="502664d6-9401-11dc-8314-0800200c9a66"/>    
-  	  <idMapping local_id="script_object" id="33754150-b594-11d9-9669-0800200c9a66!/activity_script"/>
+  	  <idMapping local_id="script_object" id="3123e5ca-0b12-4535-878c-c858a30d2577!/activity_script"/>
+  	  <idMapping local_id="rubric" id="ac0dee1d-a026-4a82-8c10-df5409c853d9"/>
   	  "/>
     </idMap>
 	<objects>
 		<OTSystem local_id="system">
 			<includes>
-  		      <OTInclude href="capa_multimeter_activity.otml" />
+  		      <OTInclude href="capa_analog_fault_activity.otml" />
 			</includes>
 			<bundles>
 				<OTViewBundle showLeftPanel="false">
@@ -73,11 +73,11 @@ td { border-width: 1; border-color: ffc0d0; }
 							DIY
 						-->
 						<OTIncludeRootObject local_id="external_user_list_url"
-							href="http://capa.diy.concord.org/external_otrunk_activities/20/ot_learner_data.xml" />
+							href="http://capa.diy.concord.org/external_otrunk_activities/25/ot_learner_data.xml" />
 					</userList>
 					<reportTemplate>
 						<OTIncludeRootObject local_id="external_activity_url"
-							href="capa_multimeter_activity.otml" />
+							href="capa_analog_fault_activity.otml" />
 					</reportTemplate>
 				</OTMultiUserRoot>
 			</root>
@@ -90,12 +90,12 @@ td { border-width: 1; border-color: ffc0d0; }
 					<variables>
 						<OTScriptVariable name="template">
 							<reference>
-								<OTBlob src="scripts/reports/aggregate/dmm-summary.html.erb" />
+								<OTBlob src="scripts/reports/aggregate/summary.html.erb" />
 							</reference>
 						</OTScriptVariable>
 						<OTScriptVariable name="rubric">
 							<reference>
-								<object refid="${rubric_xx}"/>
+								<object refid="${rubric}"/>
 							</reference>
 						</OTScriptVariable>
 						<OTScriptVariable name="scriptObject">
@@ -105,7 +105,7 @@ td { border-width: 1; border-color: ffc0d0; }
 						</OTScriptVariable>
 						<OTScriptVariable name="title">
 							<reference>
-								<OTText text="Using the Digital Multimeter"/>
+								<OTText text="Troubleshooting Analog DC Circuits"/>
 							</reference>
 						</OTScriptVariable>
 					</variables>

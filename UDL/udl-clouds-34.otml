@@ -64,10 +64,11 @@
     <import class="org.concord.otrunk.ui.OTText" />
     <import class="org.concord.otrunk.ui.OTPlacement" />
     <import class="org.concord.otrunk.ui.OTPlacementContainer" />
-    <import class="org.concord.otrunk.ui.snapshot.OTSnapshot" />
-    <import class="org.concord.otrunk.ui.snapshot.OTSnapshotButton" />
-    <import class="org.concord.otrunk.ui.snapshot.OTSnapshotAlbum" />
-    <import class="org.concord.otrunk.ui.snapshot.OTSnapshotChooser" />
+    <import class="org.concord.otrunk.util.OTLabbookBundle" />
+    <import class="org.concord.otrunk.util.OTLabbookEntry" />
+    <import class="org.concord.otrunk.labbook.OTLabbookButton" />
+    <import class="org.concord.otrunk.labbook.OTLabbook" />
+    <import class="org.concord.otrunk.labbook.OTLabbookEntryChooser" />
     <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
     <import class="org.concord.otrunk.util.OTSharingBundle" />
     <import class="org.concord.otrunk.view.OTObjectEditViewConfig" />
@@ -105,7 +106,7 @@
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="http://continuum.concord.org/otrunk/examples/UDL/global-imports/udl-view-bundle.otml" />
+        <OTInclude href="global-imports/udl-view-bundle.otml" />
       </includes>
       <bundles>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
@@ -130,13 +131,14 @@
             <OTDeviceConfig configString="none" deviceId="10" />
           </deviceConfigs>
         </OTInterfaceManager>
+        <OTLabbookBundle />
       </bundles>
       <overlays>
         <object refid="6cc8e2b0-c44e-11dc-95ff-0800200c9a66" />
         <OTOverlay>
           <deltaObjectMap>
             <entry key="${authoring_script.js}">
-              <OTJavascript src="http://continuum.concord.org/otrunk/examples/UDL/scripts/student_script.js" />
+              <OTJavascript src="scripts/student_script.js" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>
@@ -834,7 +836,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="40%">
+                                      <td width="40%" valign="top">
                                         <object refid="bdebf89d-6963-11dd-b38c-c138139ada97" />
                                       </td>
                                       <td width="60%">
@@ -917,7 +919,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="30%">
+                                      <td width="30%" valign="top">
                                         <br />
                                         <br />
                                         <object refid="2eb9b009-6964-11dd-b38c-c138139ada97" />
@@ -998,7 +1000,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="30%">Use the Cloud Wheel to help you identify, draw and label the clouds 
+                                      <td width="30%" valign="top">Use the Cloud Wheel to help you identify, draw and label the clouds 
           that appear in the sky. Use the pencil and text to help draw your 
           clouds.</td>
                                       <td width="70%">
@@ -2215,24 +2217,28 @@ is an example of
           asked.
                                   <br />
                                   <br />
-                                  "Oh, nothing," said Eduardo. "We were just wondering about clouds."
+                                  "Oh, nothing," said Eduardo. "We were just wondering 
+          about clouds."
                                   <br />
                                   <br />
-                                  "Oh," 
-          said Margaret's mother. She had a funny expression. She shook her 
-          head and turned around to face the front again.
+                                  "Oh," said Margaret's mother. She had a 
+          funny expression. She shook her head and turned around to face the 
+          front again.
                                   <br />
                                   <br />
-                                  "And we were 
-          wondering about Elvira!" whispered Margaret. "She is real, after 
-          all!"
+                                  "And we were wondering about Elvira!" whispered 
+          Margaret. "She is real, after all!"
                                   <br />
                                   <br />
                                   <center>
-                                    <img border="1" src="http://udl.concord.org/artwork/cloud_34/cl_34_story_sketches/cl_34_in_car.png" />
+                                    <img src="http://udl.concord.org/artwork/cloud_34/cl_34_story_sketches/cl_34_in_car.png" border="1" />
                                   </center>
                                   <br />
                                   "I guess she is," said Eduardo.
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="ac5b3630-7e8d-11dd-b797-b59f90d3fa64" />
                                   <br />
                                   <br />
                                   <object refid="e6db22dc-00e3-11dd-ac77-458a9ac771e9" />
@@ -2244,14 +2250,24 @@ is an example of
                             </div>
                           </bodyText>
                           <documentRefs>
+                            <OTUDLQuestion id="ac5b3630-7e8d-11dd-b797-b59f90d3fa64" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Describe something you learned from this story about clouds.</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
                             <OTUDLQuestion id="e6db22dc-00e3-11dd-ac77-458a9ac771e9" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>Describe something you learned from this story about clouds.</bodyText>
+                                  <bodyText>Draw your own picture of the inside of a cloud.</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
-                                <OTDrawingTool name="Drawing tool">
+                                <OTDrawingTool name="Drawing tool" usePopupButtons="false" lineWidthButtonVisible="true">
                                   <graphables>
                                     <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                   </graphables>
@@ -2397,7 +2413,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         <div style="padding-left: 2px; margin-bottom: 5px; border-left-width: 1px; padding-top: 2px; margin-top: 5px; margin-left: 5px; border-top-width: 1px; border-style: solid; border-right-width: 1px; padding-right: 2px; border-bottom-width: 1px; border-color: black; padding-bottom: 2px; margin-right: 5px">
                                           <object refid="f2a6b49f-5f40-11dd-b853-57f2247cadaa" />
                                           <br />
@@ -2574,14 +2590,11 @@ is an example of
                                 <OTBlob src="http://udl.concord.org/artwork/cloud_34/watercycle/cl_34_watercycle.png" name="http://udl.concord.org/artwork/cloud_34/watercycle/cl_34_watercycle.png" />
                               </backgroundSrc>
                             </OTDrawingTool2>
-                            <OTSnapshotButton id="ad8f7190-1b77-11dd-8bba-e71c789b905c" name="Snapshot button">
+                            <OTLabbookButton id="ad8f7190-1b77-11dd-8bba-e71c789b905c" name="Snapshot button">
                               <target>
                                 <object refid="5ead6d0f-e653-11dc-a279-db0c302a32f2" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%1a5b3db4-00c4-11dd-ab8f-d5c2d9ab838f" showDefinitions="true">
@@ -2630,14 +2643,11 @@ is an example of
                               </cardContainer>
                             </OTUDLMenu>
                             <object refid="5ead6d0f-e653-11dc-a279-db0c302a32f2" />
-                            <OTSnapshotButton id="d1a76746-1b77-11dd-8bba-e71c789b905c" name="Snapshot button">
+                            <OTLabbookButton id="d1a76746-1b77-11dd-8bba-e71c789b905c" name="Snapshot button">
                               <target>
                                 <object refid="5ead6d0f-e653-11dc-a279-db0c302a32f2" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -2659,7 +2669,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         <div style="padding-left: 2px; margin-bottom: 5px; border-left-width: 1px; padding-top: 2px; margin-top: 5px; margin-left: 5px; border-top-width: 1px; border-style: solid; border-right-width: 1px; padding-right: 2px; border-bottom-width: 1px; border-color: black; padding-bottom: 2px; margin-right: 5px">
                                           <object refid="02858d9b-5f42-11dd-b853-57f2247cadaa" />
                                           <br />
@@ -2737,14 +2747,11 @@ is an example of
                               </bodyText>
                             </OTCompoundDoc>
                             <object refid="5ead6d0f-e653-11dc-a279-db0c302a32f2" />
-                            <OTSnapshotButton id="e2b7d79c-1b77-11dd-8bba-e71c789b905c" name="Snapshot button">
+                            <OTLabbookButton id="e2b7d79c-1b77-11dd-8bba-e71c789b905c" name="Snapshot button">
                               <target>
                                 <object refid="5ead6d0f-e653-11dc-a279-db0c302a32f2" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -2766,10 +2773,10 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         <object refid="7b5b9607-5f43-11dd-b853-57f2247cadaa" />
                                       </td>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         <object refid="5ead6d0f-e653-11dc-a279-db0c302a32f2" />
                                         <br />
                                         <object refid="e2b7d79c-1b77-11dd-8bba-e71c789b905c" />
@@ -3275,7 +3282,65 @@ is an example of
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%08044ed3-0d8e-11dd-8292-6fb892b06cea" showDefinitions="true">
                           <documentRefs>
-                            <OTText id="3c3fe3d5-0d8e-11dd-8292-6fb892b06cea" name="Text field" rows="5" />
+                            <OTUDLQuestion id="4db08fc6-7e90-11dd-b797-b59f90d3fa64" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Imagine you are a water droplet that falls on the roof of your house. Write a story about where it travels after that, until it reaches the ocean or a lake.</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText rows="4" />
+                              </input>
+                            </OTUDLQuestion>
+                          </documentRefs>
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle" />
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">11</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="4db08fc6-7e90-11dd-b797-b59f90d3fa64" />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="9bf3d9d8-7e91-11dd-ba82-c5eaefba34fc" name="%9bf3d9d8-7e91-11dd-ba82-c5eaefba34fc" showEditBar="true" showDefinitions="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle" />
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">12</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  You can also use the drawing tool and stamps to illustrate 
+                your story. Take a snapshot when you are done.
+                                  <br />
+                                  <br />
+                                  <object refid="4727f176-0d8e-11dd-8292-6fb892b06cea" />
+                                  <br />
+                                  <br />
+                                  <object refid="9fda4ed7-1b79-11dd-8bba-e71c789b905c" />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
                             <OTDrawingTool2 id="4727f176-0d8e-11dd-8292-6fb892b06cea" name="Draw tool" usePopupButtons="false" lineWidthButtonVisible="true">
                               <stamps>
                                 <OTDrawingStamp>
@@ -3294,53 +3359,16 @@ is an example of
                                   </imageSrc>
                                 </OTDrawingStamp>
                               </stamps>
+                              <graphables>
+                                <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                              </graphables>
                             </OTDrawingTool2>
-                            <OTSnapshotButton id="9fda4ed7-1b79-11dd-8bba-e71c789b905c" name="Snapshot button">
+                            <OTLabbookButton id="9fda4ed7-1b79-11dd-8bba-e71c789b905c" name="Snapshot button">
                               <target>
                                 <object refid="4727f176-0d8e-11dd-8292-6fb892b06cea" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <table width="100%">
-                                    <tr>
-                                      <td>
-                                        <div class="subtitle" />
-                                      </td>
-                                      <td align="right">
-                                        <div class="page-number">11</div>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <table width="100%">
-                                    <tr>
-                                      <td width="40%">
-                                        Imagine you are a water droplet that falls on the roof of your 
-          house. Write a story about where it travels after that, until it 
-          reaches the ocean or a lake. You can also use the drawing tool and 
-          stamps to illustrate your story.
-                                        <br />
-                                        <br />
-                                        <object refid="3c3fe3d5-0d8e-11dd-8292-6fb892b06cea" />
-                                      </td>
-                                      <td width="60%">
-                                        <object refid="4727f176-0d8e-11dd-8292-6fb892b06cea" />
-                                        <br />
-                                        <br />
-                                        <object refid="9fda4ed7-1b79-11dd-8bba-e71c789b905c" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%894d73fd-e657-11dc-a279-db0c302a32f2" showDefinitions="true">
                           <bodyText>
@@ -3353,13 +3381,13 @@ is an example of
                                         <div class="subtitle" />
                                       </td>
                                       <td align="right">
-                                        <div class="page-number">12</div>
+                                        <div class="page-number">13</div>
                                       </td>
                                     </tr>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td>
+                                      <td valign="top">
                                         Add arrows to the picture below to show how water moves around 
                 the earth.
                                         <br />
@@ -3388,19 +3416,17 @@ is an example of
                                 <OTDrawingShape id="cf112ebc-1b7b-11dd-8bba-e71c789b905c" type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                 <object refid="cf112ebc-1b7b-11dd-8bba-e71c789b905c" />
                                 <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                               </graphables>
                               <backgroundSrc>
                                 <OTBlob src="http://udl.concord.org/artwork/cloud_34/watercycle/cl_34_watercycle.png" name="http://udl.concord.org/artwork/cloud_34/watercycle/cl_34_watercycle.png" />
                               </backgroundSrc>
                             </OTDrawingTool2>
-                            <OTSnapshotButton id="4a4dfb5a-7b69-11dd-8a3b-63a7f9af6e08" name="Snapshot button">
+                            <OTLabbookButton id="4a4dfb5a-7b69-11dd-8a3b-63a7f9af6e08" name="Snapshot button">
                               <target>
                                 <object refid="a8c7dfcc-e652-11dc-a279-db0c302a32f2" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
@@ -3668,14 +3694,11 @@ is an example of
                                 <OTDataAxis max="90.0" units="percentage" min="10.0" label="Relative Humidity" />
                               </yDataAxis>
                             </OTDataCollector>
-                            <OTSnapshotButton id="3125e5f8-696a-11dd-b38c-c138139ada97" name="Snapshot button">
+                            <OTLabbookButton id="3125e5f8-696a-11dd-b38c-c138139ada97" name="Snapshot button">
                               <target>
                                 <object refid="3feb0b5a-1307-11dd-b3e3-e5b6fe243d84" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -3693,7 +3716,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="40%">
+                                      <td width="40%" valign="top">
                                         <br />
                                         <div style="padding-right: 2px; border-left-width: 1px; padding-left: 2px; margin-right: 5px; margin-top: 5px; border-top-width: 1px; border-color: black; padding-bottom: 2px; margin-left: 5px; border-style: solid; border-bottom-width: 1px; margin-bottom: 5px; border-right-width: 1px; padding-top: 2px">
                                           <object refid="1390f021-59ae-11dd-ae45-bb21b5d48f7c" />
@@ -3772,7 +3795,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         <div border="1">
                                           <object refid="a1befc9d-59af-11dd-ae45-bb21b5d48f7c" />
                                           <br />
@@ -3874,11 +3897,11 @@ is an example of
                                 <object refid="a8c14f28-59b0-11dd-ae45-bb21b5d48f7c" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <OTDataTable id="f7e1630c-1211-11dd-98d8-f9bcfd71a603" name="Data table" showLastRowForAddingNew="true">
+                            <OTDataTable id="f7e1630c-1211-11dd-98d8-f9bcfd71a603" name="Data table" showLastRowForAddingNew="true" visibleRows="5">
                               <dataStore>
                                 <OTDataStore numberChannels="2">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="Location" numericData="false" locked="false" />
+                                    <OTDataChannelDescription name="Location" numericData="false" locked="true" />
                                     <OTDataChannelDescription name="Humidity" numericData="false" />
                                   </channelDescriptions>
                                   <values>
@@ -3922,14 +3945,11 @@ is an example of
                                 <OTDataAxis max="90.0" units="percentage" min="10.0" label="Relative Humidity" />
                               </yDataAxis>
                             </OTDataCollector>
-                            <OTSnapshotButton id="c90a82a5-72bc-11dd-a061-13ff01a7131e" name="Snapshot button">
+                            <OTLabbookButton id="c90a82a5-72bc-11dd-a061-13ff01a7131e" name="Snapshot button">
                               <target>
                                 <object refid="${temp_datacollector}" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -3947,7 +3967,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         <div style="padding-left: 2px; margin-top: 5px; padding-bottom: 2px; margin-left: 5px; border-left-width: 1px; border-color: black; border-top-width: 1px; padding-top: 2px; margin-bottom: 5px; padding-right: 2px; border-style: solid; border-right-width: 1px; margin-right: 5px; border-bottom-width: 1px">
                                           <object refid="a8c14f28-59b0-11dd-ae45-bb21b5d48f7c" />
                                           <br />
@@ -3990,7 +4010,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         <br />
                                         <object refid="eb7b35ed-6232-11dd-ab89-27ec8271e1e2" />
                                       </td>
@@ -4350,14 +4370,14 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="30%">
+                                      <td width="30%" valign="top">
                                         <div>
                                           <object refid="f82b91ca-6230-11dd-ab89-27ec8271e1e2" />
                                           <br />
                                           <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="f82b91cb-6230-11dd-ab89-27ec8271e1e2" />
                                         </div>
                                       </td>
-                                      <td width="70%" style="padding-left: 20px; padding-right: 20px">
+                                      <td style="padding-left: 20px; padding-right: 20px" width="70%">
                                         <object refid="185efa5d-6231-11dd-ab89-27ec8271e1e2" />
                                         <br />
                                         <object refid="80c92713-15f5-11dd-8b72-995c90afa490" />
@@ -4401,14 +4421,11 @@ is an example of
                                 <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                               </graphables>
                             </OTDrawingTool2>
-                            <OTSnapshotButton id="80c92713-15f5-11dd-8b72-995c90afa490" name="Snapshot button">
+                            <OTLabbookButton id="80c92713-15f5-11dd-8b72-995c90afa490" name="Snapshot button">
                               <target>
                                 <object refid="185efa5d-6231-11dd-ab89-27ec8271e1e2" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
@@ -4489,14 +4506,10 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td align="left">
-                                        <blockquote>
-                                          <br />
-                                          <br />
-                                          <object refid="06116eea-6234-11dd-ab89-27ec8271e1e2" />
-                                        </blockquote>
+                                      <td valign="top">
+                                        <object refid="06116eea-6234-11dd-ab89-27ec8271e1e2" />
                                       </td>
-                                      <td>
+                                      <td style="padding-left: 40px">
                                         <img src="http://udl.concord.org/artwork/cloud_34/Clouds168/Clouds168.jpg" border="1" />
                                       </td>
                                     </tr>
@@ -4641,7 +4654,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td width="50%" valign="top">
                                         1. Your teacher will provide you with a clear plastic bottle that has its top third separated.
                                         <br />
                                         <br />
@@ -4713,9 +4726,10 @@ is an example of
                                         5. Immediately cover the bottle with the plastic wrap. Make 
                 sure the wrap is snug against the sides of the bottle.
                                         <br />
+                                        <br />
                                         6. Place an ice cube on top of the plastic wrap.
                                       </td>
-                                      <td width="40%" style="padding-left: 20px; padding-right: 20px">
+                                      <td style="padding-left: 20px; padding-right: 20px" width="40%">
                                         <img src="http://udl.concord.org/artwork/cloud_34/bottle_ice/cl_34_bottle_ice.png" border="1" />
                                       </td>
                                     </tr>
@@ -4779,7 +4793,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="30%">9. Draw a picture of what happens in the air just below the 
+                                      <td width="30%" valign="top">9. Draw a picture of what happens in the air just below the 
                 ice cube. When you are finished take a snapshot of your 
                 drawing.</td>
                                       <td width="70%">
@@ -4794,14 +4808,11 @@ is an example of
                           </bodyText>
                           <documentRefs>
                             <OTDrawingTool2 id="ced70eed-624c-11dd-b359-add9be1207dd" name="Draw tool" />
-                            <OTSnapshotButton id="dd1f5e8e-624c-11dd-b359-add9be1207dd" name="Snapshot button">
+                            <OTLabbookButton id="dd1f5e8e-624c-11dd-b359-add9be1207dd" name="Snapshot button">
                               <target>
                                 <object refid="ced70eed-624c-11dd-b359-add9be1207dd" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="871048a0-71db-11dc-9410-0f9c34fad6c2" showDefinitions="true">
@@ -4977,14 +4988,11 @@ is an example of
                         <OTUDLCompoundDoc name="%e2f9fd53-0256-11dd-96e5-3d1faeed689f" showDefinitions="true">
                           <documentRefs>
                             <OTDrawingTool2 id="9017dd8a-6258-11dd-b109-dff7490b7962" name="Draw tool" />
-                            <OTSnapshotButton id="3eadd097-625a-11dd-a7c7-573cb2f6c7f5" name="Snapshot button">
+                            <OTLabbookButton id="3eadd097-625a-11dd-a7c7-573cb2f6c7f5" name="Snapshot button">
                               <target>
                                 <object refid="9017dd8a-6258-11dd-b109-dff7490b7962" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -5002,7 +5010,9 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="30%">Draw a picture of what you think water droplets look like when they form around a smoke particle. Don't forget to take a snapshot of your drawing.</td>
+                                      <td width="30%" valign="top">Draw a picture of what you think water droplets look like when 
+                they form around a smoke particle. Don't forget to take a 
+                snapshot of your drawing.</td>
                                       <td width="70%">
                                         <br />
                                         <object refid="9017dd8a-6258-11dd-b109-dff7490b7962" />
@@ -5018,15 +5028,16 @@ is an example of
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="e7449b8b-6258-11dd-b109-dff7490b7962" name="%e7444d6a-6258-11dd-b109-dff7490b7962" showDefinitions="true">
                           <documentRefs>
-                            <OTDrawingTool2 id="e9472c9b-6259-11dd-a7c7-573cb2f6c7f5" name="Draw tool" />
-                            <OTSnapshotButton id="ef52b87c-6259-11dd-a7c7-573cb2f6c7f5" name="Snapshot button">
+                            <OTDrawingTool2 id="e9472c9b-6259-11dd-a7c7-573cb2f6c7f5" name="Draw tool">
+                              <graphables>
+                                <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="0.3" />
+                              </graphables>
+                            </OTDrawingTool2>
+                            <OTLabbookButton id="ef52b87c-6259-11dd-a7c7-573cb2f6c7f5" name="Snapshot button">
                               <target>
                                 <object refid="e9472c9b-6259-11dd-a7c7-573cb2f6c7f5" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -5044,7 +5055,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="30%">
+                                      <td width="30%" valign="top">
                                         If it's cold enough, the water vapor will freeze and make a 
                 snowflake instead of liquid water.
                                         <br />
@@ -5081,7 +5092,7 @@ is an example of
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td>
+                                      <td valign="top">
                                         <br />
                                         <br />
                                         <div style="padding-right: 2px; border-left-width: 1px; padding-left: 2px; margin-right: 5px; margin-top: 5px; border-top-width: 1px; border-color: black; padding-bottom: 2px; margin-left: 5px; border-style: solid; border-bottom-width: 1px; margin-bottom: 5px; border-right-width: 1px; padding-top: 2px">
@@ -5090,7 +5101,7 @@ is an example of
                                           <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="c81b9717-625b-11dd-a7c7-573cb2f6c7f5" />
                                         </div>
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding: 20px">
                                         <img src="http://udl.concord.org/artwork/cloud_34/lighthousefog/lighthousefog.jpg" border="1" />
                                       </td>
                                     </tr>
@@ -5469,7 +5480,7 @@ is an example of
                                             <OTText />
                                             <OTScriptButton id="fd5acc51-79f4-11dd-b7b2-cbd92264d5b2" text="Check answer">
                                               <script>
-                                                <OTJRuby src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -5546,12 +5557,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="fd5b1a79-79f4-11dd-b7b2-cbd92264d5b2" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="fd5b1a79-79f4-11dd-b7b2-cbd92264d5b2" src="scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="fd5b1a7a-79f4-11dd-b7b2-cbd92264d5b2" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="fd5b1a7a-79f4-11dd-b7b2-cbd92264d5b2" src="scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -5578,7 +5589,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="fd5acc52-79f4-11dd-b7b2-cbd92264d5b2" text="Setup">
                                               <script>
-                                                <OTJavascript src="http://continuum.concord.org/otrunk/examples/UDL/scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="script_button">
@@ -5638,7 +5649,7 @@ end</script>
                                             <OTText id="b5f8db39-7a20-11dd-bd98-41816eb369a4" />
                                             <OTScriptButton id="b5f9024a-7a20-11dd-bd98-41816eb369a4" text="Check answer">
                                               <script>
-                                                <OTJRuby src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_number_script_template.rb">
+                                                <OTJRuby src="scripts/smart_graph_number_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_number_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -5717,12 +5728,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="b5f95073-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="b5f95073-7a20-11dd-bd98-41816eb369a4" src="scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="b5f95074-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="b5f95074-7a20-11dd-bd98-41816eb369a4" src="scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -5754,7 +5765,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="b5f9024b-7a20-11dd-bd98-41816eb369a4" text="Setup">
                                               <script>
-                                                <OTJavascript src="http://continuum.concord.org/otrunk/examples/UDL/scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="text_field">
@@ -5830,7 +5841,7 @@ end</script>
                                             <OTText />
                                             <OTScriptButton id="d8c8e7c2-7a20-11dd-bd98-41816eb369a4" text="Check answer">
                                               <script>
-                                                <OTJRuby src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -5906,12 +5917,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="d8c90eda-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="d8c90eda-7a20-11dd-bd98-41816eb369a4" src="scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="d8c90edb-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="d8c90edb-7a20-11dd-bd98-41816eb369a4" src="scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -5938,7 +5949,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="d8c8e7c3-7a20-11dd-bd98-41816eb369a4" text="Setup">
                                               <script>
-                                                <OTJavascript src="http://continuum.concord.org/otrunk/examples/UDL/scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="script_button">
@@ -5998,7 +6009,7 @@ end</script>
                                             <OTText id="e666296a-7a20-11dd-bd98-41816eb369a4" />
                                             <OTScriptButton id="e666296b-7a20-11dd-bd98-41816eb369a4" text="Check answer">
                                               <script>
-                                                <OTJRuby src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_number_script_template.rb">
+                                                <OTJRuby src="scripts/smart_graph_number_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_number_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -6077,12 +6088,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="e6665084-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="e6665084-7a20-11dd-bd98-41816eb369a4" src="scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="e6665085-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="e6665085-7a20-11dd-bd98-41816eb369a4" src="scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -6114,7 +6125,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="e666296c-7a20-11dd-bd98-41816eb369a4" text="Setup">
                                               <script>
-                                                <OTJavascript src="http://continuum.concord.org/otrunk/examples/UDL/scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="text_field">
@@ -6185,7 +6196,7 @@ end</script>
                                             <OTText id="f22d4c85-7a20-11dd-bd98-41816eb369a4" />
                                             <OTScriptButton id="f22d4c86-7a20-11dd-bd98-41816eb369a4" text="Check answer">
                                               <script>
-                                                <OTJRuby src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_number_script_template.rb">
+                                                <OTJRuby src="scripts/smart_graph_number_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_number_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -6265,12 +6276,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="f22dc1bf-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="f22dc1bf-7a20-11dd-bd98-41816eb369a4" src="scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="f22dc1c0-7a20-11dd-bd98-41816eb369a4" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="f22dc1c0-7a20-11dd-bd98-41816eb369a4" src="scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -6302,7 +6313,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="f22d4c87-7a20-11dd-bd98-41816eb369a4" text="Setup">
                                               <script>
-                                                <OTJavascript src="http://continuum.concord.org/otrunk/examples/UDL/scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="text_field">
@@ -7008,14 +7019,11 @@ end</script>
                                 <OTDataAxis max="42.613144" units="degC" min="23.943275" label="Temperature" labelFormat="None" />
                               </yDataAxis>
                             </OTDataCollector>
-                            <OTSnapshotButton id="0c2a5e35-7a23-11dd-bd98-41816eb369a4" name="Snapshot button">
+                            <OTLabbookButton id="0c2a5e35-7a23-11dd-bd98-41816eb369a4" name="Snapshot button">
                               <target>
                                 <object refid="1b4395d9-6fc4-11dd-90e9-290d96238731" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                             <object refid="b82d0deb-72aa-11dd-8930-05125fe8f057" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -7148,14 +7156,11 @@ end</script>
                                 </OTDataGraphable>
                               </graphables>
                             </OTDataCollector>
-                            <OTSnapshotButton id="48497341-72ab-11dd-8930-05125fe8f057" name="Snapshot button">
+                            <OTLabbookButton id="48497341-72ab-11dd-8930-05125fe8f057" name="Snapshot button">
                               <target>
                                 <object refid="7e10c068-1540-11dd-875d-07a82165daa1" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -7224,14 +7229,11 @@ end</script>
                             </OTUDLMenu>
                             <object refid="73aa541f-1542-11dd-875d-07a82165daa1" />
                             <object refid="7e10c068-1540-11dd-875d-07a82165daa1" />
-                            <OTSnapshotButton id="ced69116-72b8-11dd-bc5a-8bb181858e37" name="Snapshot button">
+                            <OTLabbookButton id="ced69116-72b8-11dd-bc5a-8bb181858e37" name="Snapshot button">
                               <target>
                                 <object refid="7e10c068-1540-11dd-875d-07a82165daa1" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -7302,14 +7304,11 @@ end</script>
                             </OTUDLMenu>
                             <object refid="73aa541f-1542-11dd-875d-07a82165daa1" />
                             <object refid="7e10c068-1540-11dd-875d-07a82165daa1" />
-                            <OTSnapshotButton id="e160d03f-72b8-11dd-bc5a-8bb181858e37" name="Snapshot button">
+                            <OTLabbookButton id="e160d03f-72b8-11dd-bc5a-8bb181858e37" name="Snapshot button">
                               <target>
                                 <object refid="7e10c068-1540-11dd-875d-07a82165daa1" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -7770,14 +7769,11 @@ end</script>
                                 <object refid="146a08ba-1236-11dd-bad1-ab45be8cf431" />
                               </graphables>
                             </OTDrawingTool2>
-                            <OTSnapshotButton id="e38f7518-12d0-11dd-ab87-55ab244223a3" name="Snapshot button">
+                            <OTLabbookButton id="e38f7518-12d0-11dd-ab87-55ab244223a3" name="Snapshot button">
                               <target>
                                 <object refid="841d8f5b-1231-11dd-bad1-ab45be8cf431" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -7794,7 +7790,7 @@ end</script>
                                     </tr>
                                   </table>
                                   <table width="100%">
-                                    <tr>
+                                    <tr valign="top">
                                       <td width="50%">
                                         Here is a 10x10 grid of squares (100 squares in all). Suppose this 
           is the whole surface of the earth. How much of it  water, and how 
@@ -7928,7 +7924,7 @@ end</script>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="70%">
+                                      <td width="70%" valign="top">
                                         <br />
                                         <div style="padding-top: 2px; margin-bottom: 5px; border-top-width: 1px; border-right-width: 1px; margin-top: 5px; padding-left: 2px; border-style: solid; margin-left: 5px; padding-bottom: 2px; border-left-width: 1px; margin-right: 5px; border-color: black; border-bottom-width: 1px; padding-right: 2px">
                                           <object refid="83ee517c-5a50-11dd-807d-ffdbb55d5b44" />
@@ -8051,10 +8047,14 @@ end</script>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td>On the 10 x 10 grid, fill in one square for each toss. Color 
+                                      <td valign="top">
+                                        On the 10 x 10 grid, fill in one square for each toss. Color 
                 it either brown for land or blue for water, using the results 
-                of your experiment. When you are done, take a snapshot.</td>
-                                      <td style="padding-right: 20px; padding-left: 20px">
+                of your experiment.
+                                        <br />
+                                        When you are done, take a snapshot.
+                                      </td>
+                                      <td style="padding-left: 20px; padding-right: 20px">
                                         <object refid="0b7602e5-1236-11dd-bad1-ab45be8cf431" />
                                         <br />
                                         <object refid="c05709f7-12d0-11dd-ab87-55ab244223a3" />
@@ -8067,14 +8067,11 @@ end</script>
                           </bodyText>
                           <documentRefs>
                             <OTDrawingTool2 id="0b7602e5-1236-11dd-bad1-ab45be8cf431" name="Draw tool" backgroundImage="http://udl.concord.org/artwork/cloud_34/grid/cl_34_grid.jpg" backgroundImageURL="http://udl.concord.org/artwork/cloud_34/grid/cl_34_grid.jpg" />
-                            <OTSnapshotButton id="c05709f7-12d0-11dd-ab87-55ab244223a3" name="Snapshot button">
+                            <OTLabbookButton id="c05709f7-12d0-11dd-ab87-55ab244223a3" name="Snapshot button">
                               <target>
                                 <object refid="0b7602e5-1236-11dd-bad1-ab45be8cf431" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTSnapshotButton>
+                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%5688098a-1237-11dd-bad1-ab45be8cf431" showDefinitions="true">
@@ -8147,7 +8144,7 @@ end</script>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="40%">
+                                      <td width="40%" valign="top">
                                         Compare your results with other teams in the class. Make a chart of 
           everyone's results.
                                         <br />
@@ -8349,7 +8346,7 @@ end</script>
 • Students develop an understanding of fractions as parts of unit wholes.</goals>
                   <description>Measure how much of the earth's surface is water.</description>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true" description="Gather your work together in a lab notebook.">
+                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true" description="Gather your work together in a lab notebook  and summarize what you have learned.">
                   <content>
                     <OTCardContainer id="082651f4-71c4-11dc-9410-0f9c34fad6c2" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -8368,14 +8365,20 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  Now it's time to review what you have learned about clouds. To help, 
-          you can show all of your snapshots and some of your written answers 
-          from the activities. They are all in your lab book[lab book image 
-          displayed here].
+                                  Now it's time to review and summarize what you have learned about 
+          clouds. To help, you can show all of your snapshots and some of your 
+          written answers from the activities. They are all in your lab book[
+                                  <i>lab 
+          book image displayed here</i>
+                                  ].
                                   <br />
                                   <br />
-                                  Review the discovery questions and add to what you did before. There is a 
-          separate page for each of the activities that you worked on.
+                                  Review the discovery 
+          questions on the following pages. Feel free to add to what you did 
+          before. There is a separate page for each of the activities that you 
+          worked on.
+                                  <br />
+                                  Be prepared to share your answers with the rest of the class.
                                 </div>
                               </div>
                             </div>
@@ -8399,19 +8402,38 @@ end</script>
                                   This was a story about a trip up into the clouds.
                                   <br />
                                   <br />
-                                  Use your written answers and your snapshots to answer the question: If you 
-          took a trip up into the clouds, what do you think you would see?
+                                  <br />
+                                  <br />
+                                  <object refid="1f6e7eda-7de9-11dd-a164-1704e93cfa6f" />
                                   <br />
                                   <br />
                                   <br />
-                                  [lab book contains:]
-What do you think clouds are made of?
+                                  <object refid="123e53c0-80ea-11dd-88fa-3b51097ba2ef" />
                                   <br />
-                                  Describe something you learned from this story about clouds.
+                                  <br />
+                                  [lab 
+          book contains: What do you think clouds are made of?]
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="1f6e7eda-7de9-11dd-a164-1704e93cfa6f" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: If you took a trip up into the clouds, what do you think you would see?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="123e53c0-80ea-11dd-88fa-3b51097ba2ef" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_3}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="54332c2e-7b76-11dd-9ceb-774b664b12ab" name="%54332c2e-7b76-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -8432,28 +8454,54 @@ What do you think clouds are made of?
           clouds are part of water's journey.
                                   <br />
                                   <br />
-                                  Use your written answers and your snapshots to answer the question: Where on 
-          earth does the water go?
+                                  <object refid="40a41525-7de9-11dd-a164-1704e93cfa6f" />
                                   <br />
-                                  [lab book contains:]
                                   <br />
-                                  • Where does the water in clouds come from? (page 10)
                                   <br />
-                                  • What happens to the water from rain, hail, and snow after it falls to the 
-          ground?  (page 10)
                                   <br />
-                                  • Imagine you are a water droplet that falls on the roof of your house. Write 
-          a story about where it travels after that, until it reaches the 
-          ocean or a lake. You can also use the drawing tool and stamps to 
-          illustrate your story. (page 11)
+                                  <object refid="18474795-80ea-11dd-88fa-3b51097ba2ef" />
                                   <br />
-                                  • Add arrows to the picture at the right to show how water moves around the 
-          earth. drawing tool (page 12)
+                                  <br />
+                                  <br />
+                                  [lab 
+          book contains:]
+                                  <br />
+                                  • Where does the water in clouds come from? (page 
+          10)
+                                  <br />
+                                  • What happens to the water from rain, hail, and snow after 
+          it falls to the ground? (page 10)
+                                  <br />
+                                  • Imagine you are a water 
+          droplet that falls on the roof of your house. Write a story about 
+          where it travels after that, until it reaches the ocean or a lake. 
+          You can also use the drawing tool and stamps to illustrate your 
+          story. (page 11)
+                                  <br />
+                                  • Add arrows to the picture at the right to show 
+          how water moves around the earth. drawing tool (page 12)
                                   <br />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="40a41525-7de9-11dd-a164-1704e93cfa6f" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: Where on earth does the water go?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="18474795-80ea-11dd-88fa-3b51097ba2ef" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_4}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="08fee505-7b77-11dd-9ceb-774b664b12ab" name="%08fee505-7b77-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -8474,27 +8522,48 @@ What do you think clouds are made of?
           creates clouds.
                                   <br />
                                   <br />
-                                  <br />
-                                  Use your written answers and your snapshots to answer the question:
-                                  <br />
-                                  Where does the water in the air come from?
+                                  <object refid="565584e0-7de9-11dd-a164-1704e93cfa6f" />
                                   <br />
                                   <br />
-                                  [lab book contains:]
                                   <br />
-                                  • Why did the water droplets appear on the plastic wrap above the warm water? 
-          (page 9)
+                                  <object refid="211d652a-80ea-11dd-88fa-3b51097ba2ef" />
                                   <br />
-                                  • A cloud is very much like the tiny water droplets that formed on the plastic 
-          wrap, except that the water droplets are floating in the air, making 
-          it look cloudy.Using the drawing tool, show how you think the water 
-          travels from its liquid state (a lake) through the air to the cloud. 
-          When you are done, take a snapshot of your drawing. (page 11)
+                                  <br />
+                                  <br />
+                                  [lab book 
+          contains:]
+                                  <br />
+                                  • Why did the water droplets appear on the plastic 
+          wrap above the warm water? (page 9)
+                                  <br />
+                                  • A cloud is very much like 
+          the tiny water droplets that formed on the plastic wrap, except that 
+          the water droplets are floating in the air, making it look 
+          cloudy.Using the drawing tool, show how you think the water travels 
+          from its liquid state (a lake) through the air to the cloud. When 
+          you are done, take a snapshot of your drawing. (page 11)
                                   <br />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="565584e0-7de9-11dd-a164-1704e93cfa6f" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: where does the water in the air come from?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="211d652a-80ea-11dd-88fa-3b51097ba2ef" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_5}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="0a417726-7b77-11dd-9ceb-774b664b12ab" name="%0a417726-7b77-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -8513,22 +8582,47 @@ What do you think clouds are made of?
                                   </table>
                                   In this activity, you created a cloud in a bottle.
                                   <br />
-                                  Use your written answers and your snapshots to answer the question: What are 
-          clouds made of?
+                                  <br />
+                                  <object refid="646f989b-7de9-11dd-a164-1704e93cfa6f" />
                                   <br />
                                   <br />
-                                  [lab book contains:]
-• Where do you think clouds would form in the sky? (page 9)
+                                  <br />
+                                  <br />
+                                  <object refid="26f8e05f-80ea-11dd-88fa-3b51097ba2ef" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  [lab 
+          book contains:] • Where do you think clouds would form in the sky? 
+          (page 9)
                                   <br />
                                   • List some forms of precipitation.(page 10)
                                   <br />
-                                  • Draw a picture of what you think water droplets look like when they form 
-          around a smoke particle. Don't forget to take a snapshot of your 
-          drawing. (page 11)
+                                  • 
+          Draw a picture of what you think water droplets look like when they 
+          form around a smoke particle. Don't forget to take a snapshot of 
+          your drawing. (page 11)
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="646f989b-7de9-11dd-a164-1704e93cfa6f" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: What are clouds made of?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="26f8e05f-80ea-11dd-88fa-3b51097ba2ef" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_6}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="0b6de937-7b77-11dd-9ceb-774b664b12ab" name="%0b6de937-7b77-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -8548,21 +8642,44 @@ What do you think clouds are made of?
                                   In this activity, you investigated how water in clouds forms rain or 
           snow.
                                   <br />
-                                  Use your written answers and your snapshots to answer the question:  How are 
-          rain and snow made?
+                                  <br />
+                                  <object refid="726645d6-7de9-11dd-a164-1704e93cfa6f" />
                                   <br />
                                   <br />
-                                  [lab book contains:]
-• Observe the outside of the warm cup and the cold cup. On which surface does 
-          water form? (warm cup, cold cup) Where does the water come from? 
-          (page 10)
                                   <br />
-                                  • Where else have you seen condensation? List as many examples as you can 
-          think of. (page 12)
+                                  <object refid="2d81d9a4-80ea-11dd-88fa-3b51097ba2ef" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  [lab 
+          book contains:] • Observe the outside of the warm cup and the cold 
+          cup. On which surface does water form? (warm cup, cold cup) Where 
+          does the water come from? (page 10)
+                                  <br />
+                                  • Where else have you seen 
+          condensation? List as many examples as you can think of. (page 12)
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="726645d6-7de9-11dd-a164-1704e93cfa6f" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: How are rain and snow made?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="2d81d9a4-80ea-11dd-88fa-3b51097ba2ef" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_7}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="0ca41f48-7b77-11dd-9ceb-774b664b12ab" name="%0ca41f48-7b77-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -8582,28 +8699,105 @@ What do you think clouds are made of?
                                   In this activity, you measured how much of the earth's surface is 
           water.
                                   <br />
-                                  Use your written answers and your snapshots to answer the question:  How  much 
-          water is on the earth?
+                                  <br />
+                                  <object refid="80661ad1-7de9-11dd-a164-1704e93cfa6f" />
                                   <br />
                                   <br />
-                                  [lab book contains:]
                                   <br />
-                                  • How did your prediction compare with your experiment? (There was more water 
-          than I predicted., There was less water than I predicted., My 
-          prediction was about right.) (page 8)
+                                  <object refid="399c9ae9-80ea-11dd-88fa-3b51097ba2ef" />
                                   <br />
-                                  • According to your experiment, what percent of the earth's surface is water? 
-          (page 10)
                                   <br />
-                                  • Do you think this experiment gives a good estimate of the real amounts of 
-          land and water on the surface of the earth? (Yes, No) Explain why 
-          you think so. (page 11)
+                                  <br />
+                                  <br />
+                                  [lab 
+          book contains:]
+                                  <br />
+                                  • How did your prediction compare with your 
+          experiment? (There was more water than I predicted., There was less 
+          water than I predicted., My prediction was about right.) (page 8)
+                                  <br />
+                                  • 
+          According to your experiment, what percent of the earth's surface is 
+          water? (page 10)
+                                  <br />
+                                  • Do you think this experiment gives a good 
+          estimate of the real amounts of land and water on the surface of the 
+          earth? (Yes, No) Explain why you think so. (page 11)
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="80661ad1-7de9-11dd-a164-1704e93cfa6f" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: How much water is on the earth?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="399c9ae9-80ea-11dd-88fa-3b51097ba2ef" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_8}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="ea874b70-7b78-11dd-9ceb-774b664b12ab" name="%ea874b70-7b78-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle">Summary</div>
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">8</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  Now that you have answered all of these questions, let's return to 
+          the big central question of the unit:
+                                  <b>
+                                    why are there clouds?
+                                    <br />
+                                  </b>
+                                  <br />
+                                  <object refid="ab99fafc-7de9-11dd-a164-1704e93cfa6f" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="466cc97e-80ea-11dd-88fa-3b51097ba2ef" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="ab99fafc-7de9-11dd-a164-1704e93cfa6f" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>
+                                    Answer this questions based on everything you have learned and collected:
+                                    <b>why are there clouds?</b>
+                                  </bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="466cc97e-80ea-11dd-88fa-3b51097ba2ef" name="Labbook chooser" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="eb1cfbc1-7b78-11dd-9ceb-774b664b12ab" name="%eb1cfbc1-7b78-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -8618,30 +8812,28 @@ What do you think clouds are made of?
                                       </td>
                                     </tr>
                                   </table>
-                                  Why are there clouds?  (This is the driving question.)
+                                  Congratulations! You have completed the Wrapping Up activity.
                                   <br />
                                   <br />
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="eb1cfbc1-7b78-11dd-9ceb-774b664b12ab" name="%eb1cfbc1-7b78-11dd-9ceb-774b664b12ab" showEditBar="true" showDefinitions="true">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <table width="100%">
+                                  Let 
+          your teacher know that you have completed the
+                                  <b>Clouds</b>
+                                  unit. 
+          Your teacher will then unlock the post-test for you.
+                                  <br />
+                                  <br />
+                                  <table>
                                     <tr>
+                                      <td>Teacher password:</td>
                                       <td>
-                                        <div class="subtitle" />
+                                        <i>password field here</i>
                                       </td>
-                                      <td align="right">
-                                        <div class="page-number">10</div>
+                                      <td>
+                                        <i>submit button here</i>
                                       </td>
                                     </tr>
                                   </table>
-                                  Ask your teacher to give you the password for the post test now.
+                                  <i>wrapup button script here</i>
                                 </div>
                               </div>
                             </div>
@@ -9258,8 +9450,8 @@ is an example of
       <library>
         <OTDefinitionManager id="b6350a20-e3b4-11dc-95ff-0800200c9a66">
           <definitions>
-            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/common-glossary.txt" />
-            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/clouds-glossary.txt" />
+            <OTDefinitionList src="glossary/common-glossary.txt" />
+            <OTDefinitionList src="glossary/clouds-glossary.txt" />
           </definitions>
           <frame>
             <OTFrame local_id="definition_frame" width="300" height="190" borderlessPopup="true" />
@@ -9285,7 +9477,7 @@ is an example of
             <object refid="${page-rule}" />
           </menuRule>
         </OTUDLMenu>
-        <OTSnapshotAlbum local_id="album" />
+        <OTLabbook local_id="album" />
         <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
         <OTUDLMenuRule local_id="section-rule">
           <rules>
@@ -9326,10 +9518,10 @@ is an example of
             <OTFrame local_id="speech_frame" width="380" height="340" borderlessPopup="false" />
           </speechFrame>
         </OTUDLCoachGroup>
-        <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-34-color.css" />
-        <OTJavascript local_id="change_page.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/change_page.js" />
-        <OTJavascript local_id="show_message.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/show_message.js" />
-        <OTJavascript local_id="authoring_script.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/authoring_script.js" />
+        <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="css/otrunk-34-color.css" />
+        <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
+        <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
+        <OTJavascript local_id="authoring_script.js" src="scripts/authoring_script.js" />
         <OTScriptObject local_id="authoring-script">
           <variables>
             <OTScriptVariable name="cardContainer">

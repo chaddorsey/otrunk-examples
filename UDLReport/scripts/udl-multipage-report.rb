@@ -183,26 +183,19 @@ def visitedSections(user)
   userSectionContainer.viewedCards.vector
 end
 
-# INPUT questions: ruby array of OTUDLQuesiton objects
-# RETURNS array of array of indices
-#         e.g. [[1], [0,2]] means the first question is related to activity 1, 
-#              the second question to activity 0 and 2. 
-def getActivityRefs(questions)
-  activities = activitySections
-  refs = []
-  for question in questions do
-  	questionRefs = []
-    refList = question.getActivityReferences
-    refList.size.times do |i|
-      activities.size.times do |j|
-        if activities[j].otExternalId == refList.get(i).getReferencedObject.otExternalId
-      		questionRefs << j  
-        end
+# @param question: OTUDLQuesiton
+# @return comma separated string showing activity reference indices
+#         e.g. "0,3,6"  means the question is related to activity 0, 3, and 6 
+def activityRefString(question)
+  activityIndexList = []
+  question.getActivityReferences.getVector.each do |reference|
+    activitySections.size.times do |i|
+      if activitySections[i].otExternalId == reference.getReferencedObject.otExternalId
+        activityIndexList << i      
       end
     end
-    refs << questionRefs
   end
-  return refs
+  activityIndexList.join(',')  
 end
 
 # ----- summary specific --------------
@@ -227,6 +220,14 @@ def basicSectionQuestions
 end
 
 def documentQuestions(doc)
+  if @contentHelper.version == 1
+    v = @contentHelper.getDocumentQuestions(doc)
+    ret = []
+    for e in v do 
+      ret << e
+    end
+    return ret
+  end
   questions = []
   
   doc.documentRefs.each do | ref |
@@ -332,3 +333,8 @@ def isChoiceQuestion(question)
   return question.input.is_a? org.concord.otrunk.ui.OTChoice
 end
 
+def preOrPost?
+  title = sectionTitle.downcase
+  title == "pre-test" or title == "post-test"
+end
+  
