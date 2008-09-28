@@ -8,6 +8,7 @@ include_class 'org.concord.datagraph.state.OTDataGraph'
 include_class 'org.concord.datagraph.state.OTDataGraphable'
 include_class 'org.concord.otrunk.script.ui.OTScriptVariable'
 include_class 'org.concord.otrunk.udl.UDLContentHelper'
+include_class 'org.concord.otrunk.overlay.OTUserOverlayManager'
 
 ROWCOLOR1 = "#FFFEE9"
 ROWCOLOR2 = "#FFFFFF"
@@ -28,6 +29,11 @@ def init
   @debug = true  
   @otrunk = $viewContext.getViewService(OTrunk.java_class)
   @contentHelper = UDLContentHelper.getUDLContentHelper(activityRoot)  
+  @userListService = $viewContext.getViewService(OTUserListService.java_class)
+  @users = @userListService.getUserList().sort_by {|user| 
+    (user.name && !user.name.empty?) ? user.name.split.values_at(-1, 0) : [""] 
+  }
+  @overlayManager = $viewContext.getViewService(OTUserOverlayManager.java_class)
 end
 
 def default_template
@@ -39,13 +45,12 @@ def page2
 end
 
 def render(templateBlob)
-  erb = ERB.new Java::JavaLang::String.new(templateBlob.src).to_s
+  erb = ERB.new Java::JavaLang::String.new(templateBlob.src).trim.to_s
+  srcProp = templateBlob.otClass().getProperty("src")
+  srcValue = templateBlob.otGet(srcProp)  
+  erb.filename = srcValue.getBlobURL().toExternalForm()
   erb.result(binding)   
 end 
-
-def embedObject(obj)
-  "<object refid=\"#{ obj.otExternalId() }\"/>"
-end
 
 def otCreate(rconstant, &block)
   otObj = $otObjectService.createObject(rconstant.java_class)
@@ -53,10 +58,37 @@ def otCreate(rconstant, &block)
   otObj
 end
 
-def linkToObject(link_text, obj, viewEntry=nil)
-  link = "<a href=\"#{ obj.otExternalId() }\" "
-  link += "viewid=\"#{ viewEntry.otExternalId() }\" "  if viewEntry
+def objectIdStr(obj)
+  begin
+    obj.getGlobalId().toInternalForm()
+  rescue NoMethodError
+  	obj.otExternalId()
+  end
+end
+
+def embedObject(obj, viewEntry=nil)
+  tag = "<object refid=\"#{ objectIdStr(obj) }\" "
+  tag += "viewid=\"#{ objectIdStr(viewEntry) }\" "  if viewEntry
+  tag += "/>"
+end
+
+def linkToObject(link_text, obj, viewEntry=nil, frame=nil)
+  link = "<a href=\"#{ objectIdStr(obj) }\" "
+  link += "viewid=\"#{ objectIdStr(viewEntry) }\" "  if viewEntry
+  link += "target=\"#{ objectIdStr(frame) }\" " if frame
   link += ">#{link_text}</a>"
+end
+
+def popupFrame
+  return @frame if @frame 
+  
+  @frame = otCreate(org.concord.framework.otrunk.view.OTFrame) { |frame|
+   }
+end
+
+def popupLinkToObject(link_text, obj, viewEntry=nil)
+  frame = popupFrame()
+  linkToObject(link_text, obj, viewEntry, frame)
 end
 
 def linkToObjectAction(link_text, obj, action)
@@ -67,56 +99,7 @@ def linkToObjectAction(link_text, obj, action)
       str.string=action
     }
   })
-  "<a href=\"#{ obj.otExternalId() }\" viewid=\"#{viewEntryCopy.otExternalId()}\">#{link_text}</a>"
-end
-
-def users
-  userListService = $viewContext.getViewService(OTUserListService.java_class)
-  userListService.getUserList().sort do |u1, u2| 
-    sep = /[\s,]+/
- 	n1 = u1.name.split(sep)
-	n2 = u2.name.split(sep)
-	last1 = n1[n1.length-1]
-	last2 = n2[n2.length-1]
-	first1 = n1.length > 1 ? n1[0] : ''
-	first2 = n2.length > 1 ? n2[0] : ''
-	
-	if last1 < last2 
-		-1
-	elsif last1 > last2
-		1
-	elsif first1 < first2
-		-1
-	elsif first1 > first2
-		1
-	else
-		0
-	end
-  end
-end
-
-def embedUserObject(obj, user)
-  "<object refid=\"#{ obj.otExternalId() }\" user=\"#{ user.getUserId().toExternalForm() }\"/>"
-end
-
-def hasUserModified(obj, user)
-  @otrunk.hasUserModified(obj, user)
-end
-
-def userObject(obj, user)
-  @otrunk.getUserRuntimeObject(obj, user);
-end
-
-def otCreate(rconstant, &block)
-  otObj = $otObjectService.createObject(rconstant.java_class)
-  yield otObj
-  otObj
-end
-
-def findFirstChild(rconstant, startObject)
-  # check if the startObject is one of theses
-  # if not go through all of its children objects
-  # perhaps we should just do this in java
+  linkToObject(link_text, obj, viewEntryCopy)
 end
 
 def log(message)
@@ -140,102 +123,68 @@ def truncate (string, length)
   string[0...length] + postFix
 end
 
-def popupFrame
-  return @frame if @frame 
-  
-  @frame = otCreate(org.concord.framework.otrunk.view.OTFrame) { |frame|
-   }
-end
+####################
+### Users
+####################
 
-def popupLinkToObject(link_text, obj, viewEntry=nil)
-  frame = popupFrame
-  link = "<a href=\"#{ obj.otExternalId() }\" "
-  link += "viewid=\"#{ viewEntry.otExternalId() }\" "  if viewEntry
-  link += " target=\"#{ popupFrame.otExternalId }\">#{link_text}</a>"  
-end
-
-# --------- udl report specific -------------------
-
-def linkToUnitPage(link_text)
-  firstObject = rootObject.reportTemplate
-  firstView = rootObject.reportTemplateViewEntry
-  linkToObject link_text, firstObject, firstView
-end
-
-def activityRoot
-  rootObject.reportTemplate.reference
-end
-
-def unitTitle
-  return @contentHelper.unitTitle
-end
-
-def sectionsContainer
-  return @contentHelper.sectionsContainer
-end
-
-def activitySections
-  sectionsContainer.cards.vector
-end
-
-def visitedSections(user)
-  userSectionContainer = userObject(sectionsContainer, user)
-  userSectionContainer.viewedCards.vector
-end
-
-# @param question: OTUDLQuesiton
-# @return comma separated string showing activity reference indices
-#         e.g. "0,3,6"  means the question is related to activity 0, 3, and 6 
-def activityRefString(question)
-  activityIndexList = []
-  question.getActivityReferences.getVector.each do |reference|
-    activitySections.size.times do |i|
-      if activitySections[i].otExternalId == reference.getReferencedObject.otExternalId
-        activityIndexList << i      
-      end
-    end
+def users
+  @userListService.getUserList().sort do |u1, u2| 
+    sep = /[\s,]+/
+    if u1.name and not u1.name.empty?
+	  n1 = u1.name.split(sep)
+	else
+	  n1 = [" "," "]
+	end
+	
+	if u2.name and not u2.name.empty?
+	  n2 = u2.name.split(sep)	  
+	else
+	  n2 = [" "," "]
+	end
+	
+	last1 = n1[n1.length-1]
+	last2 = n2[n2.length-1]
+	first1 = n1.length > 1 ? n1[0] : ''
+	first2 = n2.length > 1 ? n2[0] : ''
+	
+	if last1 < last2 
+		-1
+	elsif last1 > last2
+		1
+	elsif first1 < first2
+		-1
+	elsif first1 > first2
+		1
+	else
+		0
+	end
   end
-  activityIndexList.join(',')  
 end
 
-# ----- summary specific --------------
-
-# ---- section specific -------------
-def sectionTitle
-  return $model.name
+def hasUserModified(obj, user)
+  @otrunk.hasUserModified(obj, user)
 end
 
-def basicSectionQuestions
-  questions = []
-  
-  return questions unless $model.content.is_a? org.concord.otrunk.ui.OTCardContainer
-  
-  pageCards = $model.content.cards.vector
+def userObject(obj, user)
+  @otrunk.getUserRuntimeObject(obj, user);
+end
 
-  pageCards.each do | doc |
-    questions.concat documentQuestions(doc)
+#####################
+### Overlays
+#####################
+
+def embedObjectFromUserOverlay(user, obj, viewEntry=nil)
+  obj = @overlayManager.getOTObject(user, obj.getGlobalId())
+  if obj
+    embedObject(obj, viewEntry)
+  else
+    ""
   end
-
-  questions
 end
 
-def documentQuestions(doc)
-  if @contentHelper.version == 1
-    v = @contentHelper.getDocumentQuestions(doc)
-    ret = []
-    for e in v do 
-      ret << e
-    end
-    return ret
-  end
-  questions = []
-  
-  doc.documentRefs.each do | ref |
-    questions << ref if ref.is_a? org.concord.otrunk.udl.question.OTUDLQuestion
-  end
-
-  questions  
-end
+#######################
+### Questions
+#######################
 
 def promptText(question)
   toPlainText(question.prompt)
@@ -289,8 +238,7 @@ def currentChoiceText(chooser)
   return toPlainText(answer)
 end
 
-# this takes a userQuestion
-def questionAnswer(question)
+def questionAnswerRaw(question)
   input = question.input
   if input.is_a? org.concord.otrunk.ui.OTText
     answer = input.text
@@ -299,6 +247,13 @@ def questionAnswer(question)
       answer = currentChoiceText input
     end
   end
+  
+  answer
+end
+
+# this takes a userQuestion
+def questionAnswer(question)
+  answer = questionAnswerRaw(question)
   
   answer = "No Answer" if answer == nil
   truncate answer, 30
@@ -319,6 +274,15 @@ def questionCorrect (question)
   end
 end
 
+def questionAnswered (question)
+  questionAnswerRaw(question) != nil
+end
+
+# this takes an authored question
+def questionGradable (question)
+  return true if question.input.is_a? org.concord.otrunk.ui.OTChoice and question.correctAnswer  
+end
+
 # this takes a userQuestion
 def questionAnswerHtml(question)
   correct = questionCorrect question
@@ -333,8 +297,121 @@ def isChoiceQuestion(question)
   return question.input.is_a? org.concord.otrunk.ui.OTChoice
 end
 
+
+
+#############################
+###  UDL Specific
+#############################
+
+def linkToUnitPage(link_text)
+  firstObject = rootObject.reportTemplate
+  firstView = rootObject.reportTemplateViewEntry
+  linkToObject link_text, firstObject, firstView
+end
+
+def activityRoot
+  rootObject.reportTemplate.reference
+end
+
+def unitTitle
+  return @contentHelper.unitTitle
+end
+
+def sectionsContainer
+  return @contentHelper.sectionsContainer
+end
+
+def activitySections
+  sectionsContainer.cards.vector
+end
+
+def visitedSections(user)
+  userSectionContainer = userObject(sectionsContainer, user)
+  userSectionContainer.viewedCards.vector
+end
+
+# @param question: OTUDLQuesiton
+# @return comma separated string showing activity reference indices
+#         e.g. "0,3,6"  means the question is related to activity 0, 3, and 6 
+def activityRefString(question)
+  activityIndexList = []
+  question.getActivityReferences.getVector.each do |reference|
+    activitySections.size.times do |i|
+      if activitySections[i].otExternalId == reference.getReferencedObject.otExternalId
+        activityIndexList << i      
+      end
+    end
+  end
+  activityIndexList.join(',')  
+end
+
+def documentQuestions(doc)
+  if @contentHelper.version == 1
+    v = @contentHelper.getDocumentQuestions(doc)
+    ret = []
+    for e in v do 
+      ret << e
+    end
+    return ret
+  end
+  questions = []
+  
+  doc.documentRefs.each do | ref |
+    questions << ref if ref.is_a? org.concord.otrunk.udl.question.OTUDLQuestion
+  end
+
+  questions  
+end
+
+def sectionQuestions(section)
+  questions = []
+  
+  return questions unless section.content.is_a? org.concord.otrunk.ui.OTCardContainer
+    
+  pageCards = section.content.cards.vector
+
+  pageCards.each do | doc |
+    questions.concat documentQuestions(doc)
+  end
+
+  questions
+end
+
+# takes an authored section
+def relatedQuestions(section)
+  relQuestions = []
+
+  questions = sectionQuestions(pretest())
+  questions.each do |question|
+    question.getActivityReferences.getVector.each do |reference|
+      if section.equals(reference.getReferencedObject)
+        relQuestions << question
+        break
+      end
+    end
+  end
+  
+  relQuestions
+end  
+
+def pretest
+  activitySections().each do |section|
+    return section if section.getIsPretest()
+  end
+end
+
+###################
+### section view
+###################
+def sectionTitle
+  return $model.name
+end
+
+def basicSectionQuestions
+  return sectionQuestions($model)
+end
+
 def preOrPost?
   title = sectionTitle.downcase
   title == "pre-test" or title == "post-test"
 end
-  

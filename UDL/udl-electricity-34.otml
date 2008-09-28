@@ -119,35 +119,25 @@
         </OTScriptEngineBundle>
         <OTSharingBundle>
           <sharedObjects>
+            <OTSmartGraphTool id="3a237a4c-6e08-11dd-95a8-85971a6fcfae" name="smart_crank_voltage">
+              <dataCollector>
+                <object refid="37cafb27-6d55-11dd-ac9a-cb602d69c6ea" />
+              </dataCollector>
+            </OTSmartGraphTool>
+            <object refid="37cafb27-6d55-11dd-ac9a-cb602d69c6ea" />
             <OTDataCollector id="99b1b3a0-cdca-11dc-8ae1-ef1e138f3b5b" name="Voltage" title="Voltage Sensor Graph" multipleGraphableEnabled="false" autoScaleEnabled="true">
               <source>
-                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
-                  <dataProducer>
-                    <OTSensorDataProxy name="dataproducer">
-                      <request>
-                        <OTExperimentRequest period="0.1">
-                          <sensorRequests>
-                            <OTSensorRequest stepSize="0.1" type="4" unit="V" port="0" requiredMax="10.0" displayPrecision="-2" requiredMin="-10.0" />
-                          </sensorRequests>
-                        </OTExperimentRequest>
-                      </request>
-                    </OTSensorDataProxy>
-                  </dataProducer>
+                <OTDataGraphable name="Prediction" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" controllable="true">
                   <dataStore>
-                    <OTDataStore dt="0.1" numberChannels="1">
-                      <channelDescriptions>
-                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
-                        <OTDataChannelDescription name="" unit="V" precision="-2" numericData="true" />
-                      </channelDescriptions>
-                    </OTDataStore>
+                    <OTDataStore id="22677b34-8a40-11dd-ac72-6f0c3da1d168" numberChannels="2" />
                   </dataStore>
                 </OTDataGraphable>
               </source>
               <xDataAxis>
-                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" labelFormat="Engineering" />
               </xDataAxis>
               <yDataAxis>
-                <OTDataAxis max="10.0" units="V" min="-10.0" label="Voltage" />
+                <OTDataAxis max="10.0" units="V" min="-10.0" label="Voltage" labelFormat="Engineering" />
               </yDataAxis>
             </OTDataCollector>
             <OTDataCollector id="29c12135-cdcb-11dc-8ae1-ef1e138f3b5b" name="voltage-1" title="Voltage Graph" multipleGraphableEnabled="true" autoScaleEnabled="true">
@@ -175,18 +165,12 @@
                 </OTDataGraphable>
               </source>
               <xDataAxis>
-                <OTDataAxis max="30.0" units="s" min="0.0" label="Time" />
+                <OTDataAxis max="30.0" units="s" min="0.0" label="Time" labelFormat="Engineering" />
               </xDataAxis>
               <yDataAxis>
-                <OTDataAxis max="10.0" units="V" min="-10.0" label="Voltage" />
+                <OTDataAxis max="10.0" units="V" min="-10.0" label="Voltage" labelFormat="Engineering" />
               </yDataAxis>
             </OTDataCollector>
-            <OTSmartGraphTool id="3a237a4c-6e08-11dd-95a8-85971a6fcfae" name="smart_crank_voltage">
-              <dataCollector>
-                <object refid="37cafb27-6d55-11dd-ac9a-cb602d69c6ea" />
-              </dataCollector>
-            </OTSmartGraphTool>
-            <object refid="37cafb27-6d55-11dd-ac9a-cb602d69c6ea" />
           </sharedObjects>
         </OTSharingBundle>
         <OTInterfaceManager>
@@ -211,7 +195,7 @@
           <activity>
             <OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true">
               <cards>
-                <OTUDLSection local_id="section_0" name="Home" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_0" name="Home" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" enabled="true">
                   <content>
                     <OTUDLLabPage id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_0/content">
                       <backgroundImage>
@@ -274,12 +258,25 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_0/content" />
                   </center>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_1" name="Pre-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_1" name="Pre-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false" enabled="true">
                   <header>
                     <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" showEditBar="false">
                       <bodyText>
-                        <div class="title">Pre-test</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What do you already know about electricity?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTCompoundDoc>
                   </header>
                   <content>
@@ -370,7 +367,7 @@
                                     <br />
                                     <br />
                                     <center>
-                                      <img src="http://udl.concord.org/artwork/elect_34/circuit_question/el_34_circuit_question.jpg" border="1" />
+                                      <img src="http://udl.concord.org/artwork/elect_34/circuit_question/el_34_circuit_question.png" border="1" />
                                     </center>
                                   </bodyText>
                                 </OTUDLCompoundDoc>
@@ -639,12 +636,15 @@
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
-                                <OTDrawingTool name="Drawing tool" backgroundImage="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg" backgroundImageURL="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg">
+                                <OTDrawingTool name="Drawing tool" backgroundImage="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg" backgroundImageURL="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg" usePopupButtons="false" lineWidthButtonVisible="true">
                                   <graphables>
                                     <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                     <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                     <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                   </graphables>
+                                  <backgroundSrc>
+                                    <OTBlob src="http://udl.concord.org/artwork/elect_56/battery_two_bulbs/el_56_battery_two_bulbs.png" name="http://udl.concord.org/artwork/elect_56/battery_two_bulbs/el_56_battery_two_bulbs.png" />
+                                  </backgroundSrc>
                                 </OTDrawingTool>
                               </input>
                               <activityReferences>
@@ -849,8 +849,9 @@
                   <south>
                     <object refid="${nav-bar}" />
                   </south>
+                  <description>What do you already know about electricity?</description>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="What is electricity? This unit will help you explore electricity.">
+                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="What is electricity? This unit will help you explore electricity." enabled="false">
                   <content>
                     <OTCardContainer id="163543bf-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -903,7 +904,12 @@
                                   <object refid="c71f0f15-ca09-11dc-a33a-97fd86165789" />
                                   <p />
                                   <object refid="dc089b2a-ca09-11dc-a33a-97fd86165789" />
-                                  <p />
+                                  <br />
+                                  <p>
+                                    You have completed the Introduction. Click on the
+                                    <b>UDL HOME</b>
+                                    button below.
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -940,8 +946,21 @@
                   <header>
                     <OTUDLCompoundDoc id="163543c0-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%163543c0-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">What is electricity?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What is electricity?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -957,7 +976,7 @@
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_3" name="Electrical birthday party" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false" goals="" description="Read the story of &quot;The Electrical Birthday Party.&quot;">
+                <OTUDLSection local_id="section_3" name="Electrical birthday party" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false" goals="" description="Read the story of &quot;The Electrical Birthday Party.&quot;" enabled="false">
                   <content>
                     <OTCardContainer id="2b9ab66d-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -1789,8 +1808,21 @@
                   <header>
                     <OTUDLCompoundDoc id="2b9ab66e-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%2b9ab66e-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">Electrical birthday party</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">Electrical birthday party</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -1806,7 +1838,7 @@
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_4" name="Charged balloons" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Place electric charges on balloons and see what they do.&#xA;" goals="">
+                <OTUDLSection local_id="section_4" name="Charged balloons" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Place electric charges on balloons and see what they do.&#xA;" goals="" enabled="false">
                   <content>
                     <OTCardContainer id="1b062cc5-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                       <cards>
@@ -2001,7 +2033,7 @@
                                         <div style="border-bottom-width: 1px; border-top-width: 1px; margin-left: 5px; padding-bottom: 2px; padding-right: 2px; border-color: black; padding-top: 2px; margin-top: 5px; border-style: solid; margin-right: 5px; border-right-width: 1px; border-left-width: 1px; margin-bottom: 5px; padding-left: 2px">
                                           <object refid="0ebbb7a7-6499-11dd-9c53-89770638a639" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="0ebbb7a8-6499-11dd-9c53-89770638a639" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="0ebbb7a8-6499-11dd-9c53-89770638a639" />
                                         </div>
                                       </td>
                                       <td width="70%">
@@ -2226,9 +2258,6 @@
                               <target>
                                 <object refid="81c20131-781a-11dc-a365-9554a3cf1337" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -2446,7 +2475,7 @@
                                   <div style="padding-bottom: 2px; margin-left: 5px; margin-bottom: 5px; margin-right: 5px; padding-top: 2px; padding-right: 2px; border-right-width: 1px; border-style: solid; border-color: black; padding-left: 2px; border-top-width: 1px; border-left-width: 1px; margin-top: 5px; border-bottom-width: 1px">
                                     <object refid="a38c596a-649d-11dd-a494-4fdf7e1f20f7" />
                                     <br />
-                                    <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="a38c596b-649d-11dd-a494-4fdf7e1f20f7" />
+                                    <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="a38c596b-649d-11dd-a494-4fdf7e1f20f7" />
                                   </div>
                                 </div>
                               </div>
@@ -2643,7 +2672,7 @@
                                         <div style="padding-bottom: 2px; margin-left: 5px; margin-bottom: 5px; margin-right: 5px; padding-top: 2px; padding-right: 2px; border-right-width: 1px; border-style: solid; border-color: black; padding-left: 2px; border-top-width: 1px; border-left-width: 1px; margin-top: 5px; border-bottom-width: 1px">
                                           <object refid="12a6bbbc-649e-11dd-a494-4fdf7e1f20f7" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="12a6bbbd-649e-11dd-a494-4fdf7e1f20f7" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="12a6bbbd-649e-11dd-a494-4fdf7e1f20f7" />
                                         </div>
                                       </td>
                                       <td width="50%">
@@ -3190,7 +3219,7 @@
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="40%" valign="top">
+                                      <td valign="top" width="40%">
                                         Here's a picture of your experiment with hair and a balloon. 
                 Use the positive and negative stamps to show where you think 
                 the charges are on the balloon and the hair.
@@ -3239,26 +3268,125 @@
                               <target>
                                 <object refid="16e56a7d-73a3-11dd-98be-e360eb37a19e" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="51488c05-88e5-11dd-afc6-9b4b5356966d" name="%51488c05-88e5-11dd-afc6-9b4b5356966d" showEditBar="true" showDefinitions="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle" />
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">
+                                          17
+                                          <br />
+                                          <br />
+                                          <br />
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="ca401bac-88e5-11dd-afc6-9b4b5356966d" />
+                                  <br />
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="50%">
+                                        <object refid="ac5ee076-88e5-11dd-afc6-9b4b5356966d" />
+                                      </td>
+                                      <td width="50%" style="padding-left: 20px; padding-right: 20px">
+                                        <img height="200" width="350" border="1" src="http://udl.concord.org/artwork/elect_34/balloon_sweater_background/el_34_balloon_sweater_background.jpg" />
+                                        <br />
+                                        <br />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <br />
+                                  <br />
+                                  Congratulations! 
+          You have completed this activity.
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="ca401bac-88e5-11dd-afc6-9b4b5356966d" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>How well were you able to use the drawing tools?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="&#x9;I did not draw using the computer. ">
+                                      <bodyText>I did not draw using the computer.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;They were easy to use. ">
+                                      <bodyText>They were easy to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;Some were hard to use. ">
+                                      <bodyText>Some were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;Most were hard to use. ">
+                                      <bodyText>Most were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="ac5ee076-88e5-11dd-afc6-9b4b5356966d" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Did the computer model in this activity  help you learn about electricity?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Yes">
+                                      <bodyText>Yes</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat">
+                                      <bodyText>Somewhat</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="No">
+                                      <bodyText>No</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
                         <object refid="1b062cc4-775f-11dc-88e0-f91e4efaa30a" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="1b062cc4-775f-11dc-88e0-f91e4efaa30a" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="1b062cc6-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%1b062cc6-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">How do electric charges behave?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">How do electric charges behave?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -3274,7 +3402,7 @@
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_6" name="String circuit" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Build a model of how electrical charges travel in a circuit.">
+                <OTUDLSection local_id="section_6" name="String circuit" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Build a model of how electrical charges travel in a circuit." enabled="false">
                   <content>
                     <OTCardContainer id="236e6d61-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -3308,7 +3436,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[1]" name="%81055e0c-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%81055e0c-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3428,7 +3556,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[3]" name="%a7a07c2d-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%a7a07c2d-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3457,7 +3585,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[4]" name="%cbff17ce-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%cbff17ce-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3593,7 +3721,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[6]" name="%cbff17ce-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%cbff17ce-7833-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3747,7 +3875,7 @@
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[8]" name="%8dde8a22-d594-11dc-bdbd-611bcc97c71c" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%8dde8a22-d594-11dc-bdbd-611bcc97c71c" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3848,7 +3976,7 @@
                             </OTUDLLeveledQuestions>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[9]" name="%0e1f3190-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%0e1f3190-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3945,7 +4073,7 @@
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[10]" name="%40ea94c1-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%40ea94c1-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3981,7 +4109,7 @@
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[11]" name="%70e599e3-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%70e599e3-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4046,7 +4174,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[12]" name="%53d41228-d596-11dc-bdbd-611bcc97c71c" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%53d41228-d596-11dc-bdbd-611bcc97c71c" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4091,7 +4219,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[13]" name="%b4ce30f4-d594-11dc-bdbd-611bcc97c71c" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%b4ce30f4-d594-11dc-bdbd-611bcc97c71c" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4140,31 +4268,28 @@
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[13]" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="236e6d60-775f-11dc-88e0-f91e4efaa30a" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[1]" />
-                        <object refid="224ae6c7-7f53-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[3]" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[4]" />
-                        <object refid="32540418-7f54-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[6]" />
-                        <object refid="b2fa7961-7f55-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[8]" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[9]" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[10]" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[11]" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[12]" />
-                        <object refid="236e6d61-775f-11dc-88e0-f91e4efaa30a/cards[13]" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="236e6d62-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%236e6d62-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">How does electricity move through a wire?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">How does electricity move through a wire?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -4180,7 +4305,7 @@
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_7" name="Light a bulb!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Build a circuit to light a bulb with a battery.">
+                <OTUDLSection local_id="section_7" name="Light a bulb!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Build a circuit to light a bulb with a battery." enabled="false">
                   <content>
                     <OTCardContainer id="27c8ede7-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -4213,7 +4338,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[1]" name="%d41dafc4-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%d41dafc4-7834-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4239,7 +4364,7 @@
                                   <div style="padding-right: 2px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 5px; padding-left: 2px; margin-bottom: 5px; border-left-width: 1px; padding-top: 2px; border-style: solid; padding-bottom: 2px; border-color: black; border-right-width: 1px; margin-right: 5px; margin-top: 5px">
                                     <object refid="185b8b48-64ba-11dd-81ae-a16f389bc712" />
                                     <br />
-                                    <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="185b8b49-64ba-11dd-81ae-a16f389bc712" />
+                                    <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="185b8b49-64ba-11dd-81ae-a16f389bc712" />
                                   </div>
                                   <br />
                                 </div>
@@ -4328,9 +4453,6 @@
                               <currentCard>
                                 <object refid="185bb25a-64ba-11dd-81ae-a16f389bc712" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="185bb25a-64ba-11dd-81ae-a16f389bc712" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="185b8b49-64ba-11dd-81ae-a16f389bc712" showBorder="false">
@@ -4340,7 +4462,7 @@
                             </OTUDLMenu>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[2]" name="%0cd2bef6-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%0cd2bef6-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4367,7 +4489,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[3]" name="%35785317-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%35785317-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4464,7 +4586,7 @@
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[4]" name="%49a063a9-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%49a063a9-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4485,7 +4607,7 @@
                                         <div style="padding-bottom: 2px; border-right-width: 1px; margin-bottom: 5px; border-bottom-width: 1px; margin-left: 5px; border-top-width: 1px; border-left-width: 1px; padding-top: 2px; border-style: solid; padding-left: 2px; border-color: black; padding-right: 2px; margin-right: 5px; margin-top: 5px">
                                           <object refid="3d34bb97-64bf-11dd-81ae-a16f389bc712" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="3d34e2a8-64bf-11dd-81ae-a16f389bc712" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="3d34e2a8-64bf-11dd-81ae-a16f389bc712" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -4549,13 +4671,8 @@
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
-                                <object refid="6ea7babb-64bf-11dd-81ae-a16f389bc712" />
-                              </currentCard>
-                              <viewedCards>
                                 <object refid="3d34e2a9-64bf-11dd-81ae-a16f389bc712" />
-                                <object refid="50c71bda-64bf-11dd-81ae-a16f389bc712" />
-                                <object refid="6ea7babb-64bf-11dd-81ae-a16f389bc712" />
-                              </viewedCards>
+                              </currentCard>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="3d34e2a8-64bf-11dd-81ae-a16f389bc712" showBorder="false">
@@ -4576,13 +4693,10 @@
                               <target>
                                 <object refid="5d88d32a-7835-11dc-ab7e-6d2f34ff62a8" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[5]" name="%8470ffdb-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%8470ffdb-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4658,13 +4772,10 @@
                               <target>
                                 <object refid="8c8728cc-7835-11dc-ab7e-6d2f34ff62a8" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[6]" name="%97d216ed-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%97d216ed-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4685,7 +4796,7 @@
                                         <div style="border-bottom-width: 1px; border-top-width: 1px; margin-left: 5px; padding-bottom: 2px; padding-right: 2px; border-color: black; padding-top: 2px; margin-top: 5px; border-style: solid; margin-right: 5px; border-right-width: 1px; border-left-width: 1px; margin-bottom: 5px; padding-left: 2px">
                                           <object refid="50187012-64c0-11dd-81ae-a16f389bc712" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="50187013-64c0-11dd-81ae-a16f389bc712" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="50187013-64c0-11dd-81ae-a16f389bc712" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -4726,9 +4837,6 @@
                               <currentCard>
                                 <object refid="50187014-64c0-11dd-81ae-a16f389bc712" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="50187014-64c0-11dd-81ae-a16f389bc712" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="50187013-64c0-11dd-81ae-a16f389bc712" showBorder="false">
@@ -4755,13 +4863,10 @@
                               <target>
                                 <object refid="aac6b08e-7835-11dc-ab7e-6d2f34ff62a8" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[7]" name="%53c86c8b-d5ab-11dc-bdbd-611bcc97c71c" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%53c86c8b-d5ab-11dc-bdbd-611bcc97c71c" showDefinitions="true">
                           <documentRefs>
                             <OTText id="048528ce-7e6e-11dc-8fc3-c5193b11fc8e" name="Text field" text="" />
                             <OTChoice id="26e3aeb2-7e6e-11dc-8fc3-c5193b11fc8e" name="Choices" alignContent="0">
@@ -4875,7 +4980,7 @@ Mark whether they are a conductor or an insulator.</td>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[8]" name="%d4d4602f-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%d4d4602f-7835-11dc-ab7e-6d2f34ff62a8" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4891,7 +4996,11 @@ Mark whether they are a conductor or an insulator.</td>
                                     </tr>
                                   </table>
                                   <object refid="b8b8ec0d-c922-11dc-9d19-25c7087488be" />
-                                  <p />
+                                  <br />
+                                  <object refid="817f3dd9-8a41-11dd-ac72-6f0c3da1d168" />
+                                  <br />
+                                  <br />
+                                  <br />
                                   Congratulations! You have completed this activity.
                                 </div>
                               </div>
@@ -4984,30 +5093,57 @@ Mark whether they are a conductor or an insulator.</td>
                                 </OTUDLQuestion>
                               </questions>
                             </OTUDLLeveledQuestions>
+                            <OTUDLQuestion id="817f3dd9-8a41-11dd-ac72-6f0c3da1d168" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>How well were you able to use the drawing tools?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="&#x9;I did not draw using the computer. ">
+                                      <bodyText>I did not draw using the computer.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;They were easy to use. ">
+                                      <bodyText>They were easy to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;Some were hard to use. ">
+                                      <bodyText>Some were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;Most were hard to use. ">
+                                      <bodyText>Most were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[8]" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="27c8ede6-775f-11dc-88e0-f91e4efaa30a" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[1]" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[2]" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[3]" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[4]" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[5]" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[6]" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[7]" />
-                        <object refid="27c8ede7-775f-11dc-88e0-f91e4efaa30a/cards[8]" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="27c8ede8-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%27c8ede8-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">How do you use electricity to light up a bulb?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">How do you use electricity to light up a bulb?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -5023,7 +5159,7 @@ Mark whether they are a conductor or an insulator.</td>
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_5" name="Volts and lights" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Examine a light bulb and make it glow using a hand generator.">
+                <OTUDLSection local_id="section_5" name="Volts and lights" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Examine a light bulb and make it glow using a hand generator." enabled="false">
                   <content>
                     <OTCardContainer id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -5056,7 +5192,7 @@ Mark whether they are a conductor or an insulator.</td>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[1]" name="%bbf06c4a-cdc1-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%bbf06c4a-cdc1-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -5107,13 +5243,10 @@ Mark whether they are a conductor or an insulator.</td>
                               <target>
                                 <object refid="da903bbb-cdc1-11dc-bd2b-dd05e7961664" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[2]" name="%fbc0f0bc-cdc1-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%fbc0f0bc-cdc1-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -5142,7 +5275,7 @@ Mark whether they are a conductor or an insulator.</td>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[3]" name="%8d184670-cdc2-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc id="e1385726-6d50-11dd-ac9a-cb602d69c6ea" name="%e1385726-6d50-11dd-ac9a-cb602d69c6ea" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -5159,104 +5292,11 @@ Mark whether they are a conductor or an insulator.</td>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">1. Connect a holiday light to the Genecon hand generator.</td>
-                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
-                                        <img src="http://udl.concord.org/artwork/elect_56/genecon_light/el_56_genecon_light.jpg" border="1" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <br />
-                                  2. Crank the Genecon, but not too hard – you may burn out the bulb!
-                                  <br />
-                                  <br />
-                                  3. 
-          Look closely at the bulb. See if you can recognize the filament.
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="421629a0-79d0-11dd-81c5-834c36fb1e64" name="%421629a0-79d0-11dd-81c5-834c36fb1e64" showEditBar="true" showDefinitions="true">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <table width="100%">
-                                    <tr>
-                                      <td>
-                                        <div class="subtitle" />
-                                      </td>
-                                      <td align="right">
-                                        <div class="page-number">5</div>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <table width="100%">
-                                    <tr>
-                                      <td width="30%" valign="top">
-                                        4. Notice that the filament is connected to a tiny wire at each end. 
-          Each wire is connected to the bigger wire that you attached to the 
-          Genecon. This is how the electricity gets to the filament from the 
-          genecon.
-                                        <br />
-                                        <br />
-                                        5. Draw a picture of the holiday light, showing the filament and the two 
-          wires that connect to the circuit.
-                                      </td>
-                                      <td width="50%">
-                                        <object refid="951ffa37-ce92-11dc-a8f3-27c5e0d9700c" />
-                                        <br />
-                                        <object refid="c06f51a2-ce92-11dc-a8f3-27c5e0d9700c" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <br />
-                                  <br />
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                          <documentRefs>
-                            <OTDrawingTool2 id="951ffa37-ce92-11dc-a8f3-27c5e0d9700c" name="Draw tool">
-                              <graphables>
-                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
-                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
-                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
-                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
-                              </graphables>
-                            </OTDrawingTool2>
-                            <OTLabbookButton id="c06f51a2-ce92-11dc-a8f3-27c5e0d9700c" name="Snapshot button" componentIndices="">
-                              <target>
-                                <object refid="951ffa37-ce92-11dc-a8f3-27c5e0d9700c" />
-                              </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
-                            </OTLabbookButton>
-                          </documentRefs>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="e1385726-6d50-11dd-ac9a-cb602d69c6ea" name="%e1385726-6d50-11dd-ac9a-cb602d69c6ea" showEditBar="true" showDefinitions="true">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <table width="100%">
-                                    <tr>
-                                      <td>
-                                        <div class="subtitle" />
-                                      </td>
-                                      <td align="right">
-                                        <div class="page-number">6</div>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <table width="100%">
-                                    <tr>
                                       <td valign="top" width="40%">
                                         <div style="padding-left: 2px; margin-right: 5px; margin-left: 5px; border-style: solid; margin-top: 5px; border-top-width: 1px; padding-bottom: 2px; border-right-width: 1px; margin-bottom: 5px; padding-right: 2px; border-color: black; border-left-width: 1px; border-bottom-width: 1px; padding-top: 2px">
                                           <object refid="8000e4bc-6d56-11dd-b57e-df02d2f36b2a" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="8000e4bd-6d56-11dd-b57e-df02d2f36b2a" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="8000e4bd-6d56-11dd-b57e-df02d2f36b2a" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -6234,13 +6274,41 @@ end</script>
                                     <br />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc name="%91218ae0-8a3f-11dd-ac72-6f0c3da1d168" showEditBar="true">
+                                  <documentRefs>
+                                    <OTUDLQuestion id="97b4bd55-8a3f-11dd-ac72-6f0c3da1d168" name="Question" showConvertButton="true">
+                                      <prompt>
+                                        <OTCompoundDoc>
+                                          <bodyText>Did the "check answer" button help you learn about the graph?</bodyText>
+                                        </OTCompoundDoc>
+                                      </prompt>
+                                      <input>
+                                        <OTChoice name="Multiple choice" alignContent="0">
+                                          <choices>
+                                            <OTCompoundDoc name="Yes">
+                                              <bodyText>Yes</bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc name="Somewhat">
+                                              <bodyText>Somewhat</bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc name="No">
+                                              <bodyText>No</bodyText>
+                                            </OTCompoundDoc>
+                                          </choices>
+                                        </OTChoice>
+                                      </input>
+                                    </OTUDLQuestion>
+                                  </documentRefs>
+                                  <bodyText>
+                                    <br />
+                                    <object refid="97b4bd55-8a3f-11dd-ac72-6f0c3da1d168" />
+                                    <br />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
                                 <object refid="77934a2e-79d1-11dd-81c5-834c36fb1e64" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="77934a2e-79d1-11dd-81c5-834c36fb1e64" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="8000e4bd-6d56-11dd-b57e-df02d2f36b2a" showBorder="false">
@@ -6467,14 +6535,101 @@ end</script>
                               <target>
                                 <object refid="37cafb27-6d55-11dd-ac9a-cb602d69c6ea" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                             <object refid="3a237a4c-6e08-11dd-95a8-85971a6fcfae" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[6]" name="%d6ce5d21-cdc2-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%8d184670-cdc2-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle" />
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">5</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="50%">1. Connect a holiday light to the Genecon hand generator.</td>
+                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
+                                        <img src="http://udl.concord.org/artwork/elect_56/genecon_light/el_56_genecon_light.jpg" border="1" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <br />
+                                  2. Crank the Genecon, but not too hard – you may burn out the bulb!
+                                  <br />
+                                  <br />
+                                  3. 
+          Look closely at the bulb. See if you can recognize the filament.
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="421629a0-79d0-11dd-81c5-834c36fb1e64" name="%421629a0-79d0-11dd-81c5-834c36fb1e64" showEditBar="true" showDefinitions="true">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle" />
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">6</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="30%" valign="top">
+                                        4. Notice that the filament is connected to a tiny wire at each end. 
+          Each wire is connected to the bigger wire that you attached to the 
+          Genecon. This is how the electricity gets to the filament from the 
+          genecon.
+                                        <br />
+                                        <br />
+                                        5. Draw a picture of the holiday light, showing the filament and the two 
+          wires that connect to the circuit.
+                                      </td>
+                                      <td width="50%">
+                                        <object refid="951ffa37-ce92-11dc-a8f3-27c5e0d9700c" />
+                                        <br />
+                                        <object refid="c06f51a2-ce92-11dc-a8f3-27c5e0d9700c" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <br />
+                                  <br />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTDrawingTool2 id="951ffa37-ce92-11dc-a8f3-27c5e0d9700c" name="Draw tool">
+                              <graphables>
+                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                              </graphables>
+                            </OTDrawingTool2>
+                            <OTLabbookButton id="c06f51a2-ce92-11dc-a8f3-27c5e0d9700c" name="Snapshot button">
+                              <target>
+                                <object refid="951ffa37-ce92-11dc-a8f3-27c5e0d9700c" />
+                              </target>
+                            </OTLabbookButton>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%d6ce5d21-cdc2-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -6518,7 +6673,7 @@ end</script>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[7]" name="%b986268c-d5ac-11dc-bdbd-611bcc97c71c" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%b986268c-d5ac-11dc-bdbd-611bcc97c71c" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -6539,7 +6694,7 @@ end</script>
                                         <div style="padding-bottom: 2px; border-right-width: 1px; margin-bottom: 5px; border-bottom-width: 1px; margin-left: 5px; border-top-width: 1px; border-left-width: 1px; padding-top: 2px; border-style: solid; padding-left: 2px; border-color: black; padding-right: 2px; margin-right: 5px; margin-top: 5px">
                                           <object refid="4662c8b7-64b5-11dd-a5e7-1d9a5ad8173d" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="4662c8b8-64b5-11dd-a5e7-1d9a5ad8173d" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="4662c8b8-64b5-11dd-a5e7-1d9a5ad8173d" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -6641,9 +6796,6 @@ end</script>
                               <currentCard>
                                 <object refid="4662c8b9-64b5-11dd-a5e7-1d9a5ad8173d" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="4662c8b9-64b5-11dd-a5e7-1d9a5ad8173d" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="4662c8b8-64b5-11dd-a5e7-1d9a5ad8173d" showBorder="false">
@@ -6686,13 +6838,10 @@ end</script>
                               <target>
                                 <object refid="4f72223a-cdca-11dc-8ae1-ef1e138f3b5b" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[8]" name="%8e47d05a-cdc3-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%8e47d05a-cdc3-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -6747,13 +6896,10 @@ You can draw on the graph using the pencil tool.
                               <target>
                                 <object refid="99b1b3a0-cdca-11dc-8ae1-ef1e138f3b5b" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[9]" name="%c2e5c90b-cdc6-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%c2e5c90b-cdc6-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -6805,13 +6951,10 @@ You can draw on the graph using the pencil tool.
                               <target>
                                 <object refid="29c12135-cdcb-11dc-8ae1-ef1e138f3b5b" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[10]" name="%893a7d8c-cdc7-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%893a7d8c-cdc7-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -6834,7 +6977,7 @@ You can draw on the graph using the pencil tool.
                                         <div style="border-bottom-width: 1px; margin-left: 5px; border-style: solid; margin-bottom: 5px; border-right-width: 1px; border-color: black; border-top-width: 1px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; margin-right: 5px; margin-top: 5px; padding-top: 2px; border-left-width: 1px">
                                           <object refid="29e95411-64b8-11dd-81ae-a16f389bc712" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="29e95412-64b8-11dd-81ae-a16f389bc712" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="29e95412-64b8-11dd-81ae-a16f389bc712" />
                                         </div>
                                         <br />
                                       </td>
@@ -6913,15 +7056,8 @@ You can draw on the graph using the pencil tool.
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
-                                <object refid="978cdd68-7f52-11dd-9c5b-73f6d5335ed5" />
-                              </currentCard>
-                              <viewedCards>
                                 <object refid="0da516f1-79d9-11dd-ab1e-7f70d63cc30e" />
-                                <object refid="29e9a233-64b8-11dd-81ae-a16f389bc712" />
-                                <object refid="5df80cb9-64b8-11dd-81ae-a16f389bc712" />
-                                <object refid="68f21bbf-64b8-11dd-81ae-a16f389bc712" />
-                                <object refid="978cdd68-7f52-11dd-9c5b-73f6d5335ed5" />
-                              </viewedCards>
+                              </currentCard>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="29e95412-64b8-11dd-81ae-a16f389bc712" showBorder="false">
@@ -6954,15 +7090,15 @@ You can draw on the graph using the pencil tool.
                                 </OTDataGraphable>
                               </source>
                               <xDataAxis>
-                                <OTDataAxis max="30.0" units="s" min="0.0" label="Time" />
+                                <OTDataAxis max="30.0" units="s" min="0.0" label="Time" labelFormat="Engineering" />
                               </xDataAxis>
                               <yDataAxis>
-                                <OTDataAxis max="10.0" units="V" min="-10.0" label="Voltage" />
+                                <OTDataAxis max="10.0" units="V" min="-10.0" label="Voltage" labelFormat="Engineering" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" locked="true">
+                                <OTDataGraphable name="Prediction" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" controllable="true" locked="true">
                                   <dataStore>
-                                    <OTDataStore id="99b1b3a4-cdca-11dc-8ae1-ef1e138f3b5b" numberChannels="2" />
+                                    <object refid="22677b34-8a40-11dd-ac72-6f0c3da1d168" />
                                   </dataStore>
                                 </OTDataGraphable>
                                 <OTDataGraphable name="test-volts" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" locked="true">
@@ -6979,13 +7115,10 @@ You can draw on the graph using the pencil tool.
                               <target>
                                 <object refid="2f95c024-e0c3-11dc-8b8f-579135bdfd8c" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[11]" name="%d61b6e5d-cdc7-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%d61b6e5d-cdc7-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7007,7 +7140,7 @@ You can draw on the graph using the pencil tool.
                                         <div style="padding-bottom: 2px; border-right-width: 1px; margin-bottom: 5px; border-bottom-width: 1px; margin-left: 5px; border-top-width: 1px; border-left-width: 1px; padding-top: 2px; border-style: solid; padding-left: 2px; border-color: black; padding-right: 2px; margin-right: 5px; margin-top: 5px">
                                           <object refid="f7f4abd7-64b8-11dd-81ae-a16f389bc712" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="f7f4abd8-64b8-11dd-81ae-a16f389bc712" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="f7f4abd8-64b8-11dd-81ae-a16f389bc712" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -7070,9 +7203,6 @@ You can draw on the graph using the pencil tool.
                               <currentCard>
                                 <object refid="7637d28b-64b9-11dd-81ae-a16f389bc712" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="7637d28b-64b9-11dd-81ae-a16f389bc712" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="f7f4abd8-64b8-11dd-81ae-a16f389bc712" showBorder="false">
@@ -7121,7 +7251,7 @@ You can draw on the graph using the pencil tool.
                                 </OTDataGraphable>
                                 <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" locked="true">
                                   <dataStore>
-                                    <object refid="99b1b3a4-cdca-11dc-8ae1-ef1e138f3b5b" />
+                                    <OTDataStore id="99b1b3a4-cdca-11dc-8ae1-ef1e138f3b5b" numberChannels="2" />
                                   </dataStore>
                                 </OTDataGraphable>
                               </graphables>
@@ -7130,13 +7260,10 @@ You can draw on the graph using the pencil tool.
                               <target>
                                 <object refid="4d015ea5-cdcc-11dc-8ae1-ef1e138f3b5b" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[12]" name="%e8a2d1a0-cdc8-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%e8a2d1a0-cdc8-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7172,11 +7299,15 @@ You can draw on the graph using the pencil tool.
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTDrawingTool2 id="ae7a10f7-cdcc-11dc-8ae1-ef1e138f3b5b" name="Draw tool">
+                            <OTDrawingTool2 id="ae7a10f7-cdcc-11dc-8ae1-ef1e138f3b5b" name="Draw tool" usePopupButtons="false" lineWidthButtonVisible="true">
                               <stamps>
-                                <OTDrawingStamp src="http://udl.concord.org/artwork/elect_56/bulb_stamp/el_56_bulb_stamp.jpg" imageURL="http://udl.concord.org/artwork/elect_56/bulb_stamp/el_56_bulb_stamp.jpg" />
-                                <OTDrawingStamp src="http://udl.concord.org/artwork/http://udl.concord.org/artwork/elect_56/genecon-stamp/el_56_genecon_stamp.jpgel_56_genecon_stamp.jpg" imageURL="http://udl.concord.org/artwork/http://udl.concord.org/artwork/elect_56/genecon-stamp/el_56_genecon_stamp.jpgel_56_genecon_stamp.jpg" />
+                                <OTDrawingStamp id="ae7a10f7-cdcc-11dc-8ae1-ef1e138f3b5b/stamps[0]" src="http://udl.concord.org/artwork/elect_56/bulb_stamp/el_56_bulb_stamp.jpg" imageURL="http://udl.concord.org/artwork/elect_56/bulb_stamp/el_56_bulb_stamp.jpg" />
                                 <OTDrawingStamp src="http://udl.concord.org/artwork/elect_34/voltsensor_stamp/el_34_voltsensor_stamp.jpg" imageURL="http://udl.concord.org/artwork/elect_34/voltsensor_stamp/el_34_voltsensor_stamp.jpg" />
+                                <OTDrawingStamp>
+                                  <imageSrc>
+                                    <OTBlob src="http://udl.concord.org/artwork/elect_56/genecon-stamp/el_56_genecon_stamp.jpg" name="http://udl.concord.org/artwork/elect_56/genecon-stamp/el_56_genecon_stamp.jpg" />
+                                  </imageSrc>
+                                </OTDrawingStamp>
                               </stamps>
                               <graphables>
                                 <OTDrawingShape type="" fillType="clear" x="443.0" y="-182.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
@@ -7197,19 +7328,45 @@ You can draw on the graph using the pencil tool.
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                <OTDrawingImageIcon x="Infinity" y="Infinity">
+                                  <stamp>
+                                    <object refid="ae7a10f7-cdcc-11dc-8ae1-ef1e138f3b5b/stamps[0]" />
+                                  </stamp>
+                                </OTDrawingImageIcon>
+                                <OTDataGraphable color="0" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" name="" lineWidth="2.0" drawing="true">
+                                  <dataStore>
+                                    <OTDataStore />
+                                  </dataStore>
+                                </OTDataGraphable>
+                                <OTDataGraphable color="0" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" name="" lineWidth="2.0" drawing="true">
+                                  <dataStore>
+                                    <OTDataStore />
+                                  </dataStore>
+                                </OTDataGraphable>
+                                <OTDataGraphable color="0" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" name="" lineWidth="2.0" drawing="true">
+                                  <dataStore>
+                                    <OTDataStore numberChannels="2">
+                                      <values>
+                                        <float>NaN</float>
+                                        <float>NaN</float>
+                                        <float>616.0</float>
+                                        <float>-46.0</float>
+                                      </values>
+                                    </OTDataStore>
+                                  </dataStore>
+                                </OTDataGraphable>
+                                <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="0.3" />
                               </graphables>
                             </OTDrawingTool2>
-                            <OTLabbookButton id="99a7e847-fc0b-11dc-b1aa-698c3162a725" name="Snapshot button" componentIndices="">
+                            <OTLabbookButton id="99a7e847-fc0b-11dc-b1aa-698c3162a725" name="Snapshot button">
                               <target>
                                 <object refid="ae7a10f7-cdcc-11dc-8ae1-ef1e138f3b5b" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[13]" name="%2292aa82-cdc9-11dc-bd2b-dd05e7961664" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%2292aa82-cdc9-11dc-bd2b-dd05e7961664" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7232,6 +7389,10 @@ You can draw on the graph using the pencil tool.
                                   <br />
                                   <br />
                                   <object refid="d74a85b2-e489-11dc-a17c-eb2b5a3a8e3e" />
+                                  <br />
+                                  <br />
+                                  <object refid="43b9de02-8a3f-11dd-ac72-6f0c3da1d168" />
+                                  <br />
                                   <p />
                                   Congratulations! You have completed this activity.
                                 </div>
@@ -7277,35 +7438,57 @@ You can draw on the graph using the pencil tool.
                                 </OTChoice>
                               </input>
                             </OTUDLQuestion>
+                            <OTUDLQuestion id="43b9de02-8a3f-11dd-ac72-6f0c3da1d168" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>How well were you able to use the drawing tools?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="&#x9;I did not draw using the computer. ">
+                                      <bodyText>I did not draw using the computer.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;They were easy to use. ">
+                                      <bodyText>They were easy to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;Some were hard to use. ">
+                                      <bodyText>Some were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="&#x9;Most were hard to use. ">
+                                      <bodyText>Most were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="e1385726-6d50-11dd-ac9a-cb602d69c6ea" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="4e5e0955-cdc1-11dc-bd2b-dd05e7961664" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[1]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[2]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[3]" />
-                        <object refid="421629a0-79d0-11dd-81c5-834c36fb1e64" />
-                        <object refid="e1385726-6d50-11dd-ac9a-cb602d69c6ea" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[6]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[7]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[8]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[9]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[10]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[11]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[12]" />
-                        <object refid="4e5e0956-cdc1-11dc-bd2b-dd05e7961664/cards[13]" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="4e5e3067-cdc1-11dc-bd2b-dd05e7961664" showEditBar="false" name="%4e5e3067-cdc1-11dc-bd2b-dd05e7961664">
                       <bodyText>
-                        <div class="title">How do light bulbs work?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">How do light bulbs work?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -7321,7 +7504,7 @@ You can draw on the graph using the pencil tool.
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_8" name="Plus and minus" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Explore how to combine positive and negative numbers.">
+                <OTUDLSection local_id="section_8" name="Plus and minus" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Explore how to combine positive and negative numbers." enabled="false">
                   <content>
                     <OTCardContainer id="34fe6d03-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -7354,7 +7537,7 @@ You can draw on the graph using the pencil tool.
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[1]" name="%2b3b8c20-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%2b3b8c20-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7432,7 +7615,7 @@ You can draw on the graph using the pencil tool.
                             </OTAuthorNote>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[2]" name="%dbf6053d-e093-11dc-8b8f-579135bdfd8c" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%dbf6053d-e093-11dc-8b8f-579135bdfd8c" showDefinitions="true">
                           <documentRefs>
                             <OTCardContainer id="c4287213-64c6-11dd-9e86-ffa627342c16" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                               <cards>
@@ -7478,16 +7661,8 @@ You can draw on the graph using the pencil tool.
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
-                                <object refid="02cd95ef-64c7-11dd-9e86-ffa627342c16" />
-                              </currentCard>
-                              <viewedCards>
                                 <object refid="c4289925-64c6-11dd-9e86-ffa627342c16" />
-                                <object refid="c9828846-64c6-11dd-9e86-ffa627342c16" />
-                                <object refid="d22e3a77-64c6-11dd-9e86-ffa627342c16" />
-                                <object refid="dbb3f8f8-64c6-11dd-9e86-ffa627342c16" />
-                                <object refid="ff98f7ce-64c6-11dd-9e86-ffa627342c16" />
-                                <object refid="02cd95ef-64c7-11dd-9e86-ffa627342c16" />
-                              </viewedCards>
+                              </currentCard>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="c4287214-64c6-11dd-9e86-ffa627342c16" showBorder="false">
@@ -7513,7 +7688,7 @@ You can draw on the graph using the pencil tool.
                                   <div style="border-left-width: 1px; margin-left: 5px; border-top-width: 1px; padding-left: 2px; padding-right: 2px; padding-top: 2px; margin-right: 5px; border-right-width: 1px; padding-bottom: 2px; border-color: black; border-style: solid; margin-bottom: 5px; margin-top: 5px; border-bottom-width: 1px">
                                     <object refid="c4287213-64c6-11dd-9e86-ffa627342c16" />
                                     <br />
-                                    <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="c4287214-64c6-11dd-9e86-ffa627342c16" />
+                                    <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="c4287214-64c6-11dd-9e86-ffa627342c16" />
                                   </div>
                                   <p />
                                   <center>
@@ -7524,7 +7699,7 @@ You can draw on the graph using the pencil tool.
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[3]" name="%9d111665-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%9d111665-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7554,7 +7729,7 @@ You can draw on the graph using the pencil tool.
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[4]" name="%b4c2c252-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%b4c2c252-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7573,7 +7748,7 @@ You can draw on the graph using the pencil tool.
                                   <div style="border-bottom-width: 1px; border-top-width: 1px; margin-left: 5px; padding-bottom: 2px; padding-right: 2px; border-color: black; padding-top: 2px; margin-top: 5px; border-style: solid; margin-right: 5px; border-right-width: 1px; border-left-width: 1px; margin-bottom: 5px; padding-left: 2px">
                                     <object refid="42a59480-64c7-11dd-9e86-ffa627342c16" />
                                     <br />
-                                    <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="42a59481-64c7-11dd-9e86-ffa627342c16" />
+                                    <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="42a59481-64c7-11dd-9e86-ffa627342c16" />
                                   </div>
                                   <br />
                                   <center>
@@ -7635,9 +7810,6 @@ and each
                               <currentCard>
                                 <object refid="42a5bb92-64c7-11dd-9e86-ffa627342c16" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="42a5bb92-64c7-11dd-9e86-ffa627342c16" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="42a59481-64c7-11dd-9e86-ffa627342c16" showBorder="false">
@@ -7647,7 +7819,7 @@ and each
                             </OTUDLMenu>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[5]" name="%e4e43bf5-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%e4e43bf5-ba43-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7665,7 +7837,7 @@ and each
                                   <div style="border-left-width: 1px; margin-left: 5px; border-top-width: 1px; padding-left: 2px; padding-right: 2px; padding-top: 2px; margin-right: 5px; border-right-width: 1px; padding-bottom: 2px; border-color: black; border-style: solid; margin-bottom: 5px; margin-top: 5px; border-bottom-width: 1px">
                                     <object refid="1448c432-64c9-11dd-9e86-ffa627342c16" />
                                     <br />
-                                    <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="1448c433-64c9-11dd-9e86-ffa627342c16" />
+                                    <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="1448c433-64c9-11dd-9e86-ffa627342c16" />
                                   </div>
                                   <br />
                                   <br />
@@ -7735,9 +7907,6 @@ and each
                               <currentCard>
                                 <object refid="1448c434-64c9-11dd-9e86-ffa627342c16" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="1448c434-64c9-11dd-9e86-ffa627342c16" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="1448c433-64c9-11dd-9e86-ffa627342c16" showBorder="false">
@@ -7747,7 +7916,7 @@ and each
                             </OTUDLMenu>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[6]" name="%2d82a57e-e0c8-11dc-ab90-896795aed855" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%2d82a57e-e0c8-11dc-ab90-896795aed855" showDefinitions="true">
                           <documentRefs>
                             <OTCompoundDoc id="7a289b76-64e6-11dd-9e86-ffa627342c16" name="Inner pages" showEditBar="false">
                               <documentRefs>
@@ -7812,9 +7981,6 @@ and each
                                   <currentCard>
                                     <object refid="7a289b79-64e6-11dd-9e86-ffa627342c16" />
                                   </currentCard>
-                                  <viewedCards>
-                                    <object refid="7a289b79-64e6-11dd-9e86-ffa627342c16" />
-                                  </viewedCards>
                                 </OTCardContainer>
                                 <OTUDLMenu id="7a289b78-64e6-11dd-9e86-ffa627342c16" showBorder="false">
                                   <cardContainer>
@@ -7858,7 +8024,7 @@ and each
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[7]" name="%66980237-ba45-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%66980237-ba45-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7916,7 +8082,7 @@ and each
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[8]" name="%e92e2f7f-ba45-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%e92e2f7f-ba45-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -7950,7 +8116,7 @@ and each
                                         <div style="border-left-width: 1px; margin-left: 5px; border-top-width: 1px; padding-left: 2px; padding-right: 2px; padding-top: 2px; margin-right: 5px; border-right-width: 1px; padding-bottom: 2px; border-color: black; border-style: solid; margin-bottom: 5px; margin-top: 5px; border-bottom-width: 1px">
                                           <object refid="252976c0-64e7-11dd-9e86-ffa627342c16" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="252976c1-64e7-11dd-9e86-ffa627342c16" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="252976c1-64e7-11dd-9e86-ffa627342c16" />
                                         </div>
                                       </td>
                                     </tr>
@@ -8027,13 +8193,6 @@ and each
                               <currentCard>
                                 <object refid="25299cd2-64e7-11dd-9e86-ffa627342c16" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="25299cd2-64e7-11dd-9e86-ffa627342c16" />
-                                <object refid="3ab730d3-64e7-11dd-9e86-ffa627342c16" />
-                                <object refid="63aabde9-64e7-11dd-9e86-ffa627342c16" />
-                                <object refid="6f20658a-64e7-11dd-9e86-ffa627342c16" />
-                                <object refid="880cb4f0-64e7-11dd-9e86-ffa627342c16" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="252976c1-64e7-11dd-9e86-ffa627342c16" showBorder="false">
@@ -8043,7 +8202,7 @@ and each
                             </OTUDLMenu>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[9]" name="%156bc17d-ba47-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%156bc17d-ba47-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -8113,7 +8272,7 @@ and each
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[10]" name="%63b87747-ba47-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%63b87747-ba47-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -8204,7 +8363,7 @@ and each
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[11]" name="%abbf7dc0-ba47-11dc-8850-6fd722b179dc" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%abbf7dc0-ba47-11dc-8850-6fd722b179dc" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -8231,7 +8390,7 @@ and each
                                   <div style="border-left-width: 1px; margin-left: 5px; border-top-width: 1px; padding-left: 2px; padding-right: 2px; padding-top: 2px; margin-right: 5px; border-right-width: 1px; padding-bottom: 2px; border-color: black; border-style: solid; margin-bottom: 5px; margin-top: 5px; border-bottom-width: 1px">
                                     <object refid="06079323-64e9-11dd-9e86-ffa627342c16" />
                                     <br />
-                                    <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="0607ba34-64e9-11dd-9e86-ffa627342c16" />
+                                    <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="0607ba34-64e9-11dd-9e86-ffa627342c16" />
                                   </div>
                                   <br />
                                   Congratulations! You have completed this activity.
@@ -8332,9 +8491,6 @@ and each
                               <currentCard>
                                 <object refid="0607ba35-64e9-11dd-9e86-ffa627342c16" />
                               </currentCard>
-                              <viewedCards>
-                                <object refid="0607ba35-64e9-11dd-9e86-ffa627342c16" />
-                              </viewedCards>
                             </OTCardContainer>
                             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                             <OTUDLMenu id="0607ba34-64e9-11dd-9e86-ffa627342c16" showBorder="false">
@@ -8346,29 +8502,28 @@ and each
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[9]" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="34fe45f2-775f-11dc-88e0-f91e4efaa30a" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[1]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[2]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[3]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[4]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[5]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[6]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[7]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[8]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[9]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[10]" />
-                        <object refid="34fe6d03-775f-11dc-88e0-f91e4efaa30a/cards[11]" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="34fe6d04-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%34fe6d04-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">What are positive and negative numbers?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What are positive and negative numbers?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -8384,7 +8539,7 @@ and each
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true">
+                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true" enabled="false">
                   <content>
                     <OTCardContainer id="3ec88789-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -8396,21 +8551,32 @@ and each
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        <div class="subtitle" />
+                                        <div class="subtitle">What is electricity?</div>
                                       </td>
                                       <td align="right">
                                         <div class="page-number">1</div>
                                       </td>
                                     </tr>
                                   </table>
-                                  <p>Now it's time to review and summarize what you have learned about 
-            clouds. To help, you can show all of your snapshots and some of 
-            your written answers from the activities. They are all in your lab 
-            book[ lab book image displayed here ].</p>
-                                  <p>Review the discovery questions on the following pages. Feel free 
-            to add to what you did before. There is a separate page for each 
-            of the activities that you worked on.</p>
-                                  <p>Be prepared to share your answers with the rest of the class.</p>
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="60%">
+                                        Now it's time to review and summarize what you have learned 
+                about electricity. To help, you can show all of your snapshots 
+                and some of your written answers from the activities. They are 
+                all in your lab book.
+                                        <br />
+                                        <br />
+                                        Review the questions on the 
+                following pages. There is a separate page for each activity 
+                that you worked on. Be prepared to share your answers with the 
+                rest of the class.
+                                      </td>
+                                      <td style="padding-right: 20px; padding-left: 20px" width="40%">
+                                        <img src="http://udl.concord.org/artwork/elect_34/kite/el_34_kite.png" border="0" />
+                                      </td>
+                                    </tr>
+                                  </table>
                                 </div>
                               </div>
                             </div>
@@ -8434,8 +8600,11 @@ and each
                                   This was a story about electric charges on balloons.
                                   <br />
                                   <br />
-                                  <br />
                                   <object refid="c9ea5600-7f72-11dd-9c5b-73f6d5335ed5" />
+                                  <br />
+                                  <br />
+                                  <object refid="1e4ad8a3-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -8449,9 +8618,14 @@ and each
                                 </OTCompoundDoc>
                               </prompt>
                               <input>
-                                <OTText />
+                                <OTText rows="1" />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="1e4ad8a3-84c8-11dd-8020-b1018eb16256" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_3}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="2c3eab3e-7f62-11dd-9c5b-73f6d5335ed5" name="%2c3eab3e-7f62-11dd-9c5b-73f6d5335ed5" showEditBar="true" showDefinitions="true">
@@ -8473,8 +8647,11 @@ and each
           what they do. Then you compared this to a model of charged balloons.
                                   <br />
                                   <br />
-                                  <br />
                                   <object refid="3bacf4af-7f73-11dd-9c5b-73f6d5335ed5" />
+                                  <br />
+                                  <br />
+                                  <object refid="2a5fcd8c-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -8484,13 +8661,18 @@ and each
                             <OTUDLQuestion id="3bacf4af-7f73-11dd-9c5b-73f6d5335ed5" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
-                                  <bodyText>Use your written answers and your snapshots to answer this question: how do electric charges behave?</bodyText>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: How do electric charges behave?</bodyText>
                                 </OTCompoundDoc>
                               </prompt>
                               <input>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="2a5fcd8c-84c8-11dd-8020-b1018eb16256" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_4}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="2d0cf7bf-7f62-11dd-9c5b-73f6d5335ed5" name="%2d0cf7bf-7f62-11dd-9c5b-73f6d5335ed5" showEditBar="true" showDefinitions="true">
@@ -8512,8 +8694,11 @@ and each
           hand generator.
                                   <br />
                                   <br />
-                                  <br />
                                   <object refid="6435b20a-7f73-11dd-9c5b-73f6d5335ed5" />
+                                  <br />
+                                  <br />
+                                  <object refid="3fbf25bf-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -8523,13 +8708,18 @@ and each
                             <OTUDLQuestion id="6435b20a-7f73-11dd-9c5b-73f6d5335ed5" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
-                                  <bodyText>Use your written answers and your snapshots to answer this question: how do light bulbs work?</bodyText>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: How do light bulbs work?</bodyText>
                                 </OTCompoundDoc>
                               </prompt>
                               <input>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="3fbf25bf-84c8-11dd-8020-b1018eb16256" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_5}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="2e6de750-7f62-11dd-9c5b-73f6d5335ed5" name="%2e6de750-7f62-11dd-9c5b-73f6d5335ed5" showEditBar="true" showDefinitions="true">
@@ -8551,8 +8741,11 @@ and each
           travel in a circuit and move energy from one place to another.
                                   <br />
                                   <br />
-                                  <br />
                                   <object refid="ad1a9599-7f73-11dd-9c5b-73f6d5335ed5" />
+                                  <br />
+                                  <br />
+                                  <object refid="50af15c8-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -8562,13 +8755,18 @@ and each
                             <OTUDLQuestion id="ad1a9599-7f73-11dd-9c5b-73f6d5335ed5" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
-                                  <bodyText>Use your written answers and your snapshots to answer this question:  how does electricity move through a wire?</bodyText>
+                                  <bodyText>Use your written answers and your snapshots to answer this question:  How does electricity move through a wire?</bodyText>
                                 </OTCompoundDoc>
                               </prompt>
                               <input>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="50af15c8-84c8-11dd-8020-b1018eb16256" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_6}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="2f413ce1-7f62-11dd-9c5b-73f6d5335ed5" name="%2f413ce1-7f62-11dd-9c5b-73f6d5335ed5" showEditBar="true" showDefinitions="true">
@@ -8579,7 +8777,7 @@ and each
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        <div class="subtitle">Light a bulb</div>
+                                        <div class="subtitle">Light a bulb!</div>
                                       </td>
                                       <td align="right">
                                         <div class="page-number">6</div>
@@ -8589,12 +8787,34 @@ and each
                                   In this activity, you built a circuit to light a bulb with a battery.
                                   <br />
                                   <br />
-                                  Use your written answers and your snapshots to answer this question: how do 
-          you use electricity to light up a bulb?
+                                  <object refid="5c3e86ff-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
+                                  <br />
+                                  <object refid="65f8c30a-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
+                                  <br />
+                                  <br />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="5c3e86ff-84c8-11dd-8020-b1018eb16256" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: How do you use electricity to light up a bulb?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="65f8c30a-84c8-11dd-8020-b1018eb16256" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_7}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="30471422-7f62-11dd-9c5b-73f6d5335ed5" name="%30471422-7f62-11dd-9c5b-73f6d5335ed5" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -8615,8 +8835,11 @@ and each
           numbers.
                                   <br />
                                   <br />
-                                  <br />
                                   <object refid="66464d38-7f74-11dd-9c5b-73f6d5335ed5" />
+                                  <br />
+                                  <br />
+                                  <object refid="798ca9f3-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -8626,13 +8849,18 @@ and each
                             <OTUDLQuestion id="66464d38-7f74-11dd-9c5b-73f6d5335ed5" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
-                                  <bodyText>Use your written answers and your snapshots to answer this question: what are positive and negative numbers?</bodyText>
+                                  <bodyText>Use your written answers and your snapshots to answer this question: What are positive and negative numbers?</bodyText>
                                 </OTCompoundDoc>
                               </prompt>
                               <input>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="798ca9f3-84c8-11dd-8020-b1018eb16256" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_8}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="2a2e1da8-8005-11dd-a18f-81e072b55dbf" name="%2a2e1da8-8005-11dd-a18f-81e072b55dbf" showEditBar="true" showDefinitions="true">
@@ -8651,12 +8879,14 @@ and each
                                     </tr>
                                   </table>
                                   Now that you have answered all of these questions, let's return to 
-          the big central question of the unit:
-                                  <b>What is electricity?</b>
-                                  <br />
+          the big central question of the unit.
                                   <br />
                                   <br />
                                   <object refid="97888038-8005-11dd-a18f-81e072b55dbf" />
+                                  <br />
+                                  <br />
+                                  <object refid="8747adbc-84c8-11dd-8020-b1018eb16256" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -8668,7 +8898,7 @@ and each
                                 <OTCompoundDoc>
                                   <bodyText>
                                     Answer this questions based on everything you have learned and collected:
-                                    <b>what is electricity?</b>
+                                    <b>What is electricity?</b>
                                   </bodyText>
                                 </OTCompoundDoc>
                               </prompt>
@@ -8676,6 +8906,7 @@ and each
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="8747adbc-84c8-11dd-8020-b1018eb16256" name="Labbook chooser" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="313b5f33-7f62-11dd-9c5b-73f6d5335ed5" name="%313b5f33-7f62-11dd-9c5b-73f6d5335ed5" showEditBar="true" showDefinitions="true">
@@ -8693,89 +8924,86 @@ and each
                                       </td>
                                     </tr>
                                   </table>
-                                  Congratulations! You have completed the Wrapping Up activity.
                                   <br />
+                                  <object refid="f5480cde-8a41-11dd-ac72-6f0c3da1d168" />
                                   <br />
-                                  Let your teacher know when you have completed the
-                                  <b>Electricity</b>
-                                  unit. Your teacher will then unlock the post-test for you.
-                                  <p />
-                                  <table>
-                                    <tr>
-                                      <td>Teacher password:</td>
-                                      <td>
-                                        <object refid="${password-field}" />
-                                      </td>
-                                      <td>
-                                        <object refid="${wrapup-submit-button}" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <object refid="${wrapup-button-script}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText local_id="password-field" isPassword="true" name="PasswordField" />
-                            <OTButton local_id="wrapup-submit-button" name="Button" text="Submit" />
-                            <OTScriptObject local_id="wrapup-button-script">
-                              <variables>
-                                <OTScriptVariable name="cardContainer">
-                                  <reference>
-                                    <object refid="${section-card-container}" />
-                                  </reference>
-                                </OTScriptVariable>
-                                <OTScriptVariableComponent name="button">
-                                  <reference>
-                                    <object refid="${wrapup-submit-button}" />
-                                  </reference>
-                                </OTScriptVariableComponent>
-                                <OTScriptVariable name="card">
-                                  <reference>
-                                    <object refid="${section_10}" />
-                                  </reference>
-                                </OTScriptVariable>
-                                <OTScriptVariableComponent name="passwordfield">
-                                  <reference>
-                                    <object refid="${password-field}" />
-                                  </reference>
-                                </OTScriptVariableComponent>
-                                <OTScriptVariable name="password">
-                                  <reference>
-                                    <OTText local_id="password" text="electricity" name="Password" />
-                                  </reference>
-                                </OTScriptVariable>
-                              </variables>
-                              <script>
-                                <object refid="${change_page.js}" />
-                              </script>
-                              <scriptState />
-                            </OTScriptObject>
+                            <OTCompoundDoc id="f5480cde-8a41-11dd-ac72-6f0c3da1d168" name="Wrapup password" showEditBar="false">
+                              <documentRefs>
+                                <OTText id="f5480cdf-8a41-11dd-ac72-6f0c3da1d168" isPassword="true" name="PasswordField" />
+                                <OTScriptButton id="f5480ce1-8a41-11dd-ac72-6f0c3da1d168" text="Submit">
+                                  <scriptVariables>
+                                    <OTScriptVariable name="password">
+                                      <reference>
+                                        <OTText id="f5480ce0-8a41-11dd-ac72-6f0c3da1d168" text="electricity" />
+                                      </reference>
+                                    </OTScriptVariable>
+                                    <OTScriptVariableComponent name="passwordField">
+                                      <reference>
+                                        <object refid="f5480cdf-8a41-11dd-ac72-6f0c3da1d168" />
+                                      </reference>
+                                    </OTScriptVariableComponent>
+                                  </scriptVariables>
+                                  <script>
+                                    <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/wrap-up_script.js" />
+                                  </script>
+                                </OTScriptButton>
+                                <object refid="4f731e40-c257-11dc-95ff-0800200c9a66!/password-answer" />
+                                <object refid="f5480ce0-8a41-11dd-ac72-6f0c3da1d168" />
+                              </documentRefs>
+                              <bodyText>
+                                We hope you enjoyed sharing what you learned about electricity.
+                                <br />
+                                <br />
+                                Let 
+    your teacher know that you are done. Your teacher will give you a password 
+    so you can take a short test.
+                                <br />
+                                <br />
+                                <table>
+                                  <tr>
+                                    <td>Password:</td>
+                                    <td>
+                                      <object refid="f5480cdf-8a41-11dd-ac72-6f0c3da1d168" />
+                                    </td>
+                                    <td>
+                                      <object refid="f5480ce1-8a41-11dd-ac72-6f0c3da1d168" />
+                                    </td>
+                                  </tr>
+                                </table>
+                                <object viewid="4f731e40-c257-11dc-95ff-0800200c9a66!/password-answer" refid="f5480ce0-8a41-11dd-ac72-6f0c3da1d168" />
+                              </bodyText>
+                            </OTCompoundDoc>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="313b5f33-7f62-11dd-9c5b-73f6d5335ed5" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="3ec88788-775f-11dc-88e0-f91e4efaa30a" />
-                        <object refid="2b5dc11d-7f62-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="2c3eab3e-7f62-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="2d0cf7bf-7f62-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="2e6de750-7f62-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="2f413ce1-7f62-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="30471422-7f62-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="313b5f33-7f62-11dd-9c5b-73f6d5335ed5" />
-                        <object refid="2a2e1da8-8005-11dd-a18f-81e072b55dbf" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="3ec8878a-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%3ec8878a-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">Wrapping up</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">Wrapping up</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -8790,9 +9018,9 @@ and each
                   <south>
                     <object refid="${nav-bar}" />
                   </south>
-                  <description>Gather your work together in a lab notebook  and summarize what you have learned.</description>
+                  <description>Gather your work together in your lab book  and summarize what you have learned.</description>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false" enabled="false">
                   <content>
                     <OTCardContainer id="46f14e1f-775f-11dc-88e0-f91e4efaa30a" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -8878,7 +9106,7 @@ and each
                                     <br />
                                     <br />
                                     <center>
-                                      <img src="http://udl.concord.org/artwork/elect_34/circuit_question/el_34_circuit_question.jpg" border="1" />
+                                      <img src="http://udl.concord.org/artwork/elect_34/circuit_question/el_34_circuit_question.png" border="1" />
                                     </center>
                                   </bodyText>
                                 </OTUDLCompoundDoc>
@@ -9111,7 +9339,10 @@ and each
                                   </table>
                                   <object refid="6446a428-e3bc-11dc-88bd-67be801d5513" />
                                   <p />
-                                  6.  A student connects a hand generator to a light bulb. They also connext a voltage sensor which measures the voltage across the light bulb. They crank the hand generator and produce the following graph of voltage:
+                                  6. A student connects a hand generator to a light bulb. They also 
+          connext a voltage sensor which measures the voltage across the light 
+          bulb. They crank the hand generator and produce the following graph 
+          of voltage:
                                   <br />
                                   <br />
                                   <center>
@@ -9130,12 +9361,9 @@ and each
                                   <p />
                                   <object refid="56e1cb8a-e3bb-11dc-88bd-67be801d5513" />
                                   <p />
-                                  Click the
-                                  <b>Submit</b>
-                                  button when you have finished.
-                                  <br />
-                                  <object refid="${post-test-submit-button}" />
-                                  <object refid="${post-test-submit-script}" />
+                                  Press the
+                                  <b>Right Arrow below</b>
+                                  to go to the next page.
                                 </div>
                               </div>
                             </div>
@@ -9148,7 +9376,14 @@ and each
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
-                                <OTDrawingTool name="Drawing tool" backgroundImage="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg" backgroundImageURL="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg" />
+                                <OTDrawingTool name="Drawing tool" backgroundImage="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg" backgroundImageURL="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.jpg" usePopupButtons="true" lineWidthButtonVisible="true">
+                                  <graphables>
+                                    <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                  </graphables>
+                                  <backgroundSrc>
+                                    <OTBlob src="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.png" name="http://udl.concord.org/artwork/elect_56/batttery_two_bulbs/el_56_battery_two_bulbs.png" />
+                                  </backgroundSrc>
+                                </OTDrawingTool>
                               </input>
                               <activityReferences>
                                 <OTReference annotation="ACTIVITY_REFERENCE">
@@ -9308,6 +9543,197 @@ and each
                                 <object refid="9f101b16-5cbd-11dd-8254-0fe7ba4a3298" />
                               </correctAnswer>
                             </OTUDLQuestion>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%418261f6-868c-11dd-8450-3d74bb5c3bf0" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle" />
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">4</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  Now tell us what you think about this unit!
+                                  <br />
+                                  <br />
+                                  <object refid="478bcafd-868c-11dd-8450-3d74bb5c3bf0" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="59cbbabb-868c-11dd-8450-3d74bb5c3bf0" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="6b17d491-868c-11dd-8450-3d74bb5c3bf0" />
+                                  <br />
+                                  <br />
+                                  Press the
+                                  <b>Right Arrow</b>
+                                  below to go to the next page.
+                                  <br />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="478bcafd-868c-11dd-8450-3d74bb5c3bf0" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>7. How interesting was this unit to you?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Boring">
+                                      <bodyText>Boring</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Okay">
+                                      <bodyText>Okay</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Very interesting">
+                                      <bodyText>Very interesting</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="59cbbabb-868c-11dd-8450-3d74bb5c3bf0" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>8. Was it helpful to have definitions of words (a glossary) in this unit?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Very helpful">
+                                      <bodyText>Very helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat helpful">
+                                      <bodyText>Somewhat helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Not helpful">
+                                      <bodyText>Not helpful</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="6b17d491-868c-11dd-8450-3d74bb5c3bf0" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>9. Was it helpful to be able to highlight text and have the computer read it out loud?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Very helpful">
+                                      <bodyText>Very helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat helpful">
+                                      <bodyText>Somewhat helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Not helpful">
+                                      <bodyText>Not helpful</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%7da2afff-868c-11dd-8450-3d74bb5c3bf0" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle" />
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">5</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="852c0244-868c-11dd-8450-3d74bb5c3bf0" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="92e6b703-868c-11dd-8450-3d74bb5c3bf0" />
+                                  <br />
+                                  <br />
+                                  Click the
+                                  <b>Submit</b>
+                                  button when you have finished.
+                                  <br />
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <object refid="${post-test-submit-button}" />
+                                        <object refid="${post-test-submit-script}" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="852c0244-868c-11dd-8450-3d74bb5c3bf0" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>10. How well did the computer work when you used this unit?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="It worked all or most of the time.">
+                                      <bodyText>It worked all or most of the time.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="A few times it was hard to use the computer.">
+                                      <bodyText>A few times it was hard to use the computer.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="The computer was often slow, or froze, or was difficult to use.">
+                                      <bodyText>The computer was often slow, or froze, or was difficult to use.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="92e6b703-868c-11dd-8450-3d74bb5c3bf0" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>11. Was it helpful to have “coaches” (the little robot pictures)?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Very helpful">
+                                      <bodyText>Very helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat helpful">
+                                      <bodyText>Somewhat helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Not helpful">
+                                      <bodyText>Not helpful</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                             <OTButton local_id="post-test-submit-button" name="Button" text="Submit" />
                             <OTScriptObject local_id="post-test-submit-script">
                               <variables>
@@ -9338,8 +9764,21 @@ and each
                   <header>
                     <OTUDLCompoundDoc id="46f14e20-775f-11dc-88e0-f91e4efaa30a" showEditBar="false" name="%46f14e20-775f-11dc-88e0-f91e4efaa30a">
                       <bodyText>
-                        <div class="title">Post-test</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What have you learned about electricity?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -9354,20 +9793,12 @@ and each
                   <south>
                     <object refid="${nav-bar}" />
                   </south>
+                  <description>What have you learned about electricity?</description>
                 </OTUDLSection>
               </cards>
               <currentCard>
                 <object refid="${section_0}" />
               </currentCard>
-              <viewedCards>
-                <object refid="${section_0}" />
-                <object refid="${section_4}" />
-                <object refid="${section_6}" />
-                <object refid="${section_5}" />
-                <object refid="${section_7}" />
-                <object refid="${section_8}" />
-                <object refid="${section_9}" />
-              </viewedCards>
             </OTCardContainer>
           </activity>
           <script>
@@ -9504,6 +9935,13 @@ and each
           <cssColor>
             <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
           </cssColor>
+          <glossary>
+            <OTGlossary>
+              <definitionManager>
+                <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
+              </definitionManager>
+            </OTGlossary>
+          </glossary>
         </OTUDLNavBar>
       </library>
     </OTSystem>

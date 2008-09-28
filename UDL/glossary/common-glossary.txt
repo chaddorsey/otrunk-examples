@@ -16,9 +16,13 @@ Heat: <b>Heat</b> is a form of energy that consists of wiggling or motion of mol
 
 Kinetic energy: <b>Kinetic energy</b> is the energy of motion. If an object is not moving, its kinetic energy is zero.
 
+Potential energy: <b>potential energy</b> is stored-up energy, such as a stretched rubber band, chemical energy in a battery, or a car at the top of a hill.
+
 Energy: <b>Energy</b> is a property of materials that can be used to heat things. The total amount of energy in a system doesn't change.
 
 Estimate: <b>Estimate</b> is to make a careful guess of the numerical value of something.
+
+Cycle: A <b>cycle</b> means something that repeats over and over again, like traveling around in a circle or swinging back and forth.
 
 Hypothesis: A <b>hypothesis</b> is a prediction or careful guess about how something will work. 
 
@@ -26,9 +30,9 @@ Molecule: A <b>molecule</b> is a group of atoms that are joined together.
 
 Monitor: To <b>monitor</b> is to observe something carefully over a period of time. 
 
-Outlier: An <b>outlier</b> in a collection of measurements that is very different from the others.
+Outlier: An <b>outlier</b> in a collection of measurements is one that is very different from the others.
 
-Percent: <b>Percent</b> means "out of 100". 
+Percent: <b>Percent</b> means "out of 100" or "compared to 100". For example, if 30 kids in a class of 100 have brown hair, then 30 percent have brown hair.  
 
 Predict: To <b>predict</b> is to make a careful guess about how something will happen.
 

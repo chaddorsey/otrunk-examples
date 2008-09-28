@@ -75,6 +75,15 @@ importClass(Packages.org.concord.framework.otrunk.view.OTUserListService)
  * otContents
  * viewContext
  */
+ 
+ /*
+  * Variables from otml
+  * ===================
+  * otAssessment
+  */
+
+
+var otQuestion = otAssessment.getQuestions().get(0)
 
 var activityName = "Measuring Resistance 3.0";
 
@@ -125,7 +134,6 @@ var calculatorListener;
 var answerObj;
 var solutionObj;
 var solutionMessage = "";
-var otAssessment;
 
 var activityInitialized;
 var timeStepStarted = 0;
@@ -422,9 +430,6 @@ function setupAsessmentLogging()
 		var userName = getUserName();
 		var ms = new Date().getTime();
 		
-		//Create assessment object
-		otAssessment = otObjectService.createObject(OTAssessment);
-		otAssessment.setActivityName(activityName);
 		otAssessment.setTime(ms);			
 		otAssessment.setUserName(userName);
 		
@@ -1023,6 +1028,8 @@ function checkAnswer()
 	answerObj.setUnit(unit);
 	/////
 	
+	otQuestion.setInput(answerObj)
+	
 	/////
 	//Correct answer is at
 	//solutionObj.resistance
@@ -1337,6 +1344,8 @@ function calculateSolution()
 	valueObj.setUnit("Ohms");
 	solutionObj.resistance = valueObj;
 	//
+	
+	otQuestion.setCorrectAnswer(valueObj)
 	
 	//Calculate the resistance from the voltage and current rounded (like the multimeter does)
 	solutionObj.tolerance = 0;

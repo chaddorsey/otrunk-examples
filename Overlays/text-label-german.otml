@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="f080c070-7c8a-417c-a3fe-0737a7302806">
+	<imports>
+		<import class="org.concord.otrunk.OTSystem" />
+		<import class="org.concord.otrunk.OTInclude" />
+		<import class="org.concord.otrunk.view.OTViewBundle" />
+        <import class="org.concord.otrunk.view.OTViewEntry"/>
+        <import class="org.concord.otrunk.OTIncludeRootObject" />
+        <import class="org.concord.otrunk.overlay.OTOverlay"/>
+        <import class="org.concord.otrunk.ui.OTText"/>
+	</imports>
+	<objects>
+	<OTSystem local_id="system">
+		<bundles>
+			<OTViewBundle showLeftPanel="false">
+              <viewEntries>
+            <OTViewEntry
+              objectClass="org.concord.otrunk.ui.OTText" 
+              viewClass="org.concord.otrunk.ui.swing.OTTextView"/>
+          </viewEntries>
+          </OTViewBundle>
+		</bundles>
+		<includes>
+			<OTInclude href="text-label.otml" />
+		</includes>
+        <overlays>
+            <OTIncludeRootObject href="http://rails.dev.concord.org/webdav/german.otml" />
+        </overlays>
+		<root>
+			<object refid="edbc841e-0588-4333-9e1e-8b5d71d3a7fd" />
+		</root>
+		</OTSystem>
+	</objects>
+</otrunk>

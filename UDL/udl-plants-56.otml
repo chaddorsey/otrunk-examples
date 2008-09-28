@@ -519,7 +519,7 @@
           <activity>
             <OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true">
               <cards>
-                <OTUDLSection local_id="section_0" name="Home" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_0" name="Home" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" enabled="true">
                   <content>
                     <OTUDLLabPage id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_0/content">
                       <backgroundImage>
@@ -582,12 +582,25 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_0/content" />
                   </center>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_1" name="Pre-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_1" name="Pre-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false" description="What do you already know about plants?" enabled="true">
                   <header>
                     <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" showEditBar="false">
                       <bodyText>
-                        <div class="title">Pre-test</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What do you already know about plants?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTCompoundDoc>
                   </header>
                   <content>
@@ -1139,7 +1152,7 @@
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="&#xA;This unit explores how the leaves of a plant produce sugar for growth, flowers, fruits, and seeds">
+                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="&#xA;This unit explores how the leaves of a plant produce sugar for growth, flowers, fruits, and seeds." enabled="false">
                   <content>
                     <OTCardContainer id="fcb6477c-87ca-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                       <cards>
@@ -1377,7 +1390,9 @@
                                     <li>What do plants eat?</li>
                                   </ul>
                                   <br />
-                                  Let's get started!
+                                  You have completed the Introduction. Click on the
+                                  <b>UDL HOME</b>
+                                  button below.
                                 </div>
                               </div>
                             </div>
@@ -1392,8 +1407,21 @@
                   <header>
                     <OTUDLCompoundDoc id="fcb6477d-87ca-11dc-a57f-8bcc557bc796" showEditBar="false" name="%fcb6477d-87ca-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">What do plants eat?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What do plants eat?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -1420,7 +1448,7 @@ Students investigate plants while:
 • Students understand for ecosystems, the major source of energy is sunlight. Energy entering ecosystems as sunlight is transferred by producers into chemical energy through photosynthesis. 
 • Students recognize that the number of organisms an ecosystem can support depends on the resources available and abiotic factors, such as quantity of light and water, range of temperatures, and soil composition.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_3" name="A plant story" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false" description="Take a trip inside a leaf.">
+                <OTUDLSection local_id="section_3" name="A plant story" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false" description="Take a trip inside a leaf." enabled="false">
                   <content>
                     <OTCardContainer id="02c0e902-87cb-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -2765,8 +2793,21 @@ Students investigate plants while:
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_3/header" showEditBar="false" name="%02c0e903-87cb-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">A plant story</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">A plant story</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -2784,7 +2825,7 @@ Students investigate plants while:
                   <goals>• Students understand for ecosystems, the major source of energy is sunlight. Energy entering ecosystems as sunlight is transferred by producers into chemical energy through photosynthesis. 
 • Students recognize that the number of organisms an ecosystem can support depends on the resources available and abiotic factors, such as quantity of light and water, range of temperatures, and soil composition.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_4" name="The plant game" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Play a game that follows a plant through a season of growth.">
+                <OTUDLSection local_id="section_4" name="The plant game" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Play a game that follows a plant through a season of growth." enabled="false">
                   <content>
                     <OTCardContainer id="0848ed08-87cb-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -3517,7 +3558,7 @@ Students investigate plants while:
                                         <div style="padding-top: 2px; margin-right: 5px; padding-right: 2px; border-right-width: 1px; padding-left: 2px; border-left-width: 1px; border-color: black; border-top-width: 1px; margin-top: 5px; border-bottom-width: 1px; border-style: solid; padding-bottom: 2px; margin-bottom: 5px; margin-left: 5px">
                                           <object refid="72b4f966-67d9-11dd-8f1b-0725e6f8772c" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="72b4f967-67d9-11dd-8f1b-0725e6f8772c" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="72b4f967-67d9-11dd-8f1b-0725e6f8772c" />
                                         </div>
                                       </td>
                                     </tr>
@@ -3704,10 +3745,17 @@ Students investigate plants while:
                                       </td>
                                     </tr>
                                   </table>
-                                  3. Review the bar graphs showing the number of roots, leaves, and flowers in different colors. You can select them one at a time by checking one and unchecking the others.
-                                  <BR />
-                                  <BR />
+                                  3. Review the bar graphs showing the number of roots, leaves, and 
+          flowers in different colors. You can select them one at a time by 
+          checking one and unchecking the others.
+                                  <br />
+                                  <br />
                                   <object refid="${plant-game-graph-all}" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="8876790a-8a38-11dd-b952-8fa5d3102ba6" />
+                                  <br />
                                 </div>
                               </div>
                             </div>
@@ -3738,6 +3786,11 @@ Students investigate plants while:
                                 <OTDataAxis min="-0.0" max="10.0" label="Number" />
                               </yDataAxis>
                             </OTDataGraph>
+                            <OTLabbookButton id="8876790a-8a38-11dd-b952-8fa5d3102ba6" name="Labbook button">
+                              <target>
+                                <object refid="${plant-game-graph-all}" />
+                              </target>
+                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%f53a5dce-9264-11dc-8697-f35abbf4ef42" showDefinitions="true">
@@ -3863,7 +3916,6 @@ Students investigate plants while:
                                       </td>
                                     </tr>
                                   </table>
-                                  <div class="subtitle">New page</div>
                                   Compare your leaf/root ratio to other students.
                                   <br />
                                   <br />
@@ -3988,8 +4040,21 @@ Students investigate plants while:
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_4/header" showEditBar="false" name="%0848ed09-87cb-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">How do plants make food to grow?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">How do plants make food to grow?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -4008,7 +4073,7 @@ Students investigate plants while:
 • Students recognize that the number of organisms an ecosystem can support depends on the resources available and abiotic factors, such as quantity of light and water, range of temperatures, and soil composition. 
 • Weather changes from day to day and over the seasons. Weather can be described by measurable quantities, such as temperature, wind direction and speed, and precipitation.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_5" name="Photosynthesis: the big picture" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Study a model of photosynthesis inside a leaf.">
+                <OTUDLSection local_id="section_5" name="Photosynthesis: the big picture" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Study a model of photosynthesis inside a leaf." enabled="false">
                   <content>
                     <OTCardContainer id="0d742b0e-87cb-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                       <cards>
@@ -4427,7 +4492,7 @@ Students investigate plants while:
                                         <div style="padding-bottom: 2px; border-color: black; border-top-width: 1px; padding-left: 2px; border-bottom-width: 1px; margin-bottom: 5px; border-right-width: 1px; padding-right: 2px; margin-top: 5px; padding-top: 2px; border-left-width: 1px; margin-left: 5px; border-style: solid; margin-right: 5px">
                                           <object refid="ce97ea08-6899-11dd-ac63-e36b40ba09b0" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="ce981119-6899-11dd-ac63-e36b40ba09b0" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="ce981119-6899-11dd-ac63-e36b40ba09b0" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -4562,7 +4627,7 @@ Students investigate plants while:
                                         <div style="padding-right: 2px; border-right-width: 1px; border-top-width: 1px; margin-right: 5px; margin-bottom: 5px; padding-top: 2px; border-color: black; padding-bottom: 2px; margin-top: 5px; border-bottom-width: 1px; border-left-width: 1px; padding-left: 2px; margin-left: 5px; border-style: solid">
                                           <object refid="40bcd6e7-689b-11dd-ac63-e36b40ba09b0" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="40bcd6e8-689b-11dd-ac63-e36b40ba09b0" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="40bcd6e8-689b-11dd-ac63-e36b40ba09b0" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -4647,7 +4712,7 @@ Students investigate plants while:
                                         <div style="padding-right: 2px; border-right-width: 1px; border-top-width: 1px; margin-right: 5px; margin-bottom: 5px; padding-top: 2px; border-color: black; padding-bottom: 2px; margin-top: 5px; border-bottom-width: 1px; border-left-width: 1px; padding-left: 2px; margin-left: 5px; border-style: solid">
                                           <object refid="1f8cad71-689d-11dd-9eb6-cd9c67c339df" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="1f8cad72-689d-11dd-9eb6-cd9c67c339df" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="1f8cad72-689d-11dd-9eb6-cd9c67c339df" />
                                         </div>
                                       </td>
                                       <td width="50%">
@@ -4729,13 +4794,26 @@ Students investigate plants while:
                                   <object refid="c7e74b02-f1e9-11dc-bb2b-e9ff68bf9055" />
                                   <br />
                                   <br />
-                                  Congratulations! You have completed this activity.
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="50%" valign="top">
+                                        <br />
+                                        <object refid="25fdb856-8a34-11dd-b924-e18a208821b8" />
+                                      </td>
+                                      <td width="50%">
+                                        <img width="300" height="300" src="http://udl.concord.org/artwork/plant_56/leaf_macro/pl_56_leaf_macro.jpg" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <br />
+                                  Congratulations! 
+          You have completed this activity.
                                   <br />
                                   <br />
                                   If you would like to 
-    explore the model further, go on to the activity
+          explore the model further, go on to the activity
                                   <b>Photsynthesis: a 
-    closer look</b>
+          closer look</b>
                                   .
                                 </div>
                               </div>
@@ -4752,6 +4830,28 @@ Students investigate plants while:
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTUDLQuestion id="25fdb856-8a34-11dd-b924-e18a208821b8" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Did the computer model in this activity  help you learn about plants?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Yes">
+                                      <bodyText>Yes</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat">
+                                      <bodyText>Somewhat</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="No">
+                                      <bodyText>No</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
@@ -4763,8 +4863,21 @@ Students investigate plants while:
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_5/header" showEditBar="false" name="%0d74521f-87cb-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">How do leaves make food for plants?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">How do leaves make food for plants?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -4783,7 +4896,7 @@ Students investigate plants while:
 • Students recognize that the number of organisms an ecosystem can support depends on the resources available and abiotic factors, such as quantity of light and water, range of temperatures, and soil composition. 
 • Students understand that although different species might look dissimilar, the unity among organisms becomes apparent from an analysis of internal structures, the similarity of their chemical processes, and the evidence of common ancestry.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_6" name="Photosynthesis: a closer look" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Use a model to learn about the steps in photosynthesis.">
+                <OTUDLSection local_id="section_6" name="Photosynthesis: a closer look" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Use a model to learn about the steps in photosynthesis." enabled="false">
                   <content>
                     <OTCardContainer id="15771a24-87cb-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                       <cards>
@@ -4998,7 +5111,7 @@ Students investigate plants while:
                                         <div style="padding-right: 2px; border-right-width: 1px; border-top-width: 1px; margin-right: 5px; margin-bottom: 5px; padding-top: 2px; border-color: black; padding-bottom: 2px; margin-top: 5px; border-bottom-width: 1px; border-left-width: 1px; padding-left: 2px; margin-left: 5px; border-style: solid">
                                           <object refid="2edce513-689f-11dd-9eb6-cd9c67c339df" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="2edce514-689f-11dd-9eb6-cd9c67c339df" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="2edce514-689f-11dd-9eb6-cd9c67c339df" />
                                         </div>
                                       </td>
                                       <td width="50%">
@@ -5537,22 +5650,45 @@ Students investigate plants while:
                                       </td>
                                     </tr>
                                   </table>
+                                  Summarize what you found out. Choose whether each thing is
+                                  <b>produced</b>
+                                  or
+                                  <b>used up</b>
+                                  by photosynthesis.
+                                  <br />
+                                  <br />
                                   <table width="100%">
                                     <tr>
-                                      <td width="40%">
-                                        Summarize what you found out. Choose whether each thing is
-                                        <b>produced</b>
-                                        or
-                                        <b>used up</b>
-                                        by photosynthesis.
+                                      <td>
+                                        <object refid="862c32d3-00ef-11dd-a9d2-8d25df717351" />
+                                        <br />
                                       </td>
-                                      <td width="60%">
-                                        <div style="padding-top: 2px; margin-right: 5px; padding-right: 2px; border-right-width: 1px; padding-left: 2px; border-left-width: 1px; border-color: black; border-top-width: 1px; margin-top: 5px; border-bottom-width: 1px; border-style: solid; padding-bottom: 2px; margin-bottom: 5px; margin-left: 5px">
-                                          <object refid="3769ee5d-68a3-11dd-9190-bd637d239ca9" />
-                                          <br />
-                                          <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="3769ee5e-68a3-11dd-9190-bd637d239ca9" />
-                                        </div>
+                                      <td>
+                                        <object refid="8945cef0-00ef-11dd-a9d2-8d25df717351" />
+                                      </td>
+                                      <td>
+                                        <object refid="4111da76-72e1-11dd-ba0c-2994060aece4" />
+                                        <br />
+                                      </td>
+                                      <td>
+                                        <object refid="8eff917e-00ef-11dd-a9d2-8d25df717351" />
+                                      </td>
+                                      <td>
+                                        <object refid="d2f2bcca-00ef-11dd-a9d2-8d25df717351" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <br />
+                                  <br />
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <br />
+                                        <object refid="c823e1bd-8a34-11dd-b924-e18a208821b8" />
+                                        <br />
+                                      </td>
+                                      <td>
+                                        <img width="300" height="240" src="http://udl.concord.org/artwork/plant_56/leaf_micro/pl_56_leaf_micro.jpg" />
                                       </td>
                                     </tr>
                                   </table>
@@ -5564,225 +5700,123 @@ Students investigate plants while:
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTCardContainer id="3769ee5d-68a3-11dd-9190-bd637d239ca9">
-                              <cards>
-                                <OTUDLCompoundDoc id="376a156f-68a3-11dd-9190-bd637d239ca9">
-                                  <bodyText>
-                                    <object refid="862c32d3-00ef-11dd-a9d2-8d25df717351" />
-                                  </bodyText>
-                                  <documentRefs>
-                                    <OTUDLQuestion id="862c32d3-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
-                                      <prompt>
-                                        <OTUDLCompoundDoc>
-                                          <bodyText>Sunlight is</bodyText>
-                                        </OTUDLCompoundDoc>
-                                      </prompt>
-                                      <input>
-                                        <OTChoice name="Multiple choice" alignContent="0">
-                                          <choices>
-                                            <OTCompoundDoc name="produced.">
-                                              <bodyText>produced.</bodyText>
-                                            </OTCompoundDoc>
-                                            <OTCompoundDoc name="used up.">
-                                              <bodyText>used up.</bodyText>
-                                            </OTCompoundDoc>
-                                          </choices>
-                                        </OTChoice>
-                                      </input>
-                                    </OTUDLQuestion>
-                                  </documentRefs>
+                            <OTUDLQuestion id="862c32d3-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>Sunlight is</bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc id="7cc3af56-68a3-11dd-9190-bd637d239ca9" name="%7cc3af56-68a3-11dd-9190-bd637d239ca9" showEditBar="true">
-                                  <documentRefs>
-                                    <OTUDLQuestion id="8945cef0-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
-                                      <prompt>
-                                        <OTUDLCompoundDoc>
-                                          <bodyText>Water is</bodyText>
-                                        </OTUDLCompoundDoc>
-                                      </prompt>
-                                      <input>
-                                        <OTChoice name="Multiple choice" alignContent="0">
-                                          <choices>
-                                            <OTCompoundDoc name="produced.">
-                                              <bodyText>produced.</bodyText>
-                                            </OTCompoundDoc>
-                                            <OTCompoundDoc name="used up.">
-                                              <bodyText>used up.</bodyText>
-                                            </OTCompoundDoc>
-                                          </choices>
-                                        </OTChoice>
-                                      </input>
-                                    </OTUDLQuestion>
-                                  </documentRefs>
-                                  <bodyText>
-                                    <object refid="8945cef0-00ef-11dd-a9d2-8d25df717351" />
-                                  </bodyText>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="produced.">
+                                      <bodyText>produced.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="used up.">
+                                      <bodyText>used up.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="8945cef0-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>Water is</bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc id="3a82035e-72e1-11dd-ba0c-2994060aece4" name="%3a82035e-72e1-11dd-ba0c-2994060aece4" showEditBar="true">
-                                  <documentRefs>
-                                    <OTUDLQuestion id="4111da76-72e1-11dd-ba0c-2994060aece4" name="Question" showConvertButton="true">
-                                      <prompt>
-                                        <OTCompoundDoc>
-                                          <bodyText>Oxygen is</bodyText>
-                                        </OTCompoundDoc>
-                                      </prompt>
-                                      <input>
-                                        <OTChoice name="Multiple choice" alignContent="0">
-                                          <choices>
-                                            <OTCompoundDoc name="produced.">
-                                              <bodyText>produced.</bodyText>
-                                            </OTCompoundDoc>
-                                            <OTCompoundDoc name="used up.">
-                                              <bodyText>used up.</bodyText>
-                                            </OTCompoundDoc>
-                                          </choices>
-                                        </OTChoice>
-                                      </input>
-                                    </OTUDLQuestion>
-                                  </documentRefs>
-                                  <bodyText>
-                                    <object refid="4111da76-72e1-11dd-ba0c-2994060aece4" />
-                                    <br />
-                                  </bodyText>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="produced.">
+                                      <bodyText>produced.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="used up.">
+                                      <bodyText>used up.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="4111da76-72e1-11dd-ba0c-2994060aece4" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Oxygen is</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="produced.">
+                                      <bodyText>produced.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="used up.">
+                                      <bodyText>used up.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="8eff917e-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>Carbon dioxide is</bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc id="81f83c2c-68a3-11dd-9190-bd637d239ca9" name="%81f83c2c-68a3-11dd-9190-bd637d239ca9" showEditBar="true">
-                                  <documentRefs>
-                                    <OTUDLQuestion id="8eff917e-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
-                                      <prompt>
-                                        <OTUDLCompoundDoc>
-                                          <bodyText>Carbon dioxide is</bodyText>
-                                        </OTUDLCompoundDoc>
-                                      </prompt>
-                                      <input>
-                                        <OTChoice name="Multiple choice" alignContent="0">
-                                          <choices>
-                                            <OTCompoundDoc name="produced.">
-                                              <bodyText>produced.</bodyText>
-                                            </OTCompoundDoc>
-                                            <OTCompoundDoc name="used up.">
-                                              <bodyText>used up.</bodyText>
-                                            </OTCompoundDoc>
-                                          </choices>
-                                        </OTChoice>
-                                      </input>
-                                    </OTUDLQuestion>
-                                  </documentRefs>
-                                  <bodyText>
-                                    <object refid="8eff917e-00ef-11dd-a9d2-8d25df717351" />
-                                  </bodyText>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="produced.">
+                                      <bodyText>produced.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="used up.">
+                                      <bodyText>used up.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="d2f2bcca-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>Sugar is</bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc id="967c0152-68a3-11dd-9190-bd637d239ca9" name="%967c0152-68a3-11dd-9190-bd637d239ca9" showEditBar="true">
-                                  <documentRefs>
-                                    <OTUDLQuestion id="d2f2bcca-00ef-11dd-a9d2-8d25df717351" name="Question" showConvertButton="true">
-                                      <prompt>
-                                        <OTUDLCompoundDoc>
-                                          <bodyText>Sugar is</bodyText>
-                                        </OTUDLCompoundDoc>
-                                      </prompt>
-                                      <input>
-                                        <OTChoice name="Multiple choice" alignContent="0">
-                                          <choices>
-                                            <OTCompoundDoc name="produced.">
-                                              <bodyText>produced.</bodyText>
-                                            </OTCompoundDoc>
-                                            <OTCompoundDoc name="used up.">
-                                              <bodyText>used up.</bodyText>
-                                            </OTCompoundDoc>
-                                          </choices>
-                                        </OTChoice>
-                                      </input>
-                                    </OTUDLQuestion>
-                                  </documentRefs>
-                                  <bodyText>
-                                    <object refid="d2f2bcca-00ef-11dd-a9d2-8d25df717351" />
-                                  </bodyText>
-                                </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc id="18898028-8031-11dd-a9bb-a393612da1a3" name="%18898028-8031-11dd-a9bb-a393612da1a3" showEditBar="true">
-                                  <documentRefs>
-                                    <OTUDLQuestion id="34bb0f8a-8031-11dd-a9bb-a393612da1a3" name="Question" showConvertButton="true">
-                                      <prompt>
-                                        <OTCompoundDoc>
-                                          <bodyText>Summarize what you have observed. The following are needed for photosynthesis:</bodyText>
-                                        </OTCompoundDoc>
-                                      </prompt>
-                                      <input>
-                                        <OTText />
-                                      </input>
-                                    </OTUDLQuestion>
-                                    <OTUDLLeveledQuestions id="5de60055-8031-11dd-a9bb-a393612da1a3">
-                                      <questions>
-                                        <OTUDLQuestion name="L5" showConvertButton="false" showScaffolding="true">
-                                          <prompt>
-                                            <OTCompoundDoc>
-                                              <bodyText>The following are produced by photosynthesis:</bodyText>
-                                            </OTCompoundDoc>
-                                          </prompt>
-                                          <input>
-                                            <OTText />
-                                          </input>
-                                        </OTUDLQuestion>
-                                        <OTUDLQuestion name="L4" showConvertButton="false" showScaffolding="true">
-                                          <prompt>
-                                            <OTCompoundDoc>
-                                              <bodyText>The following are produced by photosynthesis:</bodyText>
-                                            </OTCompoundDoc>
-                                          </prompt>
-                                          <input>
-                                            <OTText />
-                                          </input>
-                                        </OTUDLQuestion>
-                                        <OTUDLQuestion name="L3" showConvertButton="false" showScaffolding="true">
-                                          <prompt>
-                                            <OTCompoundDoc>
-                                              <bodyText>The following are produced by photosynthesis:</bodyText>
-                                            </OTCompoundDoc>
-                                          </prompt>
-                                          <input>
-                                            <OTText />
-                                          </input>
-                                        </OTUDLQuestion>
-                                        <OTUDLQuestion name="L2" showConvertButton="false" showScaffolding="true">
-                                          <prompt>
-                                            <OTCompoundDoc>
-                                              <bodyText>The following are produced by photosynthesis:</bodyText>
-                                            </OTCompoundDoc>
-                                          </prompt>
-                                          <input>
-                                            <OTText />
-                                          </input>
-                                        </OTUDLQuestion>
-                                        <OTUDLQuestion name="L1" showConvertButton="false" showScaffolding="true">
-                                          <prompt>
-                                            <OTCompoundDoc>
-                                              <bodyText>The following are produced by photosynthesis:</bodyText>
-                                            </OTCompoundDoc>
-                                          </prompt>
-                                          <input>
-                                            <OTText />
-                                          </input>
-                                        </OTUDLQuestion>
-                                      </questions>
-                                    </OTUDLLeveledQuestions>
-                                  </documentRefs>
-                                  <bodyText>
-                                    <object refid="34bb0f8a-8031-11dd-a9bb-a393612da1a3" />
-                                    <br />
-                                    <object refid="5de60055-8031-11dd-a9bb-a393612da1a3" />
-                                    <br />
-                                    null
-                                  </bodyText>
-                                </OTUDLCompoundDoc>
-                              </cards>
-                              <currentCard>
-                                <object refid="376a156f-68a3-11dd-9190-bd637d239ca9" />
-                              </currentCard>
-                            </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
-                            <OTUDLMenu id="3769ee5e-68a3-11dd-9190-bd637d239ca9" showBorder="false">
-                              <cardContainer>
-                                <object refid="3769ee5d-68a3-11dd-9190-bd637d239ca9" />
-                              </cardContainer>
-                            </OTUDLMenu>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="produced.">
+                                      <bodyText>produced.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="used up.">
+                                      <bodyText>used up.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="c823e1bd-8a34-11dd-b924-e18a208821b8" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Did the computer model in this activity  help you learn about plants?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Yes">
+                                      <bodyText>Yes</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat">
+                                      <bodyText>Somewhat</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="No">
+                                      <bodyText>No</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
@@ -5794,8 +5828,21 @@ Students investigate plants while:
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_6/header" showEditBar="false" name="%15771a25-87cb-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">What happens inside a leaf?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What happens inside a leaf?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -5814,7 +5861,7 @@ Students investigate plants while:
 • Students recognize that the number of organisms an ecosystem can support depends on the resources available and abiotic factors, such as quantity of light and water, range of temperatures, and soil composition. 
 • Students understand that although different species might look dissimilar, the unity among organisms becomes apparent from an analysis of internal structures, the similarity of their chemical processes, and the evidence of common ancestry.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_7" name="Monitoring a living plant" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Investigate the importance of breathing for a living plant.">
+                <OTUDLSection local_id="section_7" name="Monitoring a living plant" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Investigate the importance of breathing for a living plant." enabled="false">
                   <content>
                     <OTCardContainer id="19a9522a-87cb-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -6269,7 +6316,7 @@ Students investigate plants while:
                                         <div style="border-top-width: 1px; padding-right: 2px; margin-right: 5px; border-bottom-width: 1px; margin-left: 5px; padding-top: 2px; border-right-width: 1px; border-color: black; padding-bottom: 2px; border-style: solid; border-left-width: 1px; margin-bottom: 5px; padding-left: 2px; margin-top: 5px">
                                           <object refid="d0507c06-67e5-11dd-8f1b-0725e6f8772c" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="d0507c07-67e5-11dd-8f1b-0725e6f8772c" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="d0507c07-67e5-11dd-8f1b-0725e6f8772c" />
                                         </div>
                                       </td>
                                       <td width="50%">
@@ -6468,7 +6515,7 @@ Students investigate plants while:
                                         <div style="border-top-width: 1px; padding-right: 2px; margin-right: 5px; border-bottom-width: 1px; margin-left: 5px; padding-top: 2px; border-right-width: 1px; border-color: black; padding-bottom: 2px; border-style: solid; border-left-width: 1px; padding-left: 2px; margin-bottom: 5px; margin-top: 5px">
                                           <object refid="15e95fbc-6fc1-11dd-90e9-290d96238731" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="15e95fbd-6fc1-11dd-90e9-290d96238731" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="15e95fbd-6fc1-11dd-90e9-290d96238731" />
                                         </div>
                                         <br />
                                         <br />
@@ -7047,6 +7094,36 @@ end</script>
                                     null
                                   </bodyText>
                                 </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc name="%be17b829-8a38-11dd-b952-8fa5d3102ba6" showEditBar="true">
+                                  <documentRefs>
+                                    <OTUDLQuestion id="c4613770-8a38-11dd-b952-8fa5d3102ba6" name="Question" showConvertButton="true">
+                                      <prompt>
+                                        <OTCompoundDoc>
+                                          <bodyText>Did the "check answer" button help you learn about the graph?</bodyText>
+                                        </OTCompoundDoc>
+                                      </prompt>
+                                      <input>
+                                        <OTChoice name="Multiple choice" alignContent="0">
+                                          <choices>
+                                            <OTCompoundDoc name="Yes">
+                                              <bodyText>Yes</bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc name="Somewhat">
+                                              <bodyText>Somewhat</bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc name="No">
+                                              <bodyText>No</bodyText>
+                                            </OTCompoundDoc>
+                                          </choices>
+                                        </OTChoice>
+                                      </input>
+                                    </OTUDLQuestion>
+                                  </documentRefs>
+                                  <bodyText>
+                                    <object refid="c4613770-8a38-11dd-b952-8fa5d3102ba6" />
+                                    <br />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
                                 <object refid="d37e58af-7a83-11dd-b818-79ac67ac1043" />
@@ -7609,9 +7686,6 @@ end</script>
                               <target>
                                 <object refid="48e26634-7059-11dd-9bb3-699a1165363f" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -7636,7 +7710,7 @@ end</script>
                                         <div style="border-left-width: 1px; border-color: black; margin-top: 5px; border-bottom-width: 1px; padding-left: 2px; margin-bottom: 5px; border-top-width: 1px; margin-right: 5px; margin-left: 5px; padding-right: 2px; border-right-width: 1px; padding-top: 2px; border-style: solid; padding-bottom: 2px">
                                           <object refid="cc8b4ba4-67e7-11dd-8f1b-0725e6f8772c" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="cc8b4ba5-67e7-11dd-8f1b-0725e6f8772c" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="cc8b4ba5-67e7-11dd-8f1b-0725e6f8772c" />
                                         </div>
                                       </td>
                                       <td width="70%">
@@ -7739,9 +7813,6 @@ end</script>
                               <target>
                                 <object refid="b009a4cf-9d18-11dc-820f-d1449abac26e" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -7767,7 +7838,7 @@ end</script>
                                         <div style="border-left-width: 1px; border-color: black; margin-top: 5px; border-bottom-width: 1px; padding-left: 2px; margin-bottom: 5px; border-top-width: 1px; margin-right: 5px; margin-left: 5px; padding-right: 2px; border-right-width: 1px; padding-top: 2px; border-style: solid; padding-bottom: 2px">
                                           <object refid="d2495e94-67e8-11dd-8f1b-0725e6f8772c" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="d2495e95-67e8-11dd-8f1b-0725e6f8772c" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="d2495e95-67e8-11dd-8f1b-0725e6f8772c" />
                                         </div>
                                       </td>
                                       <td width="70%">
@@ -7937,9 +8008,6 @@ end</script>
                               <target>
                                 <object refid="d6f3f3b5-9d18-11dc-820f-d1449abac26e" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -7968,7 +8036,7 @@ end</script>
                                   <div style="border-style: solid; border-top-width: 1px; padding-right: 2px; padding-left: 2px; border-color: black; margin-left: 5px; padding-bottom: 2px; padding-top: 2px; border-right-width: 1px; margin-right: 5px; margin-top: 5px; border-bottom-width: 1px; margin-bottom: 5px; border-left-width: 1px">
                                     <object refid="843c37be-67ea-11dd-8f1b-0725e6f8772c" />
                                     <br />
-                                    <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="843c37bf-67ea-11dd-8f1b-0725e6f8772c" />
+                                    <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="843c37bf-67ea-11dd-8f1b-0725e6f8772c" />
                                   </div>
                                 </div>
                               </div>
@@ -8056,7 +8124,7 @@ end</script>
                                         <div style="border-left-width: 1px; border-color: black; margin-top: 5px; border-bottom-width: 1px; padding-left: 2px; margin-bottom: 5px; border-top-width: 1px; margin-right: 5px; margin-left: 5px; padding-right: 2px; border-right-width: 1px; padding-top: 2px; border-style: solid; padding-bottom: 2px">
                                           <object refid="1115a6e5-67eb-11dd-8f1b-0725e6f8772c" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="1115a6e6-67eb-11dd-8f1b-0725e6f8772c" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="1115a6e6-67eb-11dd-8f1b-0725e6f8772c" />
                                         </div>
                                       </td>
                                       <td width="70%">
@@ -8105,9 +8173,6 @@ end</script>
                               <target>
                                 <object refid="6f1b9110-ae70-11dc-99f9-f77b3759dd95" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -8133,7 +8198,7 @@ end</script>
                                         <div style="border-left-width: 1px; border-color: black; margin-top: 5px; border-bottom-width: 1px; padding-left: 2px; margin-bottom: 5px; border-top-width: 1px; margin-right: 5px; margin-left: 5px; padding-right: 2px; border-right-width: 1px; padding-top: 2px; border-style: solid; padding-bottom: 2px">
                                           <object refid="9200952d-67eb-11dd-8f1b-0725e6f8772c" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="9200952e-67eb-11dd-8f1b-0725e6f8772c" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="9200952e-67eb-11dd-8f1b-0725e6f8772c" />
                                         </div>
                                       </td>
                                       <td width="70%">
@@ -8222,9 +8287,6 @@ end</script>
                               <target>
                                 <object refid="d7cfc45c-ae70-11dc-99f9-f77b3759dd95" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -8250,7 +8312,7 @@ end</script>
                                         <div style="border-left-width: 1px; border-color: black; margin-top: 5px; border-bottom-width: 1px; padding-left: 2px; margin-bottom: 5px; border-top-width: 1px; margin-right: 5px; margin-left: 5px; padding-right: 2px; border-right-width: 1px; padding-top: 2px; border-style: solid; padding-bottom: 2px">
                                           <object refid="0b6357b9-67ee-11dd-8f1b-0725e6f8772c" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="0b6357ba-67ee-11dd-8f1b-0725e6f8772c" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="0b6357ba-67ee-11dd-8f1b-0725e6f8772c" />
                                         </div>
                                       </td>
                                       <td width="50%">
@@ -8354,9 +8416,6 @@ end</script>
                               <target>
                                 <object refid="d7cfc45c-ae70-11dc-99f9-f77b3759dd95" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -8382,7 +8441,7 @@ end</script>
                                         <div style="border-left-width: 1px; border-color: black; margin-top: 5px; border-bottom-width: 1px; padding-left: 2px; margin-bottom: 5px; border-top-width: 1px; margin-right: 5px; margin-left: 5px; padding-right: 2px; border-right-width: 1px; padding-top: 2px; border-style: solid; padding-bottom: 2px">
                                           <object refid="65dcb335-67ef-11dd-8e74-cf46d299041f" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="65dcb336-67ef-11dd-8e74-cf46d299041f" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="65dcb336-67ef-11dd-8e74-cf46d299041f" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -8478,9 +8537,6 @@ end</script>
                               <target>
                                 <object refid="88b70fa0-ae74-11dc-99f9-f77b3759dd95" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -8493,8 +8549,21 @@ end</script>
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_7/header" showEditBar="false" name="%19a9522b-87cb-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">Do plants breathe?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">Do plants breathe?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -8513,7 +8582,7 @@ end</script>
 • Students recognize that the number of organisms an ecosystem can support depends on the resources available and abiotic factors, such as quantity of light and water, range of temperatures, and soil composition. 
 • Students gain skills and confidence in using a humidity sensor.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_8" name="Rates of growth" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Study data of the growth of plants  under different conditions of light and water.">
+                <OTUDLSection local_id="section_8" name="Rates of growth" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Study data of the growth of plants  under different conditions of light and water." enabled="false">
                   <content>
                     <OTCardContainer id="b2c84194-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -8561,16 +8630,14 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  <div class="story">
-                                    After their trip inside a leaf with Elvira, Natasha, and Marc were 
-            convinced that plants -- sunflowers at least -- use sunlight and 
-            water to make food. But Marc still wondered what would happen to a 
-            plant if these things were taken away.
-                                    <p />
-                                    "I think it will shrivel up and die right away," remarked Natasha, 
-            thinking about how she felt if she missed breakfast because she 
-            was late for school.
-                                  </div>
+                                  Natasha, and Marc were having a discussion. They were convinced that 
+          plants -- sunflowers at least -- use sunlight and water to make 
+          food. But Marc still wondered what would happen to a plant if these 
+          things were taken away.
+                                  <p />
+                                  "I think it will shrivel up and die right away," remarked Natasha, 
+          thinking about how she felt if she missed breakfast because she was 
+          late for school.
                                 </div>
                               </div>
                             </div>
@@ -8591,14 +8658,14 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  <div class="story">
-                                    "Well, I think the plant will just wait until the light and water 
+                                  "Well, I think the plant will just wait until the light and water 
             come back again," argued Marc. "After all, when I go to sleep at 
             night, I wake up hungry, but I'm not shriveled!"
-                                    <p />
-                                    "Well, maybe, but it certainly won't grow if it doesn't have light 
+                                  <p />
+                                  "Well, maybe, but it certainly won't grow if it doesn't have light 
             and water," Natasha insisted.
-                                  </div>
+                                  <br />
+                                  <br />
                                   <object refid="1d19e0dd-ce9b-11dc-9197-0bc6cc731c73" />
                                 </div>
                               </div>
@@ -9235,7 +9302,7 @@ end</script>
                                         <div style="padding-top: 2px; border-style: solid; margin-left: 5px; padding-left: 2px; padding-bottom: 2px; margin-right: 5px; border-left-width: 1px; padding-right: 2px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-bottom: 5px; border-color: black; margin-top: 5px">
                                           <object refid="ce0a4279-6889-11dd-9473-0bd604e83ef1" />
                                           <br />
-                                          <object viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" refid="ce0a427a-6889-11dd-9473-0bd604e83ef1" />
+                                          <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="ce0a427a-6889-11dd-9473-0bd604e83ef1" />
                                         </div>
                                       </td>
                                       <td width="60%">
@@ -9586,9 +9653,6 @@ end</script>
                               <target>
                                 <object refid="${combo-plant-graph}" />
                               </target>
-                              <snapshotAlbum>
-                                <object refid="${album}" />
-                              </snapshotAlbum>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
@@ -9601,8 +9665,21 @@ end</script>
                   <header>
                     <OTUDLCompoundDoc id="b2c84195-7121-11dc-b75e-4b06cf421f29" showEditBar="false" name="b2c84195-7121-11dc-b75e-4b06cf421f29">
                       <bodyText>
-                        <div class="title">How fast will a plant grow under different conditions?</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">How fast will a plant grow under different conditions?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -9620,7 +9697,7 @@ end</script>
                   <goals>• Students recognize that the number of organisms an ecosystem can support depends on the resources available and abiotic factors, such as quantity of light and water, range of temperatures, and soil composition. 
 • Students represent data using tables and graphs such as line plots, bar graphs, and line graphs.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true">
+                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true" enabled="false">
                   <content>
                     <OTCardContainer id="252d78c6-87cb-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -9639,22 +9716,33 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  Now it's time to review and summarize what you have learned about 
-          clouds. To help, you can show all of your snapshots and some of your 
-          written answers from the activities. They are all in your lab book[ 
-          lab book image displayed here ].
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="60%">
+                                        Now it's time to review and summarize what you have learned 
+                about plants. To help, you can show all of your snapshots and 
+                some of your written answers from the activities. They are all 
+                in your lab book.
+                                        <br />
+                                        <br />
+                                        Review the questions on the following 
+                pages. There is a separate page for each activity that you 
+                worked on. Be prepared to share your answers with the rest of 
+                the class.
+                                      </td>
+                                      <td width="40%" style="padding-right: 20px; padding-left: 20px">
+                                        <img src="http://udl.concord.org/artwork/plant_56/intro/pl_56_intro.png" border="0" />
+                                      </td>
+                                    </tr>
+                                  </table>
                                   <br />
                                   <br />
-                                  Review the discovery questions on the following pages. Feel free to add to 
-          what you did before. There is a separate page for each of the 
-          activities that you worked on. Be prepared to share your answers 
-          with the rest of the class.
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[1]" name="%2759641b-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%2759641b-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -9672,6 +9760,10 @@ end</script>
                                   <br />
                                   <object refid="113bd63b-803c-11dd-b31b-ff868c5b8b8e" />
                                   <br />
+                                  <br />
+                                  <object refid="c38751c7-84c2-11dd-9c83-5b728b375f6f" />
+                                  <br />
+                                  <br />
                                 </div>
                               </div>
                             </div>
@@ -9687,9 +9779,14 @@ end</script>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="c38751c7-84c2-11dd-9c83-5b728b375f6f" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_3}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[2]" name="%25b1325a-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%25b1325a-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -9710,6 +9807,10 @@ end</script>
                                   <br />
                                   <object refid="19fda886-803c-11dd-b31b-ff868c5b8b8e" />
                                   <br />
+                                  <br />
+                                  <object refid="cd880cb0-84c2-11dd-9c83-5b728b375f6f" />
+                                  <br />
+                                  <br />
                                 </div>
                               </div>
                             </div>
@@ -9725,9 +9826,14 @@ end</script>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="cd880cb0-84c2-11dd-9c83-5b728b375f6f" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_5}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[3]" name="%23e991b9-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%23e991b9-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -9747,6 +9853,10 @@ end</script>
                                   <br />
                                   <br />
                                   <object refid="21c00c31-803c-11dd-b31b-ff868c5b8b8e" />
+                                  <br />
+                                  <br />
+                                  <object refid="d86ac329-84c2-11dd-9c83-5b728b375f6f" />
+                                  <br />
                                 </div>
                               </div>
                             </div>
@@ -9762,9 +9872,14 @@ end</script>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="d86ac329-84c2-11dd-9c83-5b728b375f6f" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_6}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[4]" name="%22259a98-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%22259a98-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -9779,8 +9894,14 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  In this activity, you helped a plant through a season of growth by choosing whether to add roots, leaves, or flowers.
+                                  In this activity, you helped a plant through a season of growth by 
+          choosing whether to add roots, leaves, or flowers.
+                                  <br />
                                   <object refid="2b705d2c-803c-11dd-b31b-ff868c5b8b8e" />
+                                  <br />
+                                  <br />
+                                  <object refid="e72fbce6-84c2-11dd-9c83-5b728b375f6f" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -9797,9 +9918,14 @@ end</script>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="e72fbce6-84c2-11dd-9c83-5b728b375f6f" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_4}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[5]" name="%20462c37-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%20462c37-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -9819,6 +9945,10 @@ end</script>
                                   <br />
                                   <br />
                                   <object refid="34be1bc7-803c-11dd-b31b-ff868c5b8b8e" />
+                                  <br />
+                                  <br />
+                                  <object refid="f0e11f4f-84c2-11dd-9c83-5b728b375f6f" />
+                                  <br />
                                 </div>
                               </div>
                             </div>
@@ -9834,20 +9964,38 @@ end</script>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="f0e11f4f-84c2-11dd-9c83-5b728b375f6f" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_7}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="4c290602-803d-11dd-b31b-ff868c5b8b8e" name="%4c290602-803d-11dd-b31b-ff868c5b8b8e" showEditBar="true">
+                        <OTUDLCompoundDoc id="4c290602-803d-11dd-b31b-ff868c5b8b8e" name="%4c290602-803d-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Rates of growth</div>
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="subtitle">Rates of growth</div>
+                                      </td>
+                                      <td align="right">
+                                        <div class="page-number">7</div>
+                                      </td>
+                                    </tr>
+                                  </table>
                                   In this activity, you looked at graphs of the growth of plants for 
           nine days under different conditions of light and water.
                                   <br />
                                   <br />
                                   <br />
                                   <object refid="6e1e69d7-803d-11dd-b31b-ff868c5b8b8e" />
+                                  <br />
+                                  <br />
+                                  <object refid="08807c58-84c3-11dd-9c83-5b728b375f6f" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -9864,9 +10012,14 @@ end</script>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="08807c58-84c3-11dd-9c83-5b728b375f6f" name="Labbook chooser">
+                              <defaultSection>
+                                <object refid="${section_8}" />
+                              </defaultSection>
+                            </OTLabbookEntryChooser>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[6]" name="%1dda5c56-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc name="%1dda5c56-8033-11dd-b31b-ff868c5b8b8e" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -9877,15 +10030,19 @@ end</script>
                                         <div class="subtitle">Summary</div>
                                       </td>
                                       <td align="right">
-                                        <div class="page-number">7</div>
+                                        <div class="page-number">8</div>
                                       </td>
                                     </tr>
                                   </table>
-                                  Now that you have answered all of these questions, let's return to the big 
-          central question of the unit: what do plants eat?
+                                  Now that you have answered all of these questions, let's return to 
+          the big central question of the unit: what do plants eat?
                                   <br />
                                   <br />
                                   <object refid="9f69f541-803b-11dd-b31b-ff868c5b8b8e" />
+                                  <br />
+                                  <br />
+                                  <object refid="147ba7ad-84c3-11dd-9c83-5b728b375f6f" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -9905,6 +10062,7 @@ end</script>
                                 <OTText />
                               </input>
                             </OTUDLQuestion>
+                            <OTLabbookEntryChooser id="147ba7ad-84c3-11dd-9c83-5b728b375f6f" name="Labbook chooser" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="252d78c5-87cb-11dc-a57f-8bcc557bc796" showDefinitions="true">
@@ -9918,96 +10076,89 @@ end</script>
                                         <div class="subtitle" />
                                       </td>
                                       <td align="right">
-                                        <div class="page-number">8</div>
+                                        <div class="page-number">9</div>
                                       </td>
                                     </tr>
                                   </table>
-                                  Congratulations! You have completed the Wrapping Up activity.
+                                  <object refid="cfc237df-8a33-11dd-b924-e18a208821b8" />
                                   <br />
-                                  <br />
-                                  Let 
-          your teacher know that you have completed the
-                                  <b>Plants</b>
-                                  unit. 
-          Your teacher will then unlock the post-test for you.
-                                  <br />
-                                  <br />
-                                  <table>
-                                    <tr>
-                                      <td>Teacher password</td>
-                                      <td>
-                                        <object refid="${password-field}" />
-                                      </td>
-                                      <td>
-                                        <object refid="${wrapup-submit-button}" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <object refid="${wrapup-button-script}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText local_id="password-field" isPassword="true" name="PasswordField" />
-                            <OTButton local_id="wrapup-submit-button" name="Button" text="Submit" clicked="true" />
-                            <OTScriptObject local_id="wrapup-button-script">
-                              <variables>
-                                <OTScriptVariable name="cardContainer">
-                                  <reference>
-                                    <object refid="${section-card-container}" />
-                                  </reference>
-                                </OTScriptVariable>
-                                <OTScriptVariableComponent name="button">
-                                  <reference>
-                                    <object refid="${wrapup-submit-button}" />
-                                  </reference>
-                                </OTScriptVariableComponent>
-                                <OTScriptVariable name="card">
-                                  <reference>
-                                    <object refid="${section_10}" />
-                                  </reference>
-                                </OTScriptVariable>
-                                <OTScriptVariableComponent name="passwordfield">
-                                  <reference>
-                                    <object refid="${password-field}" />
-                                  </reference>
-                                </OTScriptVariableComponent>
-                                <OTScriptVariable name="password">
-                                  <reference>
-                                    <OTText local_id="password" text="plants" name="Password" />
-                                  </reference>
-                                </OTScriptVariable>
-                              </variables>
-                              <script>
-                                <object refid="${change_page.js}" />
-                              </script>
-                              <scriptState />
-                            </OTScriptObject>
+                            <OTCompoundDoc id="cfc237df-8a33-11dd-b924-e18a208821b8" name="Wrapup password" showEditBar="false">
+                              <documentRefs>
+                                <OTText id="cfc40ca0-8a33-11dd-b924-e18a208821b8" isPassword="true" name="PasswordField" />
+                                <OTScriptButton id="cfc40ca2-8a33-11dd-b924-e18a208821b8" text="Submit">
+                                  <scriptVariables>
+                                    <OTScriptVariable name="password">
+                                      <reference>
+                                        <OTText id="cfc40ca1-8a33-11dd-b924-e18a208821b8" text="plants" />
+                                      </reference>
+                                    </OTScriptVariable>
+                                    <OTScriptVariableComponent name="passwordField">
+                                      <reference>
+                                        <object refid="cfc40ca0-8a33-11dd-b924-e18a208821b8" />
+                                      </reference>
+                                    </OTScriptVariableComponent>
+                                  </scriptVariables>
+                                  <script>
+                                    <OTJavascript src="http://continuum.concord.org/otrunk/examples/UDL/scripts/wrap-up_script.js" />
+                                  </script>
+                                </OTScriptButton>
+                                <object refid="4f731e40-c257-11dc-95ff-0800200c9a66!/password-answer" />
+                                <object refid="cfc40ca1-8a33-11dd-b924-e18a208821b8" />
+                              </documentRefs>
+                              <bodyText>
+                                We hope you enjoyed sharing what you learned about plants.
+                                <br />
+                                <br />
+                                Let your 
+    teacher know that you are done. Your teacher will give you a password so 
+    you can take a short test.
+                                <br />
+                                <br />
+                                <table>
+                                  <tr>
+                                    <td>Password:</td>
+                                    <td>
+                                      <object refid="cfc40ca0-8a33-11dd-b924-e18a208821b8" />
+                                    </td>
+                                    <td>
+                                      <object refid="cfc40ca2-8a33-11dd-b924-e18a208821b8" />
+                                    </td>
+                                  </tr>
+                                </table>
+                                <object viewid="4f731e40-c257-11dc-95ff-0800200c9a66!/password-answer" refid="cfc40ca1-8a33-11dd-b924-e18a208821b8" />
+                              </bodyText>
+                            </OTCompoundDoc>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="252d78c5-87cb-11dc-a57f-8bcc557bc796" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="290b59dc-8033-11dd-b31b-ff868c5b8b8e" />
-                        <object refid="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[1]" />
-                        <object refid="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[2]" />
-                        <object refid="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[3]" />
-                        <object refid="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[6]" />
-                        <object refid="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[5]" />
-                        <object refid="252d78c6-87cb-11dc-a57f-8bcc557bc796/cards[4]" />
-                        <object refid="4c290602-803d-11dd-b31b-ff868c5b8b8e" />
-                        <object refid="252d78c5-87cb-11dc-a57f-8bcc557bc796" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_9/header" showEditBar="false" name="%252d78c7-87cb-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">Wrapping up</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">Wrapping up</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -10022,9 +10173,9 @@ end</script>
                   <south>
                     <object refid="${nav-bar}" />
                   </south>
-                  <description>Gather your work together in a lab notebook  and summarize what you have learned.</description>
+                  <description>Gather your work together in your lab book and summarize what you have learned.</description>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false" description="What have you learned about plants?" enabled="false">
                   <content>
                     <OTCardContainer id="29d6194c-87cb-11dc-a57f-8bcc557bc796" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -10035,11 +10186,8 @@ end</script>
                                 <div class="body">
                                   <table width="100%">
                                     <tr>
-                                      <td>
-                                        <div class="subtitle" />
-                                      </td>
                                       <td align="right">
-                                        <div class="no-page-number" />
+                                        <div class="page-number">1</div>
                                       </td>
                                     </tr>
                                   </table>
@@ -10207,7 +10355,7 @@ end</script>
                               </activityReferences>
                               <correctAnswer>
                                 <OTCompoundDoc>
-                                  <bodyText>Leaves collect light energy for growth but give off water. Roots supply water and nutrients. If there are too many leaves, the roots can't supply enough water  the leaves. If the too few leaves, there isn't enough energy to support growth of the plant.</bodyText>
+                                  <bodyText>Leaves collect light energy for growth but give off water. Roots supply water and nutrients. If there are too many leaves, the roots can't supply enough water the leaves. If the too few leaves, there isn't enough energy to support growth of the plant.</bodyText>
                                 </OTCompoundDoc>
                               </correctAnswer>
                             </OTUDLQuestion>
@@ -10218,9 +10366,6 @@ end</script>
                                 <div class="body">
                                   <table width="100%">
                                     <tr>
-                                      <td>
-                                        <div class="subtitle" />
-                                      </td>
                                       <td align="right">
                                         <div class="page-number">2</div>
                                       </td>
@@ -10248,11 +10393,8 @@ end</script>
                                 <div class="body">
                                   <table width="100%">
                                     <tr>
-                                      <td>
-                                        <div class="subtitle" />
-                                      </td>
                                       <td align="right">
-                                        <div class="no-page-number" />
+                                        <div class="page-number">3</div>
                                       </td>
                                     </tr>
                                   </table>
@@ -10277,6 +10419,7 @@ end</script>
                                   6. A leaf on an outdoor plant is monitored with a humidity sensor 
           for two full days. Here are the results.
                                   <br />
+                                  <br />
                                   <center>
                                     <img src="http://udl.concord.org/artwork/plant_56/pretest_56/pl_56_rh_2days.jpg" />
                                   </center>
@@ -10294,12 +10437,9 @@ end</script>
                                   <object refid="e69f4cc4-2810-11dd-ad0f-c1a077f181f8" />
                                   <br />
                                   <br />
-                                  Click the
-                                  <b>Submit</b>
-                                  button when you have finished.
-                                  <br />
-                                  <object refid="${post-test-submit-button}" />
-                                  <object refid="${post-test-submit-script}" />
+                                  Press the
+                                  <b>Right Arrow</b>
+                                  below to go on to the next page.
                                 </div>
                               </div>
                             </div>
@@ -10519,6 +10659,193 @@ end</script>
                                 </OTCompoundDoc>
                               </correctAnswer>
                             </OTUDLQuestion>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%35350830-8980-11dd-abd0-619c387770ff" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td align="right">
+                                        <div class="page-number">4</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  Now tell us what you think about this unit!
+                                  <br />
+                                  <br />
+                                  <object refid="b1b87dc2-8980-11dd-abd0-619c387770ff" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="c21afaec-8980-11dd-abd0-619c387770ff" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="cdf49492-8980-11dd-abd0-619c387770ff" />
+                                  <br />
+                                  <br />
+                                  Press 
+          the
+                                  <b>Right Arrow</b>
+                                  below to go on to the next page.
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="b1b87dc2-8980-11dd-abd0-619c387770ff" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>7. How interesting was this unit to you?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Boring">
+                                      <bodyText>Boring</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Okay">
+                                      <bodyText>Okay</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Very interesting">
+                                      <bodyText>Very interesting</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="c21afaec-8980-11dd-abd0-619c387770ff" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>8. Was it helpful to have definitions of words (a glossary) in this unit?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Very helpful">
+                                      <bodyText>Very helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat helpful">
+                                      <bodyText>Somewhat helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Not helpful">
+                                      <bodyText>Not helpful</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="cdf49492-8980-11dd-abd0-619c387770ff" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>9. Was it helpful to be able to highlight text and have the computer read it out loud?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Very helpful">
+                                      <bodyText>Very helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat helpful">
+                                      <bodyText>Somewhat helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Not helpful">
+                                      <bodyText>Not helpful</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%e8b41d70-8980-11dd-abd0-619c387770ff" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td align="right">
+                                        <div class="page-number">5</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <br />
+                                  <object refid="f076cf35-8980-11dd-abd0-619c387770ff" />
+                                  <br />
+                                  <br />
+                                  <br />
+                                  <object refid="240d49b7-8981-11dd-abd0-619c387770ff" />
+                                  <br />
+                                  <br />
+                                  Click the
+                                  <b>Submit</b>
+                                  button when you have finished.
+                                  <br />
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <object refid="${post-test-submit-button}" />
+                                        <object refid="${post-test-submit-script}" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="f076cf35-8980-11dd-abd0-619c387770ff" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>10. How well did the computer work when you used this unit?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="It worked all or most of the time.">
+                                      <bodyText>It worked all or most of the time.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="A few times it was hard to use the computer.">
+                                      <bodyText>A few times it was hard to use the computer.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="The computer was often slow, or froze, or was difficult to use.">
+                                      <bodyText>The computer was often slow, or froze, or was difficult to use.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="240d49b7-8981-11dd-abd0-619c387770ff" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>11. Was it helpful to have "coaches" (the little robot pictures)?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Very helpful">
+                                      <bodyText>Very helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Somewhat helpful">
+                                      <bodyText>Somewhat helpful</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Not helpful">
+                                      <bodyText>Not helpful</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                             <OTButton local_id="post-test-submit-button" name="Button" text="Submit" />
                             <OTScriptObject local_id="post-test-submit-script">
                               <variables>
@@ -10549,8 +10876,21 @@ end</script>
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_10/header" showEditBar="false" name="%29d6194d-87cb-11dc-a57f-8bcc557bc796">
                       <bodyText>
-                        <div class="title">Post-test</div>
+                        <table width="100%">
+                          <tr>
+                            <td style="text-align: left">
+                              <div class="title">What have you learned about plants?</div>
+                            </td>
+                            <td width="50px">
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                            </td>
+                          </tr>
+                        </table>
                       </bodyText>
+                      <documentRefs>
+                        <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" />
+                        <object refid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                      </documentRefs>
                     </OTUDLCompoundDoc>
                   </header>
                   <footer>
@@ -10570,10 +10910,6 @@ end</script>
               <currentCard>
                 <object refid="${section_0}" />
               </currentCard>
-              <viewedCards>
-                <object refid="${section_0}" />
-                <object refid="${section_9}" />
-              </viewedCards>
             </OTCardContainer>
           </activity>
           <script>
@@ -10655,7 +10991,7 @@ end</script>
         <OTJavascript local_id="change_page.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/change_page.js" />
         <OTJavascript local_id="show_message.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/show_message.js" />
         <OTJavascript local_id="authoring_script.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/authoring_script.js" />
-        <OTSnapshotAlbum id="164b0acc-575b-11dd-a722-77668a4af853" />
+        <null />
         <OTScriptObject local_id="authoring-script">
           <variables>
             <OTScriptVariable name="cardContainer">
@@ -10710,6 +11046,13 @@ end</script>
           <cssColor>
             <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
           </cssColor>
+          <glossary>
+            <OTGlossary>
+              <definitionManager>
+                <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
+              </definitionManager>
+            </OTGlossary>
+          </glossary>
         </OTUDLNavBar>
       </library>
     </OTSystem>

@@ -1,6 +1,8 @@
 <div id="content">
   <h1>Hanging With Friends Report</h1>
   
+  <p>Class name: <b><%= class_name %></b>, Teacher name: <b><%= teacher_name %></b></p>
+
   <h3>Roller Blade Runs</h3>
   <table>
   	<tr><td>Name</td><td>Rollerblade model</td><td>Bus model</td><td>Racecar model</td></tr>
@@ -10,11 +12,24 @@
     models << userObject( $busScriptObject, user)
     models << userObject( $racecarScriptObject, user)
     %>
-    <tr><td><%= user.name ? user.name : "Anonymous" %></td>
+    <tr>
+      <td>
+        <%= user.name ? user.name : user.id %>
+        <!-- <%= user.methods.join(",") %> -->
+      </td>
     <% models.each do |model| %>
 	    <td>
-	    <% total = 0 %>
-	    <%= model.contents.vector.select{|o| o.respond_to? "model_runs"}.collect{|o| total += o.model_runs.size} %> <%= total == 1 ? "time" : "times" %>
+	    <% total = 0
+         model_sessions = model.contents.vector
+         model_sessions.select{|o| o.respond_to? "model_runs"}.collect{|o| puts "adding #{o.model_runs.size} runs to #{total}"; total += o.model_runs.size.to_i}
+       %>
+      <%= total %> <%= total == 1 ? "time" : "times" %>
+      <!--
+        model sessions: <%= model_sessions.size %>
+        <% model_sessions.each do |ms| %>
+          session: <%= ms.model_runs.size %> runs
+        <% end %>
+      -->
 	    </td>
     <% end %>
     </tr>
