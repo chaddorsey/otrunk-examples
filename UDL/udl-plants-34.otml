@@ -56,7 +56,7 @@
     <import class="org.concord.otrunk.ui.OTCardContainer" />
     <import class="org.concord.otrunk.ui.OTChoice" />
     <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
-    <import class="org.concord.otrunk.ui.OTCurriculumUnit" />
+    <import class="org.concord.otrunk.udl.OTUDLCurriculumUnit" />
     <import class="org.concord.otrunk.ui.OTImage" />
     <import class="org.concord.otrunk.ui.OTImageMap" />
     <import class="org.concord.otrunk.ui.OTLayerContainer" />
@@ -157,11 +157,11 @@
         </OTOverlay>
       </overlays>
       <root>
-        <OTCurriculumUnit version="0" name="UDL Beginning Plants">
+        <OTUDLCurriculumUnit version="0" name="UDL Beginning Plants">
           <activity>
             <OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true">
               <cards>
-                <OTUDLSection local_id="section_0" name="Home" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" enabled="true">
+                <OTUDLSection local_id="section_0" name="Home" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTUDLLabPage id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_0/content" showButtonBorder="false">
                       <backgroundImage>
@@ -224,7 +224,7 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_0/content" />
                   </center>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_1" name="Pre-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false" enabled="true">
+                <OTUDLSection local_id="section_1" name="Pre-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
                   <header>
                     <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" showEditBar="false">
                       <bodyText>
@@ -263,6 +263,7 @@
                                   <object refid="b138c422-2361-11dd-a8ce-53b5f17aa15a" />
                                   <br />
                                   <object refid="b6b6dd1f-2361-11dd-a8ce-53b5f17aa15a" />
+                                  <br />
                                   <br />
                                   <object refid="c4282cbc-2361-11dd-a8ce-53b5f17aa15a" />
                                   <p />
@@ -871,7 +872,7 @@
                   </south>
                   <description>What do you already know about plants?</description>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="This unit explores plants and how they make food." enabled="false">
+                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="This unit explores plants and how they make food.">
                   <content>
                     <OTCardContainer id="39082771-7120-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -1074,7 +1075,7 @@ Students investigate plants while:
 • Students recognize that each plant has different structures that serve different functions in growth, survival, and reproduction.
 • Students identify the plant life cycles that include being born, developing into adults, reproducing, and eventually dying. The details of this life cycle are different for different organisms.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_3" name="Plant story" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false" description="Read about a plant growing from a seed." enabled="false">
+                <OTUDLSection local_id="section_3" name="Plant story" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false" description="Read about a plant growing from a seed.">
                   <content>
                     <OTCardContainer id="b91fca9b-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -2432,7 +2433,7 @@ Students investigate plants while:
                   <goals>• Students understand that plants require air, water, nutrients, and light.
 • Students recognize that each plant has different structures that serve different functions in growth, survival, and reproduction.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_4" name="Parts of a plant" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Learn about the parts of a plant." enabled="false">
+                <OTUDLSection local_id="section_4" name="Parts of a plant" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Learn about the parts of a plant.">
                   <content>
                     <OTCardContainer id="56477d48-7120-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                       <cards>
@@ -3027,7 +3028,7 @@ Students investigate plants while:
 • Students understand that the behavior of individual plants is influenced by external cues (such as a change in the environment).
 • Students understand that the sun provides the light and heat necessary to maintain the temperature of the earth.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_5" viewContainerIsUpdateable="true" name="Leaves, stems, roots" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Examine the parts of real plants." enabled="false">
+                <OTUDLSection local_id="section_5" viewContainerIsUpdateable="true" name="Leaves, stems, roots" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Examine the parts of real plants.">
                   <content>
                     <OTCardContainer id="9b7e306f-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -3110,7 +3111,7 @@ Students investigate plants while:
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        <div class="subtitle" />
+                                        <div class="subtitle">Explore</div>
                                       </td>
                                       <td align="right">
                                         <div class="page-number">3</div>
@@ -3309,7 +3310,7 @@ Students investigate plants while:
 • Students identify the plant life cycles that include being born, developing into adults, reproducing, and eventually dying. The details of this life cycle are different for different organisms.
 • Students understand that the sun provides the light and heat necessary to maintain the temperature of the earth.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_6" name="Water and sunlight" viewContainerIsUpdateable="true" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Explore what happens to plants if they don't get water or sunlight." enabled="false">
+                <OTUDLSection local_id="section_6" name="Water and sunlight" viewContainerIsUpdateable="true" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Explore what happens to plants if they don't get water or sunlight.">
                   <content>
                     <OTCardContainer id="a217a476-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -6803,7 +6804,7 @@ end</script>
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_7" name="The  Food-o-Meter" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Use a computer model of a growing plant." enabled="false">
+                <OTUDLSection local_id="section_7" name="The  Food-o-Meter" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Use a computer model of a growing plant.">
                   <content>
                     <OTCardContainer id="a96489fd-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                       <cards>
@@ -6966,8 +6967,8 @@ end</script>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="20%" valign="top">Here is how you use the model.</td>
-                                      <td width="80%">
+                                      <td width="30%" valign="top">Here is how you use the model.</td>
+                                      <td width="70%">
                                         <div style="border-left-width: 1px; border-color: black; padding-bottom: 2px; margin-left: 5px; padding-top: 2px; margin-top: 5px; border-top-width: 1px; margin-right: 5px; margin-bottom: 5px; border-right-width: 1px; border-style: solid; padding-right: 2px; border-bottom-width: 1px; padding-left: 2px">
                                           <object refid="4e7fce9f-62ee-11dd-9092-ad5c6c7408a6" />
                                           <br />
@@ -7437,7 +7438,7 @@ end</script>
                                         <OTUDLQuestion id="c2413af0-bfb6-11dc-ad3e-29f411a2e672" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTUDLCompoundDoc>
-                                              <bodyText>5. How did sugar production change as the carbon dioxid became less and less?</bodyText>
+                                              <bodyText>5. How did sugar production change as the carbon dioxide became less and less?</bodyText>
                                             </OTUDLCompoundDoc>
                                           </prompt>
                                           <input>
@@ -7687,7 +7688,7 @@ end</script>
 • Students understand that the behavior of individual plants is influenced by external cues (such as a change in the environment). 
 • Students determine a plant's patterns of behavior are related to the nature of that plant’s environment, including the availability of food and resources, and the physical characteristics of the environment. When the environment changes, some plants survive and reproduce, and others die or move to new locations.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_8" name="Graph it growing!" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Read and make bar graphs to show how a plant grows." enabled="false">
+                <OTUDLSection local_id="section_8" name="Graph it growing!" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Read and make bar graphs to show how a plant grows.">
                   <content>
                     <OTCardContainer id="b2c84194-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -8794,7 +8795,7 @@ end</script>
                                 <OTCardContainer id="2a49beb8-6957-11dd-acda-9d41657926d5">
                                   <cards>
                                     <OTUDLCompoundDoc id="2a49e5ca-6957-11dd-acda-9d41657926d5">
-                                      <bodyText>Here are four graphs of four plants of the same kind under four different 
+                                      <bodyText>Here are graphs of four of the same kind of plants under four different 
     growing conditions. Each plant started with a vine of different length. 
     Answer the questions about the plant.</bodyText>
                                     </OTUDLCompoundDoc>
@@ -8803,7 +8804,7 @@ end</script>
                                         <OTUDLQuestion id="395269d6-e493-11dc-8648-e19ea2f818b9" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTUDLCompoundDoc>
-                                              <bodyText>1. Based on the graphs, what are the best conditions for a plant to grow?</bodyText>
+                                              <bodyText>1. Based on the graphs, what are the best conditions for the plant to grow?</bodyText>
                                             </OTUDLCompoundDoc>
                                           </prompt>
                                           <input>
@@ -9171,7 +9172,7 @@ end</script>
                   <goals>• Students understand that plants require air, water, nutrients, and light. 
 • Students represent data using tables and graphs such as line plots, bar graphs, and line graphs.</goals>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true" enabled="false">
+                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true">
                   <content>
                     <OTCardContainer id="bebf0022-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -9594,7 +9595,7 @@ end</script>
                   </south>
                   <description>Gather your work together in your lab book and summarize what you have learned.</description>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false" description="What have you learned about plants?" enabled="false">
+                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false" description="What have you learned about plants?">
                   <content>
                     <OTCardContainer id="c7212639-7121-11dc-b75e-4b06cf421f29" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -10475,6 +10476,7 @@ end</script>
                 <object refid="${roots-section}" />
                 <object refid="${stems-section}" />
                 <object refid="${leaves-section}" />
+                <object refid="${roots-section}" />
               </cards>
               <currentCard>
                 <object refid="${section_0}" />
@@ -10484,7 +10486,7 @@ end</script>
           <script>
             <object refid="${authoring-script}" />
           </script>
-        </OTCurriculumUnit>
+        </OTUDLCurriculumUnit>
       </root>
       <library>
         <OTUDLMenu local_id="menu">
@@ -10574,7 +10576,7 @@ end</script>
           <children>
             <OTFolderObject name="Stems-roots-leaves sections">
               <children>
-                <OTUDLSection local_id="roots-section" viewContainerIsUpdateable="true" name="Stems, roots, leaves" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" enabled="false">
+                <OTUDLSection local_id="roots-section" viewContainerIsUpdateable="true" name="Stems, roots, leaves" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer local_id="roots-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -10582,7 +10584,7 @@ end</script>
                         <object refid="${stems-roots-leaves-page-2}" />
                         <object refid="${stems-roots-leaves-page-3}" />
                         <object refid="${stems-roots-leaves-page-4}" />
-                        <OTUDLCompoundDoc local_id="roots-page-3" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="roots-page-3" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10612,7 +10614,7 @@ end</script>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="bd982af4-694c-11dd-acda-9d41657926d5" name="%bd982af4-694c-11dd-acda-9d41657926d5" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc id="bd982af4-694c-11dd-acda-9d41657926d5" name="%bd982af4-694c-11dd-acda-9d41657926d5" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10641,7 +10643,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="f7513ca5-694c-11dd-acda-9d41657926d5" name="%f7513ca5-694c-11dd-acda-9d41657926d5" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc id="f7513ca5-694c-11dd-acda-9d41657926d5" name="%f7513ca5-694c-11dd-acda-9d41657926d5" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10677,7 +10679,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc local_id="roots-page-4" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="roots-page-4" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10714,7 +10716,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             <object refid="cdf93eeb-6dfd-11dd-afb3-212dca4fd45c" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc local_id="roots-page-5" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="roots-page-5" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10729,7 +10731,6 @@ Don't pull too hard because you may rip the roots apart.</td>
                                       </td>
                                     </tr>
                                   </table>
-                                  <br />
                                   <table width="100%">
                                     <tr>
                                       <td width="50%" valign="top">
@@ -10742,21 +10743,18 @@ Don't pull too hard because you may rip the roots apart.</td>
                 the main root of the plant. This type of plant has a large 
                 main root with smaller hairs growing from it.
                                         <br />
-                                        <img src="http://udl.concord.org/artwork/plant_34/root/root-turnip.jpg" />
-                                        <br />
+                                      </td>
+                                      <td>
+                                        <img border="1" src="http://udl.concord.org/artwork/plant_34/carrot_roots/pl_34_carrot_roots.png" />
                                       </td>
                                     </tr>
                                   </table>
-                                  This wildflower has the same sort of root, but the side branches are 
-          larger.
-                                  <br />
-                                  <img src="http://udl.concord.org/artwork/plant_34/root/root-queen-annes-lace.jpg" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="44806383-6df6-11dd-afb3-212dca4fd45c" name="%44806383-6df6-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc id="44806383-6df6-11dd-afb3-212dca4fd45c" name="%44806383-6df6-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10787,7 +10785,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="7409c2ed-6df3-11dd-92e1-e33caac06ad7" name="%7409c2ed-6df3-11dd-92e1-e33caac06ad7" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc id="7409c2ed-6df3-11dd-92e1-e33caac06ad7" name="%7409c2ed-6df3-11dd-92e1-e33caac06ad7" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10848,7 +10846,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc local_id="roots-page-6" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="roots-page-6" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -10988,7 +10986,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             <object refid="ef2ff190-72d5-11dd-b019-934fbc0ec13c" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="39029953-6f93-11dd-a6b0-49397660f371" name="%39029953-6f93-11dd-a6b0-49397660f371" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc id="39029953-6f93-11dd-a6b0-49397660f371" name="%39029953-6f93-11dd-a6b0-49397660f371" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11116,7 +11114,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="leaves-section" viewContainerIsUpdateable="true" name="Stems, roots, leaves" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" enabled="false">
+                <OTUDLSection local_id="leaves-section" viewContainerIsUpdateable="true" name="Stems, roots, leaves" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer local_id="leaves-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -11124,7 +11122,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                         <object refid="${stems-roots-leaves-page-2}" />
                         <object refid="${stems-roots-leaves-page-3}" />
                         <object refid="${stems-roots-leaves-page-4}" />
-                        <OTUDLCompoundDoc local_id="leaves-page-3" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="leaves-page-3" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11208,7 +11206,6 @@ Don't pull too hard because you may rip the roots apart.</td>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="544ce8f6-6dfe-11dd-afb3-212dca4fd45c" name="%544ce8f6-6dfe-11dd-afb3-212dca4fd45c" showEditBar="true">
                                   <bodyText>
-                                    <br />
                                     <object refid="33ad50c4-7e76-11dd-bbd7-ab102f179518" />
                                     <br />
                                   </bodyText>
@@ -11216,7 +11213,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                                     <OTUDLQuestion id="33ad50c4-7e76-11dd-bbd7-ab102f179518" name="Question" showConvertButton="true">
                                       <prompt>
                                         <OTCompoundDoc>
-                                          <bodyText>Are all of the leaves the same age? What is your evidence?</bodyText>
+                                          <bodyText>4. Are all of the leaves the same age? What is your evidence?</bodyText>
                                         </OTCompoundDoc>
                                       </prompt>
                                       <input>
@@ -11238,7 +11235,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             </OTUDLMenu>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc local_id="leaves-page-4" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="leaves-page-4" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11267,7 +11264,7 @@ Don't pull too hard because you may rip the roots apart.</td>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="72dab7c7-6dfe-11dd-afb3-212dca4fd45c" name="%72dab7c7-6dfe-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc id="72dab7c7-6dfe-11dd-afb3-212dca4fd45c" name="%72dab7c7-6dfe-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11318,7 +11315,7 @@ Take a snapshot of your drawing.
                             <object refid="a4bc14b9-72d6-11dd-b019-934fbc0ec13c" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="a1a59a2f-6e01-11dd-afb3-212dca4fd45c" name="%a1a59a2f-6e01-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc id="a1a59a2f-6e01-11dd-afb3-212dca4fd45c" name="%a1a59a2f-6e01-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11335,13 +11332,14 @@ Take a snapshot of your drawing.
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">Air is made of many different gases. One of them is called carbon 
-          dioxide. Plants need carbon dioxide to make food. Carbon dioxide 
-          enters the plant through a hole on the underside of the leaf, called 
-          a stoma. Plants take in carbon dioxide and let go of oxygen through 
-          their stomata (the plural of stoma).</td>
-                                      <td width="50%" style="padding-left: 20px; padding-right: 20px">
-                                        <img src="http://udl.concord.org/artwork/plant_34/stomata_opening/pl_34_stomata_opening.png" border="1" />
+                                      <td width="50%">Air is made of many different gases. One of them is called 
+                carbon dioxide. Plants need carbon dioxide to make food. 
+                Carbon dioxide enters the plant through a hole on the 
+                underside of the leaf, called a stoma. Plants take in carbon 
+                dioxide and get rid of oxygen through their stomata (the 
+                plural of stoma).</td>
+                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
+                                        <img border="1" src="http://udl.concord.org/artwork/plant_34/stomata_opening/pl_34_stomata_opening.png" />
                                       </td>
                                     </tr>
                                   </table>
@@ -11350,7 +11348,7 @@ Take a snapshot of your drawing.
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc local_id="leaves-page-5" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="leaves-page-5" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11412,7 +11410,7 @@ Take a snapshot of your drawing.
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc local_id="leaves-page-6" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="leaves-page-6" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11446,7 +11444,7 @@ Take a snapshot of your drawing.
                             <object refid="07a4d15b-72d7-11dd-b019-934fbc0ec13c" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="1b1788fa-6e02-11dd-afb3-212dca4fd45c" name="%1b1788fa-6e02-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc id="1b1788fa-6e02-11dd-afb3-212dca4fd45c" name="%1b1788fa-6e02-11dd-afb3-212dca4fd45c" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11500,7 +11498,7 @@ Take a snapshot of your drawing.
                                             <OTUDLQuestion name="L4" showConvertButton="false" showScaffolding="true">
                                               <prompt>
                                                 <OTUDLCompoundDoc>
-                                                  <bodyText>What enters the plant through the leaves?</bodyText>
+                                                  <bodyText>1. What enters the plant through the leaves?</bodyText>
                                                 </OTUDLCompoundDoc>
                                               </prompt>
                                               <input>
@@ -11515,7 +11513,7 @@ Take a snapshot of your drawing.
                                             <OTUDLQuestion name="L3" showConvertButton="false" showScaffolding="true">
                                               <prompt>
                                                 <OTUDLCompoundDoc>
-                                                  <bodyText>What enters the plant through the leaves?</bodyText>
+                                                  <bodyText>1. What enters the plant through the leaves?</bodyText>
                                                 </OTUDLCompoundDoc>
                                               </prompt>
                                               <input>
@@ -11530,7 +11528,7 @@ Take a snapshot of your drawing.
                                             <OTUDLQuestion name="L2" showConvertButton="false" showScaffolding="true">
                                               <prompt>
                                                 <OTUDLCompoundDoc>
-                                                  <bodyText>What enters the plant through the leaves?</bodyText>
+                                                  <bodyText>1. What enters the plant through the leaves?</bodyText>
                                                 </OTUDLCompoundDoc>
                                               </prompt>
                                               <input>
@@ -11557,7 +11555,7 @@ Take a snapshot of your drawing.
                                             <OTUDLQuestion name="L1" showConvertButton="false" showScaffolding="true">
                                               <prompt>
                                                 <OTUDLCompoundDoc>
-                                                  <bodyText>What enters the plant through the leaves?</bodyText>
+                                                  <bodyText>1. What enters the plant through the leaves?</bodyText>
                                                 </OTUDLCompoundDoc>
                                               </prompt>
                                               <input>
@@ -11615,7 +11613,7 @@ Take a snapshot of your drawing.
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <object refid="${stems-roots-leaves-elaborate}" />
-                        <OTUDLCompoundDoc id="3c33e5ff-6f94-11dd-a6b0-49397660f371" name="%3c33e5ff-6f94-11dd-a6b0-49397660f371" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc id="3c33e5ff-6f94-11dd-a6b0-49397660f371" name="%3c33e5ff-6f94-11dd-a6b0-49397660f371" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -11702,7 +11700,7 @@ Take a snapshot of your drawing.
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="stems-section" viewContainerIsUpdateable="true" name="Stems, roots, leaves" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" enabled="false">
+                <OTUDLSection local_id="stems-section" viewContainerIsUpdateable="true" name="Stems, roots, leaves" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer local_id="stems-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
