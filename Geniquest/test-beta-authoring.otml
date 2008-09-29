@@ -102,6 +102,12 @@
       <bundles>
         <OTSharingBundle>
           <sharedObjects>
+						<OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2">
+              <organisms>
+                <object refid="${samplemale}" />
+                <object refid="${samplefemale}" />
+              </organisms>
+            </OTMultipleOrganism>
             <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[6]" />
             <OTOrganism id="6b4c4b25-64f5-11dd-88f8-3390a456ed3b" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
@@ -1064,7 +1070,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               </variables>
                               <scriptState />
                             </OTScriptObject>
-                            <OTScriptButton local_id="multipleOrganismViewButton" text="Update Multi-org view">
+                            <OTScriptButton local_id="multipleOrganismViewButton" text="Update Multi-org view" alwaysReload="false">
                               <script>
                                 <OTJRuby src="scripts/multi_org_button.rb" />
                               </script>
@@ -1298,7 +1304,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               </variables>
                               <scriptState />
                             </OTScriptObject>
-                            <OTScriptButton local_id="multiOrgClearButton" text="Clear all organisms">
+                            <OTScriptButton local_id="multiOrgClearButton" text="Clear all organisms" alwaysReload="false">
                               <script>
                                 <OTJRuby src="scripts/multi_org_clear_button.rb" />
                               </script>
@@ -1316,12 +1322,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 <object refid="${samplefemale}" />
                               </organisms>
                             </OTMultipleOrganism>
-                            <OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2">
-                              <organisms>
-                                <object refid="${samplemale}" />
-                                <object refid="${samplefemale}" />
-                              </organisms>
-                            </OTMultipleOrganism>
+														<object refid="${multipleOrganismViewTransfer}" />
                             <OTBreedOffspring local_id="breedOffspringViewForStrains">
                               <fatherOrganism>
                                 <OTOrganism local_id="maleStrainOrganism">
@@ -1360,7 +1361,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 </OTOrganism>
                               </fatherOrganism>
                             </OTBreedOffspring>
-                            <OTScriptButton local_id="multiOrgSaveFamilyButton" text="Save">
+                            <OTScriptButton local_id="multiOrgSaveFamilyButton" text="Save" alwaysReload="false">
                               <script>
                                 <OTJRuby src="scripts/multi_org_save_family_button.rb" />
                               </script>
@@ -1394,7 +1395,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 </OTScriptVariableComponent>
                               </scriptVariables>
                             </OTScriptButton>
-                            <OTScriptButton local_id="moveUp" text="/\">
+                            <OTScriptButton local_id="moveUp" text="/\" alwaysReload="false">
                               <script>
                                 <OTJRuby src="scripts/multi_org_move_up_button.rb" />
                               </script>
@@ -1406,7 +1407,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 </OTScriptVariableComponent>
                               </scriptVariables>
                             </OTScriptButton>
-                            <OTScriptButton local_id="moveDown" text="\/">
+                            <OTScriptButton local_id="moveDown" text="\/" alwaysReload="false">
                               <script>
                                 <OTJRuby src="scripts/multi_org_move_down_button.rb" />
                               </script>
@@ -1438,7 +1439,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </div>
                           </bodyText>
 													<documentRefs>
-														<OTScriptButton local_id="repaintButton" text="Repaint">
+														<OTScriptButton local_id="repaintButton" text="Repaint" alwaysReload="false">
 															<script>
 																<OTJRuby src="scripts/repaint_button.rb"/>
 															</script>
