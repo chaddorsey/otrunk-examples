@@ -248,6 +248,11 @@
                 </OTDataGraphable>
               </graphables>
             </OTDataCollector>
+            <OTButton local_id="zero-force-p-6" text="Zero Force">
+              <action>
+                <object refid="3a57072e-4245-4533-a52b-4c34130c8597" />
+              </action>
+            </OTButton>
             <OTDataCollector id="f7971278-21d0-11dd-883b-015dfae2d4ec" name="Force - one bottle" title="Force Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
               <source>
                 <OTDataGraphable name="one bottle" connectPoints="true" yColumn="1" drawMarks="false" color="13107" xColumn="0" lineWidth="2.0">
@@ -342,6 +347,11 @@
                 </OTDataGraphable>
               </graphables>
             </OTDataCollector>
+            <OTButton local_id="zero-force-p-10" text="Zero Force">
+              <action>
+                <object refid="3c01e533-f5b6-401c-8999-9028686509f0" />
+              </action>
+            </OTButton>
             <OTDataCollector id="202483dd-21d4-11dd-883b-015dfae2d4ec" name="two bottles" title="Force Sensor Graph" multipleGraphableEnabled="true" autoScaleEnabled="true">
               <source>
                 <OTDataGraphable name="two bottles" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
@@ -355,7 +365,7 @@
                         </OTExperimentRequest>
                       </request>
                       <zeroSensor>
-                        <OTZeroSensor sensorIndex="0" />
+                        <OTZeroSensor id="3c01e533-f5b6-401c-8999-9028686509f0" sensorIndex="0" />
                       </zeroSensor>
                     </OTSensorDataProxy>
                   </dataProducer>
@@ -402,7 +412,7 @@
         <OTLabbookBundle />
       </bundles>
       <overlays>
-        <object refid="6cc8e2b0-c44e-11dc-95ff-0800200c9a66" />
+        <object refid="11444c03-dbc1-4ba3-848d-244d5fac57b5" />
         <OTOverlay>
           <deltaObjectMap>
             <entry key="${authoring_script.js}">
@@ -957,21 +967,11 @@ It's not true that friction is never useful. Without friction, you couldn't slow
                             <OTButton local_id="pretest-submit-button" name="Button" text="Submit" />
                             <OTScriptObject local_id="pretest-button-script">
                               <variables>
-                                <OTScriptVariable name="cardContainer">
-                                  <reference>
-                                    <object refid="${section-card-container}" />
-                                  </reference>
-                                </OTScriptVariable>
                                 <OTScriptVariableComponent name="button">
                                   <reference>
                                     <object refid="${pretest-submit-button}" />
                                   </reference>
                                 </OTScriptVariableComponent>
-                                <OTScriptVariable name="card">
-                                  <reference>
-                                    <object refid="${section_2}" />
-                                  </reference>
-                                </OTScriptVariable>
                               </variables>
                               <script>
                                 <object refid="${change_page.js}" />
@@ -4465,7 +4465,7 @@ end</script>
                                     <OTUDLQuestion id="0915b148-7ac7-11dd-b5e2-f5d4039a183c" name="Question" showConvertButton="true">
                                       <prompt>
                                         <OTCompoundDoc>
-                                          <bodyText>Look at the scale on the left, where it says "Temperature (deg C)." What was the temperature of the penny before the rubbing started?</bodyText>
+                                          <bodyText>Look at the scale on the left, where it says "Temperature (deg C)." What was the temperature of the penny before the rubbing started (in deg C)? Use numbers, no letters.</bodyText>
                                         </OTCompoundDoc>
                                       </prompt>
                                       <input>
@@ -4656,7 +4656,7 @@ end</script>
                                     <OTUDLQuestion id="a7417bde-7ac7-11dd-b5e2-f5d4039a183c" name="Question" showConvertButton="true">
                                       <prompt>
                                         <OTCompoundDoc>
-                                          <bodyText>What was the maximum temperature of the penny?</bodyText>
+                                          <bodyText>What was the maximum temperature of the penny (in deg C)? Use numbers, no letters.</bodyText>
                                         </OTCompoundDoc>
                                       </prompt>
                                       <input>
@@ -5794,16 +5794,16 @@ end</script>
                             <OTCardContainer id="9acc10eb-6255-11dd-818b-499ca14d14a5">
                               <cards>
                                 <OTUDLCompoundDoc id="9acc37fd-6255-11dd-818b-499ca14d14a5">
-                                  <bodyText>1. Cut out a 2 x 4 cm rectangle of cardboard.</bodyText>
+                                  <bodyText>Cut out a 2 x 4 cm rectangle of cardboard.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="a2bf6f9e-6255-11dd-818b-499ca14d14a5" name="%a2bf6f9e-6255-11dd-818b-499ca14d14a5" showEditBar="true">
-                                  <bodyText>2. Make a loop of tape, so that it is sticky on both sides. Press it 
-    against the cardboard and stick the temperature sensor to it. Then press 
-    the tape down on the penny.</bodyText>
+                                  <bodyText>Make a loop of tape, so that it is sticky on both sides. Press it against 
+    the cardboard and stick the temperature sensor to it. Then press the tape 
+    down on the penny.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="ab8f4b9f-6255-11dd-818b-499ca14d14a5" name="%ab8f4b9f-6255-11dd-818b-499ca14d14a5" showEditBar="true">
-                                  <bodyText>3. The cardboard will keep the penny from being heated by your fingers. 
-    Hold the cardboard by the edges when you press down on the penny.</bodyText>
+                                  <bodyText>The cardboard will keep the penny from being heated by your fingers. Hold 
+    the cardboard by the edges when you press down on the penny.</bodyText>
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
@@ -5860,37 +5860,37 @@ end</script>
                               <cards>
                                 <OTUDLCompoundDoc id="19028d57-6256-11dd-818b-499ca14d14a5">
                                   <bodyText>
-                                    4. Attach the temperature sensor to the computer. Click on the 
-          magnifying glass
+                                    Attach the temperature sensor to the computer. Click on the magnifying 
+    glass
                                     <a href="http://udl.concord.org/artwork/technical_hints/tech-hint-temperature.html">
-                                      <img src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" border="0" />
+                                      <img border="0" src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" />
                                     </a>
                                     for 
-          a technical hint.
+    a technical hint.
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="4b83a118-6256-11dd-818b-499ca14d14a5" name="%4b83a118-6256-11dd-818b-499ca14d14a5" showEditBar="true">
-                                  <bodyText>5. Put the penny on a flat surface, like a desk. Use a block of wood if 
-    you don't have a good surface to rub on.</bodyText>
+                                  <bodyText>Put the penny on a flat surface, like a desk. Use a block of wood if you 
+    don't have a good surface to rub on.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="59d0aba9-6256-11dd-818b-499ca14d14a5" name="%59d0aba9-6256-11dd-818b-499ca14d14a5" showEditBar="true">
                                   <bodyText>
-                                    6. Start the sensor. Click on the magnifying glass
+                                    Start the sensor. Click on the magnifying glass
                                     <a href="http://udl.concord.org/artwork/tool_hints/graph_tool_hints/graph_tool_hints.html">
-                                      <img src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" border="0" />
+                                      <img border="0" src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" />
                                     </a>
                                     for 
-          a movie showing how to use the data collection graph.
+    a movie showing how to use the data collection graph.
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="7bd0e4ea-6256-11dd-818b-499ca14d14a5" name="%7bd0e4ea-6256-11dd-818b-499ca14d14a5" showEditBar="true">
-                                  <bodyText>7. Let the sensor run for at least one minute. Wait until the penny is at 
-    a steady temperature. It should change less than 0.1 deg C in 5 seconds. 
-    If it is not steady, hit Stop and wait for a few minutes.</bodyText>
+                                  <bodyText>Let the sensor run for at least one minute. Wait until the penny is at a 
+    steady temperature. It should change less than 0.1 deg C in 5 seconds. If 
+    it is not steady, hit Stop and wait for a few minutes.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="88b362fb-6256-11dd-818b-499ca14d14a5" name="%88b362fb-6256-11dd-818b-499ca14d14a5" showEditBar="true">
                                   <bodyText>
-                                    8. When the temperature is steady, hit
+                                    When the temperature is steady, hit
                                     <b>Stop</b>
                                     and
                                     <b>Clear</b>
@@ -5951,26 +5951,25 @@ end</script>
                             <OTCardContainer id="4e65c7cf-6258-11dd-818b-499ca14d14a5" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                               <cards>
                                 <OTUDLCompoundDoc id="4e65c7d1-6258-11dd-818b-499ca14d14a5">
-                                  <bodyText>9. Start collecting data. The temperature of the penny should be quite 
-    steady now.</bodyText>
+                                  <bodyText>Start collecting data. The temperature of the penny should be quite steady 
+    now.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="61a65e92-6258-11dd-818b-499ca14d14a5" name="%61a65e92-6258-11dd-818b-499ca14d14a5" showEditBar="true">
-                                  <bodyText>10. Expand the temperature scale so that it is only two or three degrees 
-    tall. For example, if the penny temperature is 22 deg C, make the 
-    temperature scale go from 21 deg C to 24 deg C. Then you will be able to 
-    see a small change.</bodyText>
+                                  <bodyText>Expand the temperature scale so that it is only two or three degrees tall. 
+    For example, if the penny temperature is 22 deg C, make the temperature 
+    scale go from 21 deg C to 24 deg C. Then you will be able to see a small 
+    change.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="7037c523-6258-11dd-818b-499ca14d14a5" name="%7037c523-6258-11dd-818b-499ca14d14a5" showEditBar="true">
-                                  <bodyText>11. Hold the penny down by pressing on the edges of the cardboard. Hold 
-    the cardboard by the edges so that your fingers don't affect the 
-    temperature of the penny. Push down hard so that the sensor and cardboard 
-    stay in place against the penny.</bodyText>
+                                  <bodyText>Hold the penny down by pressing on the edges of the cardboard. Hold the 
+    cardboard by the edges so that your fingers don't affect the temperature 
+    of the penny. Push down hard so that the sensor and cardboard stay in 
+    place against the penny.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc name="%c0488eb4-6d4e-11dd-ac9a-cb602d69c6ea" showEditBar="true">
-                                  <bodyText>12. Have one student rub the penny and another student count out seconds. 
-    Rub the penny slowly for 10 seconds, then stop for 5 seconds, and then 
-    really fast for 10 seconds. Press stop but don't press clear. Look at the 
-    graph.</bodyText>
+                                  <bodyText>Have one student rub the penny and another student count out seconds. Rub 
+    the penny slowly for 10 seconds, then stop for 5 seconds, and then really 
+    fast for 10 seconds. Press stop but don't press clear. Look at the graph.</bodyText>
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
@@ -6086,11 +6085,11 @@ end</script>
                                 <OTCardContainer id="385228b3-625a-11dd-818b-499ca14d14a5">
                                   <cards>
                                     <OTUDLCompoundDoc id="385228b5-625a-11dd-818b-499ca14d14a5">
-                                      <bodyText>1. Press the autoscale button to change the temperature scale so that you 
-    can easily see the change in temperature of the penny.</bodyText>
+                                      <bodyText>Press the autoscale button to change the temperature scale so that you can 
+    easily see the change in temperature of the penny.</bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="41c28a76-625a-11dd-818b-499ca14d14a5" name="%41c28a76-625a-11dd-818b-499ca14d14a5" showEditBar="true">
-                                      <bodyText>2. Label the part where you were rubbing slowly. Label the part where you 
+                                      <bodyText>Label the part where you were rubbing slowly. Label the part where you 
     were rubbing fast. Then take a snapshot of your graph.</bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="63becc20-625a-11dd-818b-499ca14d14a5" name="%63becc20-625a-11dd-818b-499ca14d14a5" showEditBar="true">
@@ -6101,7 +6100,7 @@ end</script>
                                         <OTUDLQuestion id="a69348cf-21f4-11dd-883b-015dfae2d4ec" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTCompoundDoc>
-                                              <bodyText>3. Describe the graph. Which had more heating effect, rubbing slowly or rubbing fast?</bodyText>
+                                              <bodyText>1. Describe the graph. Which had more heating effect, rubbing slowly or rubbing fast?</bodyText>
                                             </OTCompoundDoc>
                                           </prompt>
                                           <input>
@@ -6118,7 +6117,7 @@ end</script>
                                         <OTUDLQuestion id="461b52d0-21f6-11dd-883b-015dfae2d4ec" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTCompoundDoc>
-                                              <bodyText>4. How can you tell from the graph which had more heating effect?</bodyText>
+                                              <bodyText>2. How can you tell from the graph which had more heating effect?</bodyText>
                                             </OTCompoundDoc>
                                           </prompt>
                                           <input>
@@ -6143,7 +6142,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="385228b3-625a-11dd-818b-499ca14d14a5" />
                                   <br />
-                                  <object refid="385228b4-625a-11dd-818b-499ca14d14a5" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="385228b4-625a-11dd-818b-499ca14d14a5" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -6217,7 +6216,7 @@ end</script>
                             <OTUDLQuestion id="5c0b4ff8-e3d0-11dc-bd8e-e5ab906ad868" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>5. Heat is a form of energy, so it takes energy to heat up a penny. Where did the heat come from?</bodyText>
+                                  <bodyText>3. Heat is a form of energy, so it takes energy to heat up a penny. Where did the heat come from?</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -6227,7 +6226,7 @@ end</script>
                             <OTUDLQuestion id="a82a4fef-e3d0-11dc-bd8e-e5ab906ad868" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>6. Explain why the heating effect of rubbing fast would be different from the heating effect of rubbing slowly.</bodyText>
+                                  <bodyText>4. Explain why the heating effect of rubbing fast would be different from the heating effect of rubbing slowly.</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -6237,7 +6236,7 @@ end</script>
                             <OTUDLQuestion id="b749c5bc-e3d0-11dc-bd8e-e5ab906ad868" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>7. Explain why the heating effect of pushing hard would be different from the heating effect of pushing lightly.</bodyText>
+                                  <bodyText>5. Explain why the heating effect of pushing hard would be different from the heating effect of pushing lightly.</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -6938,7 +6937,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="b234ab89-63f0-11dd-8b64-2ba3b656a14e" />
                                   <br />
-                                  <object refid="b234ab8a-63f0-11dd-8b64-2ba3b656a14e" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="b234ab8a-63f0-11dd-8b64-2ba3b656a14e" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -7057,10 +7056,18 @@ end</script>
                             <OTCardContainer id="10e392b6-6d4a-11dd-ac9a-cb602d69c6ea">
                               <cards>
                                 <OTUDLCompoundDoc id="10e392b8-6d4a-11dd-ac9a-cb602d69c6ea">
-                                  <bodyText>To understand about friction and warming, you must understand what heat 
-    is! The molecules in a material are always wiggling around very fast, even 
-    though we can't see them. Heat is the energy of that motion. The faster 
-    the molecules are wiggling, the higher the temperature of the material.</bodyText>
+                                  <bodyText>
+                                    To understand about friction and warming, you must understand what heat 
+    is!
+                                    <br />
+                                    <br />
+                                    The molecules in a material are always wiggling around very fast, even though 
+    we can't see them. Heat is the energy of that motion.
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc name="%b80bdca0-8e47-11dd-87f9-83c24d0a2d15" showEditBar="true">
+                                  <bodyText>The faster the molecules are wiggling, the higher the temperature of the 
+    material.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="1bf98e29-6d4a-11dd-ac9a-cb602d69c6ea" name="%1bf98e29-6d4a-11dd-ac9a-cb602d69c6ea" showEditBar="true">
                                   <bodyText>
@@ -7113,18 +7120,18 @@ end</script>
                                 <object refid="10e392b8-6d4a-11dd-ac9a-cb602d69c6ea" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="10e392b7-6d4a-11dd-ac9a-cb602d69c6ea" showBorder="false">
                               <cardContainer>
                                 <object refid="10e392b6-6d4a-11dd-ac9a-cb602d69c6ea" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <OTModelerPage id="c25fc7ca-6d49-11dd-ac9a-cb602d69c6ea" name="Molecular workbench" authoredDataURL="http://udl.concord.org/share/Friction/MW_solid/solid.cml" />
                             <OTLabbookButton id="d6fd5101-737b-11dd-a1ba-8f011e740945" name="Snapshot button">
                               <target>
                                 <object refid="c25fc7ca-6d49-11dd-ac9a-cb602d69c6ea" />
                               </target>
                             </OTLabbookButton>
+                            <OTModelerPage id="c25fc7ca-6d49-11dd-ac9a-cb602d69c6ea" name="Molecular workbench" authoredDataURL="http://udl.concord.org/share/Friction/MW_solid/solid.cml" />
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -7149,13 +7156,12 @@ end</script>
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="10e392b7-6d4a-11dd-ac9a-cb602d69c6ea" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="d6fd5101-737b-11dd-a1ba-8f011e740945" />
                                       </td>
                                       <td width="60%" style="padding-left: 20px; padding-right: 20px">
                                         <object refid="c25fc7ca-6d49-11dd-ac9a-cb602d69c6ea" />
-                                        <br />
-                                        <object refid="d6fd5101-737b-11dd-a1ba-8f011e740945" />
-                                        <br />
-                                        <br />
                                       </td>
                                     </tr>
                                   </table>
@@ -7246,7 +7252,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="18c14e88-63f2-11dd-8b64-2ba3b656a14e" />
                                   <br />
-                                  <object refid="18c14e89-63f2-11dd-8b64-2ba3b656a14e" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="18c14e89-63f2-11dd-8b64-2ba3b656a14e" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -7279,12 +7285,10 @@ end</script>
                                       <td width="70%">
                                         <object refid="${mw-fric-model}" />
                                         <br />
-                                        <div class="credit">
-                                          This model was created using
-                                          <a href="http://mw.concord.org/modeler/">Molecular Workbench</a>
+                                        <div class="credit">This model was created using
+                                          Molecular Workbench
                                           created by the
-                                          <a href="http://www.concord.org">Concord Consortium</a>
-                                        </div>
+                                 Concord Consortium.</div>
                                       </td>
                                     </tr>
                                   </table>
@@ -7351,7 +7355,7 @@ end</script>
                                     <OTUDLQuestion id="20be3604-88a9-11dd-bd08-bfa936a03652" name="Question" showConvertButton="true">
                                       <prompt>
                                         <OTCompoundDoc>
-                                          <bodyText>Insert question here</bodyText>
+                                          <bodyText>I think it's</bodyText>
                                         </OTCompoundDoc>
                                       </prompt>
                                       <input>
@@ -7373,11 +7377,10 @@ end</script>
                                     Why?
                                     <br />
                                     <br />
-                                    I think it's
-                                    <br />
                                     <object refid="20be3604-88a9-11dd-bd08-bfa936a03652" />
                                     <br />
-                                    because I notice that
+                                    because 
+    I notice that ...
                                     <br />
                                     <object refid="9b7ac3f0-9c46-11dc-a3cd-91deffa3f53a" />
                                   </bodyText>
@@ -7387,7 +7390,7 @@ end</script>
                                 <object refid="72b283c3-63f2-11dd-8b64-2ba3b656a14e" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="72b283c2-63f2-11dd-8b64-2ba3b656a14e" showBorder="false">
                               <cardContainer>
                                 <object refid="72b283c1-63f2-11dd-8b64-2ba3b656a14e" />
@@ -7472,12 +7475,10 @@ end</script>
                                       <td width="70%">
                                         <object refid="${mw-fric-model}" />
                                         <br />
-                                        <div class="credit">
-                                          This model was created using
-                                          <a href="http://mw.concord.org/modeler/">Molecular Workbench</a>
+                                        <div class="credit">This model was created using
+                                          Molecular Workbench
                                           created by the
-                                          <a href="http://www.concord.org">Concord Consortium</a>
-                                        </div>
+                                 Concord Consortium.</div>
                                       </td>
                                     </tr>
                                   </table>
@@ -7494,6 +7495,10 @@ end</script>
                                       <bodyText>Reset the model and check the "Energy Shading" box. This feature colors 
     the atoms according to how fast they are moving. Red is faster, and white 
     is slower.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc name="%939b927f-8ef9-11dd-a1c5-c38e614d2247" showEditBar="true">
+                                      <bodyText>The atoms in the orange box should also change color, but in this model 
+    they don't. So just watch the atoms in the lower surface.</bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="c99e4bc8-63f3-11dd-9387-b79d7a84b288" name="%c99e4bc8-63f3-11dd-9387-b79d7a84b288" showEditBar="true">
                                       <documentRefs>
@@ -7517,7 +7522,7 @@ end</script>
                                         <OTUDLQuestion id="92db06e6-1608-11dd-a258-9f5f09cf4b2a" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTCompoundDoc>
-                                              <bodyText>What happens to the temperature of the surface and the object slides across it?</bodyText>
+                                              <bodyText>What happens to the temperature of the surface as the object slides across it?</bodyText>
                                             </OTCompoundDoc>
                                           </prompt>
                                           <input>
@@ -7545,7 +7550,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="c3b9a8d5-63f3-11dd-9387-b79d7a84b288" />
                                   <br />
-                                  <object refid="c3b9a8d6-63f3-11dd-9387-b79d7a84b288" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="c3b9a8d6-63f3-11dd-9387-b79d7a84b288" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -7840,10 +7845,16 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  <img src="http://udl.concord.org/artwork/friction_56/MW_friction_model/fr_56_MW_friction_model.jpg" />
-                                  <br />
-                                  <br />
-                                  <object refid="1b014da3-88d3-11dd-b46e-2fcf082e38ff" />
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="50%">
+                                        <object refid="1b014da3-88d3-11dd-b46e-2fcf082e38ff" />
+                                      </td>
+                                      <td width="50%" style="padding-left: 20px; padding-right: 20px">
+                                        <img src="http://udl.concord.org/artwork/friction_56/MW_friction_model/fr_56_MW_friction_model.jpg" />
+                                      </td>
+                                    </tr>
+                                  </table>
                                   <br />
                                   <br />
                                   Congratulations! You have completed this activity.
@@ -8067,7 +8078,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="5dba8bd9-6484-11dd-9201-3771bc729610" />
                                   <br />
-                                  <object refid="5dba8bda-6484-11dd-9201-3771bc729610" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="5dba8bda-6484-11dd-9201-3771bc729610" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -8332,8 +8343,6 @@ end</script>
                                     </OTUDLQuestion>
                                   </documentRefs>
                                   <bodyText>
-                                    <br />
-                                    <br />
                                     <object refid="55af88d5-84e4-11dd-8573-f1eec8b7feab" />
                                     <br />
                                     <br />
@@ -8886,7 +8895,7 @@ end</script>
                                     <OTUDLQuestion id="789c2227-6329-11dd-823a-f15332d88ad2" name="Question" showConvertButton="true">
                                       <prompt>
                                         <OTCompoundDoc>
-                                          <bodyText>What was the average force needed to keep the box moving?</bodyText>
+                                          <bodyText>What was the average force needed to keep the box moving (in Newtons)?</bodyText>
                                         </OTCompoundDoc>
                                       </prompt>
                                       <input>
@@ -10922,7 +10931,7 @@ end</script>
                                       <td width="40%" valign="top">
                                         <br />
                                         <br />
-                                        <div style="padding-top: 2px; border-top-width: 1px; margin-top: 5px; border-color: black; border-bottom-width: 1px; margin-left: 5px; margin-right: 5px; border-right-width: 1px; margin-bottom: 5px; border-left-width: 1px; padding-right: 2px; border-style: solid; padding-left: 2px; padding-bottom: 2px">
+                                        <div style="border-left-width: 1px; border-color: black; margin-top: 5px; padding-bottom: 2px; padding-top: 2px; border-bottom-width: 1px; border-top-width: 1px; border-right-width: 1px; padding-left: 2px; margin-left: 5px; border-style: solid; margin-right: 5px; margin-bottom: 5px; padding-right: 2px">
                                           <object refid="3dbc20b5-6485-11dd-9201-3771bc729610" />
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="3dbc20b6-6485-11dd-9201-3771bc729610" />
@@ -10930,6 +10939,8 @@ end</script>
                                       </td>
                                       <td width="60%">
                                         <object refid="f7971278-21d0-11dd-883b-015dfae2d4ec" />
+                                        <br />
+                                        <object refid="${zero-force-p-6}" />
                                         <br />
                                         <object refid="81bac658-21ed-11dd-883b-015dfae2d4ec" />
                                       </td>
@@ -10951,56 +10962,63 @@ end</script>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="455ddcf8-6485-11dd-9201-3771bc729610" name="%455ddcf8-6485-11dd-9201-3771bc729610" showEditBar="true">
                                   <bodyText>
-                                    2. Hook the force sensor through the paper clip.
+                                    Hook the force sensor through the paper clip.
                                     <br />
-                                    <img src="http://udl.concord.org/artwork/friction_56/paperclip_sensor/fr_56_paperclip_sensor.png" border="1" />
+                                    <br />
+                                    <center>
+                                      <img height="150" border="1" width="220" src="http://udl.concord.org/artwork/friction_56/paperclip_sensor/fr_56_paperclip_sensor.png" />
+                                    </center>
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="50ea40e9-6485-11dd-9201-3771bc729610" name="%50ea40e9-6485-11dd-9201-3771bc729610" showEditBar="true">
                                   <bodyText>
-                                    3. Attach the force sensor to the computer. Click on the magnifying glass
+                                    Attach the force sensor to the computer. Click on the magnifying glass
                                     <a href="http://udl.concord.org/artwork/technical_hints/tech-hint-force-v.htm">
-                                      <img src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" border="0" />
+                                      <img border="0" src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" />
                                     </a>
-                                    for a technical hint. Be sure the force sensor is set to
-                                    <b>10 N and not 
-    50 N</b>
+                                    for 
+    a technical hint. Be sure the force sensor is set to
+                                    <b>10 N and not 50 N</b>
                                     .
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="63c4e9ea-6485-11dd-9201-3771bc729610" name="%63c4e9ea-6485-11dd-9201-3771bc729610" showEditBar="true">
                                   <bodyText>
-                                    4. Start recording with the force sensor by clicking on the start 
-          button. Click on the magnifying glass
+                                    Start recording with the force sensor by clicking on the start button. 
+    Click on the magnifying glass
                                     <a href="http://udl.concord.org/artwork/tool_hints/graph_tool_hints/graph_tool_hints.html">
-                                      <img src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" border="0" />
+                                      <img border="0" src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" />
                                     </a>
                                     for 
-          a movie showing how to use the data collection graph.
+    a movie showing how to use the data collection graph.
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="a6816abf-6485-11dd-9201-3771bc729610" name="%a6816abf-6485-11dd-9201-3771bc729610" showEditBar="true">
-                                  <bodyText>5. Set the force to zero, using the zero force button. The graph should go 
-          to force = 0 when you do this.</bodyText>
+                                  <bodyText>Set the force to zero, using the zero force button. The graph should go to 
+    force = 0 when you do this.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="c5272e60-6485-11dd-9201-3771bc729610" name="%c5272e60-6485-11dd-9201-3771bc729610" showEditBar="true">
                                   <bodyText>
-                                    6. Pull the box
+                                    Pull the box
                                     <b>very gently</b>
-                                    with the force sensor. Gradually pull harder and harder until the 
-          box starts to slide. Keep pulling so that the box slides slowly at a 
-          constant speed.
+                                    with the force sensor. Gradually pull 
+    harder and harder until the box starts to slide. Keep pulling so that the 
+    box slides slowly at a constant speed.
                                     <br />
-                                    <img src="http://udl.concord.org/artwork/friction_56/pull_one_bottle/fr_56_pull_one_bottle.png" border="1" />
+                                    <br />
+                                    <center>
+                                      <img height="150" border="1" width="220" src="http://udl.concord.org/artwork/friction_56/pull_one_bottle/fr_56_pull_one_bottle.png" />
+                                    </center>
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="dc530911-6485-11dd-9201-3771bc729610" name="%dc530911-6485-11dd-9201-3771bc729610" showEditBar="true">
                                   <bodyText>
-                                    7. Stop recording. If you want to try again, hit Clear and repeat the 
+                                    Stop recording. If you want to try again, hit Clear and repeat the 
     experiment. Take a snapshot of each run that you want to save.
                                     <br />
                                     <br />
-                                    You can also add new datasets with the New button, so that you see all of your 
+                                    You 
+    can also add new datasets with the New button, so that you see all of your 
     experiments at the same time.
                                   </bodyText>
                                 </OTUDLCompoundDoc>
@@ -11009,7 +11027,7 @@ end</script>
                                 <object refid="3dbc20b7-6485-11dd-9201-3771bc729610" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="3dbc20b6-6485-11dd-9201-3771bc729610" showBorder="false">
                               <cardContainer>
                                 <object refid="3dbc20b5-6485-11dd-9201-3771bc729610" />
@@ -11328,7 +11346,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="c07a5d0e-6487-11dd-9201-3771bc729610" />
                                   <br />
-                                  <object refid="c07a5d0f-6487-11dd-9201-3771bc729610" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="c07a5d0f-6487-11dd-9201-3771bc729610" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -11385,7 +11403,6 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  <br />
                                   <object refid="b7b4cbe0-21d6-11dd-883b-015dfae2d4ec" />
                                   <br />
                                   <br />
@@ -11422,6 +11439,8 @@ end</script>
                                       <td width="50%">
                                         <object refid="202483dd-21d4-11dd-883b-015dfae2d4ec" />
                                         <br />
+                                        <object refid="${zero-force-p-10}" />
+                                        <br />
                                         <object refid="c18e0a32-21ed-11dd-883b-015dfae2d4ec" />
                                       </td>
                                     </tr>
@@ -11439,7 +11458,8 @@ end</script>
                                       <bodyText>
                                         Now put two water bottles in the box.
                                         <br />
-                                        <img border="1" src="http://udl.concord.org/artwork/friction_56/pull_two_bottles/fr_56_pull_two_bottles.png" />
+                                        <br />
+                                        <img height="160" border="1" width="240" src="http://udl.concord.org/artwork/friction_56/pull_two_bottles/fr_56_pull_two_bottles.png" />
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="c135d258-6489-11dd-9201-3771bc729610" name="%c135d258-6489-11dd-9201-3771bc729610" showEditBar="true">
@@ -11452,96 +11472,6 @@ end</script>
                                     <OTUDLCompoundDoc id="edd4b42a-6489-11dd-9201-3771bc729610" name="%edd4b42a-6489-11dd-9201-3771bc729610" showEditBar="true">
                                       <bodyText>Record the average value of the moving friction force with one bottle and 
     with two bottles in the table below.</bodyText>
-                                    </OTUDLCompoundDoc>
-                                    <OTUDLCompoundDoc id="36a413db-648a-11dd-9201-3771bc729610" name="%36a413db-648a-11dd-9201-3771bc729610" showEditBar="true">
-                                      <documentRefs>
-                                        <OTUDLLeveledQuestions id="4d59af60-c524-11dc-8c9f-5d0909ba389b" timesClicked="0">
-                                          <questions>
-                                            <OTUDLQuestion name="L5" showConvertButton="false" showScaffolding="true">
-                                              <prompt>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </prompt>
-                                              <input>
-                                                <OTText rows="1" />
-                                              </input>
-                                            </OTUDLQuestion>
-                                            <OTUDLQuestion name="L4" showConvertButton="false" showScaffolding="true">
-                                              <prompt>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </prompt>
-                                              <input>
-                                                <OTText />
-                                              </input>
-                                              <scaffolding>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Think about what is happening on the surfaces.</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </scaffolding>
-                                            </OTUDLQuestion>
-                                            <OTUDLQuestion name="L3" showConvertButton="false" showScaffolding="true">
-                                              <prompt>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </prompt>
-                                              <input>
-                                                <OTText text="As the weight increases, the two surfaces are __________ harder together." />
-                                              </input>
-                                              <scaffolding>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Fill in the blank above.</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </scaffolding>
-                                            </OTUDLQuestion>
-                                            <OTUDLQuestion name="L2" showConvertButton="false" showScaffolding="true">
-                                              <prompt>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </prompt>
-                                              <input>
-                                                <OTChoice name="Multiple choice" alignContent="0">
-                                                  <choices>
-                                                    <OTCompoundDoc name="The friction force becomes less because the surfaces cool down.">
-                                                      <bodyText>The friction force becomes less because the surfaces cool down.</bodyText>
-                                                    </OTCompoundDoc>
-                                                    <OTCompoundDoc name="The increased weight makes it harder for surfaces to slide.">
-                                                      <bodyText>The increased weight makes it harder for surfaces to slide.</bodyText>
-                                                    </OTCompoundDoc>
-                                                  </choices>
-                                                </OTChoice>
-                                              </input>
-                                              <scaffolding>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Choose the right answer above.</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </scaffolding>
-                                            </OTUDLQuestion>
-                                            <OTUDLQuestion name="L1" showConvertButton="false" showScaffolding="true">
-                                              <prompt>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </prompt>
-                                              <input>
-                                                <OTText text="The increased weight made it harder for the surfaces to slide." />
-                                              </input>
-                                              <scaffolding>
-                                                <OTUDLCompoundDoc>
-                                                  <bodyText>Try adding your thoughts to the correct answer above.</bodyText>
-                                                </OTUDLCompoundDoc>
-                                              </scaffolding>
-                                            </OTUDLQuestion>
-                                          </questions>
-                                        </OTUDLLeveledQuestions>
-                                      </documentRefs>
-                                      <bodyText>
-                                        <object refid="4d59af60-c524-11dc-8c9f-5d0909ba389b" />
-                                      </bodyText>
                                     </OTUDLCompoundDoc>
                                   </cards>
                                   <currentCard>
@@ -11559,7 +11489,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="bac56a25-6489-11dd-9201-3771bc729610" />
                                   <br />
-                                  <object refid="bac56a26-6489-11dd-9201-3771bc729610" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="bac56a26-6489-11dd-9201-3771bc729610" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -11706,6 +11636,9 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
+                                  <object refid="4d59af60-c524-11dc-8c9f-5d0909ba389b" />
+                                  <br />
+                                  <br />
                                   <object refid="35416d12-e3dd-11dc-beaa-cdc9f3ab4400" />
                                   <br />
                                 </div>
@@ -11713,6 +11646,89 @@ end</script>
                             </div>
                           </bodyText>
                           <documentRefs>
+                            <OTUDLLeveledQuestions id="4d59af60-c524-11dc-8c9f-5d0909ba389b" timesClicked="0">
+                              <questions>
+                                <OTUDLQuestion name="L5" showConvertButton="false" showScaffolding="true">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTText rows="1" />
+                                  </input>
+                                </OTUDLQuestion>
+                                <OTUDLQuestion name="L4" showConvertButton="false" showScaffolding="true">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTText />
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Think about what is happening on the surfaces.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTUDLQuestion>
+                                <OTUDLQuestion name="L3" showConvertButton="false" showScaffolding="true">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTText text="As the weight increases, the two surfaces are __________ harder together." />
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Fill in the blank above.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTUDLQuestion>
+                                <OTUDLQuestion name="L2" showConvertButton="false" showScaffolding="true">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTChoice name="Multiple choice" alignContent="0">
+                                      <choices>
+                                        <OTCompoundDoc name="The friction force becomes less because the surfaces cool down.">
+                                          <bodyText>The friction force becomes less because the surfaces cool down.</bodyText>
+                                        </OTCompoundDoc>
+                                        <OTCompoundDoc name="The increased weight makes it harder for surfaces to slide.">
+                                          <bodyText>The increased weight makes it harder for surfaces to slide.</bodyText>
+                                        </OTCompoundDoc>
+                                      </choices>
+                                    </OTChoice>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Choose the right answer above.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTUDLQuestion>
+                                <OTUDLQuestion name="L1" showConvertButton="false" showScaffolding="true">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Why do you think the friction force increased when the weight increased?</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTText text="The increased weight made it harder for the surfaces to slide." />
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Try adding your thoughts to the correct answer above.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTUDLQuestion>
+                              </questions>
+                            </OTUDLLeveledQuestions>
                             <OTUDLQuestion id="35416d12-e3dd-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
@@ -11740,9 +11756,6 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
-                                  <object refid="a606c035-e3dd-11dc-beaa-cdc9f3ab4400" />
-                                  <br />
-                                  <br />
                                   <object refid="d5bc9a3a-ceb2-11dc-a3fc-f936421791a9" />
                                   <br />
                                   <br />
@@ -11752,20 +11765,10 @@ end</script>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTUDLQuestion id="a606c035-e3dd-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
-                              <prompt>
-                                <OTUDLCompoundDoc>
-                                  <bodyText>Explain why you think the force of friction is greater for two bottles than for one.</bodyText>
-                                </OTUDLCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTText />
-                              </input>
-                            </OTUDLQuestion>
                             <OTUDLQuestion id="d5bc9a3a-ceb2-11dc-a3fc-f936421791a9" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>Do you think you would get the same results if you were pushing on the box instead of pulling? Why?</bodyText>
+                                  <bodyText>Do you think you would get the same results for friction if you were pushing on the box instead of pulling? Why?</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -11849,7 +11852,7 @@ end</script>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%68387c6b-7e83-11dc-8b9b-8745c450911e" showDefinitions="true">
+                        <OTUDLCompoundDoc id="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[1]" name="%68387c6b-7e83-11dc-8b9b-8745c450911e" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -12061,7 +12064,7 @@ end</script>
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%ebb70077-8330-11dc-9929-1375fa032590" showDefinitions="true">
+                        <OTUDLCompoundDoc id="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[4]" name="%ebb70077-8330-11dc-9929-1375fa032590" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -12078,16 +12081,19 @@ end</script>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="40%" valign="top">
+                                      <td valign="top" width="40%">
                                         <br />
-                                        <div style="padding-top: 2px; margin-top: 5px; border-left-width: 1px; margin-right: 5px; border-top-width: 1px; margin-bottom: 5px; margin-left: 5px; border-bottom-width: 1px; border-color: black; padding-bottom: 2px; border-style: solid; padding-left: 2px; padding-right: 2px; border-right-width: 1px">
+                                        <div style="margin-left: 5px; padding-right: 2px; border-right-width: 1px; margin-right: 5px; margin-bottom: 5px; border-bottom-width: 1px; border-top-width: 1px; border-left-width: 1px; padding-top: 2px; padding-bottom: 2px; margin-top: 5px; border-style: solid; border-color: black; padding-left: 2px">
                                           <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a" />
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="615e1b07-7383-11dd-9e8a-efc9ed032a7a" />
                                         </div>
                                         <br />
+                                        <object refid="6c343775-908e-11dd-b128-4d7cea87844a" />
+                                        <br />
+                                        <br />
                                       </td>
-                                      <td width="60%" style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-right: 20px; padding-left: 20px" width="60%">
                                         <object refid="${halt-model-1}" />
                                         <br />
                                         <br />
@@ -12109,7 +12115,7 @@ end</script>
     can choose surfaces with different amounts of friction –- steel, wood, or 
     carpet.</bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%764f47f9-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[1]" name="%764f47f9-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <bodyText>
                                     The graph shows three values:
                                     <ul>
@@ -12137,7 +12143,7 @@ end</script>
                                     </ul>
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%91e29ba2-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[2]" name="%91e29ba2-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <bodyText>
                                     Run the model with steel by clicking the
                                     <b>Push it</b>
@@ -12145,7 +12151,7 @@ end</script>
     the graph of kinetic energy shown by the black line.
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%9bd74893-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[3]" name="%9bd74893-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLQuestion id="b0c90bee-e3df-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
                                       <prompt>
@@ -12162,7 +12168,7 @@ end</script>
                                     <object refid="b0c90bee-e3df-11dc-beaa-cdc9f3ab4400" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%d286c3c9-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[4]" name="%d286c3c9-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLQuestion id="c3146d56-e3df-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
                                       <prompt>
@@ -12179,7 +12185,7 @@ end</script>
                                     <object refid="c3146d56-e3df-11dc-beaa-cdc9f3ab4400" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%ddba324f-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[5]" name="%ddba324f-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLQuestion id="d1a6bd53-e3df-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
                                       <prompt>
@@ -12196,7 +12202,7 @@ end</script>
                                     <object refid="d1a6bd53-e3df-11dc-beaa-cdc9f3ab4400" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%e9a64275-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[6]" name="%e9a64275-7383-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLLeveledQuestions id="1a564ff7-c528-11dc-8c9f-5d0909ba389b" timesClicked="0">
                                       <questions>
@@ -12289,17 +12295,35 @@ end</script>
                                     <object refid="1a564ff7-c528-11dc-8c9f-5d0909ba389b" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc id="30b90e34-908f-11dd-b128-4d7cea87844a" name="%30b90e34-908f-11dd-b128-4d7cea87844a" showEditBar="true">
+                                  <bodyText>Take a snapshot of your model.</bodyText>
+                                </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
-                                <object refid="615e1b08-7383-11dd-9e8a-efc9ed032a7a" />
+                                <object refid="30b90e34-908f-11dd-b128-4d7cea87844a" />
                               </currentCard>
+                              <viewedCards>
+                                <object refid="615e1b08-7383-11dd-9e8a-efc9ed032a7a" />
+                                <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[1]" />
+                                <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[2]" />
+                                <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[3]" />
+                                <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[4]" />
+                                <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[5]" />
+                                <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a/cards[6]" />
+                                <object refid="30b90e34-908f-11dd-b128-4d7cea87844a" />
+                              </viewedCards>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="615e1b07-7383-11dd-9e8a-efc9ed032a7a" showBorder="false">
                               <cardContainer>
                                 <object refid="615df3f6-7383-11dd-9e8a-efc9ed032a7a" />
                               </cardContainer>
                             </OTUDLMenu>
+                            <OTLabbookButton id="6c343775-908e-11dd-b128-4d7cea87844a" name="Labbook button">
+                              <target>
+                                <object refid="${halt-model-1}" />
+                              </target>
+                            </OTLabbookButton>
                             <OTFrictionModel local_id="halt-model-1" isSlideSimulation="false" isEnergySimulation="true" showMoveRampButtons="false" showGraph="true" showPushButtons="false" showSlider="false" rampAngle="0" startMaterial="steel" />
                             <OTLabbookButton id="a75a1f1e-7dd5-11dd-add5-6d6110bdd74a" name="Snapshot button">
                               <target>
@@ -12361,7 +12385,7 @@ end</script>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%f4991f00-8bb1-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
+                        <OTUDLCompoundDoc id="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[5]" name="%f4991f00-8bb1-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -12378,16 +12402,19 @@ end</script>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">
+                                      <td valign="top" width="50%">
                                         <br />
-                                        <div style="padding-top: 2px; margin-top: 5px; border-left-width: 1px; margin-right: 5px; border-top-width: 1px; margin-bottom: 5px; margin-left: 5px; border-bottom-width: 1px; border-color: black; padding-bottom: 2px; border-style: solid; padding-left: 2px; padding-right: 2px; border-right-width: 1px">
+                                        <div style="margin-left: 5px; padding-right: 2px; border-right-width: 1px; margin-right: 5px; margin-bottom: 5px; border-bottom-width: 1px; border-top-width: 1px; border-left-width: 1px; padding-top: 2px; padding-bottom: 2px; margin-top: 5px; border-style: solid; border-color: black; padding-left: 2px">
                                           <object refid="62a39df6-7384-11dd-9e8a-efc9ed032a7a" />
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="62a39df7-7384-11dd-9e8a-efc9ed032a7a" />
                                         </div>
                                         <br />
+                                        <object refid="cffef0c6-908e-11dd-b128-4d7cea87844a" />
+                                        <br />
+                                        <br />
                                       </td>
-                                      <td width="50%" style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
                                         <object refid="${halt-model-2}" />
                                         <br />
                                         <br />
@@ -12474,17 +12501,29 @@ end</script>
                                     <object refid="20f5047a-e3e0-11dc-beaa-cdc9f3ab4400" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc id="39a3ec55-908f-11dd-b128-4d7cea87844a" name="%39a3ec55-908f-11dd-b128-4d7cea87844a" showEditBar="true">
+                                  <bodyText>Take a snapshot of your model.</bodyText>
+                                </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
-                                <object refid="62a39df8-7384-11dd-9e8a-efc9ed032a7a" />
+                                <object refid="39a3ec55-908f-11dd-b128-4d7cea87844a" />
                               </currentCard>
+                              <viewedCards>
+                                <object refid="62a39df8-7384-11dd-9e8a-efc9ed032a7a" />
+                                <object refid="39a3ec55-908f-11dd-b128-4d7cea87844a" />
+                              </viewedCards>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="62a39df7-7384-11dd-9e8a-efc9ed032a7a" showBorder="false">
                               <cardContainer>
                                 <object refid="62a39df6-7384-11dd-9e8a-efc9ed032a7a" />
                               </cardContainer>
                             </OTUDLMenu>
+                            <OTLabbookButton id="cffef0c6-908e-11dd-b128-4d7cea87844a" name="Labbook button">
+                              <target>
+                                <object refid="${halt-model-2}" />
+                              </target>
+                            </OTLabbookButton>
                             <OTFrictionModel local_id="halt-model-2" isSlideSimulation="false" isEnergySimulation="true" showMoveRampButtons="false" showGraph="true" showPushButtons="false" showSlider="false" rampAngle="0" startMaterial="wood" />
                             <OTLabbookButton id="d5561f0f-7dd5-11dd-add5-6d6110bdd74a" name="Snapshot button">
                               <target>
@@ -12546,7 +12585,7 @@ end</script>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%1cbf61b0-8bb8-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
+                        <OTUDLCompoundDoc id="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[6]" name="%1cbf61b0-8bb8-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -12691,7 +12730,7 @@ end</script>
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%e1b6fa98-8bbc-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
+                        <OTUDLCompoundDoc id="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[7]" name="%e1b6fa98-8bbc-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -12708,16 +12747,19 @@ end</script>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%" valign="top">
+                                      <td valign="top" width="50%">
                                         <br />
-                                        <div style="padding-top: 2px; margin-top: 5px; border-left-width: 1px; margin-right: 5px; border-top-width: 1px; margin-bottom: 5px; margin-left: 5px; border-bottom-width: 1px; border-color: black; padding-bottom: 2px; border-style: solid; padding-left: 2px; padding-right: 2px; border-right-width: 1px">
+                                        <div style="margin-left: 5px; padding-right: 2px; border-right-width: 1px; margin-right: 5px; margin-bottom: 5px; border-bottom-width: 1px; border-top-width: 1px; border-left-width: 1px; padding-top: 2px; padding-bottom: 2px; margin-top: 5px; border-style: solid; border-color: black; padding-left: 2px">
                                           <object refid="d9731ce7-7384-11dd-9e8a-efc9ed032a7a" />
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="d9731ce8-7384-11dd-9e8a-efc9ed032a7a" />
                                         </div>
                                         <br />
+                                        <object refid="185639f3-908f-11dd-b128-4d7cea87844a" />
+                                        <br />
+                                        <br />
                                       </td>
-                                      <td width="50%" style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
                                         <object refid="${halt-model-3}" />
                                         <br />
                                         <object refid="0b3b6cb0-7dd6-11dd-add5-6d6110bdd74a" />
@@ -12735,7 +12777,7 @@ end</script>
                                 <OTUDLCompoundDoc id="d97343f9-7384-11dd-9e8a-efc9ed032a7a">
                                   <bodyText>Now run the model with carpet, which has more friction than wood or steel.</bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%ea766dda-7384-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[1]" name="%ea766dda-7384-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLQuestion id="76970406-e3e0-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
                                       <prompt>
@@ -12752,11 +12794,11 @@ end</script>
                                     <object refid="76970406-e3e0-11dc-beaa-cdc9f3ab4400" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%f458561b-7384-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[2]" name="%f458561b-7384-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <bodyText>Now choose carpet and push it many times, so that you get the box all the 
     way across the screen.</bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%0ea98cb1-7385-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[3]" name="%0ea98cb1-7385-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLQuestion id="8a007f93-e3e0-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
                                       <prompt>
@@ -12774,7 +12816,7 @@ end</script>
                                     <br />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%1020c362-7385-11dd-9e8a-efc9ed032a7a" showEditBar="true">
+                                <OTUDLCompoundDoc id="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[4]" name="%1020c362-7385-11dd-9e8a-efc9ed032a7a" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLQuestion id="9cbc07ef-e3e0-11dc-beaa-cdc9f3ab4400" name="Question" showConvertButton="true">
                                       <prompt>
@@ -12792,17 +12834,33 @@ end</script>
                                     <br />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc id="4268cbfa-908f-11dd-b128-4d7cea87844a" name="%4268cbfa-908f-11dd-b128-4d7cea87844a" showEditBar="true">
+                                  <bodyText>Take a snapshot of your model.</bodyText>
+                                </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
-                                <object refid="d97343f9-7384-11dd-9e8a-efc9ed032a7a" />
+                                <object refid="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[2]" />
                               </currentCard>
+                              <viewedCards>
+                                <object refid="d97343f9-7384-11dd-9e8a-efc9ed032a7a" />
+                                <object refid="4268cbfa-908f-11dd-b128-4d7cea87844a" />
+                                <object refid="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[4]" />
+                                <object refid="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[3]" />
+                                <object refid="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[2]" />
+                                <object refid="d9731ce7-7384-11dd-9e8a-efc9ed032a7a/cards[1]" />
+                              </viewedCards>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="d9731ce8-7384-11dd-9e8a-efc9ed032a7a" showBorder="false">
                               <cardContainer>
                                 <object refid="d9731ce7-7384-11dd-9e8a-efc9ed032a7a" />
                               </cardContainer>
                             </OTUDLMenu>
+                            <OTLabbookButton id="185639f3-908f-11dd-b128-4d7cea87844a" name="Labbook button">
+                              <target>
+                                <object refid="${halt-model-3}" />
+                              </target>
+                            </OTLabbookButton>
                             <OTFrictionModel local_id="halt-model-3" isSlideSimulation="false" isEnergySimulation="true" showMoveRampButtons="false" showGraph="true" showPushButtons="false" showSlider="false" rampAngle="0" startMaterial="carpet" />
                             <OTLabbookButton id="0b3b6cb0-7dd6-11dd-add5-6d6110bdd74a" name="Snapshot button">
                               <target>
@@ -12811,7 +12869,7 @@ end</script>
                             </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%7311b75c-8bbe-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
+                        <OTUDLCompoundDoc id="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[8]" name="%7311b75c-8bbe-11dc-8b16-6fa2c90eaae7" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -12870,7 +12928,7 @@ end</script>
                             </OTUDLQuestion>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%6c74048f-7385-11dd-9e8a-efc9ed032a7a" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc id="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[9]" name="%6c74048f-7385-11dd-9e8a-efc9ed032a7a" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -12928,8 +12986,20 @@ end</script>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[7]" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[1]" />
+                        <object refid="7d801684-737f-11dd-9e8a-efc9ed032a7a" />
+                        <object refid="80c5569d-737f-11dd-9e8a-efc9ed032a7a" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[4]" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[5]" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[6]" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[7]" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[8]" />
+                        <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de/cards[9]" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -13167,6 +13237,8 @@ end</script>
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="52718308-648d-11dd-9201-3771bc729610" />
                                         </div>
+                                        <br />
+                                        <img height="150" width="250" src="http://udl.concord.org/artwork/friction_56/shoe_paper/fr_56_shoe_paper.png" border="1" />
                                       </td>
                                       <td width="50%">
                                         <object refid="1a635621-8efd-11dc-9390-c16ebd144e35" />
@@ -13181,15 +13253,21 @@ end</script>
                             <OTCardContainer id="52718307-648d-11dd-9201-3771bc729610">
                               <cards>
                                 <OTUDLCompoundDoc id="52718309-648d-11dd-9201-3771bc729610">
-                                  <bodyText>
-                                    A shoe is placed on a ramp, and the ramp is lifted until the shoe starts 
-    sliding. Different materials are attached to the bottom of the shoe. For 
-    example, here is the shoe with paper attached.
-                                    <br />
-                                    <img src="http://udl.concord.org/artwork/friction_56/shoe_paper/fr_56_shoe_paper.png" border="1" />
-                                  </bodyText>
+                                  <bodyText>A shoe is placed on a ramp, and the ramp is lifted until the shoe starts 
+    sliding. Different materials are attached to the bottom of the shoe.</bodyText>
+                                </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc id="9efe57ab-8fc9-11dd-a31d-8bc269a1e2ea" name="%9efe57ab-8fc9-11dd-a31d-8bc269a1e2ea" showEditBar="true">
+                                  <bodyText>For example, the picture below shows the shoe with paper attached.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="9bad602a-648d-11dd-9201-3771bc729610" name="%9bad602a-648d-11dd-9201-3771bc729610" showEditBar="true">
+                                  <bodyText>
+                                    The table on the right shows actual measurements of the height that the 
+    ramp can be raised before the shoe starts sliding.
+                                    <br />
+                                    <br />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc name="%877461fe-8fca-11dd-9a16-2b0a6c34775b" showEditBar="true">
                                   <documentRefs>
                                     <OTUDLQuestion id="1fb68f05-8efd-11dc-9390-c16ebd144e35" name="Question">
                                       <prompt>
@@ -13221,10 +13299,6 @@ end</script>
                                     </OTUDLQuestion>
                                   </documentRefs>
                                   <bodyText>
-                                    The table on the right shows actual measurements of the height that the 
-    ramp can be raised before the shoe starts sliding.
-                                    <br />
-                                    <br />
                                     <object refid="1fb68f05-8efd-11dc-9390-c16ebd144e35" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
@@ -13311,7 +13385,7 @@ end</script>
                                 <object refid="52718309-648d-11dd-9201-3771bc729610" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="52718308-648d-11dd-9201-3771bc729610" showBorder="false">
                               <cardContainer>
                                 <object refid="52718307-648d-11dd-9201-3771bc729610" />
@@ -13477,7 +13551,7 @@ end</script>
                             <OTUDLQuestion id="0d1a8a5e-8eff-11dc-8f83-457b5cb3039b" name="Question">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>Why do you think the three measurements for each material are not exactly the same?</bodyText>
+                                  <bodyText>1. Why do you think the three measurements for each material are not exactly the same?</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -13497,7 +13571,7 @@ end</script>
                             <OTUDLQuestion id="101a5ccd-8eff-11dc-8f83-457b5cb3039b" name="Question">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>If you could do the experiment yourself, what would you do to get more accurate results?</bodyText>
+                                  <bodyText>2. If you could do the experiment yourself, what would you do to get more accurate results?</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -14956,8 +15030,12 @@ It's not true that friction is never useful. Without friction, you couldn't slow
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_0}" />
+                <object refid="${section_7}" />
               </currentCard>
+              <viewedCards>
+                <object refid="${section_0}" />
+                <object refid="${section_7}" />
+              </viewedCards>
             </OTCardContainer>
           </activity>
           <script>
@@ -14983,11 +15061,7 @@ It's not true that friction is never useful. Without friction, you couldn't slow
                 <object refid="${page-rule}" />
               </reference>
             </OTScriptVariable>
-            <OTScriptVariable name="sampleMenu">
-              <reference>
-                <object refid="${menu}" />
-              </reference>
-            </OTScriptVariable>
+            <OTScriptVariable name="sampleMenu" />
             <OTScriptVariable name="menuHorizontalView">
               <reference>
                 <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
@@ -14999,25 +15073,6 @@ It's not true that friction is never useful. Without friction, you couldn't slow
           </script>
           <scriptState />
         </OTScriptObject>
-        <OTUDLMenu local_id="menu">
-          <cardContainer>
-            <object refid="${section-card-container}" />
-          </cardContainer>
-          <menuRule>
-            <object refid="${section-rule}" />
-          </menuRule>
-          <css>
-            <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
-          </css>
-        </OTUDLMenu>
-        <OTUDLMenu local_id="section-1-menu">
-          <cardContainer>
-            <object refid="${section-1-card-container}" />
-          </cardContainer>
-          <menuRule>
-            <object refid="${page-rule}" />
-          </menuRule>
-        </OTUDLMenu>
         <OTLabbook local_id="album" />
         <OTDefinitionManager id="b6350a20-e3b4-11dc-95ff-0800200c9a66">
           <definitions>
@@ -15030,32 +15085,6 @@ It's not true that friction is never useful. Without friction, you couldn't slow
         </OTDefinitionManager>
         <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
         <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
-        <OTUDLMenuRule local_id="section-rule">
-          <rules>
-            <OTUDLMenuRule remainInScope="true">
-              <scope>
-                <object refid="${section_1}" />
-              </scope>
-            </OTUDLMenuRule>
-            <OTUDLMenuRule remainInScope="true" jumpToAnyCard="true">
-              <scope>
-                <object refid="${section_2}" />
-                <object refid="${section_3}" />
-                <object refid="${section_4}" />
-                <object refid="${section_5}" />
-                <object refid="${section_6}" />
-                <object refid="${section_7}" />
-                <object refid="${section_8}" />
-                <object refid="${section_9}" />
-              </scope>
-            </OTUDLMenuRule>
-            <OTUDLMenuRule remainInScope="true">
-              <scope>
-                <object refid="${section_10}" />
-              </scope>
-            </OTUDLMenuRule>
-          </rules>
-        </OTUDLMenuRule>
         <OTJavascript local_id="change_page.js" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/change_page.js" />
         <OTJavascript local_id="show_message.js" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/show_message.js" />
         <OTJavascript local_id="authoring_script.js" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/authoring_script.js" />
@@ -15076,11 +15105,7 @@ It's not true that friction is never useful. Without friction, you couldn't slow
                 <object refid="${page-rule}" />
               </reference>
             </OTScriptVariable>
-            <OTScriptVariable name="sampleMenu">
-              <reference>
-                <object refid="${menu}" />
-              </reference>
-            </OTScriptVariable>
+            <OTScriptVariable name="sampleMenu" />
             <OTScriptVariable name="menuHorizontalView">
               <reference>
                 <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
@@ -15123,6 +15148,9 @@ It's not true that friction is never useful. Without friction, you couldn't slow
           <menuView>
             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
           </menuView>
+          <menuRule>
+            <object refid="${page-rule}" />
+          </menuRule>
           <cssColor>
             <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
           </cssColor>

@@ -105,7 +105,7 @@
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="global-imports/udl-view-bundle.otml" />
+        <OTInclude href="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/global-imports/udl-view-bundle.otml" />
       </includes>
       <bundles>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
@@ -338,11 +338,11 @@
         <OTLabbookBundle />
       </bundles>
       <overlays>
-        <object refid="6cc8e2b0-c44e-11dc-95ff-0800200c9a66" />
+        <object refid="11444c03-dbc1-4ba3-848d-244d5fac57b5" />
         <OTOverlay>
           <deltaObjectMap>
             <entry key="${authoring_script.js}">
-              <OTJavascript src="scripts/student_script.js" />
+              <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/student_script.js" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>
@@ -422,19 +422,10 @@
                         <table width="100%">
                           <tr>
                             <td style="text-align: left">
-                              <table width="100%">
-                                <tr>
-                                  <td style="text-align: left">
-                                    <div class="title">What do you already know about electricity?</div>
-                                  </td>
-                                  <td width="50px">
-                                    <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
-                                  </td>
-                                </tr>
-                              </table>
+                              <div class="title">What do you already know about electricity?</div>
                             </td>
                             <td width="50px">
-                              <object refid="${overlay-menu}" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
+                              <object refid="16c37c27-7784-4c64-b8d0-ba3752d676ce" viewid="8e15a570-16a7-4fad-8775-778cb385bb8a" />
                             </td>
                           </tr>
                         </table>
@@ -1022,21 +1013,11 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                             <OTButton local_id="pretest-submit-button" name="Button" text="Submit" />
                             <OTScriptObject local_id="pretest-button-script">
                               <variables>
-                                <OTScriptVariable name="cardContainer">
-                                  <reference>
-                                    <object refid="${section-card-container}" />
-                                  </reference>
-                                </OTScriptVariable>
                                 <OTScriptVariableComponent name="button">
                                   <reference>
                                     <object refid="${pretest-submit-button}" />
                                   </reference>
                                 </OTScriptVariableComponent>
-                                <OTScriptVariable name="card">
-                                  <reference>
-                                    <object refid="${section_2}" />
-                                  </reference>
-                                </OTScriptVariable>
                               </variables>
                               <script>
                                 <object refid="${change_page.js}" />
@@ -1163,7 +1144,8 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <object refid="6e0d3d4b-6959-11dd-8898-75b355af20c1" />
                                   <br />
                                   <br />
-                                  You have completed the Introduction. Click on the UDL HOME button below.
+                                  You 
+          have completed the introduction. Click on the UDL HOME button below.
                                 </div>
                               </div>
                             </div>
@@ -1280,30 +1262,36 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   "I don't get it!" she said.
                                   <br />
                                   <br />
-                                  "What?" asked her brother Martin.
+                                  "What?" 
+          asked her brother Martin.
                                   <br />
                                   <br />
-                                  "I'm trying to get this flashlight bulb to light," said Emily, "and it won't 
-          do it."
+                                  "I'm trying to get this flashlight 
+          bulb to light," said Emily, "and it won't do it."
                                   <br />
                                   <br />
-                                  "Maybe the bulb is broken," said Martin. He came over to look.
+                                  "Maybe 
+          the bulb is broken," said Martin. He came over to look.
                                   <br />
                                   <br />
-                                  "No," said Emily, "'cause it works when I put it in the flashlight. I just 
+                                  "No," 
+          said Emily, "'cause it works when I put it in the flashlight. I just 
           can't make it work with the wire."
                                   <br />
                                   <br />
-                                  "Oh, is that what you're trying to do?" asked Martin. "That's easy. We did it 
-          in school last year." Martin was a whole year and a month older than 
-          Emily and he thought she knew everything.
+                                  "Oh, is that what 
+          you're trying to do?" asked Martin. "That's easy. We did it in 
+          school last year." Martin was a whole year and a month older than 
+          Emily and he thought he knew everything.
                                   <br />
                                   <br />
-                                  "Well, if you're so smart, why don't you try it?" said Emily. "Here's the 
-          battery and the bulb and some wire. You make it light!"
+                                  "Well, if you're so 
+          smart, why don't you try it?" said Emily. "Here's the battery and 
+          the bulb and some wire. You make it light!"
                                   <br />
                                   <br />
-                                  "I can do it," said Martin. "Just watch!"
+                                  "I can do 
+          it," said Martin. "Just watch!"
                                   <br />
                                   <br />
                                   <object refid="f59c7cdd-eb95-11dc-8374-892ff14de9bf" />
@@ -1342,12 +1330,12 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   Outwardly, Martin seemed confident that he could make the bulb 
           light, but inside he wasn't so sure. How had they done the trick in 
           school? He remembered touching a wire to the tip of the bulb. Was 
-          that all there was to it? "
+          that all there was to it?
                                   <br />
                                   <br />
-                                  Here," he said to Emily. 
-          "You hold one end of the wire and I'll hold the other." He handed 
-          the battery to Emily. "Touch your end of the wire to one end of the 
+                                  "Here," he said to Emily. "You 
+          hold one end of the wire and I'll hold the other." He handed the 
+          battery to Emily. "Touch your end of the wire to one end of the 
           battery."
                                   <br />
                                   <br />
@@ -1393,7 +1381,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           switch. The bulb lit up.
                                   <br />
                                   <br />
-                                  "See?" said Emily, "The battery and 
+                                  "See?" said Emily. "The battery and 
           the bulb work fine in the flashlight. They're not broken. We must be 
           doing something wrong."
                                 </div>
@@ -1457,26 +1445,26 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <br />
                                   <br />
                                   <center>
-                                    <img src=" http://udl.concord.org/artwork/elect_56/el_56_story_sketches/el_56_elviras_bag.png" border="1" />
+                                    <img border="1" src=" http://udl.concord.org/artwork/elect_56/el_56_story_sketches/el_56_elviras_bag.png" />
                                   </center>
                                   <br />
-                                  Pretty soon they heard the roar of the engine of Elvira's little red 
-          car. It stopped outside their house and Elvira got out, carrying a 
-          large bag made of some sort of shiny material. The bag was purple 
-          with yellow flowers and it was big enough to carry a small dog or a 
-          birthday cake, but not both together!
+                                  Pretty soon they heard the roar of the engine of Elvira's little 
+          blue car. It stopped outside their house and Elvira got out, 
+          carrying a large bag made of some sort of shiny material. The bag 
+          was big enough to carry a small dog or a birthday cake, but not both 
+          together!
                                   <br />
                                   <br />
-                                  "So what seems to be 
-          the problem?" asked Elvira as she hugged Emily and Martin in turn.
+                                  "So what seems to be the problem?" asked Elvira as 
+          she hugged Emily and Martin in turn.
                                   <br />
                                   <br />
-                                  "Emily 
-          can't make the bulb turn on!" said Martin.
+                                  "Emily can't make the 
+          bulb turn on!" said Martin.
                                   <br />
                                   <br />
-                                  "Martin said 
-          he knew how, but it didn't work," said Emily.
+                                  "Martin said he knew how, 
+          but it didn't work," said Emily.
                                 </div>
                               </div>
                             </div>
@@ -1507,18 +1495,14 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <br />
                                   "There's 
           nothing wrong with your wire," said Elvira. "But to use it right you 
-          have know how it works. Let's go inside it and see!" She fished in 
-          her purple bag and brought something out.
+          have to know how it works. Let's go inside it and see!" She fished 
+          in her bag and brought something out.
                                   <br />
                                   <br />
-                                  "That looks just 
-          like a magnifying glass," said Martin, "only bigger. And why are 
-          there are all those knobs and buttons on the handle?"
+                                  "That looks just like a 
+          magnifying glass," said Martin, "only bigger. And why are there are 
+          all those knobs and buttons on the handle?"
                                   <br />
-                                  <br />
-                                  <center>
-                                    <img src="http://udl.concord.org/artwork/elect_56/el_56_story_sketches/el_56_copper_wire.png" border="1" />
-                                  </center>
                                   <br />
                                   "It's sort of like a magnifying glass," said Elvira, "but it's a 
           very special one. It can magnify things a lot more than an ordinary 
@@ -1530,6 +1514,11 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           turned the magnifying glass on. It made a faint humming noise and a 
           light on the top glowed green. Elvira put the magnifying glass close 
           to the wire and pushed a button labeled "Zoom."
+                                  <br />
+                                  <br />
+                                  <center>
+                                    <img border="1" src="http://udl.concord.org/artwork/elect_56/el_56_story_sketches/el_56_copper_wire.png" />
+                                  </center>
                                   <br />
                                   <br />
                                   Looking 
@@ -1760,15 +1749,17 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           seconds, so you can see what happens. Watch closely…now!!"
                                   <br />
                                   <br />
-                                  "Oooh!" said Martin. "What's going on?"
-"
+                                  "Oooh!" 
+          said Martin. "What's going on?"
                                   <br />
                                   <br />
-                                  All of a sudden the electrons are rushing down the wire," said Emily.
+                                  "All of a sudden 
+          the electrons are rushing down the wire," said Emily.
                                   <br />
                                   <br />
-                                  "I'm glad the electrons don't hit us," said Martin. "They'd knock us down and 
-          push us down the wire, too! They're like a big wind!"
+                                  "I'm 
+          glad the electrons don't hit us," said Martin. "They'd knock us down 
+          and push us down the wire, too! They're like a big wind!"
                                   <br />
                                   <br />
                                   <center>
@@ -1780,29 +1771,36 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           ends of the battery like that. It wears it out."
                                   <br />
                                   <br />
-                                  As soon as Elvira disconnected the battery the electron wind stopped.
+                                  As soon 
+          as Elvira disconnected the battery the electron wind stopped.
                                   <br />
                                   <br />
-                                  "What do you see now?" asked Elvira.
+                                  "What 
+          do you see now?" asked Elvira.
                                   <br />
                                   <br />
-                                  "The electrons are still moving," said Emily.
+                                  "The electrons are still 
+          moving," said Emily.
                                   <br />
                                   <br />
-                                  "Yes, but now they're moving in all directions, just like before," said 
-          Martin. "Just as many electrons are moving from left to right as 
-          from right to left. There is no current anymore."
+                                  "Yes, but now they're moving in all 
+          directions, just like before," said Martin. "Just as many electrons 
+          are moving from left to right as from right to left. There is no 
+          current anymore."
                                   <br />
                                   <br />
-                                  "Exactly!" said Elvira. "That's because I disconnected the end of the wire 
-          from the battery so there's nowhere for the electrons to go. When 
-          they have nowhere to go they just move in all directions."
+                                  "Exactly!" said Elvira. "That's 
+          because I disconnected the end of the wire from the battery so 
+          there's nowhere for the electrons to go. When they have nowhere to 
+          go they just move in all directions."
                                   <br />
                                   <br />
-                                  "But I still don't see what this has to do with lighting a bulb!" said Martin.
+                                  "But I still don't 
+          see what this has to do with lighting a bulb!" said Martin.
                                   <br />
                                   <br />
-                                  "Patience," said Elvira. "That's next."
+                                  "Patience," 
+          said Elvira. "That's next."
                                 </div>
                               </div>
                             </div>
@@ -1829,48 +1827,57 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           do you see when you look inside the bulb?" she asked.
                                   <br />
                                   <br />
-                                  "You mean without the magnifying glass?" asked Martin.
+                                  "You 
+          mean without the magnifying glass?" asked Martin.
                                   <br />
                                   <br />
-                                  "You don't need the magnifying glass to see this," said Elvira. "Just look 
-          closely.
+                                  "You 
+          don't need the magnifying glass to see this," said Elvira. "Just 
+          look closely."
                                   <br />
                                   <br />
                                   Martin stared at the little bulb.
                                   <br />
                                   <br />
-                                  "There’s a tiny wire in there!" said Martin. "I never noticed that before."
+                                  "There's 
+          a tiny wire in there!" said Martin. "I never noticed that before."
                                   <br />
                                   <br />
-                                  "Big light bulbs have them, too," said Emily. "I don't know why."
+                                  "Big 
+          light bulbs have them, too," said Emily. "I don't know why."
                                   <br />
                                   <br />
-                                  "That little wire is called the filament," said Elvira. "It's what makes the 
-          bulb light. Let's go inside the filament and see what it's made of."
+                                  "That 
+          little wire is called the filament," said Elvira. "It's what makes 
+          the bulb light. Let's go inside the filament and see what it's made 
+          of."
                                   <br />
                                   <br />
-                                  She turned the magnifying glass back on and the filament got bigger and 
-          bigger and closer and closer until Emily and Martin could see the 
-          atoms in it. The atoms in the filament looked like the atoms in the 
-          wire, but there was a difference.
+                                  She turned the magnifying glass back on and the 
+          filament got bigger and bigger and closer and closer until Emily and 
+          Martin could see the atoms in it. The atoms in the filament looked 
+          like the atoms in the wire, but there was a difference.
                                   <br />
                                   <br />
-                                  "These atoms are brown!" said Martin.
+                                  "These 
+          atoms are brown!" said Martin.
                                   <br />
                                   <br />
-                                  "The color isn't real," said Elvira. "The magnifying glass just colors them so 
-          you can see them. But these atoms are different from the copper ones 
-          in the wire. These are tungsten atoms."
+                                  "The color isn't real," 
+          said Elvira. "The magnifying glass just colors them so you can see 
+          them. But these atoms are different from the copper ones in the 
+          wire. These are tungsten atoms."
                                   <br />
                                   <br />
-                                  "What's tungsten?" asked Emily.
+                                  "What's tungsten?" 
+          asked Emily.
                                   <br />
                                   <br />
-                                  "Tungsten is a metal, just like copper," replied Elvira, "only tungsten atoms 
-          are bigger. Tungsten atoms are three times bigger than copper atoms. 
-          But that's not the most important thing about tungsten. See if you 
-          can figure it out. I'm going to show you the electrons. Tell me if 
-          you see anything different."
+                                  "Tungsten is a metal, just like copper," replied 
+          Elvira, "only tungsten atoms are bigger. Tungsten atoms are three 
+          times bigger than copper atoms. But that's not the most important 
+          thing about tungsten. See if you can figure it out. I'm going to 
+          show you the electrons. Tell me if you see anything different."
                                 </div>
                               </div>
                             </div>
@@ -2033,8 +2040,8 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <br />
                                   <br />
                                   Elvira said, "The atoms are getting hot. 
-          Every time an electron collides with an atom it shakes it up a bit. 
-          So that atom jiggles, and that makes the nearby atoms jiggle, and 
+          Every time an electron collides with an atom, it shakes it up a bit. 
+          So that atom jiggles and that makes the nearby atoms jiggle, and 
           pretty soon they're all jiggling like mad! All those atoms moving 
           around like that is what we call heat, and when you heat something 
           up a lot, guess what you get."
@@ -2051,14 +2058,14 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           turned off the magnifying glass and there was a moment of silence as 
           she and the children stared intently at the brightly lit bulb.
                                   <br />
+                                  <b />
+                                  <center>
+                                    <b>The End</b>
+                                  </center>
                                   <br />
                                   <br />
                                   <object refid="86560c04-eb96-11dc-8374-892ff14de9bf" />
                                   <br />
-                                  <br />
-                                  <center>
-                                    <b>The End</b>
-                                  </center>
                                   <br />
                                 </div>
                               </div>
@@ -2120,9 +2127,9 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_4" name="Light it up!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Use a computer model to build a circuit that will light two holiday lights with a battery.">
+                <OTUDLSection local_id="section_4" name="Light it up!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Use a computer model to build a circuit that will light two holiday lights with a battery." goals="">
                   <content>
-                    <OTCardContainer id="446a8a00-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
+                    <OTCardContainer id="446a8a00-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                       <cards>
                         <OTUDLCompoundDoc id="446a89ff-7764-11dc-bcdb-d9cc05265d45" name="%446a89ff-7764-11dc-bcdb-d9cc05265d45" showDefinitions="true">
                           <bodyText>
@@ -2190,15 +2197,17 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                         Imagine that you have one holiday light and a battery. How 
                 would you connect them to light up the bulb?
                                         <br />
-                                        Use the 
-                drawing tool to make a circuit. You can use the battery stamp
+                                        <br />
+                                        Use the drawing tool to make a circuit. You can use the battery stamp
                                         <img src="http://udl.concord.org/artwork/elect_56/battery_stamp/el_56_battery_stamp.jpg" />
                                         and the light stamp
                                         <img src="http://udl.concord.org/artwork/elect_56/bulb_stamp/el_56_bulb_stamp.jpg" />
                                         .
                                         <br />
                                         <br />
-                                        Take a snapshot when you think your circuit will work.
+                                        <br />
+                                        Take a snapshot when you think your circuit will work. This snapshot will be 
+                saved in your lab book.
                                       </td>
                                       <td width="70%">
                                         <object refid="e45fd243-0cbd-11dd-ba51-73b9885a4502" />
@@ -2240,7 +2249,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                             </div>
                           </bodyText>
                           <coachStatements>
-                            <OTUDLCoachStatement>
+                            <OTUDLCoachStatement timesClicked="1">
                               <coach>
                                 <object refid="${character_affective}" />
                               </coach>
@@ -2252,11 +2261,12 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                         <div class="body">Have you ever used a computer model to build something?</div>
                                       </div>
                                     </div>
+                                    <img src="http://udl.concord.org/share/shared-images/blah-anim.gif" height="150" width="200" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                               </statement>
                             </OTUDLCoachStatement>
-                            <OTUDLCoachStatement>
+                            <OTUDLCoachStatement timesClicked="1">
                               <coach>
                                 <object refid="${character_strategic}" />
                               </coach>
@@ -2268,11 +2278,12 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                         <div class="body">You will use a computer model to focus on the different parts needed to make a bulb light up.</div>
                                       </div>
                                     </div>
+                                    <img src="http://udl.concord.org/share/shared-images/clunk-anim.gif" height="150" width="200" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                               </statement>
                             </OTUDLCoachStatement>
-                            <OTUDLCoachStatement>
+                            <OTUDLCoachStatement timesClicked="1">
                               <coach>
                                 <object refid="${character_recognition}" />
                               </coach>
@@ -2284,6 +2295,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                         <div class="body">By using a model of electrical equipment, you can experiment safely.  Think about each part and the way you connect them.</div>
                                       </div>
                                     </div>
+                                    <img src="http://udl.concord.org/share/shared-images/roxy-anim.gif" height="150" width="200" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                               </statement>
@@ -2308,12 +2320,13 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        Drag two wires, a battery, and a light bulb into the blue workspace.
+                                        You will be able to drag two wires, a battery, and a light 
+                bulb into the blue workspace.
                                         <br />
                                         <br />
                                       </td>
                                       <td style="padding-left: 20px; padding-right: 20px">
-                                        <img src="http://udl.concord.org/artwork/elect_56/cck_parts/el_56_cck_parts.jpg" border="1" />
+                                        <img border="1" src="http://udl.concord.org/artwork/elect_56/cck_parts/el_56_cck_parts.jpg" />
                                       </td>
                                     </tr>
                                   </table>
@@ -2340,12 +2353,12 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        You can connect the pieces any way you want. Drag the ends 
-                (junctions) together to connect them.
+                                        You can connect the pieces any way you want. You will be able 
+                to drag the ends (junctions) together to connect them.
                                         <br />
                                         <br />
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-left: 20px; padding-right: 20px">
                                         <img border="1" src="http://udl.concord.org/artwork/elect_56/cck_dragjunction/el_56_cck_dragjunction.jpg" />
                                         <br />
                                       </td>
@@ -2354,12 +2367,12 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        You can disconnect the junctions by right-clicking on the 
-                junction and choosing "split junction."
+                                        You will be able to disconnect the junctions by right-clicking 
+                on the junction and choosing "split junction."
                                         <br />
                                         <br />
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-left: 20px; padding-right: 20px">
                                         <img border="1" src="http://udl.concord.org/artwork/elect_56/cck_splitjunction/el_56_cck_splitjunction.jpg" />
                                       </td>
                                     </tr>
@@ -2392,17 +2405,17 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="ebcd1035-695e-11dd-8898-75b355af20c1" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="718224ff-d659-11dc-b640-654f33185332" />
                                       </td>
                                       <td width="60%">
                                         <object refid="${cckmodel_1}" />
                                         <br />
-                                        <div class="credit">
-                                          This model was created using a
-                                          <a href="http://phet.colorado.edu">PhET</a>
-                                          model.
-                                        </div>
+                                        <div class="credit">This model was created using a
+                                          PhET
+                                          model.</div>
                                         <br />
-                                        <object refid="718224ff-d659-11dc-b640-654f33185332" />
                                       </td>
                                     </tr>
                                   </table>
@@ -2443,25 +2456,80 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <object refid="ebce21a6-695e-11dd-8898-75b355af20c1" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="ebcd1035-695e-11dd-8898-75b355af20c1" showBorder="false">
                               <cardContainer>
                                 <object refid="ebcd1034-695e-11dd-8898-75b355af20c1" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <OTCCKModel local_id="cckmodel_1" showMenus="false">
+                            <OTLabbookButton id="718224ff-d659-11dc-b640-654f33185332" name="Snapshot button">
+                              <target>
+                                <object refid="${cckmodel_1}" />
+                              </target>
+                            </OTLabbookButton>
+                            <OTCCKModel local_id="cckmodel_1" showMenus="false" showElectrons="true">
                               <savedCircuit>
                                 <circuit>
                                   <multimeter x="3.0" y="3.0" />
                                 </circuit>
                               </savedCircuit>
                             </OTCCKModel>
-                            <OTLabbookButton id="718224ff-d659-11dc-b640-654f33185332" name="Snapshot button">
-                              <target>
-                                <object refid="${cckmodel_1}" />
-                              </target>
-                            </OTLabbookButton>
                           </documentRefs>
+                          <coachStatements>
+                            <OTUDLCoachStatement timesClicked="2">
+                              <coach>
+                                <object refid="${character_affective}" />
+                              </coach>
+                              <statement>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>
+                                    <div class="buffer">
+                                      <div class="border">
+                                        <div class="body">This sounds like a fun challenge!</div>
+                                      </div>
+                                    </div>
+                                    <img src="http://udl.concord.org/share/shared-images/blah-anim.gif" height="150" width="200" />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                              </statement>
+                            </OTUDLCoachStatement>
+                            <OTUDLCoachStatement timesClicked="2">
+                              <coach>
+                                <object refid="${character_strategic}" />
+                              </coach>
+                              <statement>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>
+                                    <div class="buffer">
+                                      <div class="border">
+                                        <div class="body">You need to make a circuit that lights the bulb with the battery.</div>
+                                      </div>
+                                    </div>
+                                    <img src="http://udl.concord.org/share/shared-images/clunk-anim.gif" height="150" width="200" />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                              </statement>
+                            </OTUDLCoachStatement>
+                            <OTUDLCoachStatement timesClicked="3">
+                              <coach>
+                                <object refid="${character_recognition}" />
+                              </coach>
+                              <statement>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>
+                                    <div class="buffer">
+                                      <div class="border">
+                                        <div class="body">With the model, you can easily try many combinations of bulb, wires, 
+          and battery. Pay attention to what you change each time until you 
+          succeed!</div>
+                                      </div>
+                                    </div>
+                                    <img width="200" src="http://udl.concord.org/share/shared-images/roxy-anim.gif" height="150" />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                              </statement>
+                            </OTUDLCoachStatement>
+                          </coachStatements>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%68492f3f-9e93-11dc-917a-010dbc42e73e" showDefinitions="true">
                           <bodyText>
@@ -2486,17 +2554,17 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="43c079ad-695f-11dd-8898-75b355af20c1" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="a4b7e29b-d659-11dc-b640-654f33185332" />
                                       </td>
                                       <td width="60%">
                                         <object refid="${cckmodel_1}" />
                                         <br />
-                                        <div class="credit">
-                                          This model was created using a
-                                          <a href="http://phet.colorado.edu">PhET</a>
-                                          model.
-                                        </div>
+                                        <div class="credit">This model was created using a
+                                         PhET
+                                          model.</div>
                                         <br />
-                                        <object refid="a4b7e29b-d659-11dc-b640-654f33185332" />
                                       </td>
                                     </tr>
                                   </table>
@@ -2568,19 +2636,72 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <object refid="43c0a0be-695f-11dd-8898-75b355af20c1" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="43c079ad-695f-11dd-8898-75b355af20c1" showBorder="false">
                               <cardContainer>
                                 <object refid="43c079ac-695f-11dd-8898-75b355af20c1" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <object refid="${cckmodel_1}" />
                             <OTLabbookButton id="a4b7e29b-d659-11dc-b640-654f33185332" name="Snapshot button">
                               <target>
                                 <object refid="${cckmodel_1}" />
                               </target>
                             </OTLabbookButton>
+                            <object refid="${cckmodel_1}" />
                           </documentRefs>
+                          <coachStatements>
+                            <OTUDLCoachStatement timesClicked="4">
+                              <coach>
+                                <object refid="${character_affective}" />
+                              </coach>
+                              <statement>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>
+                                    <div class="buffer">
+                                      <div class="border">
+                                        <div class="body">Try another challenge to learn more about circuits.</div>
+                                      </div>
+                                    </div>
+                                    <img width="200" src="http://udl.concord.org/share/shared-images/blah-anim.gif" height="150" />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                              </statement>
+                            </OTUDLCoachStatement>
+                            <OTUDLCoachStatement timesClicked="3">
+                              <coach>
+                                <object refid="${character_recognition}" />
+                              </coach>
+                              <statement>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>
+                                    <div class="buffer">
+                                      <div class="border">
+                                        <div class="body">What do you notice? Did you try the same steps as before?</div>
+                                      </div>
+                                    </div>
+                                    <img width="200" src="http://udl.concord.org/share/shared-images/roxy-anim.gif" height="150" />
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                              </statement>
+                            </OTUDLCoachStatement>
+                            <OTUDLCoachStatement>
+                              <coach>
+                                <object refid="${character_strategic}" />
+                              </coach>
+                              <statement>
+                                <OTUDLCompoundDoc>
+                                  <bodyText>
+                                    <div class="buffer">
+                                      <div class="border">
+                                        <div class="body">Use the same strateg as before with two bulbs. Or try a different 
+          strategy.</div>
+                                      </div>
+                                    </div>
+                                  </bodyText>
+                                </OTUDLCompoundDoc>
+                              </statement>
+                            </OTUDLCoachStatement>
+                          </coachStatements>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%7d831467-783e-11dc-8198-071803989bd6" showDefinitions="true">
                           <bodyText>
@@ -2603,15 +2724,14 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                         There are two ways to connect light bulbs in a circuit.
                                         <br />
                                         <br />
-                                        1.
-                                        <b>In series</b>
-                                        means "one after the other." Here is a 
-                diagram of light bulbs in series. Notice how the charges flow 
-                through
-                                        <b>first one, and then the other bulb, along the same 
-                path.</b>
+                                        <b>In 
+                series</b>
+                                        means "one after the other." Here is a diagram of 
+                light bulbs in series. Notice how the charges flow through
+                                        <b>first 
+                one, and then the other bulb, along the same path.</b>
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-left: 20px; padding-right: 20px">
                                         <img border="1" src="http://udl.concord.org/artwork/elect_56/cck_series_circuit/el_56_cck_series_circuit.jpg" />
                                       </td>
                                     </tr>
@@ -2620,14 +2740,13 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        2.
                                         <b>In parallel</b>
-                                        means "side by side." Here is a diagram 
-                of light bulbs in parallel. Notice how the charges can flow
+                                        means "side by side." Here is a diagram of 
+                light bulbs in parallel. Notice how the charges can flow
                                         <b>through 
                 each bulb along a separate path.</b>
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-left: 20px; padding-right: 20px">
                                         <img border="1" src="http://udl.concord.org/artwork/elect_56/cck_parallel_circuit/el_56_cck_parallel_circuit.jpg" />
                                       </td>
                                     </tr>
@@ -2636,34 +2755,6 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                               </div>
                             </div>
                           </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="e66a1b0d-8008-11dd-a9b6-8330e0286144" name="%e66a1b0d-8008-11dd-a9b6-8330e0286144" showEditBar="true" showDefinitions="true">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <table width="100%">
-                                    <tr>
-                                      <td>
-                                        <div class="subtitle" />
-                                      </td>
-                                      <td align="right">
-                                        <div class="page-number">9</div>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  Open your snapshot album
-                                  <img src="http://udl.concord.org/artwork/general/album/gen_album.png" />
-                                  and choose a snapshot of the the two-bulb circuit that you made.
-                                  <br />
-                                  <object refid="93fe5ffb-d663-11dc-b640-654f33185332" />
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                          <documentRefs>
-                            <object refid="93fe5ffb-d663-11dc-b640-654f33185332" />
-                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="e9890e4e-8008-11dd-a9b6-8330e0286144" name="%e9890e4e-8008-11dd-a9b6-8330e0286144" showEditBar="true" showDefinitions="true">
                           <bodyText>
@@ -2680,6 +2771,10 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                       </td>
                                     </tr>
                                   </table>
+                                  Open your lab book and choose a snapshot of the the two-bulb circuit 
+          that you made.
+                                  <br />
+                                  <br />
                                   <object refid="d0d569ff-c396-11dc-95e4-1d6a94c19f00" />
                                   <object refid="b7f1f914-c92a-11dc-87c4-c7ab5b50b47a" />
                                 </div>
@@ -2791,6 +2886,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                             <object refid="d5f662b0-c9c0-11dc-8839-0be1cfce22b0" />
                                           </stamp>
                                         </OTDrawingImageIcon>
+                                        <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                       </graphables>
                                     </OTDrawingTool>
                                   </input>
@@ -2871,17 +2967,16 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="862a9e0d-6976-11dd-bc12-65cd3b55df5e" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="c6b80929-d666-11dc-b640-654f33185332" />
                                       </td>
                                       <td width="60%">
                                         <object refid="${cckmodel_2}" />
                                         <br />
-                                        <div class="credit">
-                                          This model was created using a
-                                          <a href="http://phet.colorado.edu">PhET</a>
-                                          model.
-                                        </div>
-                                        <br />
-                                        <object refid="c6b80929-d666-11dc-b640-654f33185332" />
+                                        <div class="credit">This model was created using a
+                                     PhET
+                                          model.</div>
                                       </td>
                                     </tr>
                                   </table>
@@ -2902,9 +2997,12 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                     battery in each 
     circuit.
                                     <br />
+                                    <br />
                                     Make one a
                                     <b>parallel</b>
-                                    circuit. Make the other a
+                                    circuit.
+                                    <br />
+                                    Make the other a
                                     <b>series</b>
                                     circuit.
                                   </bodyText>
@@ -2926,12 +3024,17 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <object refid="862ac51e-6976-11dd-bc12-65cd3b55df5e" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="862a9e0d-6976-11dd-bc12-65cd3b55df5e" showBorder="false">
                               <cardContainer>
                                 <object refid="862a9e0c-6976-11dd-bc12-65cd3b55df5e" />
                               </cardContainer>
                             </OTUDLMenu>
+                            <OTLabbookButton id="c6b80929-d666-11dc-b640-654f33185332" name="Snapshot button">
+                              <target>
+                                <object refid="${cckmodel_2}" />
+                              </target>
+                            </OTLabbookButton>
                             <OTCCKModel local_id="cckmodel_2" showMenus="false">
                               <savedCircuit>
                                 <circuit>
@@ -2939,11 +3042,6 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 </circuit>
                               </savedCircuit>
                             </OTCCKModel>
-                            <OTLabbookButton id="c6b80929-d666-11dc-b640-654f33185332" name="Snapshot button">
-                              <target>
-                                <object refid="${cckmodel_2}" />
-                              </target>
-                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%3cb1301f-783f-11dc-8198-071803989bd6" showDefinitions="true">
@@ -3065,7 +3163,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   </input>
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
-                                      <bodyText>Try add your thoughts to the correct answer above.</bodyText>
+                                      <bodyText>Try adding your thoughts to the correct answer above.</bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
                                 </OTUDLQuestion>
@@ -3088,7 +3186,16 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                       </td>
                                     </tr>
                                   </table>
-                                  <object refid="3ad396be-8a43-11dd-8974-7d5f2fa8c9f9" />
+                                  <table width="100%">
+                                    <tr>
+                                      <td width="50%">
+                                        <object refid="3ad396be-8a43-11dd-8974-7d5f2fa8c9f9" />
+                                      </td>
+                                      <td width="50%" style="padding-left: 20px; padding-right: 20px">
+                                        <img border="1" src="http://udl.concord.org/artwork/elect_56/cck_parts/el_56_cck_parts.jpg" />
+                                      </td>
+                                    </tr>
+                                  </table>
                                   <br />
                                   <br />
                                   Congratulations! You have completed this activity.
@@ -3298,7 +3405,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="d293efc8-697a-11dd-bc12-65cd3b55df5e" />
                                   <br />
-                                  <object refid="d293efc9-697a-11dd-bc12-65cd3b55df5e" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="d293efc9-697a-11dd-bc12-65cd3b55df5e" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -3481,7 +3588,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="d58aa56f-697b-11dd-bc12-65cd3b55df5e" />
                                   <br />
-                                  <object refid="d58aa570-697b-11dd-bc12-65cd3b55df5e" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="d58aa570-697b-11dd-bc12-65cd3b55df5e" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -3492,10 +3599,18 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                             <OTCardContainer id="9f0e04bd-697c-11dd-bc12-65cd3b55df5e" loadViewOnlyOnDemand="true" closeViewOnExit="true">
                               <cards>
                                 <OTUDLCompoundDoc id="9f0e2bcf-697c-11dd-bc12-65cd3b55df5e">
-                                  <bodyText>Now try the model by clicking on the go/stop button.</bodyText>
+                                  <bodyText>
+                                    Now try the model by clicking the
+                                    <b>go/stop</b>
+                                    button.
+                                  </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="aeffe5b0-697c-11dd-bc12-65cd3b55df5e" name="%aeffe5b0-697c-11dd-bc12-65cd3b55df5e" showEditBar="true">
-                                  <bodyText>Watch the path of one electron, using the 'watch one electron' button.</bodyText>
+                                  <bodyText>
+                                    Watch the path of one electron, using the
+                                    <b>watch one electron</b>
+                                    button.
+                                  </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="d7461bcb-697c-11dd-bc12-65cd3b55df5e" name="%d7461bcb-697c-11dd-bc12-65cd3b55df5e" showEditBar="true">
                                   <documentRefs>
@@ -3528,18 +3643,18 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <object refid="9f0e2bcf-697c-11dd-bc12-65cd3b55df5e" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="9f0e2bce-697c-11dd-bc12-65cd3b55df5e" showBorder="false">
                               <cardContainer>
                                 <object refid="9f0e04bd-697c-11dd-bc12-65cd3b55df5e" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <OTNLogoModel id="63896576-c39e-11dc-8809-0d8ae29217e7" name="NetLogo model" authoredDataURL="http://udl.concord.org/share/models/netlogo/Resistance-watch3.nlogo" />
                             <OTLabbookButton id="a4eeb3b1-fc37-11dc-a738-1f42f753985b" name="Snapshot button">
                               <target>
                                 <object refid="63896576-c39e-11dc-8809-0d8ae29217e7" />
                               </target>
                             </OTLabbookButton>
+                            <OTNLogoModel id="63896576-c39e-11dc-8809-0d8ae29217e7" name="NetLogo model" authoredDataURL="http://udl.concord.org/share/models/netlogo/Resistance-watch3.nlogo" />
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -3563,18 +3678,20 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="9f0e2bce-697c-11dd-bc12-65cd3b55df5e" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="a4eeb3b1-fc37-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="70%">
                                         <object refid="63896576-c39e-11dc-8809-0d8ae29217e7" />
                                         <br />
                                         <div class="credit">
                                           This model was created using
-                                          <a href="http://ccl.northwestern.edu/netlogo/">NetLogo.</a>
+Netlogo. 
                                           Go
                                           <a href="  http://ccl.northwestern.edu/netlogo/models/community/Wire-resistance ">here</a>
                                           to explore the model on your own.
                                         </div>
-                                        <object refid="a4eeb3b1-fc37-11dc-a738-1f42f753985b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -3636,7 +3753,8 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <bodyText>Circle the hottest atom you can find.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc name="%1e947d87-6f8e-11dd-a8b8-61a80512e97a" showEditBar="true">
-                                  <bodyText>Take a snapshot of your drawing.</bodyText>
+                                  <bodyText>Take a snapshot of your drawing. This snapshot will be saved in your lab 
+    book.</bodyText>
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
@@ -3709,29 +3827,25 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="30%">
-                                        Now test the effect of the voltage, which is how much force is 
-                pulling the electrons toward the positive (right-hand) end.
-                                        <br />
-                                        <br />
-                                        <div style="padding-right: 2px; margin-top: 5px; border-style: solid; padding-left: 2px; border-color: black; margin-bottom: 5px; border-left-width: 1px; margin-left: 5px; border-right-width: 1px; padding-bottom: 2px; border-top-width: 1px; padding-top: 2px; margin-right: 5px; border-bottom-width: 1px">
+                                      <td width="30%" valign="top">
+                                        <div style="border-bottom-width: 1px; margin-left: 5px; padding-top: 2px; padding-bottom: 2px; border-top-width: 1px; margin-top: 5px; margin-bottom: 5px; border-style: solid; border-right-width: 1px; padding-left: 2px; padding-right: 2px; border-left-width: 1px; margin-right: 5px; border-color: black">
                                           <object refid="952681fb-697d-11dd-bc12-65cd3b55df5e" />
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="9526a90c-697d-11dd-bc12-65cd3b55df5e" />
                                         </div>
                                         <object refid="348d5d88-2cc2-11dd-8ac4-0dbeba0ac161" />
+                                        <br />
+                                        <br />
+                                        <object refid="d1044157-fc37-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="70%">
                                         <object refid="e7ffe01f-c3a8-11dc-b880-1731be4b43c9" />
                                         <br />
                                         <div class="credit">
-                                          This model was created using
-                                          <a href="http://ccl.northwestern.edu/netlogo/">NetLogo.</a>
-                                          Go
+                                          This model was created using Netlogo. Go
                                           <a href="  http://ccl.northwestern.edu/netlogo/models/community/Wire-resistance ">here</a>
                                           to explore the model on your own.
                                         </div>
-                                        <object refid="d1044157-fc37-11dc-a738-1f42f753985b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -3744,6 +3858,10 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                           <documentRefs>
                             <OTCardContainer id="952681fb-697d-11dd-bc12-65cd3b55df5e">
                               <cards>
+                                <OTUDLCompoundDoc id="d8fa7dce-8f16-11dd-a768-b32e02af5d3b" name="%d8fa7dce-8f16-11dd-a768-b32e02af5d3b" showEditBar="true">
+                                  <bodyText>Now test the effect of the voltage, which is how much force is pulling the 
+    electrons toward the positive (right-hand) end.</bodyText>
+                                </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="9df7214e-697d-11dd-bc12-65cd3b55df5e" name="%9df7214e-697d-11dd-bc12-65cd3b55df5e" showEditBar="true">
                                   <bodyText>Run the model. Note the atom temperature shown in the graph.</bodyText>
                                 </OTUDLCompoundDoc>
@@ -3752,7 +3870,11 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                     <OTUDLQuestion id="c527c8b7-697d-11dd-bc12-65cd3b55df5e" name="Question" showConvertButton="true">
                                       <prompt>
                                         <OTCompoundDoc>
-                                          <bodyText>Increase the voltage by moving the 'voltage' slider.  What happens to the temperature?</bodyText>
+                                          <bodyText>
+                                            Increase the voltage by moving the
+                                            <b>voltage</b>
+                                            slider.  What happens to the temperature?
+                                          </bodyText>
                                         </OTCompoundDoc>
                                       </prompt>
                                       <input>
@@ -3761,8 +3883,6 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                     </OTUDLQuestion>
                                   </documentRefs>
                                   <bodyText>
-                                    <br />
-                                    <br />
                                     <object refid="c527c8b7-697d-11dd-bc12-65cd3b55df5e" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
@@ -3789,10 +3909,10 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
-                                <object refid="9df7214e-697d-11dd-bc12-65cd3b55df5e" />
+                                <object refid="d8fa7dce-8f16-11dd-a768-b32e02af5d3b" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="9526a90c-697d-11dd-bc12-65cd3b55df5e" showBorder="false">
                               <cardContainer>
                                 <object refid="952681fb-697d-11dd-bc12-65cd3b55df5e" />
@@ -3803,12 +3923,12 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <OTText text="Or watch this movie showing how to change the voltage.-- optional" />
                               </note>
                             </OTAuthorNote>
-                            <OTNLogoModel id="e7ffe01f-c3a8-11dc-b880-1731be4b43c9" name="NetLogo model" authoredDataURL="http://udl.concord.org/share/models/netlogo/Resistance-watch3.nlogo" />
                             <OTLabbookButton id="d1044157-fc37-11dc-a738-1f42f753985b" name="Snapshot button">
                               <target>
                                 <object refid="e7ffe01f-c3a8-11dc-b880-1731be4b43c9" />
                               </target>
                             </OTLabbookButton>
+                            <OTNLogoModel id="e7ffe01f-c3a8-11dc-b880-1731be4b43c9" name="NetLogo model" authoredDataURL="http://udl.concord.org/share/models/netlogo/Resistance-watch3.nlogo" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%9b48f619-b97e-11dc-b3b1-8da1b73c8c8a" showDefinitions="true">
@@ -3926,18 +4046,20 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="86638ec3-697e-11dd-bc12-65cd3b55df5e" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="cd34632f-1955-11dd-8055-e3975967b10e" />
                                       </td>
                                       <td width="70%">
                                         <object refid="33b91915-c3a9-11dc-b880-1731be4b43c9" />
                                         <br />
                                         <div class="credit">
                                           This model was created using
-                                          <a href="http://ccl.northwestern.edu/netlogo/">NetLogo.</a>
+NetLogo. 
                                           Go
                                           <a href="  http://ccl.northwestern.edu/netlogo/models/community/Wire-resistance ">here</a>
                                           to explore the model on your own.
                                         </div>
-                                        <object refid="cd34632f-1955-11dd-8055-e3975967b10e" />
                                       </td>
                                     </tr>
                                   </table>
@@ -3949,10 +4071,13 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                             <OTCardContainer id="86638ec2-697e-11dd-bc12-65cd3b55df5e">
                               <cards>
                                 <OTUDLCompoundDoc id="8663b5d4-697e-11dd-bc12-65cd3b55df5e">
-                                  <bodyText>Resistance is how much a material slows down the passage of electrons. 
-    Here is the same model, but there is a new slider called 
-    'collision-chance'. It is set to 0. Instead of bouncing off the atoms, the 
-    electrons go right past them. The wire has a low electrical resistance.</bodyText>
+                                  <bodyText>
+                                    Resistance is how much a material slows down the passage of electrons. 
+    Here is the same model, but there is a new slider called
+                                    <b>collision-chance</b>
+                                    . It is set to 0. Instead of bouncing off the atoms, the 
+    electrons go right past them. The wire has a low electrical resistance.
+                                  </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="a35a264e-697f-11dd-8cfc-6b93069291bb" name="%a35a264e-697f-11dd-8cfc-6b93069291bb" showEditBar="true">
                                   <bodyText>Run the model and watch the graph. Start with zero voltage and increase 
@@ -4030,18 +4155,18 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <object refid="8663b5d4-697e-11dd-bc12-65cd3b55df5e" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="86638ec3-697e-11dd-bc12-65cd3b55df5e" showBorder="false">
                               <cardContainer>
                                 <object refid="86638ec2-697e-11dd-bc12-65cd3b55df5e" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <OTNLogoModel id="33b91915-c3a9-11dc-b880-1731be4b43c9" name="NetLogo model" authoredDataURL="http://udl.concord.org/share/models/netlogo/resistance-no-collision-3.nlogo" />
                             <OTLabbookButton id="cd34632f-1955-11dd-8055-e3975967b10e" name="Snapshot button">
                               <target>
                                 <object refid="33b91915-c3a9-11dc-b880-1731be4b43c9" />
                               </target>
                             </OTLabbookButton>
+                            <OTNLogoModel id="33b91915-c3a9-11dc-b880-1731be4b43c9" name="NetLogo model" authoredDataURL="http://udl.concord.org/share/models/netlogo/resistance-no-collision-3.nlogo" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%ea29c2b9-b980-11dc-b3b1-8da1b73c8c8a" showDefinitions="true">
@@ -4068,11 +4193,13 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="47313360-6980-11dd-8cfc-6b93069291bb" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="2f25e42b-fc39-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="60%" style="padding-right: 20px; padding-left: 20px">
                                         <object refid="4398a8ed-b981-11dc-b3b1-8da1b73c8c8a" />
                                         <br />
-                                        <object refid="2f25e42b-fc39-11dc-a738-1f42f753985b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -4087,8 +4214,8 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                               <cards>
                                 <OTUDLCompoundDoc id="5a632427-6980-11dd-8cfc-6b93069291bb" name="%5a632427-6980-11dd-8cfc-6b93069291bb" showEditBar="true">
                                   <bodyText>Draw your own picture of what it looks like inside a wire that is being 
-    heated up by electricity. You can use the electron stamp and the two atoms 
-    stamps -- black for cold and red for hot.</bodyText>
+    heated up by electricity. You can use the electron stamp (blue) and the 
+    two atoms stamps -- black for cold and red for hot.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc name="%6a0a99f1-800e-11dd-822d-0342ded114f3" showEditBar="true">
                                   <bodyText>Take a snapshot of your drawing.</bodyText>
@@ -4110,20 +4237,22 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                     <object refid="140f2a32-b981-11dc-b3b1-8da1b73c8c8a" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc id="5efde1f8-6980-11dd-8cfc-6b93069291bb" name="%5efde1f8-6980-11dd-8cfc-6b93069291bb" showEditBar="true">
-                                  <bodyText>Congratulations! You have completed this activity.</bodyText>
-                                </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
                                 <object refid="5a632427-6980-11dd-8cfc-6b93069291bb" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="47313360-6980-11dd-8cfc-6b93069291bb" showBorder="false">
                               <cardContainer>
                                 <object refid="4731335f-6980-11dd-8cfc-6b93069291bb" />
                               </cardContainer>
                             </OTUDLMenu>
+                            <OTLabbookButton id="2f25e42b-fc39-11dc-a738-1f42f753985b" name="Snapshot button">
+                              <target>
+                                <object refid="4398a8ed-b981-11dc-b3b1-8da1b73c8c8a" />
+                              </target>
+                            </OTLabbookButton>
                             <OTDrawingTool2 id="4398a8ed-b981-11dc-b3b1-8da1b73c8c8a" name="Draw tool">
                               <stamps>
                                 <OTDrawingStamp src="http://udl.concord.org/artwork/elect_56/atom_stamp/el_56_atom_stamp_red.jpg" imageURL="http://udl.concord.org/artwork/elect_56/atom_stamp/el_56_atom_stamp_red.jpg" />
@@ -4203,11 +4332,6 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                               </graphables>
                             </OTDrawingTool2>
-                            <OTLabbookButton id="2f25e42b-fc39-11dc-a738-1f42f753985b" name="Snapshot button">
-                              <target>
-                                <object refid="4398a8ed-b981-11dc-b3b1-8da1b73c8c8a" />
-                              </target>
-                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="dbc2ee8c-8a43-11dd-8974-7d5f2fa8c9f9" name="%dbc2ee8c-8a43-11dd-8974-7d5f2fa8c9f9" showEditBar="true" showDefinitions="true">
@@ -4240,6 +4364,8 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                   <br />
                                   <object refid="80aaf701-8a44-11dd-8974-7d5f2fa8c9f9" />
                                   <br />
+                                  <br />
+                                  Congratulations! You have completed this activity.
                                 </div>
                               </div>
                             </div>
@@ -4333,7 +4459,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                     <object refid="${nav-bar}" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_6" name="Light and heat" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description=" Measure the temperature of a holiday light.">
+                <OTUDLSection local_id="section_6" name="Light and heat" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false" description="Measure the temperature of a holiday light." goals="">
                   <content>
                     <OTCardContainer id="4cb57e9c-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="false">
                       <cards>
@@ -4512,14 +4638,14 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                               <input>
                                 <OTChoice name="Multiple choice" alignContent="0">
                                   <choices>
-                                    <OTCompoundDoc name="they would be the same">
-                                      <bodyText>they would be the same</bodyText>
+                                    <OTCompoundDoc name="they would be the same.">
+                                      <bodyText>they would be the same.</bodyText>
                                     </OTCompoundDoc>
-                                    <OTCompoundDoc name="the energy produced would be greater">
-                                      <bodyText>the energy produced would be greater</bodyText>
+                                    <OTCompoundDoc name="the energy produced would be greater.">
+                                      <bodyText>the energy produced would be greater.</bodyText>
                                     </OTCompoundDoc>
-                                    <OTCompoundDoc name="the energy produced would be less">
-                                      <bodyText>the energy produced would be less</bodyText>
+                                    <OTCompoundDoc name="the energy produced would be less.">
+                                      <bodyText>the energy produced would be less.</bodyText>
                                     </OTCompoundDoc>
                                   </choices>
                                 </OTChoice>
@@ -4591,6 +4717,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           light bulb, but measuring the temperature will give you some sense 
           of how much heat is being produced. You can observe how fast the 
           bulb heats up.
+                                  <br />
                                   <table width="100%">
                                     <tr>
                                       <td>
@@ -4673,7 +4800,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                                             <OTText />
                                             <OTScriptButton id="d4d3d171-7932-11dd-8a69-b72e2de401e3" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -5202,7 +5329,7 @@ end</script>
                                           <bodyText>
                                             What was the
                                             <b>change</b>
-                                            in temperature of the bulb while it was connected?
+                                            in temperature of the bulb while it was connected (in deg C)?
                                           </bodyText>
                                         </OTCompoundDoc>
                                       </prompt>
@@ -6199,11 +6326,13 @@ end</script>
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="e741b15f-69fc-11dd-86fd-713784046a7a" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="2b28e2c6-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="60%" style="padding-right: 20px; padding-left: 20px">
                                         <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                                         <br />
-                                        <object refid="2b28e2c6-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -6216,7 +6345,7 @@ end</script>
                               <cards>
                                 <OTUDLCompoundDoc id="e741d870-69fc-11dd-86fd-713784046a7a">
                                   <bodyText>
-                                    1. Attach the temperature sensor to the computer. Click on the magnifying 
+                                    Attach the temperature sensor to the computer. Click on the magnifying 
     glass
                                     <a href="http://udl.concord.org/artwork/technical_hints/tech-hint-temperature.html">
                                       <img src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" border="0" />
@@ -6236,11 +6365,11 @@ end</script>
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="06f3dbf2-69fd-11dd-86fd-713784046a7a" name="%06f3dbf2-69fd-11dd-86fd-713784046a7a" showEditBar="true">
-                                  <bodyText>2. Start recording temperature. Let it run for ten seconds.</bodyText>
+                                  <bodyText>Start recording temperature. Let it run for ten seconds.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="19330843-69fd-11dd-86fd-713784046a7a" name="%19330843-69fd-11dd-86fd-713784046a7a" showEditBar="true">
                                   <bodyText>
-                                    3. After exactly ten seconds, hold the two leads from the holiday light 
+                                    After exactly ten seconds, hold the two leads from the holiday light 
     against the two ends of the battery.
                                     <br />
                                     <br />
@@ -6249,30 +6378,30 @@ end</script>
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="4dea5cf4-69fd-11dd-86fd-713784046a7a" name="%4dea5cf4-69fd-11dd-86fd-713784046a7a" showEditBar="true">
-                                  <bodyText>4. Watch the temperature plot. Let it run for 30 seconds, then disconnect 
+                                  <bodyText>Watch the temperature plot. Let it run for 30 seconds, then disconnect 
     leads from the battery and let it run for another 30 seconds. Stop 
     recording the data.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc name="%5ff5a6c4-6d62-11dd-b85b-496ae4e138ca" showEditBar="true">
-                                  <bodyText>5. Take a snapshot of your data.</bodyText>
+                                  <bodyText>Take a snapshot of your data. This snapshot will be saved in your lab book.</bodyText>
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
                                 <object refid="e741d870-69fc-11dd-86fd-713784046a7a" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="e741b15f-69fc-11dd-86fd-713784046a7a" showBorder="false">
                               <cardContainer>
                                 <object refid="e741b15e-69fc-11dd-86fd-713784046a7a" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                             <OTLabbookButton id="2b28e2c6-fc38-11dc-a738-1f42f753985b" name="Snapshot button">
                               <target>
                                 <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                               </target>
                             </OTLabbookButton>
+                            <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%717bba38-8d7b-11dc-92de-d3015639f7a6" showDefinitions="true">
@@ -6295,11 +6424,13 @@ end</script>
                                       <td width="40%" valign="top">
                                         <br />
                                         <object refid="1b92d527-69fe-11dd-86fd-713784046a7a" />
+                                        <br />
+                                        <br />
+                                        <object refid="31e12973-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="60%" style="padding-right: 20px; padding-left: 20px">
                                         <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                                         <br />
-                                        <object refid="31e12973-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -6313,15 +6444,16 @@ end</script>
                                 <OTCardContainer id="1b92fc38-69fe-11dd-86fd-713784046a7a">
                                   <cards>
                                     <OTUDLCompoundDoc id="1b92fc3a-69fe-11dd-86fd-713784046a7a">
-                                      <bodyText>6. Expand the graph so that you can see how much the temperature rose 
-    while the battery was attached and how much it decreased after you stopped.</bodyText>
+                                      <bodyText>Expand the graph so that you can see how much the temperature rose while 
+    the battery was attached and how much it decreased after it was 
+    disconnected.</bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="23a5c9cb-69fe-11dd-86fd-713784046a7a" name="%23a5c9cb-69fe-11dd-86fd-713784046a7a" showEditBar="true">
                                       <documentRefs>
                                         <OTUDLQuestion id="39c7eb8f-c9bc-11dc-8839-0be1cfce22b0" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTUDLCompoundDoc>
-                                              <bodyText>7. How many degrees did the bulb heat up in 30 seconds?</bodyText>
+                                              <bodyText>How many degrees did the bulb heat up in 30 seconds?</bodyText>
                                             </OTUDLCompoundDoc>
                                           </prompt>
                                           <input>
@@ -6338,7 +6470,7 @@ end</script>
                                         <OTUDLQuestion id="49023c96-c9bc-11dc-8839-0be1cfce22b0" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTUDLCompoundDoc>
-                                              <bodyText>8. How many degrees did the bulb cool down in 30 seconds?</bodyText>
+                                              <bodyText>How many degrees did the bulb cool down in 30 seconds?</bodyText>
                                             </OTUDLCompoundDoc>
                                           </prompt>
                                           <input>
@@ -6351,7 +6483,7 @@ end</script>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc name="%d224b00b-800e-11dd-822d-0342ded114f3" showEditBar="true">
-                                      <bodyText>9. Take a snapshot of your graph.</bodyText>
+                                      <bodyText>Take a snapshot of your graph.</bodyText>
                                     </OTUDLCompoundDoc>
                                   </cards>
                                   <currentCard>
@@ -6368,16 +6500,16 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="1b92fc38-69fe-11dd-86fd-713784046a7a" />
                                   <br />
-                                  <object refid="1b92fc39-69fe-11dd-86fd-713784046a7a" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="1b92fc39-69fe-11dd-86fd-713784046a7a" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
-                            <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                             <OTLabbookButton id="31e12973-fc38-11dc-a738-1f42f753985b" name="Snapshot button">
                               <target>
                                 <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                               </target>
                             </OTLabbookButton>
+                            <object refid="e80e34e5-9dec-11dc-b759-59911fa1fcdf" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%a6828e53-8d7b-11dc-92de-d3015639f7a6" showDefinitions="true">
@@ -6456,7 +6588,7 @@ end</script>
                                   <cards>
                                     <OTUDLCompoundDoc id="cd3783a0-69fe-11dd-86fd-713784046a7a">
                                       <bodyText>
-                                        10. Attach the temperature sensor to the computer. Click on the magnifying 
+                                        Attach the temperature sensor to the computer. Click on the magnifying 
     glass
                                         <a href="http://udl.concord.org/artwork/technical_hints/tech-hint-temperature.html">
                                           <img src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" border="0" />
@@ -6466,15 +6598,15 @@ end</script>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="e606ae11-69fe-11dd-86fd-713784046a7a" name="%e606ae11-69fe-11dd-86fd-713784046a7a" showEditBar="true">
-                                      <bodyText>11. Choose the "foil" dataset. Start recording temperature. Let it run for 
-    ten seconds.</bodyText>
+                                      <bodyText>Choose the "foil" dataset. Start recording temperature. Let it run for ten 
+    seconds.</bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="ef63fd02-69fe-11dd-86fd-713784046a7a" name="%ef63fd02-69fe-11dd-86fd-713784046a7a" showEditBar="true">
-                                      <bodyText>12. After exactly ten seconds, hold the two leads from the holiday light 
+                                      <bodyText>After exactly ten seconds, hold the two leads from the holiday light 
     against the two ends of the battery.</bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="f8d82f53-69fe-11dd-86fd-713784046a7a" name="%f8d82f53-69fe-11dd-86fd-713784046a7a" showEditBar="true">
-                                      <bodyText>13. Watch the temperature plot. Let it run for 30 seconds, then disconnect 
+                                      <bodyText>Watch the temperature plot. Let it run for 30 seconds, then disconnect 
     leads from the battery and let it run for another 30 seconds. Stop 
     recording the data.</bodyText>
                                     </OTUDLCompoundDoc>
@@ -6493,7 +6625,7 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="cd375c8e-69fe-11dd-86fd-713784046a7a" />
                                   <br />
-                                  <object refid="cd375c8f-69fe-11dd-86fd-713784046a7a" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="cd375c8f-69fe-11dd-86fd-713784046a7a" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -6525,6 +6657,9 @@ end</script>
                                       <td width="30%" valign="top">
                                         <br />
                                         <object refid="69e030e8-69ff-11dd-86fd-713784046a7a" />
+                                        <br />
+                                        <br />
+                                        <object refid="4bdd6247-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="70%" style="padding-right: 20px; padding-left: 20px">
                                         <object refid="0627a4c9-a437-11dc-a4ee-89d313ed1ef9" />
@@ -6543,15 +6678,16 @@ end</script>
                                 <OTCardContainer id="69e030e9-69ff-11dd-86fd-713784046a7a">
                                   <cards>
                                     <OTUDLCompoundDoc id="69e057fb-69ff-11dd-86fd-713784046a7a">
-                                      <bodyText>14. Expand the graph so that you can see how much the temperature rose 
-    while the battery was attached and how much it decreased after you stopped.</bodyText>
+                                      <bodyText>Expand the graph so that you can see how much the temperature rose while 
+    the battery was attached and how much it decreased after it was 
+    disconnected.</bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc id="7421ec6c-69ff-11dd-86fd-713784046a7a" name="%7421ec6c-69ff-11dd-86fd-713784046a7a" showEditBar="true">
                                       <documentRefs>
                                         <OTUDLQuestion id="85530fb6-c9bc-11dc-8839-0be1cfce22b0" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTUDLCompoundDoc>
-                                              <bodyText>15. How many degrees did the bulb heat up in 30 seconds?</bodyText>
+                                              <bodyText>How many degrees did the bulb heat up in 30 seconds?</bodyText>
                                             </OTUDLCompoundDoc>
                                           </prompt>
                                           <input>
@@ -6568,7 +6704,7 @@ end</script>
                                         <OTUDLQuestion id="9855b35f-c9bc-11dc-8839-0be1cfce22b0" name="Question" showConvertButton="true">
                                           <prompt>
                                             <OTUDLCompoundDoc>
-                                              <bodyText>16. How many degrees did the bulb cool down in 30 seconds?</bodyText>
+                                              <bodyText>How many degrees did the bulb cool down in 30 seconds?</bodyText>
                                             </OTUDLCompoundDoc>
                                           </prompt>
                                           <input>
@@ -6581,7 +6717,7 @@ end</script>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                     <OTUDLCompoundDoc name="%e8d7d864-800e-11dd-822d-0342ded114f3" showEditBar="true">
-                                      <bodyText>17. Take a snapshot of your graph.</bodyText>
+                                      <bodyText>Take a snapshot of your graph.</bodyText>
                                     </OTUDLCompoundDoc>
                                   </cards>
                                   <currentCard>
@@ -6598,16 +6734,16 @@ end</script>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="69e030e9-69ff-11dd-86fd-713784046a7a" />
                                   <br />
-                                  <object refid="69e030ea-69ff-11dd-86fd-713784046a7a" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="69e030ea-69ff-11dd-86fd-713784046a7a" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
-                            <object refid="0627a4c9-a437-11dc-a4ee-89d313ed1ef9" />
                             <OTLabbookButton id="4bdd6247-fc38-11dc-a738-1f42f753985b" name="Snapshot button">
                               <target>
                                 <object refid="0627a4c9-a437-11dc-a4ee-89d313ed1ef9" />
                               </target>
                             </OTLabbookButton>
+                            <object refid="0627a4c9-a437-11dc-a4ee-89d313ed1ef9" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%c64d22f5-8d7b-11dc-92de-d3015639f7a6" showDefinitions="true">
@@ -6913,7 +7049,7 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="31a461ab-6a05-11dd-86fd-713784046a7a" />
                                   <br />
-                                  <object refid="31a461ac-6a05-11dd-86fd-713784046a7a" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="31a461ac-6a05-11dd-86fd-713784046a7a" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -6988,7 +7124,7 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="dbbf70d5-6a05-11dd-86fd-713784046a7a" />
                                   <br />
-                                  <object refid="dbbf70d6-6a05-11dd-86fd-713784046a7a" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="dbbf70d6-6a05-11dd-86fd-713784046a7a" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -7014,11 +7150,13 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                       <td width="30%" valign="top">
                                         <br />
                                         <object refid="80259e9d-6a06-11dd-86fd-713784046a7a" />
+                                        <br />
+                                        <br />
+                                        <object refid="792b6cfc-6a06-11dd-86fd-713784046a7a" />
                                       </td>
                                       <td width="70%" style="padding-right: 20px; padding-left: 20px">
                                         <object refid="09187de2-a449-11dc-aee8-0d3d3ace7034" />
                                         <br />
-                                        <object refid="792b6cfc-6a06-11dd-86fd-713784046a7a" />
                                       </td>
                                     </tr>
                                   </table>
@@ -7087,10 +7225,15 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="80259e9e-6a06-11dd-86fd-713784046a7a" />
                                   <br />
-                                  <object refid="80259e9f-6a06-11dd-86fd-713784046a7a" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="80259e9f-6a06-11dd-86fd-713784046a7a" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
+                            <OTLabbookButton id="792b6cfc-6a06-11dd-86fd-713784046a7a" name="Snapshot button">
+                              <target>
+                                <object refid="09187de2-a449-11dc-aee8-0d3d3ace7034" />
+                              </target>
+                            </OTLabbookButton>
                             <OTDataCollector id="09187de2-a449-11dc-aee8-0d3d3ace7034" name="Temperature" title="Temperature Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
                               <source>
                                 <OTDataGraphable name="two" connectPoints="true" yColumn="1" drawMarks="false" color="16711731" xColumn="0" lineWidth="2.0">
@@ -7140,11 +7283,6 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                 </OTDataGraphable>
                               </graphables>
                             </OTDataCollector>
-                            <OTLabbookButton id="792b6cfc-6a06-11dd-86fd-713784046a7a" name="Snapshot button">
-                              <target>
-                                <object refid="09187de2-a449-11dc-aee8-0d3d3ace7034" />
-                              </target>
-                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%415e6af0-8d7c-11dc-92de-d3015639f7a6" showDefinitions="true">
@@ -7166,6 +7304,7 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                   <br />
                                   <br />
                                   <object refid="f8e2e978-c9bb-11dc-8839-0be1cfce22b0" />
+                                  <br />
                                   <br />
                                   <object refid="82192818-bfb3-11dc-8f64-1b51d7c2c08c" />
                                   <br />
@@ -7230,6 +7369,11 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                   <input>
                                     <OTText text="The temperature sensor showed that the bulb produced a great deal of _________." />
                                   </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Fill in the blank above.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
                                 </OTUDLQuestion>
                                 <OTUDLQuestion name="L2" showConvertButton="false" showScaffolding="true">
                                   <prompt>
@@ -7252,6 +7396,11 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                       </choices>
                                     </OTChoice>
                                   </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Choose the best answer above.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
                                 </OTUDLQuestion>
                                 <OTUDLQuestion name="L1" showConvertButton="false" showScaffolding="true">
                                   <prompt>
@@ -7262,6 +7411,11 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                   <input>
                                     <OTText text="The type of energy produced by the bulb is mainly heat because the filament has to be made very hot to glow white." />
                                   </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Add your thoughts to the above answer.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
                                 </OTUDLQuestion>
                               </questions>
                             </OTUDLLeveledQuestions>
@@ -7324,6 +7478,11 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                   <input>
                                     <OTText text="Light and heat energy produced by the bulb is _______ the electrical energy entering the bulb." />
                                   </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Fill in the blank above.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
                                 </OTUDLQuestion>
                                 <OTUDLQuestion name="L2" showConvertButton="false" showScaffolding="true">
                                   <prompt>
@@ -7346,6 +7505,11 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                       </choices>
                                     </OTChoice>
                                   </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Pick the best answer above.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
                                 </OTUDLQuestion>
                                 <OTUDLQuestion name="L1" showConvertButton="false" showScaffolding="true">
                                   <prompt>
@@ -7356,6 +7520,11 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                   <input>
                                     <OTText text="The light and heat energy produced is the same as the electrical energy entering the bulb. This is because electrical energy is transformed completely into heat and light energy." />
                                   </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>Add your thoughts to the above answer.</bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
                                 </OTUDLQuestion>
                               </questions>
                             </OTUDLLeveledQuestions>
@@ -7389,7 +7558,7 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                             <OTUDLQuestion id="20bee6fe-d67d-11dc-b640-654f33185332" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>Fluorescent bulbs don't get very hot, compared to incandescent bulbs. How could this explain why they are more efficient for producing light?</bodyText>
+                                  <bodyText>Fluorescent bulbs don't get very hot compared to incandescent bulbs. How could this explain why they are more efficient for producing light?</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -7485,7 +7654,7 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                       </td>
                                     </tr>
                                   </table>
-                                  We all use electrical power every day – lights, motors, computers, 
+                                  We all use electrical power every day for lights, motors, computers, 
           appliances, heat. It's a wonderful form of power because it can be 
           used in so many ways. But where does it come from? How is it 
           produced?
@@ -7568,7 +7737,7 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                         <b>Don't go too fast – you may burn out the bulb!</b>
                                       </td>
                                       <td width="50%" style="padding-left: 20px; padding-right: 20px">
-                                        <img src="http://udl.concord.org/artwork/elect_56/genecon_light/el_56_genecon_light.jpg" border="1" />
+                                        <img src="http://udl.concord.org/artwork/elect_56/pretest56.q4/el_56_pretest56_q4.png" border="0" />
                                       </td>
                                     </tr>
                                   </table>
@@ -7666,14 +7835,15 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%">Join up with another team. See if you can run one Genecon with 
-                another.</td>
-                                      <td style="padding-left: 20px; padding-right: 20px" width="50%">
+                                      <td width="50%">Join up with another team so that you have two Genecons. See 
+                if you can run one Genecon with another.</td>
+                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
                                         <img src="http://udl.concord.org/artwork/elect_56/genecon_pair2/el_56_genecon_pair2.jpg" border="1" />
                                       </td>
                                     </tr>
                                   </table>
                                   <object refid="e66299ca-da5c-11dc-ba99-7ffb5c0c743c" />
+                                  <br />
                                   <br />
                                   <object refid="93d7fa9e-da56-11dc-ba99-7ffb5c0c743c" />
                                 </div>
@@ -7737,15 +7907,20 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                       <td>
                                         The capacitor looks like this. The plates are hidden inside it.
                                         <br />
-                                        You can charge up a capacitor with the Genecon!
+                                        You 
+                can charge up a capacitor with the Genecon!
                                         <br />
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px">
-                                        <img border="1" src="http://udl.concord.org/artwork/elect_56/capacitor/el_56_capacitor_tokin.jpg" />
+                                      <td style="padding-left: 20px; padding-right: 20px">
+                                        <img src="http://udl.concord.org/artwork/elect_56/capacitor/el_56_capacitor_tokin.jpg" border="1" />
                                       </td>
                                     </tr>
                                   </table>
-                                  When you crank on the Genecon, the generator inside it pushes charges through the wires, and they build up on the plates of the capacitor -- negative one one plate and positive on the other. When you connect the capacitor to a light bulb, the charges run back through the circuit and light the bulb!
+                                  When you crank on the Genecon, the generator inside it pushes 
+          charges through the wires, and they build up on the plates of the 
+          capacitor -- negative on one plate and positive on the other. When 
+          you connect the capacitor to a light bulb, the charges run back 
+          through the circuit and light the bulb!
                                 </div>
                               </div>
                             </div>
@@ -7770,12 +7945,17 @@ Look at the part of the graph where the light is cooling down.</bodyText>
                                     <tr>
                                       <td>Connect the Genecon to the capacitor.</td>
                                       <td style="padding-left: 20px; padding-right: 20px">
-                                        <img border="1" src="http://udl.concord.org/artwork/elect_56/genecon_capacitor/el_56_genecon_capacitor.jpg" />
+                                        <img src="http://udl.concord.org/artwork/elect_56/genecon_capacitor/el_56_genecon_capacitor.jpg" border="1" />
                                       </td>
                                     </tr>
                                   </table>
                                   <object refid="beb0b997-da4a-11dc-ba99-7ffb5c0c743c" />
+                                  <br />
+                                  <br />
                                   <object refid="f58fa891-da4a-11dc-ba99-7ffb5c0c743c" />
+                                  <br />
+                                  <br />
+                                  Compare your results with other groups in the class.
                                 </div>
                               </div>
                             </div>
@@ -7795,13 +7975,8 @@ What happens?</bodyText>
                             <OTUDLQuestion id="f58fa891-da4a-11dc-ba99-7ffb5c0c743c" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>
-                                    Charge the capacitor with the Genecon again.
-                                    <br />
-                                    Record how many times the Genecon handle turns before it stops.
-                                    <br />
-                                    Compare your results with other groups in the class.
-                                  </bodyText>
+                                  <bodyText>Charge the capacitor with the Genecon again.
+  Record how many times the Genecon handle turns before it stops.</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -7961,7 +8136,7 @@ What happens?</bodyText>
                             <OTUDLQuestion id="e747154b-da4b-11dc-ba99-7ffb5c0c743c" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTUDLCompoundDoc>
-                                  <bodyText>1. Explain how you think a capacitor stores electrical energy. You can use the draw tool to illustrate what you mean.</bodyText>
+                                  <bodyText>Explain how you think a capacitor stores electrical energy. You can use the draw tool to illustrate what you mean.</bodyText>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
@@ -8004,11 +8179,12 @@ What happens?</bodyText>
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="e6ff51f5-6a16-11dd-848f-614a551bb1fa" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="8129ca82-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="60%" style="padding-right: 20px; padding-left: 20px">
                                         <object refid="bc55e9ac-a763-11dc-a203-d318efed63f6" />
-                                        <br />
-                                        <object refid="8129ca82-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -8069,25 +8245,25 @@ What happens?</bodyText>
                                   <bodyText>Observe what happens. Stop collecting. Do not clear the data.</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc name="%aec0ff3f-6d5e-11dd-b57e-df02d2f36b2a" showEditBar="true">
-                                  <bodyText>Take a snapshot of your data.</bodyText>
+                                  <bodyText>Take a snapshot of your data. This snapshot will be saved in your lab book.</bodyText>
                                 </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
                                 <object refid="e6ff51f6-6a16-11dd-848f-614a551bb1fa" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="e6ff51f5-6a16-11dd-848f-614a551bb1fa" showBorder="false">
                               <cardContainer>
                                 <object refid="e6ff51f4-6a16-11dd-848f-614a551bb1fa" />
                               </cardContainer>
                             </OTUDLMenu>
-                            <object refid="bc55e9ac-a763-11dc-a203-d318efed63f6" />
                             <OTLabbookButton id="8129ca82-fc38-11dc-a738-1f42f753985b" name="Snapshot button">
                               <target>
                                 <object refid="bc55e9ac-a763-11dc-a203-d318efed63f6" />
                               </target>
                             </OTLabbookButton>
+                            <object refid="bc55e9ac-a763-11dc-a203-d318efed63f6" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%64c37efc-8ee9-11dc-ab32-31c874c327b2" showDefinitions="true">
@@ -8110,11 +8286,11 @@ What happens?</bodyText>
                                       <td width="40%" valign="top">
                                         <object refid="01e8185d-6a18-11dd-848f-614a551bb1fa" />
                                         <br />
+                                        <br />
+                                        <object refid="a064a234-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                       <td width="60%" style="padding-left: 20px; padding-right: 20px">
                                         <object refid="1dc01ce4-a764-11dc-a203-d318efed63f6" />
-                                        <br />
-                                        <object refid="a064a234-fc38-11dc-a738-1f42f753985b" />
                                       </td>
                                     </tr>
                                   </table>
@@ -8171,10 +8347,15 @@ What happens?</bodyText>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="01e8185e-6a18-11dd-848f-614a551bb1fa" />
                                   <br />
-                                  <object refid="01e8185f-6a18-11dd-848f-614a551bb1fa" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="01e8185f-6a18-11dd-848f-614a551bb1fa" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
+                            <OTLabbookButton id="a064a234-fc38-11dc-a738-1f42f753985b" name="Snapshot button">
+                              <target>
+                                <object refid="1dc01ce4-a764-11dc-a203-d318efed63f6" />
+                              </target>
+                            </OTLabbookButton>
                             <OTDataCollector id="1dc01ce4-a764-11dc-a203-d318efed63f6" name="VoltageB" title="Voltage Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
                               <source>
                                 <OTDataGraphable name="Battery" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
@@ -8216,11 +8397,6 @@ What happens?</bodyText>
                                 </OTDataGraphable>
                               </graphables>
                             </OTDataCollector>
-                            <OTLabbookButton id="a064a234-fc38-11dc-a738-1f42f753985b" name="Snapshot button">
-                              <target>
-                                <object refid="1dc01ce4-a764-11dc-a203-d318efed63f6" />
-                              </target>
-                            </OTLabbookButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%aede3948-8eeb-11dc-ab32-31c874c327b2" showDefinitions="true">
@@ -8276,6 +8452,7 @@ What happens?</bodyText>
                                   </documentRefs>
                                   <bodyText>
                                     Here are your data.
+                                    <br />
                                     <br />
                                     <object refid="f3f6f4d8-da57-11dc-ba99-7ffb5c0c743c" />
                                   </bodyText>
@@ -8419,10 +8596,11 @@ What happens?</bodyText>
                                             <br />
                                           </li>
                                         </ol>
-                                        Click on the 'A' icon to type.
+                                        Click on the A icon to type.
                                         <br />
                                         <br />
-                                        Take a snapshot of your drawing.
+                                        Take a snapshot of your 
+                drawing.
                                       </td>
                                       <td width="50%">
                                         <object refid="05886c50-8e65-11dc-b79d-6992dac7dee1" />
@@ -8473,15 +8651,19 @@ What happens?</bodyText>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="50%" valign="top">
+                                      <td valign="top" width="50%">
                                         <br />
-                                        <div style="border-right-width: 1px; border-top-width: 1px; padding-bottom: 2px; margin-top: 5px; margin-right: 5px; padding-left: 2px; padding-top: 2px; border-color: black; margin-bottom: 5px; padding-right: 2px; border-left-width: 1px; border-style: solid; margin-left: 5px; border-bottom-width: 1px">
+                                        <div style="border-bottom-width: 1px; margin-left: 5px; padding-top: 2px; padding-bottom: 2px; border-top-width: 1px; margin-top: 5px; margin-bottom: 5px; border-style: solid; border-right-width: 1px; padding-left: 2px; padding-right: 2px; border-left-width: 1px; margin-right: 5px; border-color: black">
                                           <object refid="c61ffe7e-6a31-11dd-a657-a90f5967e159" />
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="c61ffe7f-6a31-11dd-a657-a90f5967e159" />
                                         </div>
+                                        <br />
+                                        <br />
+                                        <object refid="c975929e-8f1a-11dd-a768-b32e02af5d3b" />
+                                        <br />
                                       </td>
-                                      <td width="50%" style="padding-right: 20px; padding-left: 20px">
+                                      <td style="padding-left: 20px; padding-right: 20px" width="50%">
                                         <object refid="03a07339-8e65-11dc-b79d-6992dac7dee1" />
                                         <br />
                                       </td>
@@ -8496,8 +8678,7 @@ What happens?</bodyText>
                               <cards>
                                 <OTUDLCompoundDoc id="c6202590-6a31-11dd-a657-a90f5967e159">
                                   <bodyText>
-                                    In the Draw tool below, put the number where where each of these things 
-    happens:
+                                    In the Draw tool, put the number where where each of these things happens:
                                     <br />
                                     <ol>
                                       <li>Chemical energy is stored.</li>
@@ -8544,20 +8725,22 @@ What happens?</bodyText>
                                     <object refid="03719a8f-da5e-11dc-ba99-7ffb5c0c743c" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
-                                <OTUDLCompoundDoc name="%0add7f8b-6a32-11dd-a657-a90f5967e159" showEditBar="true">
-                                  <bodyText>Congratulations! You have completed this activity.</bodyText>
-                                </OTUDLCompoundDoc>
                               </cards>
                               <currentCard>
                                 <object refid="c6202590-6a31-11dd-a657-a90f5967e159" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="c61ffe7f-6a31-11dd-a657-a90f5967e159" showBorder="false">
                               <cardContainer>
                                 <object refid="c61ffe7e-6a31-11dd-a657-a90f5967e159" />
                               </cardContainer>
                             </OTUDLMenu>
+                            <OTLabbookButton id="c975929e-8f1a-11dd-a768-b32e02af5d3b" name="Labbook button">
+                              <target>
+                                <object refid="03a07339-8e65-11dc-b79d-6992dac7dee1" />
+                              </target>
+                            </OTLabbookButton>
                             <OTDrawingTool2 id="03a07339-8e65-11dc-b79d-6992dac7dee1" name="Draw tool" backgroundImage="http://udl.concord.org/artwork/elect_56/bulb_battery_wider/el_56_bulb_battery_wider.jpg" backgroundImageURL="http://udl.concord.org/artwork/elect_56/bulb_battery_wider/el_56_bulb_battery_wider.jpg" usePopupButtons="false" lineWidthButtonVisible="true">
                               <graphables>
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
@@ -8692,7 +8875,7 @@ What happens?</bodyText>
                                       <td style="padding-left: 20px; padding-right: 20px">
                                         <img src="http://udl.concord.org/artwork/elect_56/load_flashlight/el_56_load_flashlight.png" border="0" />
                                       </td>
-                                      <td>In this activity you will measure what happens when batteries 
+                                      <td>In this activity, you will measure what happens when batteries 
                 are added together in a series.</td>
                                     </tr>
                                   </table>
@@ -8810,6 +8993,8 @@ What happens?</bodyText>
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="1b726b63-6a3f-11dd-80bd-43facecd65ef" />
                                         </div>
+                                        <br />
+                                        <img src="http://udl.concord.org/artwork/elect_56/battery_one/el_56_battery_one.png" border="1" />
                                       </td>
                                       <td width="60%" style="padding-right: 20px; padding-left: 20px">
                                         <object refid="0fcf57c5-cada-11dc-9f17-f581dffccb2a" />
@@ -8855,14 +9040,13 @@ What happens?</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="5a87b628-6a3f-11dd-80bd-43facecd65ef" name="%5a87b628-6a3f-11dd-80bd-43facecd65ef" showEditBar="true">
                                   <bodyText>Measure the voltage of each battery. Note: did you touch the red lead to 
-    the positive end of the battery?</bodyText>
+    the positive end of the battery (the one with the bump)?</bodyText>
                                 </OTUDLCompoundDoc>
                                 <OTUDLCompoundDoc id="6d0a5419-6a3f-11dd-80bd-43facecd65ef" name="%6d0a5419-6a3f-11dd-80bd-43facecd65ef" showEditBar="true">
                                   <bodyText>
                                     Write the voltage of each battery on the tape. Be sure to mark which end 
-    is (+) and which end is (- )!
+    is (+) and which end is (-)!
                                     <br />
-                                    <img src="http://udl.concord.org/artwork/elect_56/battery_one/el_56_battery_one.png" border="1" />
                                   </bodyText>
                                 </OTUDLCompoundDoc>
                               </cards>
@@ -8870,7 +9054,7 @@ What happens?</bodyText>
                                 <object refid="1b729274-6a3f-11dd-80bd-43facecd65ef" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="1b726b63-6a3f-11dd-80bd-43facecd65ef" showBorder="false">
                               <cardContainer>
                                 <object refid="1b726b62-6a3f-11dd-80bd-43facecd65ef" />
@@ -9029,7 +9213,7 @@ What happens?</bodyText>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="9f9a17cb-6a40-11dd-80bd-43facecd65ef" />
                                   <br />
-                                  <object refid="9f9a17cc-6a40-11dd-80bd-43facecd65ef" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="9f9a17cc-6a40-11dd-80bd-43facecd65ef" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -9107,18 +9291,14 @@ What happens?</bodyText>
                                   </table>
                                   <table width="100%">
                                     <tr>
-                                      <td width="40%" valign="top">
+                                      <td valign="top" width="40%">
                                         Measure the total voltage from one end to the other and record 
-                it below. Click on the magnifying glass
-                                        <a href="http://portal.teemss2.concord.org/content/vernier_gotemp_golink/technical_hint_id_31.html">
-                                          <img src="http://udl.concord.org/artwork/general/mag_glass/mag_glass.png" border="0" />
-                                        </a>
-                                        for 
-                a technical hint.
+                it below.
+                                        <br />
                                         <br />
                                         <object refid="50ac6946-6d5f-11dd-b57e-df02d2f36b2a" />
                                       </td>
-                                      <td style="padding-left: 20px; padding-right: 20px" width="60%">
+                                      <td style="padding-right: 20px; padding-left: 20px" width="60%">
                                         <object refid="d4708f90-cada-11dc-9f17-f581dffccb2a" />
                                         <br />
                                         <object refid="f5e2c40c-cadb-11dc-9f17-f581dffccb2a" />
@@ -9195,6 +9375,7 @@ What happens?</bodyText>
                                   </table>
                                   Look back at your data. Compare the measured voltage with the 
           predicted voltage. How close was your prediction?
+                                  <br />
                                   <br />
                                   <object refid="daf954c8-b969-11dc-9c96-c9838ca6fb43" />
                                   <p />
@@ -9500,7 +9681,7 @@ What happens?</bodyText>
                                 <div style="border-width:1px; border-color:black; border-style:solid; margin: 5px; padding:2px;">
                                   <object refid="95d2f09c-6d60-11dd-b57e-df02d2f36b2a" />
                                   <br />
-                                  <object refid="95d2f09d-6d60-11dd-b57e-df02d2f36b2a" viewId="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                                  <object refid="95d2f09d-6d60-11dd-b57e-df02d2f36b2a" viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                                 </div>
                               </bodyText>
                             </OTCompoundDoc>
@@ -9652,20 +9833,17 @@ What happens?</bodyText>
                                     <tr>
                                       <td valign="top" width="50%">
                                         <br />
-                                        <div style="padding-top: 2px; margin-left: 5px; padding-left: 2px; margin-bottom: 5px; padding-bottom: 2px; border-color: black; border-top-width: 1px; border-bottom-width: 1px; margin-top: 5px; margin-right: 5px; border-right-width: 1px; border-left-width: 1px; padding-right: 2px; border-style: solid">
+                                        <div style="border-bottom-width: 1px; margin-left: 5px; padding-top: 2px; padding-bottom: 2px; border-top-width: 1px; margin-top: 5px; margin-bottom: 5px; border-style: solid; border-right-width: 1px; padding-left: 2px; padding-right: 2px; margin-right: 5px; border-left-width: 1px; border-color: black">
                                           <object refid="6b27f9fc-6d61-11dd-b57e-df02d2f36b2a" />
                                           <br />
                                           <object viewid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" refid="6b27f9fd-6d61-11dd-b57e-df02d2f36b2a" />
                                         </div>
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
+                                      <td style="padding-left: 20px; padding-right: 20px" width="50%">
                                         <img src="http://udl.concord.org/artwork/elect_56/batteries_three/el_56_batteries_three2.jpg" border="1" />
                                       </td>
                                     </tr>
                                   </table>
-                                  <br />
-                                  <br />
-                                  Congratulations! You have completed this activity.
                                 </div>
                               </div>
                             </div>
@@ -9682,7 +9860,7 @@ What happens?</bodyText>
                                     <OTUDLQuestion id="d722068d-b96c-11dc-9c96-c9838ca6fb43" name="Question">
                                       <prompt>
                                         <OTUDLCompoundDoc>
-                                          <bodyText>What is the voltage supplied to the light bulb?</bodyText>
+                                          <bodyText>What is the voltage supplied to the light bulb (in volts)?</bodyText>
                                         </OTUDLCompoundDoc>
                                       </prompt>
                                       <input>
@@ -9748,7 +9926,7 @@ What happens?</bodyText>
                                 <object refid="6b28210e-6d61-11dd-b57e-df02d2f36b2a" />
                               </currentCard>
                             </OTCardContainer>
-                            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                            <object refid="08f8f680-aaf9-455c-b1d8-82e9b5b51c79" />
                             <OTUDLMenu id="6b27f9fd-6d61-11dd-b57e-df02d2f36b2a" showBorder="false">
                               <cardContainer>
                                 <object refid="6b27f9fc-6d61-11dd-b57e-df02d2f36b2a" />
@@ -9994,7 +10172,7 @@ What happens?</bodyText>
                                       </td>
                                     </tr>
                                   </table>
-                                  In this activity, you measures the temperature of a holiday light.
+                                  In this activity, you measured the temperature of a holiday light.
                                   <br />
                                   <br />
                                   <object refid="cef51711-8015-11dd-b853-577f73538399" />
@@ -10041,7 +10219,6 @@ What happens?</bodyText>
                                 <object refid="${section_7}" />
                               </defaultSection>
                             </OTLabbookEntryChooser>
-                            <object refid="8a5f65e9-fc3b-11dc-a738-1f42f753985b" />
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -10065,10 +10242,6 @@ What happens?</bodyText>
                                   <br />
                                   <br />
                                   <object refid="4f68bcf1-84c9-11dd-8020-b1018eb16256" />
-                                  <br />
-                                  <br />
-                                  <br />
-                                  <object refid="8a5f65e9-fc3b-11dc-a738-1f42f753985b" />
                                 </div>
                               </div>
                             </div>
@@ -10091,7 +10264,6 @@ What happens?</bodyText>
                                 <object refid="${section_8}" />
                               </defaultSection>
                             </OTLabbookEntryChooser>
-                            <object refid="8e42a855-fc3d-11dc-a738-1f42f753985b" />
                           </documentRefs>
                           <bodyText>
                             <div class="buffer">
@@ -10107,7 +10279,7 @@ What happens?</bodyText>
                                       </td>
                                     </tr>
                                   </table>
-                                  In this activity you measured what happens when batteries are added 
+                                  In this activity, you measured what happens when batteries are added 
           together in a series.
                                   <br />
                                   <br />
@@ -10115,10 +10287,6 @@ What happens?</bodyText>
                                   <br />
                                   <br />
                                   <object refid="3f4d0cdc-84c9-11dd-8020-b1018eb16256" />
-                                  <br />
-                                  <br />
-                                  <br />
-                                  <object refid="8e42a855-fc3d-11dc-a738-1f42f753985b" />
                                 </div>
                               </div>
                             </div>
@@ -10211,7 +10379,7 @@ What happens?</bodyText>
                                     </OTScriptVariableComponent>
                                   </scriptVariables>
                                   <script>
-                                    <OTJavascript src="scripts/wrap-up_script.js" />
+                                    <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/wrap-up_script.js" />
                                   </script>
                                 </OTScriptButton>
                                 <object refid="4f731e40-c257-11dc-95ff-0800200c9a66!/password-answer" />
@@ -10993,7 +11161,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                             <OTUDLQuestion id="6d27b3b4-868a-11dd-8728-9b11daa028a8" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
-                                  <bodyText>11. Was it helpful to have “coaches” (the little robot pictures)?</bodyText>
+                                  <bodyText>11. Was it helpful to have "coaches" (the little robot pictures)?</bodyText>
                                 </OTCompoundDoc>
                               </prompt>
                               <input>
@@ -11076,53 +11244,8 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           </frame>
         </OTDefinitionManager>
         <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
-        <OTUDLMenu local_id="menu">
-          <cardContainer>
-            <object refid="${section-card-container}" />
-          </cardContainer>
-          <menuRule>
-            <object refid="${section-rule}" />
-          </menuRule>
-          <css>
-            <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
-          </css>
-        </OTUDLMenu>
-        <OTUDLMenu local_id="section-1-menu">
-          <cardContainer>
-            <object refid="${section-1-card-container}" />
-          </cardContainer>
-          <menuRule>
-            <object refid="${page-rule}" />
-          </menuRule>
-        </OTUDLMenu>
         <OTLabbook local_id="album" />
         <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
-        <OTUDLMenuRule local_id="section-rule">
-          <rules>
-            <OTUDLMenuRule remainInScope="true">
-              <scope>
-                <object refid="${section_1}" />
-              </scope>
-            </OTUDLMenuRule>
-            <OTUDLMenuRule remainInScope="true" jumpToAnyCard="true">
-              <scope>
-                <object refid="${section_2}" />
-                <object refid="${section_3}" />
-                <object refid="${section_4}" />
-                <object refid="${section_5}" />
-                <object refid="${section_6}" />
-                <object refid="${section_7}" />
-                <object refid="${section_8}" />
-                <object refid="${section_9}" />
-              </scope>
-            </OTUDLMenuRule>
-            <OTUDLMenuRule remainInScope="true">
-              <scope>
-                <object refid="${section_10}" />
-              </scope>
-            </OTUDLMenuRule>
-          </rules>
-        </OTUDLMenuRule>
         <OTUDLCoachGroup local_id="character-group">
           <topLevelCardContainer>
             <object refid="${section-card-container}" />
@@ -11156,11 +11279,7 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
                 <object refid="${page-rule}" />
               </reference>
             </OTScriptVariable>
-            <OTScriptVariable name="sampleMenu">
-              <reference>
-                <object refid="${menu}" />
-              </reference>
-            </OTScriptVariable>
+            <OTScriptVariable name="sampleMenu" />
             <OTScriptVariable name="menuHorizontalView">
               <reference>
                 <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
@@ -11190,6 +11309,9 @@ Some energy is always lost as heat when it is transferred. So the amount of ligh
           <menuView>
             <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
           </menuView>
+          <menuRule>
+            <object refid="${page-rule}" />
+          </menuRule>
           <cssColor>
             <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
           </cssColor>
