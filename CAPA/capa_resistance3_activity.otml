@@ -231,7 +231,7 @@
 			<root>
       			<OTCAPAChecker local_id="checker" name="Checker" 
       				nextToShow="f9736c78-b42b-473e-b22a-f755a7a8db1b" mozSwing="30fa2fa4-d0cf-4bf7-ab36-c7ec5cc327eb"
-      				checkFlashPlugin="true" flashPluginRequiredVersion="8"/>
+      				checkFlashPlugin="true" flashPluginMinVersion="8"/>
 			</root>
 			<library>
 				<OTCompoundDoc local_id="main_activity_doc" name="Measuring Resistance">
@@ -246,7 +246,7 @@
 				</OTCompoundDoc>
 				<OTCompoundDoc local_id="information_area">
 					<bodyText>
-						<p align="center"><img src="http://capa.concord.org/images/capa.gif"/></p>
+						<p align="center"><img src="images/capa.gif"/></p>
 						<object refid="${infoCards}"/>
 					</bodyText>
 				</OTCompoundDoc>
@@ -551,7 +551,7 @@ Good luck, and thank you for helping us with our research!
 	 					<OTCompoundDoc local_id="intro_page">
 							<bodyText>
 		            			<p align="center">
-		              				<img src="http://capa.concord.org/images/capa.gif"/>
+		              				<img src="images/capa.gif"/>
 		            			</p>
 								<object refid="${startText}"/>
 								<div align="center"><font size="4" face="Verdana">

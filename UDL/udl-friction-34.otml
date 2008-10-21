@@ -105,7 +105,7 @@
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="global-imports/udl-view-bundle.otml" />
+        <OTInclude href="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/global-imports/udl-view-bundle.otml" />
       </includes>
       <bundles>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
@@ -138,7 +138,7 @@
           <entries>
             <OTLabbookEntry timeStamp="October 2 at 10:07" type="Snapshots">
               <oTObject>
-                <OTBlob>
+                <OTBlob id="678b5190-0bcf-012a-b542-0017f2cc694e!/system/bundles[4]/entries[0]/oTObject">
                   <src>gzb64:H4sIAAAAAAAAAF1YCTiU6/u27/uIjLUORrYSSgyypaGM7WQpyZ6tsg8TyZY1sk3E2LNLsoRCGoRS
 2WUnZTd2Qv7vzOj8zvnPdX1zzTXf+z3v+yz3/dzPF6Gvp83MAGUgIyNjRlzWNCQjI48Ev9voKMB3
 eGmwGhnZcV+Eppox6ttSOv2VYwONbZtm1yvNr1LjxE8n335mXunI1pF3MVWntJQ60jzHUcfCKfvh
@@ -248,6 +248,13 @@ DHwQWnqaZeq3gv4PUaYljLIYAAA=</src>
               <originalObject>
                 <object refid="${pushit-slide-model}" />
               </originalObject>
+              <drawingTool>
+                <OTDrawingTool>
+                  <backgroundSrc>
+                    <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/system/bundles[4]/entries[0]/oTObject" />
+                  </backgroundSrc>
+                </OTDrawingTool>
+              </drawingTool>
             </OTLabbookEntry>
             <OTLabbookEntry timeStamp="October 2 at 10:07" type="Snapshots">
               <oTObject>
@@ -376,7 +383,7 @@ WKyIGQAA</src>
         <OTOverlay>
           <deltaObjectMap>
             <entry key="${authoring_script.js}">
-              <OTJavascript src="scripts/student_script.js" />
+              <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/student_script.js" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>
@@ -390,7 +397,7 @@ WKyIGQAA</src>
                   <content>
                     <OTUDLLabPage id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_0/content">
                       <backgroundImage>
-                        <OTBlob src="http://udl.concord.org/artwork/gateway_illustrations/friction/beginning_friction.png" />
+                        <OTBlob src="http://udl.concord.org/artwork/gateway_illustrations/friction/beginning_friction.jpg" />
                       </backgroundImage>
                       <map>
                         <OTPlacementContainer>
@@ -1128,6 +1135,7 @@ D) Less precise answers are good too, such as "measure how much force it takes t
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                <OTDrawingShape type="line" fillType="clear" x="276.0" y="-57.0" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
                               </graphables>
                             </OTDrawingTool2>
                             <OTLabbookButton id="97cf6add-72b6-11dd-bc5a-8bb181858e37" name="Snapshot button">
@@ -2676,10 +2684,21 @@ Students investigate friction while:
                                         </div>
                                       </bodyText>
                                       <documentRefs>
-                                        <OTDrawingTool2 local_id="act1-eng-ques2-drawing">
+                                        <OTDrawingTool2 local_id="act1-eng-ques2-drawing" usePopupButtons="true" lineWidthButtonVisible="true">
                                           <stamps>
-                                            <OTDrawingStamp src="http://confluence.concord.org/download/attachments/12343/playground_slide.jpg" description="slide" />
+                                            <OTDrawingStamp id="38fdd381-96ec-11dd-ad60-897bd3fde69c">
+                                              <imageSrc>
+                                                <OTBlob src="http://udl.concord.org/artwork/friction_34/playground_slide.jpg" name="http://udl.concord.org/artwork/friction_34/playground_slide.jpg" />
+                                              </imageSrc>
+                                            </OTDrawingStamp>
                                           </stamps>
+                                          <graphables>
+                                            <OTDrawingImageIcon x="Infinity" y="Infinity">
+                                              <stamp>
+                                                <object refid="38fdd381-96ec-11dd-ad60-897bd3fde69c" />
+                                              </stamp>
+                                            </OTDrawingImageIcon>
+                                          </graphables>
                                         </OTDrawingTool2>
                                       </documentRefs>
                                     </OTUDLCompoundDoc>
@@ -2711,10 +2730,18 @@ Students investigate friction while:
                                         </div>
                                       </bodyText>
                                       <documentRefs>
-                                        <OTDrawingTool2 local_id="act1-eng-ques3-drawing">
+                                        <OTDrawingTool2 local_id="act1-eng-ques3-drawing" usePopupButtons="true" lineWidthButtonVisible="true">
                                           <stamps>
-                                            <OTDrawingStamp src="http://confluence.concord.org/download/attachments/12343/playground_slide.jpg" description="slide" />
-                                            <OTDrawingStamp src="http://confluence.concord.org/download/attachments/12343/kid.png" description="kid" />
+                                            <OTDrawingStamp>
+                                              <imageSrc>
+                                                <OTBlob src="http://udl.concord.org/artwork/friction_34/playground_slide.jpg" name="http://udl.concord.org/artwork/friction_34/playground_slide.jpg" />
+                                              </imageSrc>
+                                            </OTDrawingStamp>
+                                            <OTDrawingStamp>
+                                              <imageSrc>
+                                                <OTBlob src="http://udl.concord.org/artwork/friction_34/kid.png" name="http://udl.concord.org/artwork/friction_34/kid.png" />
+                                              </imageSrc>
+                                            </OTDrawingStamp>
                                           </stamps>
                                         </OTDrawingTool2>
                                       </documentRefs>
@@ -2747,7 +2774,11 @@ Students investigate friction while:
                                         </div>
                                       </bodyText>
                                       <documentRefs>
-                                        <OTDrawingTool2 local_id="act1-eng-ques4-drawing" backgroundImage="http://confluence.concord.org/download/attachments/12343/slide_with_kid.jpg" />
+                                        <OTDrawingTool2 local_id="act1-eng-ques4-drawing" backgroundImage="http://confluence.concord.org/download/attachments/12343/slide_with_kid.jpg">
+                                          <graphables>
+                                            <OTDrawingShape type="" fillType="clear" x="Infinity" y="Infinity" width="0.0" height="0.0" color="0x000000" strokeWidth="2.0" />
+                                          </graphables>
+                                        </OTDrawingTool2>
                                       </documentRefs>
                                     </OTUDLCompoundDoc>
                                   </input>
@@ -6485,7 +6516,7 @@ Students investigate friction while:
                                             <OTText />
                                             <OTScriptButton id="0bc39cdc-7aae-11dd-99b9-cba04a218266" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -6562,12 +6593,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="0bc3c3f4-7aae-11dd-99b9-cba04a218266" src="scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="0bc3c3f4-7aae-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="0bc3c3f5-7aae-11dd-99b9-cba04a218266" src="scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="0bc3c3f5-7aae-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -6594,7 +6625,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="0bc39cdd-7aae-11dd-99b9-cba04a218266" text="Setup">
                                               <script>
-                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="script_button">
@@ -6658,7 +6689,7 @@ end</script>
                                             <OTText />
                                             <OTScriptButton id="622ddf43-7ab7-11dd-99b9-cba04a218266" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -6699,7 +6730,7 @@ response_key = {
   #
   # valid axis values are :x and :y
   #
-  :correct_range =&gt; { :range =&gt; 6.5..8.0, :axis =&gt; :y },
+  :correct_range =&gt; { :range =&gt; 7.5..17.0, :axis =&gt; :x },
   
   # Optional: specify the highlight_range if it is different than the correct_range
   # :highlight_range =&gt; { :range =&gt; 5..30, :axis =&gt; :x },
@@ -6736,12 +6767,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="622e065b-7ab7-11dd-99b9-cba04a218266" src="scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="622e065b-7ab7-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="622e065c-7ab7-11dd-99b9-cba04a218266" src="scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="622e065c-7ab7-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -6768,7 +6799,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="622ddf44-7ab7-11dd-99b9-cba04a218266" text="Setup">
                                               <script>
-                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="script_button">
@@ -6834,7 +6865,7 @@ end</script>
                                             <OTText id="2af65306-7ab8-11dd-99b9-cba04a218266" />
                                             <OTScriptButton id="2af65307-7ab8-11dd-99b9-cba04a218266" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_number_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_number_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_number_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -6913,12 +6944,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="2af67a20-7ab8-11dd-99b9-cba04a218266" src="scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="2af67a20-7ab8-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="2af67a21-7ab8-11dd-99b9-cba04a218266" src="scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="2af67a21-7ab8-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -6950,7 +6981,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="2af65308-7ab8-11dd-99b9-cba04a218266" text="Setup">
                                               <script>
-                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="text_field">
@@ -9746,7 +9777,7 @@ end</script>
                                             <OTText />
                                             <OTScriptButton id="96f06c25-7ab9-11dd-99b9-cba04a218266" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -9787,7 +9818,7 @@ response_key = {
   #
   # valid axis values are :x and :y
   #
-  :correct_range =&gt; { :range =&gt; 2.5..3.5, :axis =&gt; :x },
+  :correct_range =&gt; { :range =&gt; 3.0..3.5, :axis =&gt; :x },
   
   # Optional: specify the highlight_range if it is different than the correct_range
   # :highlight_range =&gt; { :range =&gt; 5..30, :axis =&gt; :x },
@@ -9823,12 +9854,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="96f0933d-7ab9-11dd-99b9-cba04a218266" src="scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="96f0933d-7ab9-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="96f0933e-7ab9-11dd-99b9-cba04a218266" src="scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="96f0933e-7ab9-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -9838,12 +9869,12 @@ end</script>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="times_incorrect">
                                                   <reference>
-                                                    <OTInt />
+                                                    <OTInt value="2" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="correct">
                                                   <reference>
-                                                    <OTBoolean />
+                                                    <OTBoolean value="false" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="question">
@@ -9855,7 +9886,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="96f06c26-7ab9-11dd-99b9-cba04a218266" text="Setup">
                                               <script>
-                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="script_button">
@@ -9918,7 +9949,7 @@ end</script>
                                             <OTText />
                                             <OTScriptButton id="79875208-7aba-11dd-99b9-cba04a218266" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -9973,7 +10004,7 @@ response_key = {
     { :text =&gt; "That's still not correct. Add a label to the highlighted part of the graph.", :highlight_region =&gt; true },
   :multiple_wrong_answers =&gt; 
     { :text =&gt; "That's still not correct. Remember your experiment pulling the shoe. It needed a force to keep it 
-moving.  Where on the graph was the force roughly constant and &lt;b&gt;not&lt;/b&gt; zero?  ", :highlight_region =&gt; true }
+moving.  Where on the graph was the force roughly constant and not zero?  ", :highlight_region =&gt; true }
 }
 
 # Create a new SmartGraphRangeResponse object with your response_key and the 
@@ -9995,12 +10026,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="79877920-7aba-11dd-99b9-cba04a218266" src="scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="79877920-7aba-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="7987a031-7aba-11dd-99b9-cba04a218266" src="scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="7987a031-7aba-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -10027,7 +10058,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="79875209-7aba-11dd-99b9-cba04a218266" text="Setup">
                                               <script>
-                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="script_button">
@@ -10091,7 +10122,7 @@ end</script>
                                             <OTText />
                                             <OTScriptButton id="d448f6ac-7aba-11dd-99b9-cba04a218266" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_label_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_label_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_label_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -10167,12 +10198,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="d4491dc4-7aba-11dd-99b9-cba04a218266" src="scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="d4491dc4-7aba-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="d44944d5-7aba-11dd-99b9-cba04a218266" src="scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="d44944d5-7aba-11dd-99b9-cba04a218266" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -10199,7 +10230,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="d448f6ad-7aba-11dd-99b9-cba04a218266" text="Setup">
                                               <script>
-                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="script_button">
@@ -10264,7 +10295,7 @@ end</script>
                                             <OTText id="29b2ee86-7abe-11dd-aad5-236dc663e6a0" />
                                             <OTScriptButton id="29b2ee87-7abe-11dd-aad5-236dc663e6a0" text="Check answer">
                                               <script>
-                                                <OTJRuby src="scripts/smart_graph_number_script_template.rb">
+                                                <OTJRuby src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_number_script_template.rb">
                                                   <script># Original template file: scripts/smart_graph_number_script_template.rb
 
 # Setting the DEBUG constant to true will generate additional 
@@ -10346,12 +10377,12 @@ end</script>
                                                 </OTScriptVariableRealObject>
                                                 <OTScriptVariable name="smart_graph_range_response">
                                                   <reference>
-                                                    <OTBlob id="29b315a0-7abe-11dd-aad5-236dc663e6a0" src="scripts/smart_graph_range_response.rb" />
+                                                    <OTBlob id="29b315a0-7abe-11dd-aad5-236dc663e6a0" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/smart_graph_range_response.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="otrunk_ruby_script_tools">
                                                   <reference>
-                                                    <OTBlob id="29b315a1-7abe-11dd-aad5-236dc663e6a0" src="scripts/otrunk_ruby_script_tools.rb" />
+                                                    <OTBlob id="29b315a1-7abe-11dd-aad5-236dc663e6a0" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/otrunk_ruby_script_tools.rb" />
                                                   </reference>
                                                 </OTScriptVariable>
                                                 <OTScriptVariable name="graph">
@@ -10383,7 +10414,7 @@ end</script>
                                             </OTScriptButton>
                                             <OTScriptButton id="29b2ee88-7abe-11dd-aad5-236dc663e6a0" text="Setup">
                                               <script>
-                                                <OTJavascript src="scripts/set-up-smartgraph-button-script.js" />
+                                                <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/set-up-smartgraph-button-script.js" />
                                               </script>
                                               <scriptVariables>
                                                 <OTScriptVariable name="text_field">
@@ -10482,7 +10513,7 @@ end</script>
                             </OTUDLMenu>
                             <OTDataCollector id="e4fd01f1-6d3a-11dd-94c5-7d1ceeb17079" name="Force (5N)" title="Pull shoe: sample data" autoScaleEnabled="true">
                               <source>
-                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable id="e4fd01f1-6d3a-11dd-94c5-7d1ceeb17079/source" name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
                                   <dataProducer>
                                     <OTSensorDataProxy name="dataproducer">
                                       <request>
@@ -11620,11 +11651,669 @@ end</script>
                                 </OTDataGraphable>
                               </source>
                               <xDataAxis>
-                                <OTDataAxis max="9.855388" units="s" min="0.16917293" label="Time" />
+                                <OTDataAxis max="9.855388" units="s" min="0.16917293" label="Time" labelFormat="Engineering" />
                               </xDataAxis>
                               <yDataAxis>
-                                <OTDataAxis max="3.0" units="N" min="-2.0" label="Force" />
+                                <OTDataAxis max="2.5" units="N" min="-0.5" label="Force" labelFormat="Engineering" />
                               </yDataAxis>
+                              <labels>
+                                <OTDataPointLabel id="8b194d65-961a-11dd-a79e-a94d1719b6cb" x="3.1333404" y="0.33868632" color="0xffffbe" fontSize="10" text="starts moving" xData="2.22" yData="0.17046201">
+                                  <dataGraphable>
+                                    <object refid="e4fd01f1-6d3a-11dd-94c5-7d1ceeb17079/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="8b194d65-961a-11dd-a79e-a94d1719b6cb" />
+                                <OTDataPointLabel id="918dad36-961a-11dd-a79e-a94d1719b6cb" x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                                <object refid="918dad36-961a-11dd-a79e-a94d1719b6cb" />
+                              </labels>
                             </OTDataCollector>
                             <object refid="13e32a3e-6fae-11dd-a502-e5ae37d976be" />
                             <OTLabbookButton id="de41e105-6fa1-11dd-a602-55d6db7e08ee" name="Snapshot button">
@@ -13674,15 +14363,17 @@ end</script>
                                       </td>
                                     </tr>
                                   </table>
+                                  <object refid="0e948523-94a2-11dd-9414-7f76d6d9e393" />
+                                  <br />
+                                  <br />
+                                  <br />
                                   <table width="100%">
                                     <tr>
                                       <td width="50%">
                                         <object refid="dd9eb096-85a7-11dd-878a-1182af09f377" />
                                       </td>
-                                      <td style="padding-right: 20px; padding-left: 20px" width="50%">
+                                      <td width="50%" style="padding-left: 20px; padding-right: 20px">
                                         <img src="http://udl.concord.org/artwork/friction_34/push_box_model/push_box_model.jpg" />
-                                        <br />
-                                        <br />
                                       </td>
                                     </tr>
                                   </table>
@@ -13692,6 +14383,31 @@ end</script>
                             </div>
                           </bodyText>
                           <documentRefs>
+                            <OTUDLQuestion id="0e948523-94a2-11dd-9414-7f76d6d9e393" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>How well were you able to use the drawing tools?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="I did not draw using the computer.">
+                                      <bodyText>I did not draw using the computer.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="They were easy to use.">
+                                      <bodyText>They were easy to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Some were hard to use.">
+                                      <bodyText>Some were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Most were hard to use.">
+                                      <bodyText>Most were hard to use.</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
                             <OTUDLQuestion id="dd9eb096-85a7-11dd-878a-1182af09f377" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
@@ -15034,7 +15750,7 @@ end</script>
                                     </OTScriptVariableComponent>
                                   </scriptVariables>
                                   <script>
-                                    <OTJavascript src="scripts/wrap-up_script.js" />
+                                    <OTJavascript src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/wrap-up_script.js" />
                                   </script>
                                 </OTScriptButton>
                                 <object refid="4f731e40-c257-11dc-95ff-0800200c9a66!/password-answer" />
@@ -15748,8 +16464,8 @@ D) Less precise answers are good too, such as "measure how much force it takes t
         <OTLabbook local_id="album" />
         <OTDefinitionManager id="b6350a20-e3b4-11dc-95ff-0800200c9a66">
           <definitions>
-            <OTDefinitionList src="glossary/common-glossary.txt" />
-            <OTDefinitionList src="glossary/friction-glossary.txt" />
+            <OTDefinitionList src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/glossary/common-glossary.txt" />
+            <OTDefinitionList src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/glossary/friction-glossary.txt" />
           </definitions>
           <frame>
             <OTFrame local_id="definition_frame" width="300" height="190" borderlessPopup="true" />
@@ -15770,11 +16486,11 @@ D) Less precise answers are good too, such as "measure how much force it takes t
             <OTFrame local_id="speech_frame" width="380" height="340" borderlessPopup="false" />
           </speechFrame>
         </OTUDLCoachGroup>
-        <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="css/otrunk-34-color.css" />
-        <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
-        <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
-        <OTJavascript local_id="authoring_script.js" src="scripts/authoring_script.js" />
-        <OTJavascript local_id="check_graph.js" src="scripts/check_graph.js" />
+        <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/css/otrunk-34-color.css" />
+        <OTJavascript local_id="change_page.js" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/change_page.js" />
+        <OTJavascript local_id="show_message.js" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/show_message.js" />
+        <OTJavascript local_id="authoring_script.js" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/authoring_script.js" />
+        <OTJavascript local_id="check_graph.js" src="https://svn.concord.org/svn/projects/trunk/common/java/otrunk/otrunk-examples/UDL/scripts/check_graph.js" />
         <OTScriptObject local_id="authoring-script">
           <variables>
             <OTScriptVariable name="cardContainer">

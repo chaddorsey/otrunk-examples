@@ -73,7 +73,7 @@ class MyActionListener
           # $stderr.puts "pause clicked"
           $blnDoStop = true
       else
-      	$integerTimeToStop = -1
+        $integerTimeToStop = -1
         # $stderr.puts "starting model"
         $blnDoStop = false
         $model.runScript("run")

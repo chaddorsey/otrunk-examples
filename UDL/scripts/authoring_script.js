@@ -30,6 +30,8 @@ importClass(Packages.javax.swing.JOptionPane);
 
 var objectAboveSnapshotButton;
 
+var autoNumberPages = false
+
 var pageHandler =
 {
 	
@@ -239,6 +241,9 @@ function init() {
 			for (var j = 0; j < sectionCardContainers[i].getCards().size(); j++){
 				pages[pageIndex] = sectionCardContainers[i].getCards().get(j);
 				pages[pageIndex].addOTChangeListener(pageListener);
+				if (autoNumberPages){
+					addPageNumber(pages[pageIndex], j+1);
+				}
 				if ((i == 0) || (i == (cardContainer.getCards().size()-1))){
 					pages[pageIndex].setShowDefinitions(false);
 				} else {
@@ -262,7 +267,9 @@ function addPageNumber(page, number) {
 		return;
 	}
 	if (text.indexOf("<div class=\"page-number\">") > -1){
-		text = text.replaceAll("<div class=\"page-number\">.*</div>","<div class=\"page-number\">"+number+"</div>");
+			var numberPattern = Pattern.compile("class=\"page-number\">([^>]*)<", Pattern.MULTILINE)
+			var matcher = numberPattern.matcher(text)
+			text = matcher.replaceAll("class=\"page-number\">"+number+"<")
 	} else {
 		var startBody = "<div class=\"body\">";
 		var number = "<div class=\"page-number\">"+number+"</div>";
