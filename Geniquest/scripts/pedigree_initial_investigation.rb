@@ -1,6 +1,6 @@
-include_class 'org.concord.biologica.state.OTStaticOrganism'
-include_class 'org.concord.biologica.state.OTPedigree'
-include_class 'org.concord.biologica.state.OTSex'
+include_class 'org.concord.biologica.OTStaticOrganism'
+include_class 'org.concord.biologica.OTPedigree'
+include_class 'org.concord.biologica.OTSex'
 include_class 'org.concord.otrunk.ui.OTChoiceWithFeedback'
 include_class 'org.concord.otrunk.ui.OTText'
 

@@ -1,5 +1,5 @@
-include_class 'org.concord.biologica.state.OTStaticOrganism'
-include_class 'org.concord.biologica.state.OTMultipleOrganism'
+include_class 'org.concord.biologica.OTStaticOrganism'
+include_class 'org.concord.biologica.OTMultipleOrganism'
 include_class 'org.concord.otrunk.ui.OTText'
 
 import org.concord.biologica

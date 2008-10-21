@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>test-beta-authoring.otml</string>
+	<string>scripts/multi_org_save_pedigree_organisms.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -116,17 +116,25 @@
 			<key>filename</key>
 			<string>test-beta-authoring.otml</string>
 			<key>lastUsed</key>
-			<date>2008-09-15T13:18:15Z</date>
+			<date>2008-10-07T13:19:39Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>scripts/multi_org_button.rb</string>
 			<key>lastUsed</key>
-			<date>2008-09-08T13:22:57Z</date>
+			<date>2008-10-07T13:03:31Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>scripts/multi_org_save_family_button.rb</string>
+			<key>lastUsed</key>
+			<date>2008-10-07T13:24:03Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/multi_org_save_pedigree_organisms.rb</string>
+			<key>lastUsed</key>
+			<date>2008-10-07T13:24:03Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -246,14 +254,58 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>46</integer>
+				<integer>2</integer>
 				<key>line</key>
+				<integer>44</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>42</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
 				<integer>53</integer>
+				<key>line</key>
+				<integer>44</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>44</integer>
+			</dict>
+		</dict>
+		<key>scripts/multi_org_save_family_button.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>82</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>37</integer>
+			<integer>76</integer>
+		</dict>
+		<key>scripts/multi_org_save_pedigree_organisms.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>66</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>56</integer>
 		</dict>
 		<key>scripts/pedigree_initial_investigation.rb</key>
 		<dict>
@@ -288,20 +340,38 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>66</integer>
 				<key>line</key>
-				<integer>1262</integer>
+				<integer>1112</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1234</integer>
+			<integer>1096</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>53</integer>
+				<key>line</key>
+				<integer>1112</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>66</integer>
+				<key>line</key>
+				<integer>1112</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>scripts/meiosis_initial_investigation.rb</string>
 		<string>test-beta-authoring.otml</string>
+		<string>scripts/multi_org_save_pedigree_organisms.rb</string>
+		<string>scripts/multi_org_save_family_button.rb</string>
 		<string>scripts/strain_multiple_organism.rb</string>
 		<string>scripts/pedigree_initial_investigation.rb</string>
 		<string>scripts/multi_org_button.rb</string>
@@ -310,6 +380,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{512, 87}, {823, 722}}</string>
+	<string>{{364, 143}, {861, 670}}</string>
 </dict>
 </plist>

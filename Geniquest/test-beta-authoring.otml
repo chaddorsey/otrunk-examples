@@ -46,7 +46,7 @@
     <import class="org.concord.otrunk.udl.document.OTDefinitionManager" />
     <import class="org.concord.otrunk.udl.document.OTUDLCompoundDoc" />
     <import class="org.concord.otrunk.graph.OTDataCollectorViewConfig" />
-    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+<!--    <import class="org.concord.otrunk.ui.question.OTQuestion" /> -->
     <import class="org.concord.otrunk.udl3.OTUDLMenu" />
     <import class="org.concord.otrunk.udl3.OTUDLContainer" />
     <import class="org.concord.otrunk.udl3.OTUDLSection" />
@@ -80,19 +80,21 @@
     <import class="org.concord.sensor.state.OTSensorRequest" />
     <import class="org.concord.sensor.state.OTZeroSensor" />
     <import class="org.concord.otrunkmw.OTModelerPage" />
-    <import class="org.concord.biologica.state.OTWorld" />
-    <import class="org.concord.biologica.state.OTOrganism" />
-    <import class="org.concord.biologica.state.OTStaticOrganism" />
-    <import class="org.concord.biologica.state.OTChromosome" />
-    <import class="org.concord.biologica.state.OTBreedOffspring" />
-    <import class="org.concord.biologica.state.OTPedigree" />
-    <import class="org.concord.biologica.state.OTMultipleOrganism" />
-    <import class="org.concord.biologica.state.OTFamily" />
-    <import class="org.concord.biologica.state.OTFamilyController" />
+    <import class="org.concord.biologica.OTWorld" />
+    <import class="org.concord.biologica.OTOrganism" />
+    <import class="org.concord.biologica.OTStaticOrganism" />
+    <import class="org.concord.biologica.OTChromosome" />
+    <import class="org.concord.biologica.OTChromosomeZoom" />
+    <import class="org.concord.biologica.OTBreedOffspring" />
+    <import class="org.concord.biologica.OTPedigree" />
+    <import class="org.concord.biologica.OTMultipleOrganism" />
+    <import class="org.concord.biologica.OTFamily" />
+    <import class="org.concord.biologica.OTFamilyController" />
     <import class="org.concord.otrunk.udl.question.OTUDLQuestion" />
     <import class="org.concord.otrunk.ui.OTObjectSet" />
-    <import class="org.concord.biologica.state.OTSex" />
+    <import class="org.concord.biologica.OTSex" />
     <import class="org.concord.otrunk.view.OTFrameDisplayAction" />
+		<import class="org.concord.biologica.test.SimulatedMarkerTest" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -240,6 +242,38 @@
             </OTOrganism>
             <object refid="${femaleStrainOrganism}" />
             <object refid="${maleStrainOrganism}" />
+
+					  <OTOrganism local_id="samplemale_strain">
+                <name>male</name>
+                <sex>0</sex>
+                <world>
+                  <object refid="${dragon_world_strains}" />
+                </world>
+							 <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:f,a:a,a:B</alleles>
+              </OTOrganism>
+						  <OTOrganism local_id="samplemale_strain_plates">
+                  <name>male</name>
+                  <sex>0</sex>
+                  <world>
+                    <object refid="${dragon_world_strains}" />
+                  </world>
+								 <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,a:P,b:t,a:t,a:f,a:a,a:B</alleles>
+                </OTOrganism>
+              <OTOrganism local_id="samplefemale_strain">
+                <name>female</name>
+                <sex>1</sex>
+                <world>
+                  <object refid="${dragon_world_strains}" />
+                </world>          <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
+              </OTOrganism>
+              <OTOrganism local_id="samplefemale_strain_plates">
+                <name>female</name>
+                <sex>1</sex>
+                <world>
+                  <object refid="${dragon_world_strains}" />
+                </world>          <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:F,a:f,a:P,b:p,b:a,a:a,b:B,a:B</alleles>
+              </OTOrganism>
+
           </sharedObjects>
         </OTSharingBundle>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
@@ -1036,7 +1070,8 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             <br />
                             <object refid="${multipleOrganismView}" />
                             <br />
-                            <object refid="${multipleOrganismViewButton}" />
+                            <object refid="${savePedigreeOrganismsButton}" />
+                            <object refid="${clearPedigreeOrganismsButton}" />
                           </bodyText>
                           <documentRefs>
                             <OTText local_id="pedigreeTextObject" text="This is a text placeholder!" />
@@ -1070,9 +1105,9 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               </variables>
                               <scriptState />
                             </OTScriptObject>
-                            <OTScriptButton local_id="multipleOrganismViewButton" text="Update Multi-org view" alwaysReload="false">
+                            <OTScriptButton local_id="savePedigreeOrganismsButton" text="Save selected" alwaysReload="true">
                               <script>
-                                <OTJRuby src="scripts/multi_org_button.rb" />
+                                <OTJRuby src="scripts/multi_org_save_pedigree_organisms.rb" />
                               </script>
                               <scriptVariables>
                                 <OTScriptVariableComponent name="pedigreeView">
@@ -1080,13 +1115,26 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                     <object refid="${firstPedigreeView}" />
                                   </reference>
                                 </OTScriptVariableComponent>
-                                <OTScriptVariableComponent name="multiOrganismView">
+                                <OTScriptVariableComponent name="multiOrgView">
                                   <reference>
                                     <object refid="${multipleOrganismView}" />
                                   </reference>
                                 </OTScriptVariableComponent>
                               </scriptVariables>
                             </OTScriptButton>
+                            <OTScriptButton local_id="clearPedigreeOrganismsButton" text="Clear all" alwaysReload="false">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_clear_button.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+
                             <OTButton local_id="pedigreeButton" text="Show Pedigree View">
                               <action>
                                 <object refid="${show_pedigree_frame}" />
@@ -1329,7 +1377,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                   <name>male</name>
                                   <sex>0</sex>
                                   <world>
-                                    <OTWorld local_id="dragon_world_strains" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+                                    <OTWorld local_id="dragon_world_strains" speciesPath="org/concord/biologica/worlds/dragonmarkers_plates_test.xml" />
                                   </world>
                                   <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
                                 </OTOrganism>
@@ -1428,9 +1476,36 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 <div class="body">
                                  <table>
 																	<tr>
-																		<td>
-																			<object refid="${multipleOrganismViewTransfer}" />
-																			<object refid="${repaintButton}"/>
+<!--																		<td width="150">
+																			<object refid="${multipleOrganismViewTransferPlaceholder}" />
+																		</td>
+-->																		<td>
+																			<table>
+																				<tr>
+																					<td>
+																						<object refid="${samplemale_strain_static}" />
+																						<object refid="${samplemale_strain_chromzoom}" />
+																					</td>
+																				</tr>
+																				<tr>
+																					<td>
+																						<object refid="${samplemale_strain_plates_static}" />
+																						<object refid="${samplemale_strain_plates_chromzoom}" />
+																					</td>
+																				</tr>
+																				<tr>
+																					<td>
+																						<object refid="${samplefemale_strain_plates_static}" />
+																						<object refid="${samplefemale_strain_plates_chromzoom}" />
+																					</td>
+																				</tr>
+																				<tr>
+																					<td>
+																						<object refid="${samplefemale_strain_static}" />
+																						<object refid="${samplefemale_strain_chromzoom}" />
+																					</td>
+																				</tr>
+																			</table>
 																		</td>
 																	</tr>
 																 </table>		
@@ -1439,6 +1514,55 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </div>
                           </bodyText>
 													<documentRefs>
+<!--														<OTMultipleOrganism local_id="multipleOrganismViewTransferPlaceholder" width="150" height="400" organismImageSize="2">
+								              <organisms>
+								                <object refid="${samplemale_strain}" />
+								                <object refid="${samplemale_strain_plates}" />
+								                <object refid="${samplefemale_strain_plates}" />
+								                <object refid="${samplefemale_strain}" />
+								              </organisms>
+								            </OTMultipleOrganism>
+-->													<OTStaticOrganism local_id="samplemale_strain_static">
+															<organism>
+								               	<object refid="${samplemale_strain}" />
+															</organism>
+														</OTStaticOrganism>
+														<OTStaticOrganism local_id="samplemale_strain_plates_static">
+															<organism>
+								               	<object refid="${samplemale_strain_plates}" />
+															</organism>
+														</OTStaticOrganism>
+														<OTStaticOrganism local_id="samplefemale_strain_plates_static">
+															<organism>
+								               	<object refid="${samplefemale_strain_plates}" />
+															</organism>
+														</OTStaticOrganism>
+														<OTStaticOrganism local_id="samplefemale_strain_static">
+															<organism>
+								               	<object refid="${samplefemale_strain}" />
+															</organism>
+														</OTStaticOrganism>
+														<OTChromosomeZoom local_id="samplemale_strain_chromzoom" >
+															<organism>
+								                <object refid="${samplemale_strain}" />
+															</organism>
+														</OTChromosomeZoom>
+														<OTChromosomeZoom local_id="samplemale_strain_plates_chromzoom" >
+															<organism>
+								                <object refid="${samplemale_strain_plates}" />
+															</organism>
+														</OTChromosomeZoom>
+														<OTChromosomeZoom local_id="samplefemale_strain_plates_chromzoom" >
+															<organism>
+								                <object refid="${samplefemale_strain_plates}" />
+															</organism>
+														</OTChromosomeZoom>
+														<OTChromosomeZoom local_id="samplefemale_strain_chromzoom" >
+															<organism>
+								                <object refid="${samplefemale_strain}" />
+															</organism>
+														</OTChromosomeZoom>
+<!--
 														<OTScriptButton local_id="repaintButton" text="Repaint" alwaysReload="false">
 															<script>
 																<OTJRuby src="scripts/repaint_button.rb"/>
@@ -1446,21 +1570,21 @@ Try changing some of the genes and see what happens. Experiment with the genes f
 															<scriptVariables>
 																<OTScriptVariableComponent name="component">
                                   <reference>
-                                    <object refid="${multipleOrganismViewTransfer}" />
+                                    <object refid="${multipleOrganismViewTransferPlaceholder}" />
                                   </reference>
                                 </OTScriptVariableComponent>
                               </scriptVariables>
 														</OTScriptButton>
+-->
 													</documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="b9f387a7-83ef-11dd-9e23-eb01b8e568e2" name="%b9f387a7-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
-                                </div>
+                                New QTL test page
+																<object refid="${samplefemale_strain_plates_static}" />
+																<object refid="${QTL_test_button}" />
                               </div>
                             </div>
                           </bodyText>
@@ -1498,6 +1622,18 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         </div>
                       </bodyText>
                       <documentRefs>
+												<OTScriptButton local_id="QTL_test_button" text="Run QTL sample scan" alwaysReload="true">
+												  <script>
+														<OTJRuby src="scripts/QTL_ruby_test.rb" />
+													</script>
+													<scriptVariables>
+														<OTScriptVariableComponent name="QTL_mother">
+															<reference>
+																<object refid="${samplefemale_strain_plates}" />
+															</reference>
+														</OTScriptVariableComponent>
+													</scriptVariables>
+												</OTScriptButton>
                         <OTUDLMenu id="f69cf6c5-79bb-11dd-b6e3-bdb383ed1215">
                           <cardContainer>
                             <object refid="f69b9732-79bb-11dd-b6e3-bdb383ed1215" />
