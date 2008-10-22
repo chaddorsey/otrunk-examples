@@ -5,18 +5,18 @@ require 'erb'
 include_class 'javax.swing.JOptionPane'
 
 include_class 'org.concord.framework.otrunk.OTrunk'
-include_class 'org.concord.biologica.OTBreedOffspring'
-include_class 'org.concord.biologica.OTOrganism'
-include_class 'org.concord.biologica.OTWorld'
-include_class 'org.concord.biologica.OTChromosome'
-include_class 'org.concord.biologica.OTStaticOrganism'
-include_class 'org.concord.biologica.OTSex'
+include_class 'org.concord.otrunk.biologica.OTBreedOffspring'
+include_class 'org.concord.otrunk.biologica.OTOrganism'
+include_class 'org.concord.otrunk.biologica.OTWorld'
+include_class 'org.concord.otrunk.biologica.OTChromosome'
+include_class 'org.concord.otrunk.biologica.OTStaticOrganism'
+include_class 'org.concord.otrunk.biologica.OTSex'
 include_class 'org.concord.otrunk.ui.OTChoiceWithFeedback'
 include_class 'org.concord.otrunk.ui.OTText'
 
-import org.concord.biologica
-import org.concord.biologica.ui
-import org.concord.biologica.engine
+import org.concord.otrunk.biologica
+import org.concord.otrunk.biologica.ui
+import org.concord.otrunk.biologica.engine
 import java.lang
 import java.beans
 include_class 'org.concord.otrunk.view.OTFolderObject'

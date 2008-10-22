@@ -44,16 +44,16 @@
 							css="body {color: purple; background-color: #FFFFFF } .caption {color: black; padding-left: 5px;} .staticOrganism {width: 150px; float:right;} #introOrganisms {width: 400px;} "/>
 							
 <<<<<<< HEAD:Geniquest/ruby_erb_dragon_test.otml
-						<OTViewEntry objectClass="org.concord.biologica.OTBreedOffspring"
-							viewClass="org.concord.biologica.ui.OTBreedOffspringView" />
-						<OTViewEntry objectClass="org.concord.biologica.OTSex" 
-							viewClass="org.concord.biologica.ui.OTSexView" />
-						<OTViewEntry objectClass="org.concord.biologica.OTChromosome" 
-							viewClass="org.concord.biologica.ui.OTChromosomeView" />
-						<OTViewEntry objectClass="org.concord.biologica.OTStaticOrganism" 
-							viewClass="org.concord.biologica.ui.OTStaticOrganismView" />
-						<OTViewEntry objectClass="org.concord.biologica.OTStaticOrganism" 
-							viewClass="org.concord.biologica.ui.OTStaticOrganismView" />
+						<OTViewEntry objectClass="org.concord.otrunk.biologica.OTBreedOffspring"
+							viewClass="org.concord.otrunk.biologica.ui.OTBreedOffspringView" />
+						<OTViewEntry objectClass="org.concord.otrunk.biologica.OTSex" 
+							viewClass="org.concord.otrunk.biologica.ui.OTSexView" />
+						<OTViewEntry objectClass="org.concord.otrunk.biologica.OTChromosome" 
+							viewClass="org.concord.otrunk.biologica.ui.OTChromosomeView" />
+						<OTViewEntry objectClass="org.concord.otrunk.biologica.OTStaticOrganism" 
+							viewClass="org.concord.otrunk.biologica.ui.OTStaticOrganismView" />
+						<OTViewEntry objectClass="org.concord.otrunk.biologica.OTStaticOrganism" 
+							viewClass="org.concord.otrunk.biologica.ui.OTStaticOrganismView" />
 =======
 						<OTViewEntry objectClass="org.concord.otrunk.biologica.OTBreedOffspring"
 							viewClass="org.concord.otrunk.biologica.ui.OTBreedOffspringView" />

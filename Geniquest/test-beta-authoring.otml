@@ -94,7 +94,7 @@
     <import class="org.concord.otrunk.ui.OTObjectSet" />
     <import class="org.concord.otrunk.biologica.OTSex" />
     <import class="org.concord.otrunk.view.OTFrameDisplayAction" />
-		<import class="org.concord.biologica.test.SimulatedMarkerTest" />
+		<import class="org.concord.otrunk.biologica.test.SimulatedMarkerTest" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -1588,6 +1588,20 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               </div>
                             </div>
                           </bodyText>
+													<documentRefs>
+														<OTScriptButton local_id="QTL_test_button" text="Run QTL sample scan" alwaysReload="true">
+														  <script>
+																<OTJRuby src="scripts/QTL_test_scan.rb" />
+															</script>
+															<scriptVariables>
+																<OTScriptVariableComponent name="QTLMother">
+																	<reference>
+																		<object refid="${samplefemale_strain_plates}" />
+																	</reference>
+																</OTScriptVariableComponent>
+															</scriptVariables>
+														</OTScriptButton>
+													</documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
@@ -1622,18 +1636,6 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         </div>
                       </bodyText>
                       <documentRefs>
-												<OTScriptButton local_id="QTL_test_button" text="Run QTL sample scan" alwaysReload="true">
-												  <script>
-														<OTJRuby src="scripts/QTL_ruby_test.rb" />
-													</script>
-													<scriptVariables>
-														<OTScriptVariableComponent name="QTL_mother">
-															<reference>
-																<object refid="${samplefemale_strain_plates}" />
-															</reference>
-														</OTScriptVariableComponent>
-													</scriptVariables>
-												</OTScriptButton>
                         <OTUDLMenu id="f69cf6c5-79bb-11dd-b6e3-bdb383ed1215">
                           <cardContainer>
                             <object refid="f69b9732-79bb-11dd-b6e3-bdb383ed1215" />

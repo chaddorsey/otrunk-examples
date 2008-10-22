@@ -20,14 +20,14 @@
     <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
     <import class="org.concord.framework.otrunk.wrapper.OTBlob" />
     <import class="org.concord.otrunk.view.OTViewChild" />
-    <import class="org.concord.biologica.OTOrganism" />
-    <import class="org.concord.biologica.OTWorld" />
-    <import class="org.concord.biologica.OTStaticOrganism" />
-    <import class="org.concord.biologica.OTBreedOffspring" />
-    <import class="org.concord.biologica.OTChromosome" />
-    <import class="org.concord.biologica.OTSex" />
-		<import class="org.concord.biologica.OTPedigree" />
-		<import class="org.concord.biologica.OTMultipleOrganism" />
+    <import class="org.concord.otrunk.biologica.OTOrganism" />
+    <import class="org.concord.otrunk.biologica.OTWorld" />
+    <import class="org.concord.otrunk.biologica.OTStaticOrganism" />
+    <import class="org.concord.otrunk.biologica.OTBreedOffspring" />
+    <import class="org.concord.otrunk.biologica.OTChromosome" />
+    <import class="org.concord.otrunk.biologica.OTSex" />
+		<import class="org.concord.otrunk.biologica.OTPedigree" />
+		<import class="org.concord.otrunk.biologica.OTMultipleOrganism" />
     <import class="org.concord.otrunk.ui.OTChoiceWithFeedback" />
     <import class="org.concord.otrunk.ui.OTText" />
     <import class="org.concord.otrunk.script.ui.OTScriptButton" />
@@ -43,16 +43,16 @@
       <bundles>
         <OTViewBundle>
           <viewEntries>
-						<OTViewEntry objectClass="org.concord.biologica.OTPedigree"
-viewClass="org.concord.biologica.ui.OTPedigreeView" />
+						<OTViewEntry objectClass="org.concord.otrunk.biologica.OTPedigree"
+viewClass="org.concord.otrunk.biologica.ui.OTPedigreeView" />
             <OTViewEntry objectClass="org.concord.otrunk.script.ui.OTXHTMLScript" viewClass="org.concord.otrunk.script.ui.OTXHTMLScriptView" />
             <OTDocumentViewConfig objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" css="body {color: purple; background-color: #FFFFFF } .caption {color: black; padding-left: 5px;} .staticOrganism {width: 150px; float:right;} #introOrganisms {width: 400px;} " />
-            <OTViewEntry objectClass="org.concord.biologica.OTBreedOffspring" viewClass="org.concord.biologica.ui.OTBreedOffspringView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTSex" viewClass="org.concord.biologica.ui.OTSexView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTChromosome" viewClass="org.concord.biologica.ui.OTChromosomeView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTOrganism" viewClass="org.concord.biologica.ui.OTOrganismView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTStaticOrganism" viewClass="org.concord.biologica.ui.OTStaticOrganismView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTMultipleOrganism" viewClass="org.concord.biologica.ui.OTMultipleOrganismView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTBreedOffspring" viewClass="org.concord.otrunk.biologica.ui.OTBreedOffspringView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTSex" viewClass="org.concord.otrunk.biologica.ui.OTSexView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTChromosome" viewClass="org.concord.otrunk.biologica.ui.OTChromosomeView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTOrganism" viewClass="org.concord.otrunk.biologica.ui.OTOrganismView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTStaticOrganism" viewClass="org.concord.otrunk.biologica.ui.OTStaticOrganismView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTMultipleOrganism" viewClass="org.concord.otrunk.biologica.ui.OTMultipleOrganismView" />
             <OTViewEntry local_id="choice_feedback_radio_view" objectClass="org.concord.otrunk.ui.OTChoiceWithFeedback" viewClass="org.concord.otrunk.ui.swing.OTChoiceRadioButtonWithFeedbackView" />
             <OTViewEntry local_id="menu-horizontal-circle" objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageView" />
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTCardContainer" viewClass="org.concord.otrunk.ui.swing.OTCardContainerView" />

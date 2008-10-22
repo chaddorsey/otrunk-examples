@@ -1,12 +1,12 @@
 require 'erb'
 include_class 'org.concord.framework.otrunk.OTrunk'
 <<<<<<< HEAD:Geniquest/scripts/multi-page-ruby-script-1.rb
-include_class='org.concord.biologica.OTBreedOffspring'
-include_class='org.concord.biologica.OTOrganism'
-include_class='org.concord.biologica.OTWorld'
-include_class='org.concord.biologica.OTChromosome'
-include_class='org.concord.biologica.OTStaticOrganism'
-include_class='org.concord.biologica.OTSex'
+include_class='org.concord.otrunk.biologica.OTBreedOffspring'
+include_class='org.concord.otrunk.biologica.OTOrganism'
+include_class='org.concord.otrunk.biologica.OTWorld'
+include_class='org.concord.otrunk.biologica.OTChromosome'
+include_class='org.concord.otrunk.biologica.OTStaticOrganism'
+include_class='org.concord.otrunk.biologica.OTSex'
 =======
 include_class='org.concord.otrunk.biologica.OTBreedOffspring'
 include_class='org.concord.otrunk.biologica.OTOrganism'

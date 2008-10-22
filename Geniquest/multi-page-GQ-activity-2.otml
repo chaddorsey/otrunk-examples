@@ -233,10 +233,10 @@
             <OTViewEntry local_id="netlogo-view" viewClass="org.concord.otrunknl4.OTNLogoModelView" objectClass="org.concord.otrunknl4.OTNLogoModel" />
             <OTViewEntry local_id="sound-player-view" objectClass="org.concord.otrunk.ui.OTSoundPlayer" viewClass="org.concord.otrunk.ui.swing.OTSoundPlayerView" />
 <<<<<<< HEAD:Geniquest/multi-page-GQ-activity-2.otml
-            <OTViewEntry objectClass="org.concord.biologica.OTBreedOffspring" viewClass="org.concord.biologica.ui.OTBreedOffspringView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTSex" viewClass="org.concord.biologica.ui.OTSexView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTChromosome" viewClass="org.concord.biologica.ui.OTChromosomeView" />
-            <OTViewEntry objectClass="org.concord.biologica.OTStaticOrganism" viewClass="org.concord.biologica.ui.OTStaticOrganismView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTBreedOffspring" viewClass="org.concord.otrunk.biologica.ui.OTBreedOffspringView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTSex" viewClass="org.concord.otrunk.biologica.ui.OTSexView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTChromosome" viewClass="org.concord.otrunk.biologica.ui.OTChromosomeView" />
+            <OTViewEntry objectClass="org.concord.otrunk.biologica.OTStaticOrganism" viewClass="org.concord.otrunk.biologica.ui.OTStaticOrganismView" />
 =======
             <OTViewEntry objectClass="org.concord.otrunk.biologica.OTBreedOffspring" viewClass="org.concord.otrunk.biologica.ui.OTBreedOffspringView" />
             <OTViewEntry objectClass="org.concord.otrunk.biologica.OTSex" viewClass="org.concord.otrunk.biologica.ui.OTSexView" />

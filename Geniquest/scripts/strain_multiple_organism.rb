@@ -1,10 +1,10 @@
-include_class 'org.concord.biologica.OTStaticOrganism'
-include_class 'org.concord.biologica.OTMultipleOrganism'
+include_class 'org.concord.otrunk.biologica.OTStaticOrganism'
+include_class 'org.concord.otrunk.biologica.OTMultipleOrganism'
 include_class 'org.concord.otrunk.ui.OTText'
 
-import org.concord.biologica
-import org.concord.biologica.ui
-import org.concord.biologica.engine
+import org.concord.otrunk.biologica
+import org.concord.otrunk.biologica.ui
+import org.concord.otrunk.biologica.engine
 import java.lang
 import java.beans
 include_class 'org.concord.otrunk.view.OTFolderObject'

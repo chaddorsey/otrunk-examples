@@ -23,14 +23,14 @@
           <viewEntries>
             <OTViewEntry
 <<<<<<< HEAD:Geniquest/chromosome-dna-view.otml
-              objectClass="org.concord.biologica.OTDna"
-              viewClass="org.concord.biologica.ui.OTDnaView" />
+              objectClass="org.concord.otrunk.biologica.OTDna"
+              viewClass="org.concord.otrunk.biologica.ui.OTDnaView" />
             <OTViewEntry
-              objectClass="org.concord.biologica.OTChromosome"
-              viewClass="org.concord.biologica.ui.OTChromosomeView" />
+              objectClass="org.concord.otrunk.biologica.OTChromosome"
+              viewClass="org.concord.otrunk.biologica.ui.OTChromosomeView" />
             <OTViewEntry
-              objectClass="org.concord.biologica.OTStaticOrganism"
-              viewClass="org.concord.biologica.ui.OTStaticOrganismView" />
+              objectClass="org.concord.otrunk.biologica.OTStaticOrganism"
+              viewClass="org.concord.otrunk.biologica.ui.OTStaticOrganismView" />
 =======
               objectClass="org.concord.otrunk.biologica.OTDna"
               viewClass="org.concord.otrunk.biologica.ui.OTDnaView" />

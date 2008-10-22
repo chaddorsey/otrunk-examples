@@ -95,7 +95,7 @@
 	  <import class="org.concord.smartgraph.OTSmartGraphQuestion" />
 
 <!-- GENIQUEST IMPORTS -->
-    <import class="org.concord.biologica.OTOrganism" />
+    <import class="org.concord.otrunk.biologica.OTOrganism" />
 		<import class="org.concord.otrunk.biologica.OTChromosomeZoom" />
 		<import class="org.concord.otrunk.biologica.OTMultipleOrganism" />
 		<import class="org.concord.otrunk.biologica.OTFamily" />
