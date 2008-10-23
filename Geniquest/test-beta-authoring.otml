@@ -94,7 +94,7 @@
     <import class="org.concord.otrunk.ui.OTObjectSet" />
     <import class="org.concord.otrunk.biologica.OTSex" />
     <import class="org.concord.otrunk.view.OTFrameDisplayAction" />
-		<import class="org.concord.otrunk.biologica.test.SimulatedMarkerTest" />
+		<import class="org.concord.biologica.test.SimulatedMarkerTest" />
   </imports>
   <objects>
     <OTSystem local_id="system">

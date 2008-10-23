@@ -16,11 +16,11 @@ include_class 'org.concord.otrunk.ui.OTText'
 
 import org.concord.otrunk.biologica
 import org.concord.otrunk.biologica.ui
-import org.concord.otrunk.biologica.engine
+import org.concord.biologica.engine
 import java.lang
 import java.beans
 include_class 'org.concord.otrunk.view.OTFolderObject'
-#include_class 'org.concord.biologica.ui.UIProp'
+#include_class 'org.concord.otrunk.biologica.ui.UIProp'
 include_class 'org.concord.biologica.engine.EngineProp'
 
 def self.init
@@ -37,7 +37,7 @@ class ButtonResponse
 
   def clicked
     puts "Running QTL test script"
-    puts inspect $QTLMother
-    puts "Mother's name: " + $QTLmother.name
+    puts inspect $QTLMotherInternal
+    puts "Mother's name: " + $QTLmotherInternal.name
   end
 end

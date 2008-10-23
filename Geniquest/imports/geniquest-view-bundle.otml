@@ -110,7 +110,9 @@
     <import class="org.concord.otrunk.biologica.OTSpecies" />
     <import class="org.concord.otrunk.biologica.OTCharacteristic" />
     <import class="org.concord.otrunk.ui.OTChoiceWithFeedback" />
-<!-- GENIQUEST IMPORTS -->
+		<import class="org.concord.otrunk.biologica.OTFamilyController" />
+		<import class="org.concord.biologica.test.SimulatedMarkerTest" />
+<!-- GENIQUEST IMPORTS --> 
   
   </imports>
   <idMap>
