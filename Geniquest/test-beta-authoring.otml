@@ -89,12 +89,15 @@
     <import class="org.concord.otrunk.biologica.OTPedigree" />
     <import class="org.concord.otrunk.biologica.OTMultipleOrganism" />
     <import class="org.concord.otrunk.biologica.OTFamily" />
-    <import class="org.concord.otrunk.biologica.OTFamilyController" />
+    <import class="org.concord.otrunk.biologica.qtl.OTQTLSimulation" />
+    <import class="org.concord.otrunk.biologica.qtl.OTQTL" />
+    <import class="org.concord.datagraph.state.OTDataGraph"/>
+    <import class="org.concord.datagraph.state.OTDataAxis"/>
     <import class="org.concord.otrunk.udl.question.OTUDLQuestion" />
     <import class="org.concord.otrunk.ui.OTObjectSet" />
     <import class="org.concord.otrunk.biologica.OTSex" />
     <import class="org.concord.otrunk.view.OTFrameDisplayAction" />
-		<import class="org.concord.biologica.test.SimulatedMarkerTest" />
+
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -1584,11 +1587,35 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               <div class="border">
                                 New QTL test page
 																<object refid="${samplefemale_strain_plates_static}" />
-																<object refid="${QTL_test_button}" />
+																<object refid="${QTL_simulation}" /><br/>
+																<object refid="${QTL_scan_graph}" />
                               </div>
                             </div>
                           </bodyText>
 													<documentRefs>
+														<OTQTLSimulation local_id="QTL_simulation" numberOfIndividuals="1000" numberOfMarkersPerChromosome="1000">
+															<chromosomeLengths>
+																<int>100</int>
+																<int>100</int>
+																<int>100</int>
+																<int>30</int>
+															</chromosomeLengths>
+															<locations>
+																<OTQTL chromosome="1" locationInCM="24" additiveEffect="0.5" dominanceDeviation="-0.5" />
+																<OTQTL chromosome="2" locationInCM="67" additiveEffect="0.7" dominanceDeviation="0.5" />
+															</locations>
+															<dataGraph>
+																<object refid="${QTL_scan_graph}" />
+															</dataGraph>
+														</OTQTLSimulation>
+														<OTDataGraph local_id="QTL_scan_graph" name="LOD Scores">
+															<xDataAxis>
+																<OTDataAxis min="0" max="100" label="Position" units="cM" />
+															</xDataAxis>
+															<yDataAxis>
+																<OTDataAxis min="0" max="10" label="LOD" units="" />
+															</yDataAxis>
+														</OTDataGraph>
 														<OTScriptButton local_id="QTL_test_button" text="Run QTL sample scan" alwaysReload="true">
 														  <script>
 																<OTJRuby src="scripts/QTL_test_scan.rb" />
@@ -1596,7 +1623,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
 															<scriptVariables>
 																<OTScriptVariableComponent name="QTLMother">
 																	<reference>
-																		<object refid="${samplefemale_strain_plates}" />
+																		<object refid="${samplefemale_strain_plates_static}" />
 																	</reference>
 																</OTScriptVariableComponent>
 															</scriptVariables>
