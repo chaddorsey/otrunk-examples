@@ -1615,12 +1615,10 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                               </scriptVariables>
                             </OTScriptButton>
                             <OTMozSwing local_id="moz-swing" showToolbar="true" />
-                            <OTQTLSimulation local_id="QTL_simulation" numberOfIndividuals="200" numberOfMarkersPerChromosome="500">
+                            <OTQTLSimulation local_id="QTL_simulation" numberOfIndividuals="200" numberOfMarkersPerChromosome="200">
                               <chromosomeLengths>
                                 <int>100</int>
-                                <int>100</int>
-                                <int>100</int>
-                                <int>30</int>
+																<int>100</int>
                               </chromosomeLengths>
                               <thresholdValues>
                                 <double>0.01</double>
@@ -1628,8 +1626,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 <double>0.35</double>
                               </thresholdValues>
                               <locations>
-                                <OTQTL chromosome="1" locationInCM="24.0" additiveEffect="0.5" dominanceDeviation="-0.5" />
-                                <OTQTL chromosome="2" locationInCM="67.0" additiveEffect="0.7" dominanceDeviation="0.5" />
+                                <OTQTL chromosome="1" locationInCM="24.0" additiveEffect="0.48" dominanceDeviation="-0.5" />
                               </locations>
                               <dataGraph>
                                 <object refid="${QTL_scan_graph}" />
