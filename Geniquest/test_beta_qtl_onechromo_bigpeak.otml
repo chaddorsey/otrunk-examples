@@ -1626,8 +1626,6 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                   <div class="subtitle">QTL Graph</div>
                                   <object refid="${QTL_graph_sub65_nohilight}" />
                                   <br />
-                                  <a href="http://cgd.jax.org/cgi-bin/geniquest/dragon/?start=22200;stop=25900;ref=1;width=800;version=100;label=Genes%3Aoverview-Genes-CrossFxV;id=b6caf2a864ad7bcdc88c3735f3241464;grid=on">Explore Genome for interval</a>
-                                  <br />
                                   <object refid="${QTL_plain_text_pane}" />
                                   <br />
                                   <object refid="${QTL_link_script_solograph}" />
@@ -2950,7 +2948,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 <OTDataAxis min="-0.0" max="10.844629" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable id="1cdf19ee-a94a-11dd-bb77-9d54298f6095" name="1" color="16711680" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable id="99_pct_graphable_hilight" name="1" color="16711680" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -3558,22 +3556,22 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 </OTDataGraphable>
                               </graphables>
                               <labels>
-                                <OTDataPointRuler local_id="thresh99_99double" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="thresh99_99double_hilight" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="true" horizontalVisible="true" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh90_99double" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.342027" yData="7.3420267" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="thresh90_99double_hilight" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.342027" yData="7.3420267" selectable="false" labelVisible="true" horizontalVisible="true" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh65_99double" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="0.0" y="1.5904223" yData="6.590422" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="thresh65_99double_hilight" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="0.0" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="true" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-																<OTDataRegionLabel local_id="highlight_99double" x="4.109589" y="2.4902482" xData="22.19551" yData="9.978143" x1="19.0" x2="25.441261" name="region label" text="1 peak (95% confidence interval)" color="0xffffbe" fontSize="10" showLabel="true">
+																<OTDataRegionLabel local_id="highlight_99double_hilight" x="4.109589" y="2.4902482" xData="22.19551" yData="9.978143" x1="19.0" x2="25.441261" name="region label" text="1 peak (95% confidence interval)" color="0xffffbe" fontSize="10" showLabel="true">
                                   <dataGraphable>
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
                                   </dataGraphable>
@@ -4950,17 +4948,15 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                   <br />
                                   <object refid="${QTL_plain_text_pane3}" />
                                   <br />
-                                  <a href="http://cgd.jax.org/cgi-bin/geniquest/dragon/?start=22200;stop=25900;ref=1;width=800;version=100;label=Genes%3Aoverview-Genes-CrossFxV;id=b6caf2a864ad7bcdc88c3735f3241464;grid=on">Explore Genome for interval</a>
+                                  <a href="http://cgd.jax.org/cgi-bin/geniquest/dragon/?start=190000;stop=254000;ref=1;width=800;version=100;label=Genes%3Aoverview-Genes-CrossFxV;id=b6caf2a864ad7bcdc88c3735f3241464;grid=on">Explore Genome for interval</a>
                                 </div>
                               </div>
                             </div>
                           </bodyText>
 													<documentRefs>
 	                          <OTText local_id="QTL_plain_text_pane3">
-	                            <text>Now the 95% confidence interval for this scan is highlighted. Click on the link below to load a genome browser opened to this interval and explore the dragon genes that fall under this peak location.
-															</text>
+	                            <text>Now the 95% confidence interval for this scan is highlighted. Click on the link below to load a genome browser opened to this interval and explore the dragon genes that fall under this peak location.</text>
 	                          </OTText>
-														
 													</documentRefs>
                         </OTUDLCompoundDoc>
 												
