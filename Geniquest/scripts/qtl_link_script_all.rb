@@ -15,36 +15,49 @@ include_class 'org.concord.biologica.ui.UIProp'
 include_class 'org.concord.biologica.engine.EngineProp'
 
 def self.clicked
-  puts $QTLSimulation.inspect
-  puts $QTLGraph.inspect
-  $confidenceIntervalVector = $QTLSimulation.getConfidenceInterval(1.to_s).to_s
-  num = 0
-  puts $confidenceIntervalVector.size
-  puts "confInt: " + $confidenceIntervalVector[0].to_s
-  thresh_array=[99,90,35].to_java :double
-  $thresholdVector = $QTLSimulation.getThresholdValues(thresh_array)
-  puts $thresholdVector.size
-  $thresholdAdjusted = $thresholdVector.map{ |v| v+= 5}
-  $thresholdAdjusted.each {|v| puts v}
-  #For some reason, this seems to be 5 lower than the actual LOD threshold output on the graph
-  puts "Threshold at 99%: " + $thresholdAdjusted[0].to_s
-  num = 0
+  puts $thresh99_99.inspect
+  puts "Setting Horizontal visible to false."
+  puts $thresh99_99.isHorizontalVisible.to_s
+  $thresh99_99.setHorizontalVisible(false)
+  puts $thresh99_99.isHorizontalVisible.to_s  
+  #puts $QTLSimulation.inspect
+  #puts $QTLGraph.inspect
+  ##$confidenceIntervalVector = $QTLSimulation.getConfidenceInterval(1.to_s).to_s
+  ##num = 0
+  ##puts $confidenceIntervalVector.size
+  ##puts "confInt: " + $confidenceIntervalVector[0].to_s
+  ##thresh_array=[99,90,35].to_java :double
+  ##$thresholdVector = $QTLSimulation.getThresholdValues(thresh_array)
+  ##puts $thresholdVector.size
+  ##$thresholdAdjusted = $thresholdVector.map{ |v| v+= 5}
+  ##$thresholdAdjusted.each {|v| puts v}
+  ##For some reason, this seems to be 5 lower than the actual LOD threshold output on the graph
+  ##puts "Threshold at 99%: " + $thresholdAdjusted[0].to_s
+  #num = 0
   #puts $confidenceIntervalVector.size
   #puts "confInt: " + $confidenceIntervalVector[0].to_s
   
 #    num += 1
 #  end
-  $QTLGraphables = $QTLGraph.getGraphables
-  $QTLConfidenceLabels = $QTLGraph.getLabels.getVector
+
+  puts $QTL_graph_99pct.inspect
+  $QTLGraphables = $QTL_graph_99pct.getGraphables
+  $QTLConfidenceLabels = $QTL_graph_99pct.getLabels.getVector
   $QTLConfidenceLabels.each {|l| puts l;}
   
-  puts $QTLGraphView.inspect
+
   #$QTLGraph.remove($QTLConfidenceLabels[4])
   $QTLGraphableVector = $QTLGraphables.getVector
+  puts "99pct Graphables: "
+  puts
+  $QTLGraphableVector.each {|o| puts o.inspect}
+  puts "9pct Graphables DataStores: "
+  puts
   $QTLGraphableVector.each {|o| puts o.getDataStore}
   $QTLDataStoreZero = $QTLGraphableVector[0].getDataStore.getValues
   puts $QTLDataStoreZero.size
-  num = 0
+
+  #num = 0
   #while num < $QTLDataStoreZero.size
   #  puts $QTLDataStoreZero.get(num)
   #  num += 1
