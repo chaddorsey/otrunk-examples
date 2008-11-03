@@ -1617,7 +1617,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                     <object refid="${QTL_scan_graph}" />
                                   </reference>
                                 </OTScriptVariable>
-                                <OTScriptVariable name="QTLGraph">
+                                <OTScriptVariable name="QTL_graph_99pct">
                                   <reference>
                                     <object refid="${QTL_graph_99pct}" />
                                   </reference>
@@ -1627,7 +1627,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                     <object refid="${QTL_graph_99pct}" />
                                   </reference>
                                 </OTScriptVariableView>
-                                <OTScriptVariable name="QTLGraph">
+                                <OTScriptVariable name="QTL_graph_99pct_double">
                                   <reference>
                                     <object refid="${QTL_graph_99pct_double}" />
                                   </reference>
@@ -1637,7 +1637,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                     <object refid="${QTL_graph_99pct_double}" />
                                   </reference>
                                 </OTScriptVariableView>
-                                <OTScriptVariable name="QTLGraph">
+                                <OTScriptVariable name="QTL_graph_sub65">
                                   <reference>
                                     <object refid="${QTL_graph_sub65}" />
                                   </reference>
@@ -1647,7 +1647,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                     <object refid="${QTL_graph_sub65}" />
                                   </reference>
                                 </OTScriptVariableView>
-                                <OTScriptVariable name="QTLGraph">
+                                <OTScriptVariable name="QTL_graph_91pct">
                                   <reference>
                                     <object refid="${QTL_graph_91pct}" />
                                   </reference>
