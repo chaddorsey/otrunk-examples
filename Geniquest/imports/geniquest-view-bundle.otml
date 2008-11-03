@@ -66,6 +66,7 @@
     <import class="org.concord.otrunk.ui.OTObjectSet"/>
     <import class="org.concord.otrunk.ui.OTSoundPlayer" />
     <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTTextPane" />
     <import class="org.concord.otrunk.ui.snapshot.OTSnapshot" />
     <import class="org.concord.otrunk.ui.snapshot.OTSnapshotButton" />
     <import class="org.concord.otrunk.ui.snapshot.OTSnapshotAlbum" />
@@ -270,6 +271,7 @@
 											<OTMultipleOrganism name="Multiple Organism" />
 											<OTWorld name="World" />
 											<OTText name="Text field!" />
+											<OTTextPane name="Text pane" />
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Multiple-choice (single answer)" />
                       <OTChoiceMultiple name="Multiple-choice (check boxes)" />
@@ -395,6 +397,9 @@
                 <entry key="${text-edit}">
                 	<OTViewEntry objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextEditEditView" />
                 </entry>
+                <entry key="${text-pane}">
+                	<OTViewEntry objectClass="org.concord.otrunk.ui.OTTextPane" viewClass="org.concord.otrunk.ui.swing.OTTextPaneEditView" />
+                </entry>
                 <entry key="${sound-player-view}">
                 	<OTViewEntry objectClass="org.concord.otrunk.ui.OTSoundPlayer" viewClass="org.concord.otrunk.ui.swing.OTSoundPlayerEditView"/>
                 </entry>
@@ -480,6 +485,7 @@ viewClass="org.concord.otrunk.biologica.ui.OTPedigreeView" />
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTPlacementContainer" viewClass="org.concord.otrunk.ui.swing.OTPlacementContainerView" />
             <OTViewEntry id="be713960-e18a-11dc-95ff-0800200c9a66" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextEditView" />
             <OTViewEntry id="c93a7460-e18a-11dc-95ff-0800200c9a66" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextView" />
+            <OTViewEntry id="OTTextPane_View" objectClass="org.concord.otrunk.ui.OTTextPane" viewClass="org.concord.otrunk.ui.swing.OTTextPaneView" />
             <OTViewEntry local_id="data-collector-view" viewClass="org.concord.datagraph.state.OTDataCollectorView" objectClass="org.concord.datagraph.state.OTDataCollector" />
             <OTViewEntry viewClass="org.concord.datagraph.state.OTDataGraphView" objectClass="org.concord.datagraph.state.OTDataGraph" />
             <OTViewEntry viewClass="org.concord.data.state.OTDataFieldView" objectClass="org.concord.data.state.OTDataField" />
