@@ -46,7 +46,6 @@
     <import class="org.concord.otrunk.udl.document.OTDefinitionManager" />
     <import class="org.concord.otrunk.udl.document.OTUDLCompoundDoc" />
     <import class="org.concord.otrunk.graph.OTDataCollectorViewConfig" />
-<!--    <import class="org.concord.otrunk.ui.question.OTQuestion" /> -->
     <import class="org.concord.otrunk.udl3.OTUDLMenu" />
     <import class="org.concord.otrunk.udl3.OTUDLContainer" />
     <import class="org.concord.otrunk.udl3.OTUDLSection" />
@@ -91,13 +90,14 @@
     <import class="org.concord.otrunk.biologica.OTFamily" />
     <import class="org.concord.otrunk.biologica.qtl.OTQTLSimulation" />
     <import class="org.concord.otrunk.biologica.qtl.OTQTL" />
-    <import class="org.concord.datagraph.state.OTDataGraph"/>
-    <import class="org.concord.datagraph.state.OTDataAxis"/>
+    <import class="org.concord.datagraph.state.OTDataGraph" />
+    <import class="org.concord.datagraph.state.OTDataAxis" />
     <import class="org.concord.otrunk.udl.question.OTUDLQuestion" />
     <import class="org.concord.otrunk.ui.OTObjectSet" />
     <import class="org.concord.otrunk.biologica.OTSex" />
     <import class="org.concord.otrunk.view.OTFrameDisplayAction" />
-
+    <import class="org.concord.datagraph.state.OTDataPointRuler" />
+    <import class="org.concord.datagraph.state.OTDataRegionLabel" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -107,7 +107,7 @@
       <bundles>
         <OTSharingBundle>
           <sharedObjects>
-						<OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2">
+            <OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2">
               <organisms>
                 <object refid="${samplemale}" />
                 <object refid="${samplefemale}" />
@@ -245,38 +245,38 @@
             </OTOrganism>
             <object refid="${femaleStrainOrganism}" />
             <object refid="${maleStrainOrganism}" />
-
-					  <OTOrganism local_id="samplemale_strain">
-                <name>male</name>
-                <sex>0</sex>
-                <world>
-                  <object refid="${dragon_world_strains}" />
-                </world>
-							 <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:f,a:a,a:B</alleles>
-              </OTOrganism>
-						  <OTOrganism local_id="samplemale_strain_plates">
-                  <name>male</name>
-                  <sex>0</sex>
-                  <world>
-                    <object refid="${dragon_world_strains}" />
-                  </world>
-								 <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,a:P,b:t,a:t,a:f,a:a,a:B</alleles>
-                </OTOrganism>
-              <OTOrganism local_id="samplefemale_strain">
-                <name>female</name>
-                <sex>1</sex>
-                <world>
-                  <object refid="${dragon_world_strains}" />
-                </world>          <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
-              </OTOrganism>
-              <OTOrganism local_id="samplefemale_strain_plates">
-                <name>female</name>
-                <sex>1</sex>
-                <world>
-                  <object refid="${dragon_world_strains}" />
-                </world>          <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:F,a:f,a:P,b:p,b:a,a:a,b:B,a:B</alleles>
-              </OTOrganism>
-
+            <OTOrganism local_id="samplemale_strain">
+              <name>male</name>
+              <sex>0</sex>
+              <world>
+                <object refid="${dragon_world_strains}" />
+              </world>
+              <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+            </OTOrganism>
+            <OTOrganism local_id="samplemale_strain_plates">
+              <name>male</name>
+              <sex>0</sex>
+              <world>
+                <object refid="${dragon_world_strains}" />
+              </world>
+              <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:P,a:f,a:a,a:B</alleles>
+            </OTOrganism>
+            <OTOrganism local_id="samplefemale_strain">
+              <name>female</name>
+              <sex>1</sex>
+              <world>
+                <object refid="${dragon_world_strains}" />
+              </world>
+              <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
+            </OTOrganism>
+            <OTOrganism local_id="samplefemale_strain_plates">
+              <name>female</name>
+              <sex>1</sex>
+              <world>
+                <object refid="${dragon_world_strains}" />
+              </world>
+              <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:p,a:P,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
+            </OTOrganism>
           </sharedObjects>
         </OTSharingBundle>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
@@ -1137,7 +1137,6 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 </OTScriptVariableComponent>
                               </scriptVariables>
                             </OTScriptButton>
-
                             <OTButton local_id="pedigreeButton" text="Show Pedigree View">
                               <action>
                                 <object refid="${show_pedigree_frame}" />
@@ -1239,7 +1238,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                   <content>
                     <OTCardContainer id="f69b9732-79bb-11dd-b6e3-bdb383ed1215" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc id="f69b9731-79bb-11dd-b6e3-bdb383ed1215" showDefinitions="false">
+                        <OTUDLCompoundDoc id="f69b9731-79bb-11dd-b6e3-bdb383ed1215" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1291,7 +1290,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="170b4e9a-7b50-11dd-8304-0bc503599a8b" name="%170b4e9a-7b50-11dd-8304-0bc503599a8b" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc id="170b4e9a-7b50-11dd-8304-0bc503599a8b" name="%170b4e9a-7b50-11dd-8304-0bc503599a8b" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1373,7 +1372,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                 <object refid="${samplefemale}" />
                               </organisms>
                             </OTMultipleOrganism>
-														<object refid="${multipleOrganismViewTransfer}" />
+                            <object refid="${multipleOrganismViewTransfer}" />
                             <OTBreedOffspring local_id="breedOffspringViewForStrains">
                               <fatherOrganism>
                                 <OTOrganism local_id="maleStrainOrganism">
@@ -1472,52 +1471,53 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </OTScriptButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b6e29e26-83ef-11dd-9e23-eb01b8e568e2" name="%b6e29e26-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true">
+                        <OTUDLCompoundDoc id="b6e29e26-83ef-11dd-9e23-eb01b8e568e2" name="%b6e29e26-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                 <table>
-																	<tr>
-<!--																		<td width="150">
+                                  <table>
+                                    <tr>
+                                      <!--																		<td width="150">
 																			<object refid="${multipleOrganismViewTransferPlaceholder}" />
 																		</td>
--->																		<td>
-																			<table>
-																				<tr>
-																					<td>
-																						<object refid="${samplemale_strain_static}" />
-																						<object refid="${samplemale_strain_chromzoom}" />
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>
-																						<object refid="${samplemale_strain_plates_static}" />
-																						<object refid="${samplemale_strain_plates_chromzoom}" />
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>
-																						<object refid="${samplefemale_strain_plates_static}" />
-																						<object refid="${samplefemale_strain_plates_chromzoom}" />
-																					</td>
-																				</tr>
-																				<tr>
-																					<td>
-																						<object refid="${samplefemale_strain_static}" />
-																						<object refid="${samplefemale_strain_chromzoom}" />
-																					</td>
-																				</tr>
-																			</table>
-																		</td>
-																	</tr>
-																 </table>		
+-->
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td>
+                                              <object refid="${samplemale_strain_static}" />
+                                              <object refid="${samplemale_strain_chromzoom}" />
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <object refid="${samplemale_strain_plates_static}" />
+                                              <object refid="${samplemale_strain_plates_chromzoom}" />
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <object refid="${samplefemale_strain_plates_static}" />
+                                              <object refid="${samplefemale_strain_plates_chromzoom}" />
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <object refid="${samplefemale_strain_static}" />
+                                              <object refid="${samplefemale_strain_chromzoom}" />
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
                                 </div>
                               </div>
                             </div>
                           </bodyText>
-													<documentRefs>
-<!--														<OTMultipleOrganism local_id="multipleOrganismViewTransferPlaceholder" width="150" height="400" organismImageSize="2">
+                          <documentRefs>
+                            <!--														<OTMultipleOrganism local_id="multipleOrganismViewTransferPlaceholder" width="150" height="400" organismImageSize="2">
 								              <organisms>
 								                <object refid="${samplemale_strain}" />
 								                <object refid="${samplemale_strain_plates}" />
@@ -1525,115 +1525,137 @@ Try changing some of the genes and see what happens. Experiment with the genes f
 								                <object refid="${samplefemale_strain}" />
 								              </organisms>
 								            </OTMultipleOrganism>
--->													<OTStaticOrganism local_id="samplemale_strain_static">
-															<organism>
-								               	<object refid="${samplemale_strain}" />
-															</organism>
-														</OTStaticOrganism>
-														<OTStaticOrganism local_id="samplemale_strain_plates_static">
-															<organism>
-								               	<object refid="${samplemale_strain_plates}" />
-															</organism>
-														</OTStaticOrganism>
-														<OTStaticOrganism local_id="samplefemale_strain_plates_static">
-															<organism>
-								               	<object refid="${samplefemale_strain_plates}" />
-															</organism>
-														</OTStaticOrganism>
-														<OTStaticOrganism local_id="samplefemale_strain_static">
-															<organism>
-								               	<object refid="${samplefemale_strain}" />
-															</organism>
-														</OTStaticOrganism>
-														<OTChromosomeZoom local_id="samplemale_strain_chromzoom" >
-															<organism>
-								                <object refid="${samplemale_strain}" />
-															</organism>
-														</OTChromosomeZoom>
-														<OTChromosomeZoom local_id="samplemale_strain_plates_chromzoom" >
-															<organism>
-								                <object refid="${samplemale_strain_plates}" />
-															</organism>
-														</OTChromosomeZoom>
-														<OTChromosomeZoom local_id="samplefemale_strain_plates_chromzoom" >
-															<organism>
-								                <object refid="${samplefemale_strain_plates}" />
-															</organism>
-														</OTChromosomeZoom>
-														<OTChromosomeZoom local_id="samplefemale_strain_chromzoom" >
-															<organism>
-								                <object refid="${samplefemale_strain}" />
-															</organism>
-														</OTChromosomeZoom>
-<!--
-														<OTScriptButton local_id="repaintButton" text="Repaint" alwaysReload="false">
-															<script>
-																<OTJRuby src="scripts/repaint_button.rb"/>
-															</script>
-															<scriptVariables>
-																<OTScriptVariableComponent name="component">
-                                  <reference>
-                                    <object refid="${multipleOrganismViewTransferPlaceholder}" />
-                                  </reference>
-                                </OTScriptVariableComponent>
-                              </scriptVariables>
-														</OTScriptButton>
 -->
-													</documentRefs>
+                            <OTStaticOrganism local_id="samplemale_strain_static">
+                              <organism>
+                                <object refid="${samplemale_strain}" />
+                              </organism>
+                            </OTStaticOrganism>
+                            <OTStaticOrganism local_id="samplemale_strain_plates_static">
+                              <organism>
+                                <object refid="${samplemale_strain_plates}" />
+                              </organism>
+                            </OTStaticOrganism>
+                            <OTStaticOrganism local_id="samplefemale_strain_plates_static">
+                              <organism>
+                                <object refid="${samplefemale_strain_plates}" />
+                              </organism>
+                            </OTStaticOrganism>
+                            <OTStaticOrganism local_id="samplefemale_strain_static">
+                              <organism>
+                                <object refid="${samplefemale_strain}" />
+                              </organism>
+                            </OTStaticOrganism>
+                            <OTChromosomeZoom local_id="samplemale_strain_chromzoom">
+                              <organism>
+                                <object refid="${samplemale_strain}" />
+                              </organism>
+                            </OTChromosomeZoom>
+                            <OTChromosomeZoom local_id="samplemale_strain_plates_chromzoom">
+                              <organism>
+                                <object refid="${samplemale_strain_plates}" />
+                              </organism>
+                            </OTChromosomeZoom>
+                            <OTChromosomeZoom local_id="samplefemale_strain_plates_chromzoom">
+                              <organism>
+                                <object refid="${samplefemale_strain_plates}" />
+                              </organism>
+                            </OTChromosomeZoom>
+                            <OTChromosomeZoom local_id="samplefemale_strain_chromzoom">
+                              <organism>
+                                <object refid="${samplefemale_strain}" />
+                              </organism>
+                            </OTChromosomeZoom>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b9f387a7-83ef-11dd-9e23-eb01b8e568e2" name="%b9f387a7-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true">
+                        <OTUDLCompoundDoc id="b9f387a7-83ef-11dd-9e23-eb01b8e568e2" name="%b9f387a7-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 New QTL test page
-<!--																<object refid="${samplefemale_strain_plates_static}" /> -->
-																<object refid="${QTL_simulation}" /><br/>
-																<object refid="${QTL_scan_graph}" />
+                                <!--																<object refid="${samplefemale_strain_plates_static}" /> -->
+                                <object refid="${QTL_simulation}" />
+                                <br />
+                                <object refid="${QTL_scan_graph}" />
+                                <br />
+                                <object refid="${QTL_test_page_text_field}" />
+                                <br />
+                                <!--																<object refid="${moz-swing}" /> -->
+                                <object refid="${QTL_link_script}" />
                               </div>
                             </div>
                           </bodyText>
-													<documentRefs>
-														<OTQTLSimulation local_id="QTL_simulation" numberOfIndividuals="200" numberOfMarkersPerChromosome="500">
-															<chromosomeLengths>
-																<int>100</int>
-																<int>100</int>
-																<int>100</int>
-																<int>30</int>
-															</chromosomeLengths>
-															<thresholdValues>
-								                <double>0.01</double>
-								                <double>0.10</double>
-								                <double>0.35</double>
-								              </thresholdValues>
-															<locations>
-																<OTQTL chromosome="1" locationInCM="24" additiveEffect="0.5" dominanceDeviation="-0.5" />
-																<OTQTL chromosome="2" locationInCM="67" additiveEffect="0.7" dominanceDeviation="0.5" />
-															</locations>
-															<dataGraph>
-																<object refid="${QTL_scan_graph}" />
-															</dataGraph>
-														</OTQTLSimulation>
-														<OTDataGraph local_id="QTL_scan_graph" name="LOD Scores">
-															<xDataAxis>
-																<OTDataAxis min="0" max="100" label="Position" units="cM" />
-															</xDataAxis>
-															<yDataAxis>
-																<OTDataAxis min="0" max="10" label="LOD" units="" />
-															</yDataAxis>
-														</OTDataGraph>
-														<OTScriptButton local_id="QTL_test_button" text="Run QTL sample scan" alwaysReload="true">
-														  <script>
-																<OTJRuby src="scripts/QTL_test_scan.rb" />
-															</script>
-															<scriptVariables>
-																<OTScriptVariableComponent name="QTLMother">
-																	<reference>
-																		<object refid="${samplefemale_strain_plates_static}" />
-																	</reference>
-																</OTScriptVariableComponent>
-															</scriptVariables>
-														</OTScriptButton>
-													</documentRefs>
+                          <documentRefs>
+                            <OTText local_id="QTL_test_page_text_field" />
+                            <OTScriptButton local_id="QTL_link_script" text="Evaluate Script" alwaysReload="true">
+                              <script>
+                                <OTJRuby src="scripts/qtl_link_script.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableView name="QTLSimulation">
+                                  <reference>
+                                    <object refid="${QTL_simulation}" />
+                                  </reference>
+                                </OTScriptVariableView>
+                                <OTScriptVariable name="textField">
+                                  <reference>
+                                    <object refid="${QTL_test_page_text_field}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariable name="QTLGraph">
+                                  <reference>
+                                    <object refid="${QTL_scan_graph}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableView name="QTLGraphView">
+                                  <reference>
+                                    <object refid="${QTL_scan_graph}" />
+                                  </reference>
+                                </OTScriptVariableView>
+                              </scriptVariables>
+                            </OTScriptButton>
+                            <OTMozSwing local_id="moz-swing" showToolbar="true" />
+                            <OTQTLSimulation local_id="QTL_simulation" numberOfIndividuals="200" numberOfMarkersPerChromosome="500">
+                              <chromosomeLengths>
+                                <int>100</int>
+                                <int>100</int>
+                                <int>100</int>
+                                <int>30</int>
+                              </chromosomeLengths>
+                              <thresholdValues>
+                                <double>0.01</double>
+                                <double>0.10</double>
+                                <double>0.35</double>
+                              </thresholdValues>
+                              <locations>
+                                <OTQTL chromosome="1" locationInCM="24.0" additiveEffect="0.5" dominanceDeviation="-0.5" />
+                                <OTQTL chromosome="2" locationInCM="67.0" additiveEffect="0.7" dominanceDeviation="0.5" />
+                              </locations>
+                              <dataGraph>
+                                <object refid="${QTL_scan_graph}" />
+                              </dataGraph>
+                            </OTQTLSimulation>
+                            <OTDataGraph local_id="QTL_scan_graph" name="LOD Scores">
+                              <xDataAxis>
+                                <OTDataAxis min="0.0" max="100.0" label="Position" units="cM" />
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis min="-0.0" max="12.629056" label="LOD" units="" />
+                              </yDataAxis>
+                            </OTDataGraph>
+                            <OTScriptButton local_id="QTL_test_button" text="Run QTL sample scan" alwaysReload="true">
+                              <script>
+                                <OTJRuby src="scripts/QTL_test_scan.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="QTLMother">
+                                  <reference>
+                                    <object refid="${samplefemale_strain_plates_static}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
@@ -1694,7 +1716,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                   <content>
                     <OTCardContainer id="bcc4f72a-83ef-11dd-9e23-eb01b8e568e2" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc id="bcc4f729-83ef-11dd-9e23-eb01b8e568e2">
+                        <OTUDLCompoundDoc id="bcc4f729-83ef-11dd-9e23-eb01b8e568e2" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1706,7 +1728,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" name="%be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true">
+                        <OTUDLCompoundDoc id="be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" name="%be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">

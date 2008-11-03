@@ -115,6 +115,7 @@
     <import class="org.concord.datagraph.state.OTDataGraph"/>
     <import class="org.concord.datagraph.state.OTDataAxis"/>
 		<import class="org.concord.biologica.qtl.Rinterface" />
+		<import class="org.concord.otrunk.browser.mozswing.OTMozSwing" />
 <!-- GENIQUEST IMPORTS --> 
   
   </imports>
