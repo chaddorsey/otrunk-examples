@@ -358,7 +358,6 @@
                             </div>
                           </bodyText>
                           <documentRefs>
-
                             <OTDataGraph local_id="QTL_graph_44peak_1" name="LOD Scores">
                               <xDataAxis>
                                 <OTDataAxis min="0.0" max="100.0" label="Position" units="cM" />
@@ -367,7 +366,7 @@
                                 <OTDataAxis min="-0.0" max="9.8" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="44_peak1_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="44_peak1_graphable" name="1" color="16777215" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -588,7 +587,7 @@
                                 <OTDataAxis min="-0.0" max="15.5" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="44_peak2_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="44_peak2_graphable" name="1" color="16777215" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -807,7 +806,7 @@
                                 <OTDataAxis min="-0.0" max="19.6" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="44_peak3_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="44_peak3_graphable" name="1" color="16777215" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -932,7 +931,7 @@
                                 <OTDataAxis min="-0.0" max="9.8" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="noise_1_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="noise_1_graphable" name="1" color="16777215" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -1201,15 +1200,19 @@
                                   <br />
                                   <br />
                                   <object refid="95913144-abdf-11dd-92e4-29790a6d5976" />
-																	<object refid="4e49515e-1707-4c07-a020-cb0d8d6a2e87" />
+                                  <object refid="4e49515e-1707-4c07-a020-cb0d8d6a2e87" />
                                   <object refid="c59b9fbb-abdf-11dd-92e4-29790a6d5976" />
                                   <br />
                                   <br />
                                   <br />
-<!--                                  <object refid="03ce79d8-abe0-11dd-92e4-29790a6d5976" />
+                                  <!--                                  <object refid="03ce79d8-abe0-11dd-92e4-29790a6d5976" ></object>
+                                  <br >
+                                  <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]" ></object>
+-->
+                                  <object refid="eb631a46-abdf-11dd-92e4-29790a6d5976" />
                                   <br />
-                                  <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]" />
--->                                  <object refid="eb631a46-abdf-11dd-92e4-29790a6d5976" />
+                                  <object refid="03b9556f-ac0e-11dd-ab4f-15c2b8208995" />
+                                  <br />
                                   <br />
                                 </div>
                               </div>
@@ -1268,28 +1271,30 @@
                                 <OTDataAxis min="-0.0" max="23.13889" label="LOD" units="" />
                               </yDataAxis>
                               <labels>
-																<object refid="${thresh99_44-1}" />
-																<object refid="${thresh90_44-1}" />
-																<object refid="${thresh65_44-1}" />
-																<object refid="${44-1-hilight-left}" />
-																<object refid="${44-1-hilight-right}" />
-																<object refid="${thresh99_44-2}" />
-																<object refid="${thresh90_44-2}" />
-																<object refid="${thresh65_44-2}" />
-																<object refid="${44-2-hilight-left}" />
-																<object refid="${44-2-hilight-right}" />
-																<object refid="${thresh99_44-3}" />
-																<object refid="${thresh90_44-3}" />
-																<object refid="${thresh65_44-3}" />
-																<object refid="${44-3-hilight-left}" />
-																<object refid="${44-3-hilight-right}" />
+                                <object refid="${thresh99_44-1}" />
+                                <object refid="${thresh90_44-1}" />
+                                <object refid="${thresh65_44-1}" />
+                                <object refid="${44-1-hilight-left}" />
+                                <object refid="${44-1-hilight-right}" />
+                                <object refid="${thresh99_44-2}" />
+                                <object refid="${thresh90_44-2}" />
+                                <object refid="${thresh65_44-2}" />
+                                <object refid="${44-2-hilight-left}" />
+                                <object refid="${44-2-hilight-right}" />
+                                <object refid="${thresh99_44-3}" />
+                                <object refid="${thresh90_44-3}" />
+                                <object refid="${thresh65_44-3}" />
+                                <object refid="${44-3-hilight-left}" />
+                                <object refid="${44-3-hilight-right}" />
                               </labels>
                             </OTDataGraph>
+                            <OTLabbookButton id="03ce79d8-abe0-11dd-92e4-29790a6d5976" name="Labbook button" />
+                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]" />
                             <OTScriptButton id="eb631a46-abdf-11dd-92e4-29790a6d5976" name="Script button" text="Run Selected Experiment" alwaysReload="true">
                               <script>
                                 <OTJRuby src="../scripts/qtl_link_script_commongraph.rb" />
                               </script>
-															<scriptVariables>
+                              <scriptVariables>
                                 <OTScriptVariable name="QTLGraph">
                                   <reference>
                                     <object refid="c59b9fbb-abdf-11dd-92e4-29790a6d5976" />
@@ -1310,10 +1315,14 @@
                                     <object refid="4e49515e-1707-4c07-a020-cb0d8d6a2e87" />
                                   </reference>
                                 </OTScriptVariable>
+																<OTScriptVariable name="textField">
+																	<reference>
+																		<object refid="03b9556f-ac0e-11dd-ab4f-15c2b8208995"/>
+																	</reference>
+																</OTScriptVariable>
                               </scriptVariables>
                             </OTScriptButton>
-                            <OTLabbookButton id="03ce79d8-abe0-11dd-92e4-29790a6d5976" name="Labbook button" />
-                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]" />
+                            <OTText id="03b9556f-ac0e-11dd-ab4f-15c2b8208995" name="Text field" rows="3" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="067f372e-abdf-11dd-92e4-29790a6d5976" name="%067f372e-abdf-11dd-92e4-29790a6d5976" showEditBar="true" showDefinitions="false">
