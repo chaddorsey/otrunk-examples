@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>scripts/multi_org_save_pedigree_organisms.rb</string>
+	<string>test_beta_qtl_onechromo_bigpeak.otml</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -114,9 +114,51 @@
 		</dict>
 		<dict>
 			<key>filename</key>
+			<string>Biologica-test-beta-OTQTL-student-1peak-99pct.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T02:53:21Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Biologica-test-beta-OTQTL-student-1peak-highpct-double.launch.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T02:54:57Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Biologica-test-beta-OTQTL-student-1peak-sub65-pct.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T13:41:21Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Biologica-test-beta-OTQTL-student-1peak-low-pct.otml</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Biologica-test-beta-OTQTL-student-1peak-91pct.launch.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T02:57:21Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>test_beta_qtl_onechromo_bigpeak.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T18:24:12Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>test-beta-authoring.otml</string>
 			<key>lastUsed</key>
-			<date>2008-10-07T13:19:39Z</date>
+			<date>2008-11-03T17:33:14Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>test-beta-GQ-smartgraph.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-02T01:10:59Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -134,21 +176,19 @@
 			<key>filename</key>
 			<string>scripts/multi_org_save_pedigree_organisms.rb</string>
 			<key>lastUsed</key>
-			<date>2008-10-07T13:24:03Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2008-10-31T16:01:22Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>scripts/pedigree_initial_investigation.rb</string>
 			<key>lastUsed</key>
-			<date>2008-09-08T13:14:20Z</date>
+			<date>2008-11-02T01:10:58Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>scripts/meiosis_initial_investigation.rb</string>
 			<key>lastUsed</key>
-			<date>2008-08-29T13:53:28Z</date>
+			<date>2008-11-03T17:33:14Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -158,9 +198,39 @@
 			<key>filename</key>
 			<string>scripts/multi_org_move_up_button.rb</string>
 		</dict>
+		<dict>
+			<key>filename</key>
+			<string>simple-qtl-example.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T00:17:10Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>imports/geniquest-view-bundle.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T17:19:58Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/qtl_link_script.rb</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T13:45:13Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/qtl_link_script_all.rb</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T17:41:46Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/qtl_link_script_solograph.rb</string>
+			<key>lastUsed</key>
+			<date>2008-11-03T18:24:12Z</date>
+		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>239</integer>
+	<integer>214</integer>
 	<key>metaData</key>
 	<dict>
 		<key>../LOOPS/scripts/loops-one-dimension-report.rb</key>
@@ -190,6 +260,20 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>imports/geniquest-view-bundle.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>142</integer>
+				<key>line</key>
+				<integer>487</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>487</integer>
 		</dict>
 		<key>multi-page-GQ-activity-1.otml</key>
 		<dict>
@@ -240,14 +324,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>6</integer>
+				<integer>9</integer>
 				<key>line</key>
 				<integer>30</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>11</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>30</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>30</integer>
+			</dict>
 		</dict>
 		<key>scripts/multi_org_button.rb</key>
 		<dict>
@@ -298,7 +398,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
+				<integer>0</integer>
 				<key>line</key>
 				<integer>66</integer>
 			</dict>
@@ -321,6 +421,48 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>scripts/qtl_link_script.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>50</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>35</integer>
+		</dict>
+		<key>scripts/qtl_link_script_all.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>scripts/qtl_link_script_solograph.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>151</integer>
+				<key>line</key>
+				<integer>38</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>10</integer>
+		</dict>
 		<key>scripts/strain_multiple_organism.rb</key>
 		<dict>
 			<key>caret</key>
@@ -335,34 +477,78 @@
 			<key>firstVisibleLine</key>
 			<integer>23</integer>
 		</dict>
-		<key>test-beta-authoring.otml</key>
+		<key>simple-qtl-example.otml</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>66</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>1112</integer>
+				<integer>49</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1096</integer>
+			<integer>37</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>53</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>1112</integer>
+				<integer>44</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>66</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>1112</integer>
+				<integer>49</integer>
+			</dict>
+		</dict>
+		<key>test-beta-authoring.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>94</integer>
+				<key>line</key>
+				<integer>1628</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>1620</integer>
+		</dict>
+		<key>test_beta_qtl_onechromo_bigpeak.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>70</integer>
+				<key>line</key>
+				<integer>8881</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>8866</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>67</integer>
+				<key>line</key>
+				<integer>8881</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>70</integer>
+				<key>line</key>
+				<integer>8881</integer>
 			</dict>
 		</dict>
 	</dict>
@@ -370,6 +556,12 @@
 	<array>
 		<string>scripts/meiosis_initial_investigation.rb</string>
 		<string>test-beta-authoring.otml</string>
+		<string>test_beta_qtl_onechromo_bigpeak.otml</string>
+		<string>scripts/qtl_link_script_solograph.rb</string>
+		<string>scripts/qtl_link_script_all.rb</string>
+		<string>scripts/qtl_link_script.rb</string>
+		<string>imports/geniquest-view-bundle.otml</string>
+		<string>simple-qtl-example.otml</string>
 		<string>scripts/multi_org_save_pedigree_organisms.rb</string>
 		<string>scripts/multi_org_save_family_button.rb</string>
 		<string>scripts/strain_multiple_organism.rb</string>
@@ -380,6 +572,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{364, 143}, {861, 670}}</string>
+	<string>{{483, 110}, {861, 670}}</string>
 </dict>
 </plist>
