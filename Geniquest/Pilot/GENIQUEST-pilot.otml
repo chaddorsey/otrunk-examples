@@ -112,6 +112,7 @@
         <OTScriptEngineBundle>
           <engines>
             <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.jruby.OTJRuby" engineClass="org.concord.otrunk.script.jruby.OTJRubyEngine" />
           </engines>
         </OTScriptEngineBundle>
         <OTInterfaceManager>
@@ -366,7 +367,7 @@
                                 <OTDataAxis min="-0.0" max="9.8" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="44_peak1_graphable" name="1" color="16711680" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="44_peak1_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -567,12 +568,12 @@
                                     <object refid="${QTL_graph_44peak_1}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-1-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="44.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="44-1-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="44.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak2_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-1-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="48.9" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="44-1-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="48.9" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak2_graphable}" />
                                   </dataGraphable>
@@ -587,7 +588,7 @@
                                 <OTDataAxis min="-0.0" max="15.5" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="44_peak2_graphable" name="1" color="16711680" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="44_peak2_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -786,12 +787,12 @@
                                     <object refid="${44_peak2_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-2-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="42.68" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="44-2-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="42.68" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak2_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-2-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="47.5" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="44-2-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="47.5" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak2_graphable}" />
                                   </dataGraphable>
@@ -806,7 +807,7 @@
                                 <OTDataAxis min="-0.0" max="19.6" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="44_peak3_graphable" name="1" color="16711680" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="44_peak3_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -911,12 +912,12 @@
                                     <object refid="${44_peak3_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-3-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="45.1" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="44-3-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="45.1" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak3_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-3-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="47.48" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="44-3-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="47.48" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak3_graphable}" />
                                   </dataGraphable>
@@ -931,7 +932,7 @@
                                 <OTDataAxis min="-0.0" max="9.8" label="LOD" units="" />
                               </yDataAxis>
                               <graphables>
-                                <OTDataGraphable local_id="noise_1_graphable" name="1" color="16711680" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
+                                <OTDataGraphable local_id="noise_1_graphable" name="1" color="0X00FFFFFF" connectPoints="true" drawMarks="false" xColumn="0" yColumn="1" lineWidth="2.0">
                                   <dataStore>
                                     <OTDataStore numberChannels="2">
                                       <values>
@@ -1135,7 +1136,7 @@
                                     <object refid="${noise_1_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="hilight-right-noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="54.0" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0x00ff00" fontSize="10">
+                                <OTDataPointRuler local_id="hilight-right-noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="54.0" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0x00ff00" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${noise_1_graphable}" />
                                   </dataGraphable>
@@ -1200,19 +1201,15 @@
                                   <br />
                                   <br />
                                   <object refid="95913144-abdf-11dd-92e4-29790a6d5976" />
+																	<object refid="4e49515e-1707-4c07-a020-cb0d8d6a2e87" />
                                   <object refid="c59b9fbb-abdf-11dd-92e4-29790a6d5976" />
                                   <br />
                                   <br />
-                                  <object refid="eb631a46-abdf-11dd-92e4-29790a6d5976" />
                                   <br />
-                                  <object refid="03ce79d8-abe0-11dd-92e4-29790a6d5976" />
+<!--                                  <object refid="03ce79d8-abe0-11dd-92e4-29790a6d5976" />
                                   <br />
                                   <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]" />
-                                  <br />
-                                  <br />
-                                  <br />
-                                  <br />
-                                  <br />
+-->                                  <object refid="eb631a46-abdf-11dd-92e4-29790a6d5976" />
                                   <br />
                                 </div>
                               </div>
@@ -1241,7 +1238,23 @@
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoiceMultiple>
-                            <OTDataGraph id="c59b9fbb-abdf-11dd-92e4-29790a6d5976" name="Data graph" title="Data graph" showGraphableList="false">
+                            <OTChoiceMultiple id="4e49515e-1707-4c07-a020-cb0d8d6a2e87" name="Multiple-choice (check boxes)" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc name="50">
+                                  <bodyText>50 individuals</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="100">
+                                  <bodyText>100 individuals</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="200">
+                                  <bodyText>200 individuals</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="400">
+                                  <bodyText>400 individuals</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoiceMultiple>
+                            <OTDataGraph id="c59b9fbb-abdf-11dd-92e4-29790a6d5976" name="Data graph" showGraphableList="false">
                               <graphables>
                                 <object refid="${44_peak3_graphable}" />
                                 <object refid="${44_peak2_graphable}" />
@@ -1255,116 +1268,49 @@
                                 <OTDataAxis min="-0.0" max="23.13889" label="LOD" units="" />
                               </yDataAxis>
                               <labels>
-                                <OTDataPointRuler local_id="thresh99_44-1" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="3.7207239" yData="8.720724" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${QTL_graph_44peak_1}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh90_44-1" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.5138166" yData="7.513817" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${QTL_graph_44peak_1}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh65_44-1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="0.0" y="1.687281" yData="6.687281" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${QTL_graph_44peak_1}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-1-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="44.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak2_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-1-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="48.9" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak2_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh99_44-2" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak2_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh90_44-2" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.342027" yData="7.3420267" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak2_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh65_44-2" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="0.0" y="1.5904223" yData="6.590422" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak2_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-2-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="42.68" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak2_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-2-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="47.5" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak2_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh99_44-3" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="3.58" yData="8.58" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak3_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh90_44-3" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.24" yData="7.24" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak3_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh65_44-3" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="0.0" y="1.69" yData="6.69" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak3_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-3-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="45.1" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak3_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="44-3-hilight-right" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="47.48" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${44_peak3_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh99_noise_1" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="4.49" yData="9.49" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${noise_1_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh90_noise_1" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.69" yData="7.69" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${noise_1_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh65_noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="41.5" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${noise_1_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="hilight-left-noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="41.5" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0x00ff00" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${noise_1_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="hilight-right-noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="54.0" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0x00ff00" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="${noise_1_graphable}" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
+																<object refid="${thresh99_44-1}" />
+																<object refid="${thresh90_44-1}" />
+																<object refid="${thresh65_44-1}" />
+																<object refid="${44-1-hilight-left}" />
+																<object refid="${44-1-hilight-right}" />
+																<object refid="${thresh99_44-2}" />
+																<object refid="${thresh90_44-2}" />
+																<object refid="${thresh65_44-2}" />
+																<object refid="${44-2-hilight-left}" />
+																<object refid="${44-2-hilight-right}" />
+																<object refid="${thresh99_44-3}" />
+																<object refid="${thresh90_44-3}" />
+																<object refid="${thresh65_44-3}" />
+																<object refid="${44-3-hilight-left}" />
+																<object refid="${44-3-hilight-right}" />
                               </labels>
                             </OTDataGraph>
-                            <OTScriptButton id="eb631a46-abdf-11dd-92e4-29790a6d5976" name="Script button">
+                            <OTScriptButton id="eb631a46-abdf-11dd-92e4-29790a6d5976" name="Script button" text="Run Selected Experiment" alwaysReload="true">
                               <script>
-                                <OTJavascript>
-                                  <script>function clicked(){
-                      				
-                      				}</script>
-                                </OTJavascript>
+                                <OTJRuby src="../scripts/qtl_link_script_commongraph.rb" />
                               </script>
+															<scriptVariables>
+                                <OTScriptVariable name="QTLGraph">
+                                  <reference>
+                                    <object refid="c59b9fbb-abdf-11dd-92e4-29790a6d5976" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableView name="QTLGraphView">
+                                  <reference>
+                                    <object refid="c59b9fbb-abdf-11dd-92e4-29790a6d5976" />
+                                  </reference>
+                                </OTScriptVariableView>
+                                <OTScriptVariable name="drakesCheckBoxes">
+                                  <reference>
+                                    <object refid="95913144-abdf-11dd-92e4-29790a6d5976" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariable name="numbersCheckBoxes">
+                                  <reference>
+                                    <object refid="4e49515e-1707-4c07-a020-cb0d8d6a2e87" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </scriptVariables>
                             </OTScriptButton>
                             <OTLabbookButton id="03ce79d8-abe0-11dd-92e4-29790a6d5976" name="Labbook button" />
                             <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]" />
