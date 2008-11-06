@@ -31,7 +31,7 @@ def self.clicked
   $selectedDrakes.each {|d| puts d.name}
   $textField.text = "Budget Remaining: $" + $remaining_budget.to_s
   
-  if($selectedDrakes.size !== 2 )
+  if($selectedDrakes.size != 2 )
     $textField.text = "Please select only two strains of Drakes for this run."
   end
   
