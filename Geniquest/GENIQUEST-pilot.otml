@@ -2246,7 +2246,7 @@
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="QTL_graph_44peak2_hilight_right" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="25.44" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="fales" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="QTL_graph_44peak2_hilight_right" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="25.44" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="false" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
                                   </dataGraphable>
@@ -3625,7 +3625,7 @@
                             </OTScriptButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-												<OTUDLCompoundDoc id="qtl_page_4" name="%be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc name="%be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -3640,17 +3640,16 @@
                               </div>
                             </div>
                           </bodyText>
-													<documentRefs>
-	                          <OTText local_id="QTL_plain_text_pane3">
-	                            <text>Now the 95% confidence interval for this scan is shown with vertical lines. Zoom in on the graph to identify the section of the chromosome this interval represents. Record this interval separately for your notes. Then click on the link below to load a genome browser opened to this interval and explore the dragon genes that fall under this peak location.</text>
-	                          </OTText>
-													</documentRefs>
+                          <documentRefs>
+                            <OTText local_id="QTL_plain_text_pane3">
+                              <text>Now the 95% confidence interval for this scan is shown with vertical lines. Zoom in on the graph to identify the section of the chromosome this interval represents. Record this interval separately for your notes. Then click on the link below to load a genome browser opened to this interval and explore the dragon genes that fall under this peak location.</text>
+                            </OTText>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
-												
                         <OTUDLCompoundDoc local_id="section-3-page-1" showDefinitions="true" />
                       </cards>
                       <currentCard>
-                        <object refid="qtl_page_2" />
+                        <object refid="be1d0d1e-83ef-11dd-9e23-eb01b8e568e2" />
                       </currentCard>
                       <viewedCards>
                         <object refid="${section-3-page-1}" />
