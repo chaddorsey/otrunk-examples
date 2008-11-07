@@ -165,7 +165,7 @@
           <content>
             <OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true">
               <cards>
-                <OTUDLSection local_id="section_1" name="Section 1">
+                <OTUDLSection local_id="section_1" name="Intro">
                   <header>
                     <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" showEditBar="false">
                       <bodyText>
@@ -176,6 +176,543 @@
                   <content>
                     <OTCardContainer local_id="section-1-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
+												<OTUDLCompoundDoc local_id="page-1" name="1" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="staticdragon">
+                                          <object refid="c1e77778-64f5-11dd-88f8-3390a456ed3b" />
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="staticdragon">
+                                          <object refid="6b4c4b24-64f5-11dd-88f8-3390a456ed3b" />
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  Today is a very exciting day on the island of Gandwar. Two dragons 
+          there are about to have a baby. Because it happens only about every 
+          500 years, the birth of a dragon is met with great anticipation. The 
+          lucky parents are Molthwan and Lucenne, two of the island’s most 
+          admired inhabitants.
+                                  <br />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTStaticOrganism id="c1e77778-64f5-11dd-88f8-3390a456ed3b" name="Static Organism">
+                              <organism>
+                                <object refid="c1e77779-64f5-11dd-88f8-3390a456ed3b" />
+                              </organism>
+                            </OTStaticOrganism>
+                            <OTStaticOrganism id="6b4c4b24-64f5-11dd-88f8-3390a456ed3b" name="Static Organism">
+                              <organism>
+                                <object refid="6b4c4b25-64f5-11dd-88f8-3390a456ed3b" />
+                              </organism>
+                            </OTStaticOrganism>
+														
+														
+														<OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2">
+								              <organisms>
+								                <object refid="${samplemale}" />
+								                <object refid="${samplefemale}" />
+								              </organisms>
+								            </OTMultipleOrganism>
+								            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[6]" />
+								            <OTOrganism id="6b4c4b25-64f5-11dd-88f8-3390a456ed3b" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld local_id="dragonmarkers" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="c1e77779-64f5-11dd-88f8-3390a456ed3b" name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTWorld id="433cea58-64fa-11dd-88f8-3390a456ed3b" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								            <OTWorld id="7850b6ea-64fa-11dd-88f8-3390a456ed3b" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								            <OTWorld id="9039c71c-64fa-11dd-88f8-3390a456ed3b" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								            <OTOrganism id="433cea57-64fa-11dd-88f8-3390a456ed3b" name="WingsEx2Female" alleles="b:W,a:W" sex="1" allowFatalCharacteristic="false">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="7850b6e9-64fa-11dd-88f8-3390a456ed3b" name="WingsEx2Male" alleles="b:w,a:w" sex="0" allowFatalCharacteristic="false">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="f9868606-64f9-11dd-88f8-3390a456ed3b" name="WingsEx1Male" alleles="b:W,a:w" sex="0" allowFatalCharacteristic="false">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="9039c71b-64fa-11dd-88f8-3390a456ed3b" name="WingsEx1Female" alleles="b:w,a:w" sex="1" allowFatalCharacteristic="false">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <object refid="${femaleOrganism}" />
+								            <object refid="${maleOrganism}" />
+								            <object refid="${femaleOrganism2}" />
+								            <object refid="${maleOrganism2}" />
+								            <object refid="${femaleOrganism3}" />
+								            <object refid="${maleOrganism3}" />
+								            <object refid="${femaleOrganism4}" />
+								            <object refid="${maleOrganism4}" />
+								            <OTOrganism id="ec63a7dc-6517-11dd-bd45-d9d11cbf97e7" name="Zandar" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld id="ec63a7dd-6517-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <object refid="ec63a7dd-6517-11dd-bd45-d9d11cbf97e7" />
+								            <OTOrganism name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism local_id="samplefemale" name="female" sex="1" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld id="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism local_id="samplemale" name="male" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <object refid="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="f87576ad-651c-11dd-bd45-d9d11cbf97e7" name="Lucenne" sex="1" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld id="f87576ae-651c-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="f87576ac-651c-11dd-bd45-d9d11cbf97e7" name="Molthwan" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <object refid="f87576ae-651c-11dd-bd45-d9d11cbf97e7" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="a8e20bf5-73a4-11dd-a769-cbc7ca7b3ef4" name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="a8e20bf4-73a4-11dd-a769-cbc7ca7b3ef4" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="619fc538-79cd-11dd-acfb-c58c080ea6e2" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld id="619fc538-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2/world" />
+								            <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2/world" />
+								            <OTOrganism id="3b6fe9db-7b46-11dd-8304-0bc503599a8b" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="4c5615de-7b46-11dd-8304-0bc503599a8b" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="3f49957e-7b50-11dd-8304-0bc503599a8b" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="3f49957f-7b50-11dd-8304-0bc503599a8b" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <object refid="${femaleStrainOrganism}" />
+								            <object refid="${maleStrainOrganism}" />
+								            <OTOrganism local_id="samplemale_strain">
+								              <name>male</name>
+								              <sex>0</sex>
+								              <world>
+								                <object refid="${dragon_world_strains}" />
+								              </world>
+								              <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+								            </OTOrganism>
+								            <OTOrganism local_id="samplemale_strain_plates">
+								              <name>male</name>
+								              <sex>0</sex>
+								              <world>
+								                <object refid="${dragon_world_strains}" />
+								              </world>
+								              <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:P,a:f,a:a,a:B</alleles>
+								            </OTOrganism>
+								            <OTOrganism local_id="samplefemale_strain">
+								              <name>female</name>
+								              <sex>1</sex>
+								              <world>
+								                <object refid="${dragon_world_strains}" />
+								              </world>
+								              <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
+								            </OTOrganism>
+								            <OTOrganism local_id="samplefemale_strain_plates">
+								              <name>female</name>
+								              <sex>1</sex>
+								              <world>
+								                <object refid="${dragon_world_strains}" />
+								              </world>
+								              <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:p,a:P,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
+								            </OTOrganism>
+														
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+												<OTUDLCompoundDoc id="c05510a7-5367-11dd-bf21-11a44a6b030d" name="%c05510a7-5367-11dd-bf21-11a44a6b030d" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table width="100%">
+                                    <tr>
+                                      <td>
+                                        <div class="staticdragon">
+                                          <object refid="c1e77778-64f5-11dd-88f8-3390a456ed3b" />
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="staticdragon">
+                                          <object refid="6b4c4b24-64f5-11dd-88f8-3390a456ed3b" />
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  Like all eager parents, Molthwan and Lucenne are anxious to know 
+          what their  baby will be like. Molthwan is especially interested in 
+          knowing whether the baby will have horns, a much-admired 
+          trait. Lucenne is hoping that the baby will have wings and be able 
+          to fly, something not many dragons on Gandwar are able to do.
+                                  <br />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+												<OTUDLCompoundDoc id="f95ce30c-650c-11dd-ac85-bb6ebc537d22" name="%f95ce30c-650c-11dd-ac85-bb6ebc537d22" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table>
+                                    <tr>
+                                      <td>Try breeding some dragons to see if you can figure out any 
+                rules that govern which dragons have horns.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <object refid="${breedOffspringView}" editable="true" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <object refid="${breedOffspringView2}" editable="true" />
+                                        <br />
+                                        <object refid="3262387d-6511-11dd-ac85-bb6ebc537d22" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <br />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="3262387d-6511-11dd-ac85-bb6ebc537d22" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Based on these examples, what kind of a trait do you think horns are?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc id="32623880-6511-11dd-ac85-bb6ebc537d22" name="Dominant">
+                                      <bodyText>Dominant</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Recessive">
+                                      <bodyText>Recessive</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                              <correctAnswer>
+                                <object refid="32623880-6511-11dd-ac85-bb6ebc537d22" />
+                              </correctAnswer>
+                            </OTUDLQuestion>
+                            <object refid="${breedOffspringView}" />
+                            <object refid="${breedOffspringView2}" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+												<OTUDLCompoundDoc id="9c422e44-64f9-11dd-88f8-3390a456ed3b" name="%9c422e44-64f9-11dd-88f8-3390a456ed3b" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <table width="100%">
+                              <tr>
+                                <td>Now try breeding some dragons to see if you can figure out any rules 
+          that govern which dragons have wings. Click the button to breed 
+          possible children from these pairs.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <object refid="${breedOffspringView}" editable="false" />
+                                  <br />
+                                  <object refid="1615797e-6509-11dd-ac85-bb6ebc537d22" />
+                                  <br />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <object refid="${breedOffspringView2}" editable="false" />
+                                  <br />
+                                  <object refid="4cdb3c0b-6509-11dd-ac85-bb6ebc537d22" />
+                                </td>
+                              </tr>
+                            </table>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="1615797e-6509-11dd-ac85-bb6ebc537d22" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>What can you say about the offspring of two dragons that have wings?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText name="Open response" />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="4cdb3c0b-6509-11dd-ac85-bb6ebc537d22" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>If one parent has wings, does that guarantee that the child will have wings?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Yes">
+                                      <bodyText>Yes</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="No">
+                                      <bodyText>No</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion id="7008f8e9-6509-11dd-ac85-bb6ebc537d22" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>What do these two scenarios tell you about how wings are inherited?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText name="Open response" rows="2" />
+                              </input>
+                            </OTUDLQuestion>
+                            <OTBreedOffspring local_id="breedOffspringView">
+                              <fatherOrganism>
+                                <OTOrganism local_id="maleOrganism">
+                                  <name>male</name>
+                                  <sex>0</sex>
+                                  <world>
+                                    <OTWorld local_id="dragon_world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+                                  </world>
+                                  <alleles>b:H,a:H,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+                                </OTOrganism>
+                              </fatherOrganism>
+                              <motherOrganism>
+                                <OTOrganism local_id="femaleOrganism">
+                                  <name>female</name>
+                                  <sex>1</sex>
+                                  <world>
+                                    <object refid="${dragon_world}" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:T,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+                                </OTOrganism>
+                              </motherOrganism>
+                            </OTBreedOffspring>
+                            <OTBreedOffspring local_id="breedOffspringView2">
+                              <fatherOrganism>
+                                <OTOrganism local_id="maleOrganism2">
+                                  <name>male</name>
+                                  <sex>0</sex>
+                                  <world>
+                                    <object refid="${dragon_world}" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:w,a:W,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+                                </OTOrganism>
+                              </fatherOrganism>
+                              <motherOrganism>
+                                <OTOrganism local_id="femaleOrganism2">
+                                  <name>female</name>
+                                  <sex>1</sex>
+                                  <world>
+                                    <object refid="${dragon_world}" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+                                </OTOrganism>
+                              </motherOrganism>
+                            </OTBreedOffspring>
+                            <OTBreedOffspring local_id="breedOffspringView3">
+                              <fatherOrganism>
+                                <OTOrganism local_id="maleOrganism3">
+                                  <name>male</name>
+                                  <sex>0</sex>
+                                  <world>
+                                    <object refid="${dragon_world}" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+                                </OTOrganism>
+                              </fatherOrganism>
+                              <motherOrganism>
+                                <OTOrganism local_id="femaleOrganism3">
+                                  <name>female</name>
+                                  <sex>1</sex>
+                                  <world>
+                                    <object refid="${dragon_world}" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:W,a:W,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+                                </OTOrganism>
+                              </motherOrganism>
+                            </OTBreedOffspring>
+                            <OTBreedOffspring local_id="breedOffspringView4">
+                              <fatherOrganism>
+                                <OTOrganism local_id="maleOrganism4">
+                                  <name>male</name>
+                                  <sex>0</sex>
+                                  <world>
+                                    <object refid="${dragon_world}" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+                                </OTOrganism>
+                              </fatherOrganism>
+                              <motherOrganism>
+                                <OTOrganism local_id="femaleOrganism4">
+                                  <name>female</name>
+                                  <sex>1</sex>
+                                  <world>
+                                    <object refid="${dragon_world}" />
+                                  </world>
+                                  <alleles>b:h,a:h,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:F,a:F,b:A,a:a,b:B,a:B</alleles>
+                                </OTOrganism>
+                              </motherOrganism>
+                            </OTBreedOffspring>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+												<OTUDLCompoundDoc id="9ad368eb-6509-11dd-ac85-bb6ebc537d22" name="%9ad368eb-6509-11dd-ac85-bb6ebc537d22" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <table>
+                                    <tr>
+                                      <td>Do you have an idea about how wings are inherited? Try the two 
+                scenarios below to see if they confirm your suspicions.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <object refid="${breedOffspringView3}" editable="false" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <object refid="${breedOffspringView4}" editable="false" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <object refid="7008f8e9-6509-11dd-ac85-bb6ebc537d22" />
+                                        <br />
+                                        <object refid="b611d402-650b-11dd-ac85-bb6ebc537d22" />
+                                        <br />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTUDLQuestion id="b611d402-650b-11dd-ac85-bb6ebc537d22" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>What kind of trait do you think wings are?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Dominant">
+                                      <bodyText>Dominant</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Recessive">
+                                      <bodyText>Recessive</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                              <correctAnswer>
+                                <OTCompoundDoc id="b611d405-650b-11dd-ac85-bb6ebc537d22" name="Recessive">
+                                  <bodyText>Recessive</bodyText>
+                                </OTCompoundDoc>
+                              </correctAnswer>
+                            </OTUDLQuestion>
+                            <object refid="${breedOffspringView3}" />
+                            <object refid="${breedOffspringView4}" />
+                            <object refid="7008f8e9-6509-11dd-ac85-bb6ebc537d22" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+												<OTUDLCompoundDoc id="39819641-6517-11dd-bd45-d9d11cbf97e7" name="%39819641-6517-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="false">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">Looking Deeper</div>
+                                  You have an idea about how horns and wings are inherited. In the 
+          next section, you will look deeper into the genetics of dragons to 
+          determine whether you were correct.
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+												
                         <OTUDLCompoundDoc local_id="section-1-page-1" name="1" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
