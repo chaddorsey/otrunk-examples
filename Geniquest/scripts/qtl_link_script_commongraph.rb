@@ -15,36 +15,65 @@ include_class 'org.concord.biologica.ui.UIProp'
 include_class 'org.concord.biologica.engine.EngineProp'
 #include OTrunkRubyScriptTools
 
+@remaining_budget = 500000
+
 def self.clicked
   puts "Inspecting graphs"
-  $remaining_budget = 500000
-  puts "Initial budget: " + $remaining_budget.to_s
+  puts "Initial budget: " + @remaining_budget.to_s
   puts "$QTL_graph.inspect!!: " + $QTLGraph.inspect
   $QTLGraphables = $QTLGraph.getGraphables.getVector
   puts "Graphables: " + $QTLGraphables.inspect
-  $QTLGraphables.each {|g| g.setColor(0x00FFFFFF)}
+  $QTLGraphables.each {|g| g.setLineWidth(2.0)}
+  #$QTLGraphables.each {|g| g.setColor(0x00FF0000)}
+  $QTLGraphables.each {|g| g.setVisible(false)}
+  #$QTLGraphables[0].inspect
+  #$QTLGraphables[0].setVisible(false)
   puts "$drakesCheckBoxes.inspect: " + $drakesCheckBoxes.inspect
   $selectedDrakes = $drakesCheckBoxes.getCurrentChoices.getVector
   puts "$drakesCheckBoxes.getCurrentChoices: "
   puts $selectedDrakes.inspect
-  puts $selectedDrakes.size
-  $selectedDrakes.each {|d| puts d.name}
-  $textField.text = "Budget Remaining: $" + $remaining_budget.to_s
-  
-  if($selectedDrakes.size != 2 )
-    $textField.text = "Please select only two strains of Drakes for this run."
+  puts $selectedDrakes.size > 2
+  n=0
+  $selectedDrakeStrains = Array.new
+  $selectedDrakes.each do |drake|
+    $selectedDrakeStrains[n]=drake.name
+    puts $selectedDrakeStrains[n]
+    n+=1
   end
   
-  if($selectedDrakes.size == 2 && $remaining_budget != 0)
-    if $selectedDrakes.include?("Mountain") {$QTLGraphables[0].setColor(0x00FF0000)}
-    elsif $selectedDrakes.include?("Valley") {$QTLGraphables[1].setColor(0x00FF0000)}
-    elsif $selectedDrakes.include?("Swamp") {$QTLGraphables[2].setColor(0x00FF0000)}
-    else $QTLGraphables[3].setColor(0x0000FF00)
+  puts "incl mt.? " + $selectedDrakeStrains.include?("Mountain").to_s
+  
+  if($selectedDrakes.size > 2 )
+    
+  end
+  
+  if ($selectedDrakes.size == 2)
+    @remaining_budget += -100000
+    puts @remaining_budget
+    $textField.text = "Budget Remaining: $" + @remaining_budget.to_s
+    if (@remaining_budget != 0)
+      if $selectedDrakeStrains.include?("Mountain")
+        puts "Mountain"
+        $QTLGraphables[0].setVisible(true)
+        $QTLGraphables[0].setColor(0x00FF0000)
+      elsif $selectedDrakeStrains.include?("Valley")
+        puts "Valley"
+        $QTLGraphables[1].setVisible(true)
+        $QTLGraphables[1].setColor(0x00FF0000)
+      elsif $selectedDrakeStrains.include?("Swamp")
+        puts "Swamp"
+        $QTLGraphables[2].setVisible(true)
+        $QTLGraphables[2].setColor(0x00FF0000)
+      elsif $selectedDrakeStrains.include?("Desert" || "Ice" || "Forest") 
+        puts "Other"
+        $QTLGraphables[3].setColor(0x00FF0000)
+        $QTLGraphables[3].setVisible(true)
+      end
+    else $textField.text = "You have no money remaining!"
     end
-    $remaining_budget = $remaining_budget - 100000
-  else $textField.text = "You have no money remaining!"
+  else $textField.text = "Please select two strains of Drakes for this run." 
   end
-  $textField.text = "Budget Remaining: $" + $remaining_budget.to_s
+  
   #puts $QTLGraphLabels = $QTLGraph.getLabels.getVector.inspect
   #puts "99pct Labels: "
   #$QTLGraphLabels.each {|l| puts l; l.setHorizontalVisible(true)}
