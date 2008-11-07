@@ -99,6 +99,7 @@
     <import class="org.concord.datagraph.state.OTDataPointRuler" />
     <import class="org.concord.datagraph.state.OTDataRegionLabel" />
     <import class="org.concord.otrunk.labbook.OTLabbookButton" />
+	  <import class="org.concord.framework.otrunk.wrapper.OTInt" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -567,6 +568,11 @@
                                     <object refid="${QTL_graph_44peak_1}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
+																<OTDataRegionLabel local_id="44-1-hilight-label" name="95% Confidence Interval" text="95% Conf. Interval" x="1.0" x1="44.0" x2="48.9" y="5" yData="0" color="0xffffbe" fontSize="10" showLabel="false" setVisible="false">
+																	<dataGraphable>
+                                    <object refid="${QTL_graph_44peak_1}" />
+																	</dataGraphable>
+																</OTDataRegionLabel>
                                 <OTDataPointRuler local_id="44-1-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="44.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak2_graphable}" />
@@ -786,6 +792,12 @@
                                     <object refid="${44_peak2_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
+																<OTDataRegionLabel local_id="44-2-hilight-label" name="95% Confidence Interval" text="95% Conf. Interval" x="1.0" x1="42.68" x2="47.5" y="5" yData="0" color="0xffffbe" fontSize="10" showLabel="false" setVisible="false">
+																	<dataGraphable>
+                                    <object refid="${QTL_graph_44peak_2}" />
+																	</dataGraphable>
+																</OTDataRegionLabel>
+
                                 <OTDataPointRuler local_id="44-2-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="42.68" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak2_graphable}" />
@@ -911,6 +923,11 @@
                                     <object refid="${44_peak3_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
+																<OTDataRegionLabel local_id="44-1-hilight-label" name="95% Confidence Interval" text="95% Conf. Interval" x="1.0" x1="45.1" x2="47.48" y="5" yData="0" color="0xffffbe" fontSize="10" showLabel="false" setVisible="false">
+																	<dataGraphable>
+                                    <object refid="${QTL_graph_44peak_3}" />
+																	</dataGraphable>
+																</OTDataRegionLabel>
                                 <OTDataPointRuler local_id="44-3-hilight-left" name="95% confidence interval" text="99.0% Conf. Interval" x="1.0" xData="45.1" y="3.3008826" yData="8.300882" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${44_peak3_graphable}" />
@@ -1115,22 +1132,27 @@
                                 </OTDataGraphable>
                               </graphables>
                               <labels>
-                                <OTDataPointRuler local_id="thresh99_noise_1" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="4.49" yData="9.49" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="thresh99_noise_1" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="4.49" yData="9.49" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${noise_1_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh90_noise_1" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.69" yData="7.69" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="thresh90_noise_1" name="90.0% Threshold" text="90.0% Threshold" x="1.0" xData="0.0" y="2.69" yData="7.69" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${noise_1_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="thresh65_noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="41.5" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                <OTDataPointRuler local_id="thresh65_noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="41.5" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${noise_1_graphable}" />
                                   </dataGraphable>
                                 </OTDataPointRuler>
-                                <OTDataPointRuler local_id="hilight-left-noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="41.5" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="true" verticalVisible="true" intersectionVisible="false" color="0x00ff00" fontSize="10">
+																<OTDataRegionLabel local_id="noise_1-hilight-label" name="95% Confidence Interval" text="95% Conf. Interval" x="1.0" x1="41.5" x2="54.0" y="5" yData="0" color="0xffffbe" fontSize="10" showLabel="false" setVisible="false">
+																	<dataGraphable>
+                                    <object refid="${QTL_graph_44peak_1}" />
+																	</dataGraphable>
+																</OTDataRegionLabel>
+                                <OTDataPointRuler local_id="hilight-left-noise_1" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="41.5" y="1.81" yData="6.81" selectable="false" labelVisible="false" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0x00ff00" fontSize="10">
                                   <dataGraphable>
                                     <object refid="${noise_1_graphable}" />
                                   </dataGraphable>
@@ -1180,7 +1202,7 @@
           experiments on a few crosses. Use what you already know about Drakes 
           to help you select which strains to breed in experiments and how 
           many Drakes to use in each experiment. Make sure to keep watch on 
-          your budget and timeframe so you don't run out!
+          your budget so you don't run out!
                                 </div>
                               </div>
                             </div>
@@ -1192,22 +1214,17 @@
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Breeding</div>
-                                  Select two types of Drakes you would like to breed in an experiment, 
-          and the number you would like to use. Click on the button below to 
-          run your experiment. As you look at scans, make sure to save the 
-          results in your lab notebook, so you don't have to waste time or 
-          money running experiments over again.
+                                  Select two types of Drakes you would like to breed in an experiment. Click on the button below to 
+          run your experiment. Experimental runs cost $100,000 each, and you start with a budget of $500,000. As you look at scans, make sure to record your
+          results carefully so you don't have to waste your money running any experiments over again. You may wish to zoom in on individual graph results in order to record all information accurately.
                                   <br />
                                   <br />
                                   <object refid="95913144-abdf-11dd-92e4-29790a6d5976" />
-                                  <object refid="4e49515e-1707-4c07-a020-cb0d8d6a2e87" />
                                   <object refid="c59b9fbb-abdf-11dd-92e4-29790a6d5976" />
                                   <br />
                                   <br />
                                   <br />
-                                	<object refid="03ce79d8-abe0-11dd-92e4-29790a6d5976" ></object>
-                                  <br >
-                                  <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]"></object>
+																	<object refid="${budget_text}" />
                                   <object refid="eb631a46-abdf-11dd-92e4-29790a6d5976" />
                                   <br />
                                   <object refid="03b9556f-ac0e-11dd-ab4f-15c2b8208995" />
@@ -1269,8 +1286,15 @@
                                 <object refid="${thresh65_44-3}" />
                                 <object refid="${44-3-hilight-left}" />
                                 <object refid="${44-3-hilight-right}" />
+                                <object refid="${thresh99_noise_1}" />
+                                <object refid="${thresh90_noise_1}" />
+                                <object refid="${thresh65_noise_1}" />
+                                <object refid="${noise_1-hilight-left}" />
+                                <object refid="${noise_1-hilight-right}" />
                               </labels>
                             </OTDataGraph>
+														<OTText local_id="budget_text" text="Initial Budget: $500000"/>
+														<OTInt local_id="remaining_budget" value="500000" />
                             <OTLabbookButton id="03ce79d8-abe0-11dd-92e4-29790a6d5976" name="Labbook button" />
                             <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[10]" />
                             <OTScriptButton id="eb631a46-abdf-11dd-92e4-29790a6d5976" name="Script button" text="Run Selected Experiment" alwaysReload="true">
@@ -1293,14 +1317,19 @@
                                     <object refid="95913144-abdf-11dd-92e4-29790a6d5976" />
                                   </reference>
                                 </OTScriptVariable>
-                                <OTScriptVariable name="numbersCheckBoxes">
-                                  <reference>
-                                    <object refid="4e49515e-1707-4c07-a020-cb0d8d6a2e87" />
-                                  </reference>
-                                </OTScriptVariable>
 																<OTScriptVariable name="textField">
 																	<reference>
 																		<object refid="03b9556f-ac0e-11dd-ab4f-15c2b8208995"/>
+																	</reference>
+																</OTScriptVariable>
+																<OTScriptVariable name="remainingBudget">
+																	<reference>
+																		<object refid="${remaining_budget}" />
+																	</reference>
+																</OTScriptVariable>
+																<OTScriptVariable name="budgetText">
+																	<reference>
+																		<object refid="${budget_text}" />
 																	</reference>
 																</OTScriptVariable>
                               </scriptVariables>
