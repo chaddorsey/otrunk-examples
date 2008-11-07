@@ -1240,22 +1240,6 @@
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoiceMultiple>
-                            <OTChoiceMultiple id="4e49515e-1707-4c07-a020-cb0d8d6a2e87" name="Multiple-choice (check boxes)" alignContent="0">
-                              <choices>
-                                <OTCompoundDoc name="50">
-                                  <bodyText>50 individuals</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="100">
-                                  <bodyText>100 individuals</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="200">
-                                  <bodyText>200 individuals</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="400">
-                                  <bodyText>400 individuals</bodyText>
-                                </OTCompoundDoc>
-                              </choices>
-                            </OTChoiceMultiple>
                             <OTDataGraph id="c59b9fbb-abdf-11dd-92e4-29790a6d5976" name="Data graph" showGraphableList="false">
                               <graphables>
                                 <object refid="${44_peak3_graphable}" />
