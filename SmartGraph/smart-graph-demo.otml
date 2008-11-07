@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <otrunk id="fba5ef80-db43-11dc-95ff-0800200c9a66">
   <imports>
-    <import class="org.concord.smartgraph.OTSmartGraph"/>
+    <import class="org.concord.smartgraph.OTSmartGraphTool"/>
     <import class="org.concord.data.state.OTDataStore" />
     <import class="org.concord.data.state.OTDataChannelDescription" />
     <import class="org.concord.data.state.OTDataField" />
@@ -153,10 +153,10 @@
             </OTViewMode>
           </modes>
           <frame>
-            <OTFrame useScrollPane="false" width="550" height="600" />
+            <OTFrame useScrollPane="false" width="600" height="600" />
           </frame>
           <views>
-            <OTViewEntry objectClass="org.concord.smartgraph.OTSmartGraph" viewClass="org.concord.smartgraph.OTSmartGraphDemoView"/>
+            <OTViewEntry objectClass="org.concord.smartgraph.OTSmartGraphTool" viewClass="org.concord.smartgraph.OTSmartGraphToolDemoView"/>
             <OTViewEntry local_id="mw-view" objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
             <OTViewEntry objectClass="org.concord.otrunk.OTIncludeRootObject" viewClass="org.concord.otrunk.OTIncludeRootObjectView" />
             <OTViewEntry local_id="moz-swing-view" objectClass="org.concord.otrunk.browser.mozswing.OTMozSwing" viewClass="org.concord.otrunk.browser.mozswing.OTMozSwingView" />
@@ -209,7 +209,7 @@
                 <object refid="${smart-graph}"/>
               </bodyText>
               <documentRefs>
-              	<OTSmartGraph local_id="smart-graph" dataCollector="8fa4b0d5-3be4-11dd-9c3a-3f5e1df63e61" />
+              	<OTSmartGraphTool local_id="smart-graph" dataCollector="8fa4b0d5-3be4-11dd-9c3a-3f5e1df63e61" />
                 <OTDataCollector id="8fa4b0d5-3be4-11dd-9c3a-3f5e1df63e61" name="Data graph" title="Data graph">
                   <source>
                     <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
@@ -219,10 +219,10 @@
                     </OTDataGraphable>
                   </source>
                   <xDataAxis>
-                    <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                    <OTDataAxis max="3.0" units="s" min="0.0" label="Time" />
                   </xDataAxis>
                   <yDataAxis>
-                    <OTDataAxis max="40.0" units="" min="-0.0" label="" />
+                    <OTDataAxis max="1.0" units="" min="0.0" label="" />
                   </yDataAxis>
                 </OTDataCollector>
               </documentRefs>
