@@ -104,7 +104,7 @@
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="../UDL/global-imports/udl-view-bundle.otml" />
+<!--        <OTInclude href="../UDL/global-imports/UDL-view-bundle.otml" /> -->
         <OTInclude href="imports/geniquest-view-bundle.otml" />
       </includes>
       <bundles>
@@ -165,18 +165,440 @@
           <content>
             <OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true">
               <cards>
-                <OTUDLSection local_id="section_1" name="Intro">
+                <OTUDLSection local_id="section_1" name="Disease at Gandwar">
                   <header>
                     <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" showEditBar="false">
                       <bodyText>
-                        <div class="title">Section 1</div>
+                        <div class="title">Disease at Gandwar</div>
                       </bodyText>
                     </OTCompoundDoc>
                   </header>
                   <content>
                     <OTCardContainer local_id="section-1-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc local_id="section-1-page-1" name="1" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="section-1-page-1" name="1" showEditBar="true" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">Disease strikes the dragons</div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  <div class="bodytext">
+																		Trouble has come to Gandwar. In recent years, dragons have begun to become sick. Usually an extremely rare event indeed, this sickness has begun to affect dragon populations in several parts of the island. Usually healthy dragons have begun to become lethargic, and their beautiful, glossy scales have become brittle and turned white. Dragons across the island have begun to fear for the survival of populations that have been hearty and hale for many eons.</div>
+																		<object refid="${dragon_with_scales_static}" />
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+													<documentRefs>                                    
+								            <OTOrganism local_id="dragon_with_scales" name="Sad dragon" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:s,a:s,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld local_id="dragonmarkers" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism local_id="dragon_with_scales2" name="" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:s,a:s,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+																<object refid="${dragonmarkers}" />
+								              </world>
+								            </OTOrganism>
+														<OTOrganism local_id="Lucenne_organism" name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>                                       
+								              	<object refid="${dragonmarkers}" />
+															</world>                                      
+								            </OTOrganism>                                   
+														<OTStaticOrganism local_id="dragon_with_scales_static" name="Molthwan">
+															<organism>                                    
+																<object refid="${dragon_with_scales}" />       
+															</organism>                                   
+														</OTStaticOrganism>                           
+													</documentRefs>                                   
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-2" name="2" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">Disease strikes the dragons</div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">2</div>    
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  <div class="bodytext">
+																		<p>The dragon populations across the island have decided to hold a council of their elders and geneticists in an attempt to learn enough about the problem to protect themselves from further harm. At the council, they compare stories and experiences and learn some important things:</p>
+
+																		<p>1. Only the dragons from the Swamp, Valley and Mountain populations are affected by this disease. Desert, Ice and Forest dragons have been strangely unaffected.</p>
+
+																		<p>2. This disease does not seem to be contagious from one dragon to another.</p>
+
+																		<p>Because of these clues, the council decrees that a genetic study should be undertaken to attempt learn more about this disease.</p></div>
+																		<object refid="${dragon_with_scales_static}" />
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+													<documentRefs>                                    
+													</documentRefs>                                   
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-3" name="3" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">Genetic study</div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">3</div>
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+																	<p>The dragons have spent much time studying genetics to date, and have stumbled upon small creatures ideal for these studies. Miniature dragon-like creatures known as drakes, populate much of the island. They reproduce easily and live much shorter lifespans than dragons. These qualities make them ideal for breeding and studying. Because the genetics of drakes are quite similar to those of the dragons, they have been studied extensively.</p>
+
+																	<p>Mice are another creature that have been studied even more extensively, and the dragons on the island have come a good way toward connecting genetic information between drakes and mice. Doing this, they can take advantage of the fact that much is known about individual mouse genes and apply this to their study of drake genetics.</p>                         
+																	<object refid="${dragon_with_scales_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-4" name="4" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">Breeding and traits</div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">4</div>    
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  <br />                                    
+																	<p>You learned about genetic recombination, or crossing over, earlier. This is the key to studying drake genetics to search for a disease gene.</p>
+
+																	<p>Remember our dragons with horns earlier? The dragons didn't yet know where the gene responsible for plates is located. You did find out that by breeding two separate strains of dragons together, those that had plates and those that didn't, you got a mix of the two kinds. Try this again below and verify it for yourself.</p><br/><br/>
+																	<object refid="${firstPedigreeView}" />
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+													<documentRefs>                                    
+                            <OTText local_id="pedigreeTextObject" text="This is a text placeholder!" />
+                            <OTOrganism local_id="maleStrainOrganism">
+                              <name>male</name>
+                              <sex>0</sex>
+                              <world>
+                                <OTWorld local_id="dragon_world_strains" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+                              </world>
+                              <alleles>b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B</alleles>
+                            </OTOrganism>
+                            <OTOrganism local_id="femaleStrainOrganism">
+                              <name>female</name>
+                              <sex>1</sex>
+                              <world>
+                                <object refid="${dragon_world_strains}" />
+                              </world>
+                              <alleles>b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:P,b:F,a:f,b:a,a:a,b:B,a:B</alleles>
+                            </OTOrganism>
+                            <OTPedigree local_id="firstPedigreeView" height="400" width="400" organismImagesVisible="true" organismImageSize="2">
+                              <organisms>
+                                <object refid="${maleStrainOrganism}" />
+                                <object refid="${femaleStrainOrganism}" />
+                              </organisms>
+                            </OTPedigree>
+                            <OTMultipleOrganism local_id="multipleOrganismView" width="300" height="100">
+                              <organisms>
+
+                              </organisms>
+                            </OTMultipleOrganism>
+                            <OTScriptObject local_id="pedigreeInitialInvestigation">
+                              <script>
+                                <OTJRuby src="scripts/pedigree_initial_investigation.rb" />
+                              </script>
+                              <variables>
+                                <OTScriptVariableComponent name="pedigreeView">
+                                  <reference>
+                                    <object refid="${firstPedigreeView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="textField">
+                                  <reference>
+                                    <object refid="${pedigreeTextObject}" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </variables>
+                              <scriptState />
+                            </OTScriptObject>
+                            <OTScriptButton local_id="savePedigreeOrganismsButton" text="Save selected" alwaysReload="true">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_save_pedigree_organisms.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="pedigreeView">
+                                  <reference>
+                                    <object refid="${firstPedigreeView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+                            <OTScriptButton local_id="clearPedigreeOrganismsButton" text="Clear all" alwaysReload="false">
+                              <script>
+                                <OTJRuby src="scripts/multi_org_clear_button.rb" />
+                              </script>
+                              <scriptVariables>
+                                <OTScriptVariableComponent name="multiOrgView">
+                                  <reference>
+                                    <object refid="${multipleOrganismView}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                              </scriptVariables>
+                            </OTScriptButton>
+													</documentRefs>                                   
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-5" name="5" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">5</div>
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  <p>To find out more about where a gene is located, we can take advantage of the genetic recombination—or "crossing over"—that you used to help Molthwan and Lucenne make a designer baby.</p>
+                                  <br/>
+																	<object refid="${firstPedigreeView}" /><br/>
+			                            <object refid="${pedigree_crossover_question}"/>
+																	<object refid="${pedigree_crossover_openresp}" />
+																	<object refid="${clearPedigreeScript}" />
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+													<documentRefs>
+														<OTPedigree local_id="secondPedigreeView" height="400" width="400" organismImagesVisible="true" organismImageSize="2">
+                              <organisms>
+                                <object refid="${maleStrainOrganism}" />
+                                <object refid="${femaleStrainOrganism}" />
+                              </organisms>
+                            </OTPedigree>
+														<OTScriptObject text="Set up pedigree view" local_id="clearPedigreeScript" >
+															<script>
+                                <OTJRuby src="scripts/pedigree_clear_all_organisms.rb" />
+                              </script>
+                              <variables>
+																<OTScriptVariableComponent name="pedigreeView">
+																	<reference>
+																		<object refid="${firstPedigreeView}" />
+																	</reference>
+																</OTScriptVariableComponent>
+															</variables>
+														</OTScriptObject>
+														<OTUDLQuestion local_id="pedigree_crossover_question" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Use the chromosome tool to examine the genes of these two parents. Based on the evidence you found, would these two be able to make a child dragon that had wings but no legs if no "crossing over" happened? (Remember that a child must have the gene combinations ww and ll for this to happen.)</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc local_id="crossover_pedigree_question_doc" name="Yes">
+                                      <bodyText>Yes</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="No">
+                                      <bodyText>No</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion local_id="pedigree_crossover_openresp" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Why or why not?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText rows="3" />
+                              </input>
+                            </OTUDLQuestion>
+														
+													</documentRefs>                                   
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-6" name="6" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">6</div>
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+																	<p>You may have noticed that these dragons are similar to Molthwan and Lucenne. If no genetic recombination occurred, they would not be able to have a child with wings and no legs.</p>
+																	<p>Use this fact and the pedigree space below to breed some children from this couple. Notice that you can change the number of offspring by changing the number in the input box and by using the dropdown menu to indicate a fixed number or a range of offspring.</p>
+																	<object refid="${pedigree_crossover_question2}"/><br/>
+																	<object refid= "${pedigree_crossover_openresp2}"/>																	                                  				
+																	<br />
+																	<object refid="${firstPedigreeView}"/>                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+													<documentRefs>
+														<OTUDLQuestion local_id="pedigree_crossover_question2" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Based on the information from your experimentation, do you believe that genes are crossing over when these two breed?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc local_id="crossover_pedigree_question2_doc" name="Yes">
+                                      <bodyText>Yes</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="No">
+                                      <bodyText>No</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTUDLQuestion>
+                            <OTUDLQuestion local_id="pedigree_crossover_openresp2" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Why or why not?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText rows="3" />
+                              </input>
+                            </OTUDLQuestion>
+														                                   
+													</documentRefs>                                   
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-7" name="7" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle"></div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">7</div>
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                <p>Just like Molthwan and Lucenne, these dragons shouldn't have had any children with wings and no legs. Because you found some, genetic recombination must be taking place. Breed some children again, and use the chromosome tool to examine some of the dragons. Can you find evidence in their genes to prove your case? Describe one piece of evidence you find in the box below.</p>                        
+																	<object refid="${pedigree_crossover_openresp3}"/><br/><br/>
+																	<object refid="${firstPedigreeView}" /><br/>																	       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+													<documentRefs>
+														<OTUDLQuestion local_id="pedigree_crossover_openresp3" name="Question" showConvertButton="true">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText></bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTText rows="5" />
+                              </input>
+                            </OTUDLQuestion>                                    
+													</documentRefs>                                   
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-8" name="8" showDefinitions="false">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">Mega-breeding</div>
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">8</div>
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+<p>Now take another look at the dragons you bred. Do they all have plates? If genetic recombination is taking place, the gene that causes plates must be "scrambled" in this population of children, just like the genes for wings and legs. Find two children of these dragons and breed them together. Make a *lot* of children, like 100 or 200.</p>                                  
+<br/>
+<object refid="${firstPedigreeView}"/>
+
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+													<documentRefs>                                    
+													</documentRefs>                                   
+                        </OTUDLCompoundDoc>                                 
+                        <OTUDLCompoundDoc local_id="section-1-page-9" name="9" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -184,40 +606,34 @@
                                   <table width="100%">
                                     <tr>
                                       <td>
-                                        <div class="subtitle">New page</div>
+                                        <div class="subtitle">Using the offspring</div>
                                       </td>
                                       <td align="right">
-                                        <div class="page-number">1</div>
+                                        <div class="page-number">9</div>
                                       </td>
                                     </tr>
                                   </table>
-                                  New page content.
+<p>Let's think about what these chromosomes must look like. If the genes have crossed over at random locations, the set of children you bred will represent a varied patchwork of genes. If we have enough of these, we can compare the genes through a process known as QTL analysis and see where it is most likely that the gene for a trait is located.</p>
+<p>Select all the children you created with the pointer and save them. Then move to the next section to look at a QTL analysis of this population of children.</p>
                                   <br />
+<object refid="${firstPedigreeView}"/><br/>
+<object refid="${multipleOrganismView}" />
+<br />
+<object refid="${savePedigreeOrganismsButton}" />
+<object refid="${clearPedigreeOrganismsButton}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="e9f90777-aba8-11dd-ad94-e18eb6c63512" name="%e9f90777-aba8-11dd-ad94-e18eb6c63512" showEditBar="true" showDefinitions="false">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
+													<documentRefs>
+													</documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <viewedCards>
-                        <null />
                         <object refid="${section-1-page-1}" />
-                        <object refid="e9f90777-aba8-11dd-ad94-e18eb6c63512" />
                       </viewedCards>
                       <currentCard>
-                        <object refid="e9f90777-aba8-11dd-ad94-e18eb6c63512" />
+                        <object refid="${section-1-page-1}" />
                       </currentCard>
                     </OTCardContainer>
                   </content>
@@ -246,14 +662,174 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_2" name="Section 2">
+                <OTUDLSection local_id="section_2" name="QTL Analysis">
                   <header>
                     <OTUDLCompoundDoc />
                   </header>
                   <content>
                     <OTCardContainer local_id="section-2-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc local_id="section-2-page-1" showDefinitions="true" />
+                        <OTUDLCompoundDoc local_id="section-2-page-1" showDefinitions="true">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+												</OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc local_id="section-2-page-2" showDefinitions="true">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+												</OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc local_id="section-2-page-3" showDefinitions="true">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+												</OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc local_id="section-2-page-4" showDefinitions="true">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+												</OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc local_id="section-2-page-5" showDefinitions="true">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+												</OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc local_id="section-2-page-6" showDefinitions="true">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+												</OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc local_id="section-2-page-7" showDefinitions="true">
+                          <bodyText>                                        
+                            <div class="buffer">                            
+                              <div class="border">                          
+                                <div class="body">                          
+                                  <table width="100%">                      
+                                    <tr>                                    
+                                      <td>                                  
+                                        <div class="subtitle">New page</div>a
+                                      </td>                                 
+                                      <td align="right">                    
+                                        <div class="page-number">1</div>    /
+                                      </td>                                 
+                                    </tr>                                   
+                                  </table>                                  
+                                  New page content.                         
+																	<object refid="${Lucenne_static}" />       
+                                  <br />                                    
+                                </div>                                      
+                              </div>                                        
+                            </div>                                          
+                          </bodyText>                                       
+												</OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
                         <object refid="${section-2-page-1}" />
@@ -288,7 +864,7 @@
                     <object refid="705302ca-aba3-11dd-ad94-e18eb6c63512" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_3" name="Analyzing QTL Results">
+                <OTUDLSection local_id="section_3" name="QTL Pitfalls">
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_3/header" />
                   </header>
@@ -3685,7 +4261,7 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_3/footer" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_4" name="A Disease Strikes">
+                <OTUDLSection local_id="section_4" name="Disease Detectives">
                   <header>
                     <OTUDLCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_4/header" />
                   </header>
@@ -4737,12 +5313,10 @@
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_3}" />
+                <object refid="${section_1}" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
-                <object refid="${section_4}" />
-                <object refid="${section_3}" />
               </viewedCards>
             </OTCardContainer>
           </content>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>test_beta_qtl_onechromo_bigpeak.otml</string>
+	<string>GENIQUEST-pilot.otml</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -114,6 +114,14 @@
 		</dict>
 		<dict>
 			<key>filename</key>
+			<string>GENIQUEST-pilot.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-07T23:56:37Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>Biologica-test-beta-OTQTL-student-1peak-99pct.otml</string>
 			<key>lastUsed</key>
 			<date>2008-11-03T02:53:21Z</date>
@@ -142,17 +150,15 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>test_beta_qtl_onechromo_bigpeak.otml</string>
+			<string>Pilot/GENIQUEST-pilot-reboot.otml</string>
 			<key>lastUsed</key>
-			<date>2008-11-03T18:24:12Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2008-11-07T01:49:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>test-beta-authoring.otml</string>
 			<key>lastUsed</key>
-			<date>2008-11-03T17:33:14Z</date>
+			<date>2008-11-07T23:41:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -176,7 +182,7 @@
 			<key>filename</key>
 			<string>scripts/multi_org_save_pedigree_organisms.rb</string>
 			<key>lastUsed</key>
-			<date>2008-10-31T16:01:22Z</date>
+			<date>2008-11-05T18:37:52Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -202,13 +208,13 @@
 			<key>filename</key>
 			<string>simple-qtl-example.otml</string>
 			<key>lastUsed</key>
-			<date>2008-11-03T00:17:10Z</date>
+			<date>2008-11-07T01:49:39Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>imports/geniquest-view-bundle.otml</string>
 			<key>lastUsed</key>
-			<date>2008-11-03T17:19:58Z</date>
+			<date>2008-11-07T23:42:05Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -226,11 +232,35 @@
 			<key>filename</key>
 			<string>scripts/qtl_link_script_solograph.rb</string>
 			<key>lastUsed</key>
-			<date>2008-11-03T18:24:12Z</date>
+			<date>2008-11-07T03:43:58Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>scripts/qtl_link_script_commongraph.rb</string>
+			<key>lastUsed</key>
+			<date>2008-11-07T10:13:29Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>test_beta_qtl_revised.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-07T23:45:58Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>simple-breed-offspring-view.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-07T23:56:37Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../UDL/global-imports/udl-view-bundle.otml</string>
+			<key>lastUsed</key>
+			<date>2008-11-07T23:41:05Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>214</integer>
+	<integer>289</integer>
 	<key>metaData</key>
 	<dict>
 		<key>../LOOPS/scripts/loops-one-dimension-report.rb</key>
@@ -261,19 +291,93 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../UDL/global-imports/udl-view-bundle.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>512</integer>
+		</dict>
+		<key>GENIQUEST-pilot.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>37</integer>
+				<key>line</key>
+				<integer>107</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>91</integer>
+		</dict>
+		<key>Pilot/GENIQUEST-pilot-reboot.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>59</integer>
+				<key>line</key>
+				<integer>99</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>77</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>53</integer>
+				<key>line</key>
+				<integer>99</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>59</integer>
+				<key>line</key>
+				<integer>99</integer>
+			</dict>
+		</dict>
 		<key>imports/geniquest-view-bundle.otml</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>142</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>487</integer>
+				<integer>148</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>487</integer>
+			<integer>419</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>15</integer>
+				<key>line</key>
+				<integer>148</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>23</integer>
+				<key>line</key>
+				<integer>148</integer>
+			</dict>
 		</dict>
 		<key>multi-page-GQ-activity-1.otml</key>
 		<dict>
@@ -449,6 +553,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>scripts/qtl_link_script_commongraph.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>165</integer>
+				<key>line</key>
+				<integer>109</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>34</integer>
+		</dict>
 		<key>scripts/qtl_link_script_solograph.rb</key>
 		<dict>
 			<key>caret</key>
@@ -461,7 +579,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>10</integer>
+			<integer>0</integer>
 		</dict>
 		<key>scripts/strain_multiple_organism.rb</key>
 		<dict>
@@ -477,6 +595,20 @@
 			<key>firstVisibleLine</key>
 			<integer>23</integer>
 		</dict>
+		<key>simple-breed-offspring-view.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>32</integer>
+				<key>line</key>
+				<integer>57</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>39</integer>
+		</dict>
 		<key>simple-qtl-example.otml</key>
 		<dict>
 			<key>caret</key>
@@ -491,7 +623,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>37</integer>
+			<integer>0</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
@@ -512,55 +644,59 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>94</integer>
+				<integer>83</integer>
 				<key>line</key>
-				<integer>1628</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>1620</integer>
-		</dict>
-		<key>test_beta_qtl_onechromo_bigpeak.otml</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>70</integer>
-				<key>line</key>
-				<integer>8881</integer>
+				<integer>359</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>8866</integer>
+			<integer>343</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>67</integer>
+				<integer>47</integer>
 				<key>line</key>
-				<integer>8881</integer>
+				<integer>359</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>70</integer>
+				<integer>83</integer>
 				<key>line</key>
-				<integer>8881</integer>
+				<integer>359</integer>
 			</dict>
+		</dict>
+		<key>test_beta_qtl_revised.otml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>4948</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>91</integer>
+			<key>firstVisibleLine</key>
+			<integer>4853</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>scripts/meiosis_initial_investigation.rb</string>
+		<string>Pilot/GENIQUEST-pilot-reboot.otml</string>
+		<string>GENIQUEST-pilot.otml</string>
 		<string>test-beta-authoring.otml</string>
-		<string>test_beta_qtl_onechromo_bigpeak.otml</string>
+		<string>test_beta_qtl_revised.otml</string>
+		<string>simple-breed-offspring-view.otml</string>
+		<string>scripts/qtl_link_script_commongraph.rb</string>
 		<string>scripts/qtl_link_script_solograph.rb</string>
 		<string>scripts/qtl_link_script_all.rb</string>
 		<string>scripts/qtl_link_script.rb</string>
 		<string>imports/geniquest-view-bundle.otml</string>
+		<string>../UDL/global-imports/udl-view-bundle.otml</string>
 		<string>simple-qtl-example.otml</string>
 		<string>scripts/multi_org_save_pedigree_organisms.rb</string>
 		<string>scripts/multi_org_save_family_button.rb</string>
@@ -572,6 +708,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{483, 110}, {861, 670}}</string>
+	<string>{{410, 110}, {861, 670}}</string>
 </dict>
 </plist>
