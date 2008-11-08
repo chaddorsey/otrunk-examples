@@ -677,16 +677,15 @@
                                   <table width="100%">                      
                                     <tr>                                    
                                       <td>                                  
-                                        <div class="subtitle">New page</div>a
+                                        <div class="subtitle">QTL Analysis</div>
                                       </td>                                 
                                       <td align="right">                    
-                                        <div class="page-number">1</div>    /
+                                        <div class="page-number">1</div>
                                       </td>                                 
                                     </tr>                                   
                                   </table>                                  
 																	<object refid="${QTL_graph_99pct_double_hilight}"/> 
                                   <br />
-																	<object refid="${QTL_openresp1}"/>
 																	<object refid="${QTL_openresp2}"/>
 																	<object refid="${QTL_openresp3}"/>
                                 </div>                                      
@@ -1341,6 +1340,16 @@
                                 </OTDataGraphable>
                               </graphables>
                               <labels>
+                                <OTDataPointRuler local_id="99double_hilight_righthilight" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="25.4" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                  <dataGraphable>
+                                    <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
+                                  </dataGraphable>
+                                </OTDataPointRuler>
+                                <OTDataPointRuler local_id="99double_hilight_lefthilight" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="19.0" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
+                                  <dataGraphable>
+                                    <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
+                                  </dataGraphable>
+                                </OTDataPointRuler>
                                 <OTDataPointRuler local_id="thresh99_99double_hilight" name="99.0% Threshold" text="99.0% Threshold" x="1.0" xData="0.0" y="3.3008826" yData="8.300882" selectable="false" labelVisible="true" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
@@ -1352,16 +1361,6 @@
                                   </dataGraphable>
                                 </OTDataPointRuler>
                                 <OTDataPointRuler local_id="thresh65_99double_hilight" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="0.0" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="99double_hilight_lefthilight" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="19.0" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
-                                  <dataGraphable>
-                                    <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
-                                  </dataGraphable>
-                                </OTDataPointRuler>
-                                <OTDataPointRuler local_id="99double_hilight_righthilight" name="65.0% Threshold" text="65.0% Threshold" x="1.0" xData="25.4" y="1.5904223" yData="6.590422" selectable="false" labelVisible="true" horizontalVisible="false" verticalVisible="false" intersectionVisible="false" color="0xffffbe" fontSize="10">
                                   <dataGraphable>
                                     <object refid="1cdf19ee-a94a-11dd-bb77-9d54298f6095" />
                                   </dataGraphable>
@@ -1378,15 +1377,18 @@
                                   <table width="100%">                      
                                     <tr>                                    
                                       <td>                                  
-                                        <div class="subtitle">New page</div>a
+                                        <div class="subtitle">Pinpointing a Peak</div>a
                                       </td>                                 
                                       <td align="right">                    
-                                        <div class="page-number">1</div>    /
+                                        <div class="page-number">2</div>
                                       </td>                                 
                                     </tr>                                   
-                                  </table>                                  
-                                  New page content.                         
-																	<object refid="${Lucenne_static}" />       
+                                  </table>
+																	Place a marker on this graph where you think the gene is most likely to be found. When you are done, click the button to show the 95% confidence interval for this peak.
+
+																	If you had to look somewhere along the chromosome and claim that you were 95% sure that the gene of finding the gene you were seeking, between which two locations would you have to look? Write this interval down.
+																	<object refid="${QTL_graph_99pct_double_hilight}" />
+																	<object refid="${QTL_link_script_solograph_intro}"/>
                                   <br />                                    
                                 </div>                                      
                               </div>                                        
@@ -5960,16 +5962,44 @@
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="067f372e-abdf-11dd-92e4-29790a6d5976" name="%067f372e-abdf-11dd-92e4-29790a6d5976" showEditBar="true" showDefinitions="false">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
+
+
+														          <bodyText>
+														          Start: <object refid="${start}" /><br/>
+														          End: <object refid="${end}" /><br/>
+														          <object refid="${button}" />
+														          </bodyText>
+														          <children>
+														            <OTText local_id="start" />
+														            <OTText local_id="end" />
+														            <OTScriptButton local_id="button">
+														              <text>Launch GBrowse</text>
+														              <scriptVariables>
+														                <OTScriptVariable reference="${start}" name="start" />
+														                <OTScriptVariable reference="${end}" name="end" />
+														              </scriptVariables>
+														              <script>
+														                <OTJRuby>
+														                  <script>
+														                    require 'java' 
+														                    require 'rbconfig'
+														                    require 'uri'
+
+														                    import org.concord.framework.otrunk.view.OTExternalAppService
+														                    import java.net.URL
+
+														                    $external_app_service = $viewContext.getViewService(OTExternalAppService.java_class)
+
+														                    def clicked
+														                      url = "http://cgd.jax.org/cgi-bin/geniquest/dragon/?start=#{$start.text.to_i*10000};stop=#{$end.text.to_i*10000};ref=1;width=800;version=100;label=Genes%3Aoverview-Genes-CrossFxV;id=b6caf2a864ad7bcdc88c3735f3241464;grid=on"
+														                      $external_app_service.showDocument(URL.new(url))
+														                    end
+														                  </script>
+														                </OTJRuby>
+														              </script>
+														            </OTScriptButton>
+														          </children>
+
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>

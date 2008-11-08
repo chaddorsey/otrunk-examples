@@ -21,10 +21,8 @@ def self.clicked
   $QTLGraphLabels = $QTL_graph.getLabels.getVector
   puts "99pct Labels: "
   $QTLGraphLabels.each {|l| puts l;}
-  puts "Setting horizontal visible to false again: "
-  $QTLGraphLabels[0].setHorizontalVisible(false)  
-  $QTLGraphConfLeft = $QTLGraphLabels[3]
-  $QTLGraphConfRight = $QTLGraphLabels[4]
+  $QTLGraphConfLeft = $QTLGraphLabels[0]
+  $QTLGraphConfLeft = $QTLGraphLabels[1]
   puts "Turning on confidence intervals." 
   
   def show_conf_int
