@@ -333,7 +333,7 @@
                   <content>
                     <OTCardContainer local_id="section-1-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc local_id="page-1" name="1" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="section-1-page-1" name="1" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -383,7 +383,7 @@
 								            </OTOrganism>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="c05510a7-5367-11dd-bf21-11a44a6b030d" name="%c05510a7-5367-11dd-bf21-11a44a6b030d" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="section-1-page-2" name="2" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -410,7 +410,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="f95ce30c-650c-11dd-ac85-bb6ebc537d22" name="%f95ce30c-650c-11dd-ac85-bb6ebc537d22" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="section-1-page-3" name="3" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -469,7 +469,7 @@
                             <object refid="${breedOffspringView2}" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="9c422e44-64f9-11dd-88f8-3390a456ed3b" name="%9c422e44-64f9-11dd-88f8-3390a456ed3b" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="section-1-page-4" name="4" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <table width="100%">
                               <tr>
@@ -624,7 +624,7 @@
                             </OTBreedOffspring>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="9ad368eb-6509-11dd-ac85-bb6ebc537d22" name="%9ad368eb-6509-11dd-ac85-bb6ebc537d22" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="section-1-page-5" name="5" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -687,7 +687,7 @@
                             <object refid="7008f8e9-6509-11dd-ac85-bb6ebc537d22" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="39819641-6517-11dd-bd45-d9d11cbf97e7" name="%39819641-6517-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="false">
+                        <OTUDLCompoundDoc local_id="section-1-page-6" name="6" showEditBar="true" showDefinitions="false">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1074,11 +1074,9 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             Now that you know how to breed dragons, let's try some selective breeding. 
     This is the pedigree view. 
                             <br />
-                            <object refid="${pedigreeButton}" />
-                            <br />
                             <p>Use the cross tool to breed a new generation of dragons. Then breed two of the 
       dragons from this new (F2) generation together. 
-      Repeat this as far as you wish. What do you notice about the dragons as you continue to breed ore generations this way?</p>
+      Repeat this as far as you wish. What do you notice about the dragons as you continue to breed more generations this way?</p>
                             <p>Use the chromosome tool to examine the genes of the dragons more closely. Can you find any genes that are different among 
       the members of your F8 generation?</p>
                             <p>
