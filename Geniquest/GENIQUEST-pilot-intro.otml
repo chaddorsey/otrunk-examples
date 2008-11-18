@@ -324,7 +324,7 @@
           <content>
             <OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true" width="50">
               <cards>
-                <OTUDLSection local_id="section_1" name="Intro and Rules">
+                <OTUDLSection local_id="section-1" name="Intro and Rules">
                   <header>
                     <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" showEditBar="true">
                       <bodyText />
@@ -735,11 +735,11 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection id="3bac2cae-64f4-11dd-88f8-3390a456ed3b" name="Meiosis">
+                <OTUDLSection local_id="section-2" name="Meiosis">
                   <content>
                     <OTCardContainer id="3bac2cb0-64f4-11dd-88f8-3390a456ed3b" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc id="3bac2caf-64f4-11dd-88f8-3390a456ed3b" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-2-page-1" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -835,7 +835,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </OTChromosome>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="24c8fed6-651a-11dd-bd45-d9d11cbf97e7" name="%24c8fed6-651a-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-2-page-2" name="2-2" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <br />
                             <div class="buffer">
@@ -881,7 +881,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </OTScriptObject>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="7407ca81-651c-11dd-bd45-d9d11cbf97e7" name="%7407ca81-651c-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-2-page-3" name="2-3" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             Below you can see this couple's germ cells. By pressing the 
     triangular play button, you can cause the cells to undergo meiosis. Click 
@@ -901,7 +901,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </p>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" name="%1b5fbcfb-6524-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-2-page-4" name="2-4" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <p>
                               Now zoom in on our Daddy dragon. Your goal will be to create a 
@@ -952,7 +952,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="14a64879-6525-11dd-bd45-d9d11cbf97e7" name="%14a64879-6525-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-2-page-5" name="2-5" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <p>Now reset the meiosis and zoom in on our expectant mother 
       dragon. Run meiosis a few times. (Note that you will have to return to 
@@ -985,7 +985,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[5]" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b98c073d-6525-11dd-bd45-d9d11cbf97e7" name="%b98c073d-6525-11dd-bd45-d9d11cbf97e7" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-2-page-6" name="2-6" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <p>
                               You're right: we have a problem. The mother can only give chromosomes with 
@@ -1065,11 +1065,11 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                     <object refid="3bac53c2-64f4-11dd-88f8-3390a456ed3b" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection id="5fdbdad2-6517-11dd-bd45-d9d11cbf97e7" name="Pedigree and Genes">
+                <OTUDLSection local_id="section-3" name="Pedigree and Genes">
                   <content>
                     <OTCardContainer id="5fdbdad4-6517-11dd-bd45-d9d11cbf97e7" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc id="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-3-page-1" showDefinitions="true">
                           <bodyText>
                             Now that you know how to breed dragons, let's try some selective breeding. 
     This is the pedigree view. 
@@ -1257,11 +1257,11 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                     <object refid="5fdc01e6-6517-11dd-bd45-d9d11cbf97e7" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection id="f69b7020-79bb-11dd-b6e3-bdb383ed1215" name="The Plates Problem">
+                <OTUDLSection local_id="section-4" name="The Plates Problem">
                   <content>
                     <OTCardContainer id="f69b9732-79bb-11dd-b6e3-bdb383ed1215" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
-                        <OTUDLCompoundDoc id="f69b9731-79bb-11dd-b6e3-bdb383ed1215" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-4-page-1" name="4-1" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1314,7 +1314,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             <object refid="619fc538-79cd-11dd-acfb-c58c080ea6e2" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="170b4e9a-7b50-11dd-8304-0bc503599a8b" name="%170b4e9a-7b50-11dd-8304-0bc503599a8b" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-4-page-2" name="4-2" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1490,7 +1490,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </OTScriptButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b6e29e26-83ef-11dd-9e23-eb01b8e568e2" name="%b6e29e26-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true" showDefinitions="true">
+                        <OTUDLCompoundDoc local_id="section-4-page-3" name="4-3" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1586,7 +1586,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </OTChromosomeZoom>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b9f387a7-83ef-11dd-9e23-eb01b8e568e2" name="%b9f387a7-83ef-11dd-9e23-eb01b8e568e2" showEditBar="true" showDefinitions="true" />
+                        <OTUDLCompoundDoc local_id="section-4-page-4" name="4-4" showEditBar="true" showDefinitions="true" />
                       </cards>
                       <currentCard>
                         <object refid="f69b9731-79bb-11dd-b6e3-bdb383ed1215" />
