@@ -115,6 +115,7 @@
   	<idMapping local_id="menu-vertical" id="1b0cb6e0-c453-11dc-95ff-0800200c9a66"/>
 	<idMapping local_id="menu-horizontal-circle" id="29dc5ef0-c453-11dc-95ff-0800200c9a66"/>
 	<idMapping local_id="menu-horizontal-book" id="416eeab0-c453-11dc-95ff-0800200c9a66"/>
+	<idMapping local_id="menu-horizontal-compass" id="29dc5ef0-c453-11dc-95ff-0800200c9a66"/>
 	<idMapping local_id="css-color-34-overlay" id="bfc60e90-db35-11dc-95ff-0800200c9a66"/>
 	<idMapping local_id="css-color-56-overlay" id="b5d8b4a0-db35-11dc-95ff-0800200c9a66"/>
 	<idMapping local_id="text-edit" id="be713960-e18a-11dc-95ff-0800200c9a66"/>
@@ -159,6 +160,9 @@
             </OTViewMode>
             <OTViewMode name="authoring">
               <map>
+              	<entry key="${slider-view}">
+              		<OTViewEntry objectClass="org.concord.otrunk.ui.OTSlider" viewClass="org.concord.otrunk.ui.swing.OTSliderEditView" />
+              	</entry>
               	<entry key="${labbook-button-view}">
               		<OTViewEntry objectClass="org.concord.otrunk.labbook.OTLabbookButton" viewClass="org.concord.otrunk.labbook.ui.OTLabbookButtonEditView" />
               	</entry>
@@ -199,6 +203,9 @@
                   <OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageEditView" />
                 </entry>
                 <entry key="${menu-horizontal-book}">
+                  <OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageEditView" />
+                </entry>
+                <entry key="${menu-horizontal-compass}">
                   <OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageEditView" />
                 </entry>
                 <entry key="${question-view}">
@@ -464,6 +471,8 @@
 						  such as "L1", "L2", etc. -->
             <OTUDLQuestionViewConfig id="c0e33320-e611-11dc-95ff-0800200c9a66" isLevelFrozen="false" defaultScaffoldLevel="0" objectClass="org.concord.otrunk.udl.question.OTUDLLeveledQuestions" viewClass="org.concord.otrunk.udl.question.OTUDLLeveledQuestionsCardView" />
             <OTViewEntry objectClass="org.concord.otrunk.labbook.OTLabbook" viewClass="org.concord.otrunk.labbook.ui.OTLabbookView" />
+            <OTViewEntry local_id="slider-view" objectClass="org.concord.otrunk.ui.OTSlider" 
+              viewClass="org.concord.otrunk.ui.swing.OTSliderView" />            
             <OTViewEntry local_id="labbook-button-view" objectClass="org.concord.otrunk.labbook.OTLabbookButton" viewClass="org.concord.otrunk.labbook.ui.OTLabbookButtonView" />
             <OTViewEntry local_id="labbook-entry-chooser-view" objectClass="org.concord.otrunk.labbook.OTLabbookEntryChooser" viewClass="org.concord.otrunk.labbook.ui.OTLabbookEntryChooserView" />
             <OTViewEntry local_id="container_view" objectClass="org.concord.otrunk.udl3.OTUDLContainer" viewClass="org.concord.otrunk.udl3.OTUDLContainerView" />

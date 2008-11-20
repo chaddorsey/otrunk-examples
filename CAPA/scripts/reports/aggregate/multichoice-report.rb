@@ -10,6 +10,7 @@ include_class 'org.concord.otrunk.view.document.OTCompoundDoc'
 include_class 'org.concord.otrunk.ui.OTText'
 include_class 'org.concord.otrunk.ui.OTChoice'
 include_class 'org.concord.otrunk.ui.question.OTQuestion'
+include_class 'org.concord.otrunk.capa.question.OTEmbeddedTextInput'
 
 # Called when the script view is loaded
 def getText
@@ -48,7 +49,7 @@ end
 ## Assuming the root object is OTCurriculumUnit version=2
 
 def questions
-    @questions  
+  return @questions  
 end
 
 def prompt(question)
@@ -61,6 +62,7 @@ def prompt(question)
   else
     System.err.println("Unknown prompt type")
   end
+  return nil
 end
 
 # @param question an OTQuestion with an input of OTChoice
@@ -75,15 +77,26 @@ def correctAnswerNum(question)
 end
 
 def correctAnswerText(question)
-  if question.is_a?(OTQuestion) and question.input.is_a?(OTChoice)
-    return correctAnswerNum(question).to_s
-  else
-    return 'N/A'
+  if question.is_a?(OTQuestion)
+    if question.input.is_a?(OTChoice)
+      return correctAnswerNum(question).to_s
+    elsif question.input.is_a?(OTEmbeddedTextInput)
+      return correctAnswerET(question.input)
+    end
   end
+  return 'N/A'
 end
 
-def answerNum(user, question)
-  userQuestion = userObject(question, user)
+def correctAnswerET(input)
+  unless input.is_a?(OTEmbeddedTextInput)
+    error("correctAnswerTexts: Expecting an OTEmbeddedTextInput")
+    return ''
+  end
+  answers = input.getCorrectAnswers.getVector.map { |x| x.getText }
+  return answers.join(',')
+end
+
+def answerNum(userQuestion)
   answer = userQuestion.getInput.getCurrentChoice
   if answer == nil
     return 0
@@ -93,23 +106,37 @@ def answerNum(user, question)
 end
 
 def answerText(user, question)
-  if question.is_a?(OTQuestion) && question.input.is_a?(OTChoice)
-    num = answerNum(user, question)
-    if num == 0
-      return '-'
-    else
-      return num.to_s
+  userQuestion = userObject(question, user)
+  if question.is_a?(OTQuestion)
+    if userQuestion.input.is_a?(OTChoice)
+      num = answerNum(userQuestion)
+      if num == 0
+        return '-'
+      else
+        return num.to_s
+      end
+    elsif userQuestion.input.is_a?(OTEmbeddedTextInput)
+      return answerTextET(userQuestion.input)
     end
   elsif question.is_a?(OTDataTable)
     return dtAnswerText(user, question)
   elsif question.is_a?(OTText)
-    return userObject(question, user).getText
+    return userQuestion.getText
   end
+end
+
+## input: OTEmbeddedTextInput
+def answerTextET(input)
+  answers = input.getTextObjects.getVector.map { |x| 
+    t = x.getText
+    (t == nil) ? '-' : t 
+  }
+  return answers.join(',')
 end
 
 def answerHtmlText(user, question)
   text = answerText(user, question)
-  if question.is_a?(OTQuestion) && question.input.is_a?(OTChoice)
+  if gradable(question)
     color = isCorrect(user, question) ? 'green' : 'red'
     return "<b><font color=\"#{color}\">#{text}</font></b>"
   elsif question.is_a?(OTDataTable)
@@ -128,7 +155,7 @@ def dtAnswerText(user, dataTable)
     if i % numChannels == numChannels - 1
       text << (values.get(i) ? values.get(i) : '-')
     end  }
-  text
+  return text
 end
 
 def surveyAnswerText(user, question)
@@ -143,19 +170,31 @@ def surveyAnswerText(user, question)
   return 'ERROR'
 end
 
+## Return true if question has a correct answer
+def gradable(question)
+  return question.is_a?(OTQuestion) and (question.input.is_a?(OTChoice) or question.input.is_a?(OTEmbeddedTextInput))
+end
+
 def isCorrect(user, question)
-  if question.is_a?(OTQuestion) and question.input.is_a?(OTChoice)
-    userQuestion = userObject(question, user)  
-    userAnswer = userQuestion.getInput.getCurrentChoice
-    if userAnswer and question.getCorrectAnswer
-      return question.correctAnswer.otExternalId == userAnswer.otExternalId
+  if question.is_a?(OTQuestion)
+    userQuestion = userObject(question, user)
+    input = userQuestion.input  
+    if input.is_a?(OTChoice)
+      userAnswer = input.getCurrentChoice
+      if userAnswer and question.getCorrectAnswer
+        return question.correctAnswer.otExternalId == userAnswer.otExternalId
+      end
+    elsif input.is_a?(OTEmbeddedTextInput)
+      answers = input.getTextObjects.getVector.map { |x| x.getText }
+      correctAnswers = input.getCorrectAnswers.getVector.map { |x| x.getText }
+      return answers == correctAnswers
     end
   end
-  false
+  return false
 end
 
 def getPoints(user)
-  questions.inject(0) { |sum, question| sum + (isCorrect(user, question) ? 1 : 0) }
+  return questions.inject(0) { |sum, question| sum + (isCorrect(user, question) ? 1 : 0) }
 end
 
 def _getQuestions
@@ -169,8 +208,19 @@ def _getQuestions
       end
     end
   end
-  questions
+  return questions
 end
+
+def _choiceNum(options, choice) 
+  num = 0 
+  options.size.times do |i| 
+    if options[i].otExternalId == choice.otExternalId 
+      num = i+1 
+      break 
+    end  
+  end 
+  return num 
+end 
 
 ### END Assessment Related ###
 
@@ -201,7 +251,7 @@ def getCsvText
     t << getPoints(user).to_s
     t << "\n" 
   end
-  t 
+  return t 
 end
 
 def getSurveyCsvText
@@ -217,7 +267,7 @@ def getSurveyCsvText
     end 
     t << newline
   end
-  t 
+  return t 
 end
 
 def err(msg)

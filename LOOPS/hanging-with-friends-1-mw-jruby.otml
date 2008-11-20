@@ -80,7 +80,7 @@
     <objects>
         <OTSystem local_id="system">
             <includes>
-                <OTInclude href="../UDL/global-imports/udl-view-bundle.otml" />
+                <OTInclude href="global-imports/loops-view-bundle.otml" />
             </includes>
             <bundles>
                
@@ -353,10 +353,9 @@
                                                     <br />
                                                     <ol>
                                                         <li>Press the START button to begin the trial.</li>
-                                                        <li>Press the STOP button to end the trial</li>
+                                                        <li>Press the STOP button to end the trial.</li>
                                                         <li>Record the information in the table below.</li>
-                                                        <li>To begin a new trial for Vijay, press the RESET button.
-                                                        </li>
+                                                        <li>To begin a new trial for Vijay, press the RESET button.</li>
                                                     </ol>
                                                     <p />
                                                     <center>
@@ -492,7 +491,7 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                        <object refid="${section-1-menu}" viewid="416eeab0-c453-11dc-95ff-0800200c9a66" />
+                                                        <object refid="${section-1-menu}" viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
                                                     </td>
                                                 </tr>
                                             </table>
