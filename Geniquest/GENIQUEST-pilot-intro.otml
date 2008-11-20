@@ -256,7 +256,7 @@
         </OTInterfaceManager>
       </bundles>
       <root>
-        <OTUDLContainer name="LOOPS">
+        <OTUDLContainer name="GENIQUEST">
           <cssColor>
             <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
           </cssColor>
@@ -264,7 +264,8 @@
             <OTCompoundDoc local_id="title" showEditBar="true">
               <bodyText>
                 <div class="leftpanel">
-                  <div class="activity-title">GENIQUEST</div>
+									<img src="images/GENIQUEST-Logo.png" /><br/>
+                  <div class="activity-title">Intro</div>
                 </div>
               </bodyText>
             </OTCompoundDoc>
