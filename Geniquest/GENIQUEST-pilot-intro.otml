@@ -110,16 +110,6 @@
           <sharedObjects>
             <OTMultipleOrganism local_id="multipleOrganismViewTransfer" width="95" height="400" organismImageSize="2" />
             <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[6]" />
-            <OTOrganism id="6b4c4b25-64f5-11dd-88f8-3390a456ed3b" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
-              <world>
-                <OTWorld local_id="dragonmarkers" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
-            <OTOrganism id="c1e77779-64f5-11dd-88f8-3390a456ed3b" name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
-              <world>
-                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
             <OTWorld id="433cea58-64fa-11dd-88f8-3390a456ed3b" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
             <OTWorld id="7850b6ea-64fa-11dd-88f8-3390a456ed3b" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
             <OTWorld id="9039c71c-64fa-11dd-88f8-3390a456ed3b" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
@@ -151,11 +141,7 @@
             <object refid="${maleOrganism3}" />
             <object refid="${femaleOrganism4}" />
             <object refid="${maleOrganism4}" />
-            <OTOrganism id="ec63a7dc-6517-11dd-bd45-d9d11cbf97e7" name="Zandar" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
-              <world>
-                <OTWorld id="ec63a7dd-6517-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
+
             <object refid="ec63a7dd-6517-11dd-bd45-d9d11cbf97e7" />
             <OTOrganism name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
               <world>
@@ -165,16 +151,6 @@
             <OTOrganism name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
-            <OTOrganism local_id="samplefemale" name="female" sex="1" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
-              <world>
-                <OTWorld id="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
-            <OTOrganism local_id="samplemale" name="male" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
-              <world>
-                <object refid="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" />
               </world>
             </OTOrganism>
             <OTOrganism name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
@@ -203,30 +179,9 @@
                 <object refid="f87576ae-651c-11dd-bd45-d9d11cbf97e7" />
               </world>
             </OTOrganism>
-
-            <OTOrganism id="f87576ac-651c-11dd-bd45-d9d11cbf97e7" name="Landar" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
-              <world>
-                <object refid="f87576ae-651c-11dd-bd45-d9d11cbf97e7" />
-              </world>
-            </OTOrganism>
-            <OTOrganism id="a8e20bf5-73a4-11dd-a769-cbc7ca7b3ef4" name="Tanada" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
-              <world>
-                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
             <OTOrganism id="a8e20bf4-73a4-11dd-a769-cbc7ca7b3ef4" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
               <world>
                 <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
-            <OTOrganism id="619fc538-79cd-11dd-acfb-c58c080ea6e2" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
-              <world>
-                <OTWorld id="619fc538-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
-              </world>
-            </OTOrganism>
-            <OTOrganism id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
-              <world>
-                <OTWorld id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
               </world>
             </OTOrganism>
             <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2/world" />
@@ -360,6 +315,16 @@
                             </div>
                           </bodyText>
                           <documentRefs>
+								            <OTOrganism id="c1e77779-64f5-11dd-88f8-3390a456ed3b" name="Lucenne" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="6b4c4b25-64f5-11dd-88f8-3390a456ed3b" name="Molthwan" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld local_id="dragonmarkers" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
 	                          <OTStaticOrganism id="c1e77778-64f5-11dd-88f8-3390a456ed3b" name="Static Organism">
                               <organism>
                                 <object refid="c1e77779-64f5-11dd-88f8-3390a456ed3b" />
@@ -695,51 +660,13 @@
                                   <div class="subtitle">Looking Deeper</div>
                                   You have an idea about how horns and wings are inherited. In the 
           next section, you will look deeper into the genetics of dragons to 
-          determine whether you were correct.
+          determine whether you were correct. Use the menu at left to move to the next section.
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                      </cards>
-                      <currentCard>
-                        <object refid="${page-1}" />
-                      </currentCard>
-                      <viewedCards>
-                        <object refid="${page-1}" />
-                      </viewedCards>
-                    </OTCardContainer>
-                  </content>
-                  <footer>
-                    <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" showEditBar="true">
-                      <bodyText>
-                        <div align="center">
-                          <table>
-                            <tr>
-                              <td>
-                                <object refid="${section-1-menu}" viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </bodyText>
-                    </OTCompoundDoc>
-                  </footer>
-                  <north>
-                    <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" />
-                  </north>
-                  <center>
-                    <object refid="${section-1-card-container}" />
-                  </center>
-                  <south>
-                    <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" />
-                  </south>
-                </OTUDLSection>
-                <OTUDLSection local_id="section-2" name="Meiosis">
-                  <content>
-                    <OTCardContainer id="3bac2cb0-64f4-11dd-88f8-3390a456ed3b" contentsMayScroll="true" loadViewOnlyOnDemand="true">
-                      <cards>
-                        <OTUDLCompoundDoc local_id="section-2-page-1" showDefinitions="true">
+												<OTUDLCompoundDoc local_id="section-1-page-7" showDefinitions="true">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -749,7 +676,7 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                                   <br />
                                   <table>
                                     <td>
-                                      <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[7]" />
+																			<object refid="${Zandar_static}"/>
                                     </td>
                                     <td>
                                       <object refid="94904970-6517-11dd-bd45-d9d11cbf97e7" />
@@ -768,7 +695,16 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <object refid="8d880970-c22a-11dc-95ff-0800200c9a66/modes[3]/map['${compound_doc_view}']/objectsToInsert[7]" />
+								            <OTOrganism id="ec63a7dc-6517-11dd-bd45-d9d11cbf97e7" name="Zandar" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld id="ec63a7dd-6517-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+														<OTStaticOrganism local_id="Zandar_static" name="Zandar">
+															<organism>
+																<object refid="ec63a7dc-6517-11dd-bd45-d9d11cbf97e7" />
+															</organism>
+														</OTStaticOrganism>
                             <OTUDLQuestion id="94904970-6517-11dd-bd45-d9d11cbf97e7" name="Question" showConvertButton="true">
                               <prompt>
                                 <OTCompoundDoc>
@@ -835,6 +771,44 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </OTChromosome>
                           </documentRefs>
                         </OTUDLCompoundDoc>
+                      </cards>
+                      <currentCard>
+                        <object refid="${page-1}" />
+                      </currentCard>
+                      <viewedCards>
+                        <object refid="${page-1}" />
+                      </viewedCards>
+                    </OTCardContainer>
+                  </content>
+                  <footer>
+                    <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" showEditBar="true">
+                      <bodyText>
+                        <div align="center">
+                          <table>
+                            <tr>
+                              <td>
+                                <object refid="${section-1-menu}" viewid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </bodyText>
+                    </OTCompoundDoc>
+                  </footer>
+                  <north>
+                    <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header" />
+                  </north>
+                  <center>
+                    <object refid="${section-1-card-container}" />
+                  </center>
+                  <south>
+                    <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" />
+                  </south>
+                </OTUDLSection>
+                <OTUDLSection local_id="section-2" name="Meiosis">
+                  <content>
+                    <OTCardContainer id="3bac2cb0-64f4-11dd-88f8-3390a456ed3b" contentsMayScroll="true" loadViewOnlyOnDemand="true">
+                      <cards>
                         <OTUDLCompoundDoc local_id="section-2-page-2" name="2-2" showEditBar="true" showDefinitions="true">
                           <bodyText>
                             <br />
@@ -852,7 +826,17 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText id="fa8552fb-73b1-11dd-a769-cbc7ca7b3ef4" name="Text field!" text="This is a view of Molthwan and Lucenne's cousins as their cells undergo the process of meiosis. Click on the play button to start the process in the mother." />
+                            <OTText id="fa8552fb-73b1-11dd-a769-cbc7ca7b3ef4" name="Text field!" text="Tanada and Landar also hope to be able to have a baby soon. This is a view of their cells as they undergo the process of meiosis. Click on the play button to start the process in the mother, Tanada." />
+								            <OTOrganism id="a8e20bf5-73a4-11dd-a769-cbc7ca7b3ef4" name="Tanada" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:L,b:t,a:t,b:p,a:p,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="f87576ac-651c-11dd-bd45-d9d11cbf97e7" name="Landar" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <object refid="f87576ae-651c-11dd-bd45-d9d11cbf97e7" />
+								              </world>
+								            </OTOrganism>
                             <OTSex id="f87576ab-651c-11dd-bd45-d9d11cbf97e7" name="Meiosis" replayButtonEnabled="false">
                               <fatherOrganism>
                                 <object refid="f87576ac-651c-11dd-bd45-d9d11cbf97e7" />
@@ -1016,11 +1000,10 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="24c8fed6-651a-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="${section-2-page-2}" />
                       </currentCard>
                       <viewedCards>
-                        <object refid="3bac2caf-64f4-11dd-88f8-3390a456ed3b" />
-                        <object refid="24c8fed6-651a-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="${section-2-page-2}" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
@@ -1101,6 +1084,16 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                           </bodyText>
                           <documentRefs>
                             <OTText local_id="pedigreeTextObject" text="This is a text placeholder!" />
+								            <OTOrganism local_id="samplefemale" name="female" sex="1" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:l,a:L,b:t,a:t,b:p,a:p,b:f,a:f,b:A,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld id="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism local_id="samplemale" name="male" sex="0" alleles="b:h,a:h,b:S,a:S,b:w,a:w,b:l,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <object refid="8a4637f5-651c-11dd-bd45-d9d11cbf97e7" />
+								              </world>
+								            </OTOrganism>
                             <OTPedigree local_id="firstPedigreeView" height="400" width="400" organismImagesVisible="true" organismImageSize="2" sexTextVisible="true">
                               <organisms>
                                 <object refid="${samplemale}" />
@@ -1209,10 +1202,10 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                         </OTUDLCompoundDoc>
 -->                      </cards>
                       <currentCard>
-                        <object refid="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="${section-3-page-1}" />
                       </currentCard>
                       <viewedCards>
-                        <object refid="5fdbdad3-6517-11dd-bd45-d9d11cbf97e7" />
+                        <object refid="${section-3-page-1}" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
@@ -1290,6 +1283,16 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                             </div>
                           </bodyText>
                           <documentRefs>
+								            <OTOrganism id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" name="Strain 2 Male" sex="0" allowFatalCharacteristic="false" alleles="b:h,a:h,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,a:p,a:f,a:a,a:B">
+								              <world>
+								                <OTWorld id="680d6e4b-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
+								            <OTOrganism id="619fc538-79cd-11dd-acfb-c58c080ea6e2" name="Strain 1 Female" sex="1" allowFatalCharacteristic="false" alleles="b:h,a:H,b:S,a:S,b:W,a:w,b:L,a:l,b:t,a:t,b:P,a:P,b:F,a:f,b:a,a:a,b:B,a:B">
+								              <world>
+								                <OTWorld id="619fc538-79cd-11dd-acfb-c58c080ea6e2/world" speciesPath="org/concord/biologica/worlds/dragonmarkers.xml" />
+								              </world>
+								            </OTOrganism>
                             <OTStaticOrganism id="680d6e4a-79cd-11dd-acfb-c58c080ea6e2" name="Static Organism">
                               <organism>
                                 <object refid="680d6e4b-79cd-11dd-acfb-c58c080ea6e2" />
@@ -1641,13 +1644,10 @@ Try changing some of the genes and see what happens. Experiment with the genes f
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_1}" />
+                <object refid="${section-1}" />
               </currentCard>
               <viewedCards>
-                <object refid="${section_1}" />
-                <object refid="3bac2cae-64f4-11dd-88f8-3390a456ed3b" />
-                <object refid="5fdbdad2-6517-11dd-bd45-d9d11cbf97e7" />
-                <object refid="f69b7020-79bb-11dd-b6e3-bdb383ed1215" />
+                <object refid="${section-1}" />
               </viewedCards>
             </OTCardContainer>
           </content>

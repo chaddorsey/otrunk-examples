@@ -504,9 +504,9 @@ viewClass="org.concord.otrunk.biologica.ui.OTPedigreeView" />
                 <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
               </definitionManager>
               <cssBlocks>
-                <OTCssText id="23cc14f0-c44f-11dc-95ff-0800200c9a66" src="../css/otrunk-normal-font.css" />
-                <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="../css/otrunk-56-color.css" />
-                <OTCssText id="3cefc800-c44f-11dc-95ff-0800200c9a66" src="../css/otrunk-normal-layout.css" />
+                <OTCssText id="23cc14f0-c44f-11dc-95ff-0800200c9a66" src="../css/GENIQUEST-normal-font.css" />
+                <OTCssText id="31193bb0-c44f-11dc-95ff-0800200c9a66" src="../css/GENIQUEST-color.css" />
+                <OTCssText id="3cefc800-c44f-11dc-95ff-0800200c9a66" src="../css/GENIQUEST-normal-layout.css" />
               </cssBlocks>
             </OTUDLDocumentViewConfig>
             <OTPrototypeViewEntry id="textsize-choice-view" objectClass="org.concord.otrunk.OTSystem" viewClass="org.concord.otrunk.view.prototype.OTPrototypeView" copyPrototype="false">
@@ -519,7 +519,7 @@ viewClass="org.concord.otrunk.biologica.ui.OTPedigreeView" />
                     <OTOverlay id="da41a2a0-c44e-11dc-95ff-0800200c9a66" name="Small text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText src="../css/otrunk-small-font.css" />
+                          <OTCssText src="../css/GENIQUEST-small-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -527,7 +527,7 @@ viewClass="org.concord.otrunk.biologica.ui.OTPedigreeView" />
                     <OTOverlay id="7ba31210-c44e-11dc-95ff-0800200c9a66" name="Large text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText src="../css/otrunk-large-font.css" />
+                          <OTCssText src="../css/GENIQUEST-large-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -581,14 +581,14 @@ viewClass="org.concord.otrunk.biologica.ui.OTPedigreeView" />
         <OTOverlay id="bfc60e90-db35-11dc-95ff-0800200c9a66">
           <deltaObjectMap>
             <entry key="${css-color}">
-              <OTCssText src="../css/otrunk-34-color.css" />
+              <OTCssText src="../css/GENIQUEST-color.css" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>
         <OTOverlay id="b5d8b4a0-db35-11dc-95ff-0800200c9a66">
           <deltaObjectMap>
             <entry key="${css-color}">
-              <OTCssText src="../css/otrunk-56-color.css" />
+              <OTCssText src="../css/GENIQUEST-color.css" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>

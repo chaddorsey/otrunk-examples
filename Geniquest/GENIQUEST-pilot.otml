@@ -132,7 +132,9 @@
               <bodyText>
                 <div class="leftpanel">
                   <br />
-                  <div class="activity-title">GENIQUEST</div>
+                  <div class="activity-title">
+										<img src="images/GENIQUEST-Logo.png" /><br/>
+										Main Activity</div>
                 </div>
               </bodyText>
             </OTCompoundDoc>
